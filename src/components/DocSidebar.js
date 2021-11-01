@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 function DocSidebar({ pages }) {
 
-    console.log(pages);
+    // console.log("Doc Pages ====> ", pages);
 
     return (
         <nav className="padding-2 font-size-md">
@@ -11,7 +11,7 @@ function DocSidebar({ pages }) {
 
                 {pages.map(page => (
                     <li key={page.id}>
-                        <Link to={page.slug}>
+                        <Link to={"/docs/" + page.slug}>
                             {page.frontmatter.title}
                         </Link> 
                     </li>

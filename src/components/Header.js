@@ -59,10 +59,10 @@ const Header = ({ version }) => {
 
                     <ul>
                         <li>
-                            <span class="font-size-sm margin-y-auto opacity-70">{version}</span> 
+                            <span className="font-size-sm margin-y-auto opacity-70">{version}</span> 
                         </li>
                         <li>
-                            <Link to="/docs">Docs</Link>
+                            <Link to="/docs/get-started">Docs</Link>
                         </li>
                         <li>
                             <Link to="/icons/">Icons</Link>
