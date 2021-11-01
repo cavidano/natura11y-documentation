@@ -37,8 +37,6 @@ const Home = () => {
             alt="Bees"
             placeholder="dominantColor"
             layout="fullWidth"
-            width={1500}
-            height={750} 
           />
         </div>
 
@@ -60,7 +58,7 @@ const Home = () => {
                         <a className="button theme-white width-100" href="#1">
                             Get Started
                         </a>
-                        <a className="button button--outline width-100" href="#1">
+                        <a className="button button--outline width-100" href="{{ site.url }}/examples">
                             Examples
                         </a>
                     </div>

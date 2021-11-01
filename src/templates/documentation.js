@@ -2,6 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXRenderer} from 'gatsby-plugin-mdx';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
@@ -12,6 +13,8 @@ function Documentation({ data }) {
 
     const { body } = data.singleDoc;
     const { title } = data.singleDoc.frontmatter;
+    const { slug } = data.singleDoc.slug;
+
     
     return (
         <Layout>
@@ -101,3 +104,6 @@ export const query = graphql`
     }
   }
 `;
+
+
+  
