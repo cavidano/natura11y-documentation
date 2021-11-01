@@ -1,47 +1,81 @@
-import React, { Fragment } from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
+import { StaticImage } from "gatsby-plugin-image";
 
-export default function Home() {
+const Home = () => {
+
+  const bannerHeight = () => {
+
+    const headerHeight = document.getElementById('global-header').offsetHeight;
+    const bannerTarget = document.getElementById('introduction');
+
+    const initBannerHeight = () => {
+
+        const windowHeight = window.innerHeight;
+
+        bannerTarget.style.height = (windowHeight - headerHeight) + 'px';
+
+    }
+
+    initBannerHeight();
+    window.addEventListener('resize', initBannerHeight);
+  }
+
+  useEffect(() => {
+    bannerHeight();
+  }, []);
+
   return (
     <Layout>
 
-      <section>
+      <section className="backdrop backdrop--fixed theme-dark" id="introduction">
 
-        <h2>Design</h2>
-        <h3>Develop &amp; Deploy</h3>
-        <p>UX Designer and web developer based in NYC</p>
-
-        <div className="accordion">
-
-    <button
-        className="accordion__button h5"
-        id="acc-button-example-01"
-        data-toggle="accordion"
-        aria-controls="acc-panel-example-01"
-        aria-expanded="false">
-            Danaus Plexippus
-    </button>
-
-    <div
-        className="accordion__panel"
-        id="acc-panel-example-01"
-        data-accordion="panel"
-        aria-labelledby="acc-button-example-01"
-        role="region">
-
-        <div className="accordion__panel__content">
-            <p>
-                The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar <a href="#1">North American</a> butterfly, and is considered an iconic pollinator species.
-            </p>
+        <div className="backdrop__image">
+          <StaticImage
+            className="opacity-40"
+            src="../images/backdrop-introduction.jpg"
+            alt="Bees"
+            placeholder="dominantColor"
+            layout="fullWidth"
+            width={1500}
+            height={750} 
+          />
         </div>
 
-    </div>
+        <div className="backdrop__cover">
 
+            <div className="container medium margin-y-4 text-align-center">
 
-</div>
-      
+                <h1 className="banner-headline text-align-center text-shadow">
+                    Be inclusive&#8212;naturally.
+                </h1>
+
+                <div className="narrow margin-y-3">
+
+                    <p className="font-size-lg text-shadow">
+                        Natura11y is an open-source design system. With it, create elegant, accessible websites.
+                    </p>
+
+                    <div className="grid grid--column-2--sm gap-3">
+                        <a className="button theme-white width-100" href="{{ site.url }}/docs/get-started/">
+                            Get Started
+                        </a>
+                        <a className="button button--outline width-100" href="{{ site.url }}/examples">
+                            Examples
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+
+        </div>
+
       </section>
 
     </Layout>
   )
 }
+
+export default Home;

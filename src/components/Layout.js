@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../../natura11y';
+import '../icons/natura11y-icons.css';
 
 import Navbar from './Navbar';
 

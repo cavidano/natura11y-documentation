@@ -47,7 +47,8 @@ In this file:
 }
 
 .backdrop__image {
-    img {
+    img, 
+    [data-gatsby-image-wrapper] {
         min-width: 100%;
         min-height: 100%;
     }
@@ -127,7 +128,8 @@ In this file:
         display: flex;
         overflow: hidden;
 
-        img {
+        img, 
+        [data-gatsby-image-wrapper] {
             object-fit: cover;
             object-position: 50% 50%;
         }
