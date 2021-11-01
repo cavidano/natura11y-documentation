@@ -8,7 +8,7 @@ const Docs = ({ data }) => {
 
     console.log(data);
 
-    const docPages = data.allMdx.nodes;
+    const docPages = data.docs.nodes;
 
     return (
         <Layout>
@@ -75,12 +75,11 @@ const Docs = ({ data }) => {
         </Layout>
     );
 
-      
 }
 
 export const query = graphql`
-    query MyQuery {
-        allMdx {
+    query queryDocs {
+        docs: allMdx {
             nodes {
                 frontmatter {
                     title
