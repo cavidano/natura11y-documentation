@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../natura11y';
+
 import Navbar from './Navbar';
 
 function Layout({ children }) {
