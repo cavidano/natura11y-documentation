@@ -6,7 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Natura11y Inclusive Docs",
+    title: "Natura11y Inclusive Framework",
+    version: "1.0.0-alpha"
   },
   plugins: [
     `gatsby-plugin-sass`,

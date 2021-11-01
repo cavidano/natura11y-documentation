@@ -8,7 +8,7 @@ const Docs = () => {
             <h1>Docs Page</h1>
             
         </Layout>
-    )
+    );
 }
 
 export default Docs;

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ version, title }) => {
+    
     return (
         <footer className="theme-white box-shadow-1 text-align-center overflow-hidden font-size-md">
 
@@ -9,7 +10,7 @@ const Footer = () => {
             <div className="container narrow margin-y-4">
 
                 <p className="text-align-center font-size-sm opacity-70">
-                    Version 1.0.0-alpha
+                    Version: { version }
                 </p>
             
                 <ul className="nav nav--horizontal justify-content-center margin-y-3">
@@ -42,7 +43,7 @@ const Footer = () => {
                     </svg>
                 </a>
                 <p>
-                    Natura11y Inclusive Framework is an open source design system created by <a href="https://www.behance.net/carlavidano" target="_blank">Carl Avidano</a>.
+                    { title } is an open source design system created by <a href="https://www.behance.net/carlavidano" target="_blank">Carl Avidano</a>.
                 </p>
             </div>
 
@@ -51,7 +52,7 @@ const Footer = () => {
             </div>
 
         </footer>
-    )
+    );
 }
 
 export default Footer;

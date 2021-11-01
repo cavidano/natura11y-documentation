@@ -1,7 +1,7 @@
+import React from 'react';
 import { Link } from 'gatsby';
-import React from 'react'
 
-const Header = () => {
+const Header = ({ version }) => {
 
     const logo = (
         <svg xmlns="http://www.w3.org/2000/svg" width="168" height="42" viewBox="0 0 168 42">
@@ -39,7 +39,8 @@ const Header = () => {
                 <path d="M143.5186,42.0342h-1.9034v-9.99h1.9034v5.711l2.5244-3.1992h2.5791l-3.3213,3.7793,3.3213,3.6992H146.084l-2.5654-3.1182Z"/>
             </g>
         </svg>
-    )
+    );
+
     return (
         <header className="box-shadow-1 z-index-2500" id="global-header">
 
@@ -56,7 +57,9 @@ const Header = () => {
 
                 <nav className="primary-nav__menu" id="primary-menu">
 
-                    <ul>
+                    <ul><li>
+                   <span class="font-size-sm margin-y-auto opacity-70">{version}</span> 
+                </li>
                         <li>
                             <Link to="/docs">Docs</Link>
                         </li>
@@ -88,7 +91,7 @@ const Header = () => {
             </div>
 
         </header>
-    )
+    );
 }
 
 export default Header;
