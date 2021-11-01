@@ -5,7 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Natura11y Inclusive Docs",
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

@@ -3,20 +3,19 @@ import React from 'react';
 import '../../natura11y';
 import '../icons/natura11y-icons.css';
 
-import Navbar from './Navbar';
+import Header from './Header';
+import Footer from './Footer';
 
 function Layout({ children }) {
     return (
         <div className="Layout">
-            <Navbar />
+            <Header />
 
             <div className="content">
                 { children }
             </div>
 
-            <footer>
-                <p>Copyright 2021 - Web Warrior</p>
-            </footer>
+            <Footer />
             
         </div>
     )
