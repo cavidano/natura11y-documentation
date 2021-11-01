@@ -19,7 +19,7 @@ const Docs = ({ data }) => {
                     <ul className="nav">
 
                     {docPages.map(page => (
-                        <li>
+                        <li key={page.id}>
                            <Link to={page.slug}>
                                 {page.frontmatter.title}
                            </Link> 
@@ -88,18 +88,17 @@ const Docs = ({ data }) => {
 }
 
 export const query = graphql`
-
-query MyQuery {
-    allMdx {
-        nodes {
-        frontmatter {
-            title
-            stack
+    query MyQuery {
+        allMdx {
+            nodes {
+            frontmatter {
+                title
+                stack
+            }
+            slug
+            id
+            }
         }
-        slug
-        id
-        }
-    }
     }
 `;
 
