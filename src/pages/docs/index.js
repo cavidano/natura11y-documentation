@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../../components/Layout';
+import DocSidebar from '../../components/DocSidebar';
 
 const Docs = ({ data }) => {
 
@@ -15,19 +16,9 @@ const Docs = ({ data }) => {
             <div className="article article--two-column">
 
                 <div className="article__sidebar">
-                    Sidebar
                     <ul className="nav">
-
-                    {docPages.map(page => (
-                        <li key={page.id}>
-                           <Link to={page.slug}>
-                                {page.frontmatter.title}
-                           </Link> 
-                        </li>
-                    ))}
-
+                        <DocSidebar pages={docPages} />
                     </ul>
-                   
                 </div>
 
                 <div className="article__body border-left--lg" id="primary-content">
@@ -91,12 +82,12 @@ export const query = graphql`
     query MyQuery {
         allMdx {
             nodes {
-            frontmatter {
-                title
-                stack
-            }
-            slug
-            id
+                frontmatter {
+                    title
+                    stack
+                }
+                slug
+                id
             }
         }
     }

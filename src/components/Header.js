@@ -57,9 +57,10 @@ const Header = ({ version }) => {
 
                 <nav className="primary-nav__menu" id="primary-menu">
 
-                    <ul><li>
-                   <span class="font-size-sm margin-y-auto opacity-70">{version}</span> 
-                </li>
+                    <ul>
+                        <li>
+                            <span class="font-size-sm margin-y-auto opacity-70">{version}</span> 
+                        </li>
                         <li>
                             <Link to="/docs">Docs</Link>
                         </li>
