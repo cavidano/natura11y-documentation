@@ -13,9 +13,7 @@ function Documentation({ data }) {
 
     const { body } = data.singleDoc;
     const { title } = data.singleDoc.frontmatter;
-    const { slug } = data.singleDoc.slug;
 
-    
     return (
         <Layout>
             <div className="article article--two-column">
