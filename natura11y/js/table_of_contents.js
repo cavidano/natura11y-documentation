@@ -1,31 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const sectionStartList = document.querySelectorAll("hr.section-start")
+  const toc = document.querySelector("#table-of-contents")
 
-    const sectionStartList = document.querySelectorAll("hr.section-start");
-    const toc = document.querySelector("#table-of-contents");
+  if (toc) {
+    const tocUL = document.createElement("ul")
 
-    if (toc) {
+    tocUL.classList.add("nav", "font-size-md")
 
-        const tocUL = document.createElement("ul");
+    toc.appendChild(tocUL)
 
-        tocUL.classList.add("nav", "font-size-md");
+    sectionStartList.forEach(sectionStart => {
+      const sectionID = sectionStart.getAttribute("id")
+      const sectionTitle =
+        sectionStart.nextElementSibling.querySelector("h2").innerText
 
-        toc.appendChild(tocUL);
-
-        sectionStartList.forEach((sectionStart) => {
-
-            const sectionID = sectionStart.getAttribute("id");
-            const sectionTitle = sectionStart.nextElementSibling.querySelector("h2").innerText;
-
-            const sectionLinkHTML =
-                `<li>
+      const sectionLinkHTML = `<li>
                     <a href="#${sectionID}">${sectionTitle}</a>
-                </li>`;
+                </li>`
 
-            tocUL.insertAdjacentHTML('beforeend', sectionLinkHTML)
-
-        });
-    }
-    
-});
-
-
+      tocUL.insertAdjacentHTML("beforeend", sectionLinkHTML)
+    })
+  }
+})

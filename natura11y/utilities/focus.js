@@ -11,19 +11,22 @@ In this file:
 //////////////////////////////////////////////
 
 export const getFocusableElements = (element = document) => {
-    
-    const els = [
-      'a[href]',
-      'button',
-      'input',
-      'textarea',
-      'select',
-      'details',
-      '[tabindex]:not([tabindex="-1"])'
-    ];
+  const els = [
+    "a[href]",
+    "button",
+    "input",
+    "textarea",
+    "select",
+    "details",
+    '[tabindex]:not([tabindex="-1"])',
+  ]
 
-    return [...element.querySelectorAll(
+  return [
+    ...element.querySelectorAll(
       els
-      // 'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])' 
-    )].filter(el => !el.hasAttribute('disabled') && !el.getAttribute("aria-hidden"));
+      // 'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
+    ),
+  ].filter(
+    el => !el.hasAttribute("disabled") && !el.getAttribute("aria-hidden")
+  )
 }

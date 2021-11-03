@@ -1,150 +1,147 @@
-import './_style.scss';
+import "./_style.scss"
 
 //////////////////////////////////////////////
 // Document
 //////////////////////////////////////////////
 
 export default class Document {
+  constructor() {
+    ///////////////////////
+    // Copyright Year
+    ///////////////////////
 
-    constructor() {
-        
-        ///////////////////////
-        // Copyright Year
-        ///////////////////////
+    const copyrightYear = document.querySelector(".copyright-year")
 
-        const copyrightYear = document.querySelector('.copyright-year');
+    if (copyrightYear) {
+      const currentYear = new Date().getFullYear()
+      copyrightYear.innerHTML = currentYear
+    }
 
-        if (copyrightYear) {
-            const currentYear = new Date().getFullYear();
-            copyrightYear.innerHTML = currentYear;
+    ///////////////////////
+    // Language & RTL
+    ///////////////////////
+
+    window.addEventListener("load", () => {
+      // Google Translate
+
+      const googleTranslateSelect = document.querySelector(".goog-te-combo")
+
+      if (
+        typeof googleTranslateSelect !== "undefined" &&
+        googleTranslateSelect !== null
+      ) {
+        const setLanguage = myLang => {
+          googleTranslateSelect.value = myLang
+          googleTranslateSelect.querySelector(
+            `option[value="${myLang}"]`
+          ).selected = true
+
+          languageChangeEvent(googleTranslateSelect, "change")
         }
 
-        ///////////////////////
-        // Language & RTL 
-        ///////////////////////
+        const languageChangeEvent = (element, event) => {
+          let eventObject
 
-        window.addEventListener('load', () => {
+          if (document.createEventObject) {
+            eventObject = document.createEventObject()
+            return element.languageChangeEvent("on" + event, eventObject)
+          } else {
+            eventObject = document.createEvent("HTMLEvents")
+            // event type, bubbling, cancelable
+            eventObject.initEvent(event, false, true)
+            return !element.dispatchEvent(eventObject)
+          }
+        }
 
-            // Google Translate
+        // Footer Links
 
-            const googleTranslateSelect = document.querySelector('.goog-te-combo');
+        // const translateLinkList = document.querySelectorAll('[data-lang]');
 
-            if (typeof(googleTranslateSelect) !== 'undefined' && googleTranslateSelect !== null) {
+        // translateLinkList.forEach((translateLink) => {
 
-                const setLanguage = (myLang) => {
-                    googleTranslateSelect.value = myLang;
-                    googleTranslateSelect.querySelector(`option[value="${myLang}"]`).selected = true;
+        //     translateLink.classList.add('notranslate');
 
-                    languageChangeEvent(googleTranslateSelect, 'change');
-                }
+        //     translateLink.addEventListener('click', (event) => {
 
-                const languageChangeEvent = (element, event) => {
+        //         event.preventDefault();
 
-                    let eventObject;
-                    
-                    if (document.createEventObject){
-                        eventObject = document.createEventObject();
-                        return element.languageChangeEvent('on' + event, eventObject)
-                    } else {
-                        eventObject = document.createEvent('HTMLEvents'); 
-                        // event type, bubbling, cancelable
-                        eventObject.initEvent(event, false, true);
-                        return !element.dispatchEvent(eventObject);
-                    }
-                }  
+        //         let myLang = translateLink.getAttribute('data-lang');
 
-                // Footer Links
-                
-                // const translateLinkList = document.querySelectorAll('[data-lang]');
+        //         setLanguage(myLang);
 
-                // translateLinkList.forEach((translateLink) => {
+        //     });
+        // });
 
-                //     translateLink.classList.add('notranslate');
-                    
-                //     translateLink.addEventListener('click', (event) => {
+        const allLanguageSelect = document.getElementById(
+          "custom-language-select"
+        )
+        const allLanguageButton = document.getElementById(
+          "custom-language-update"
+        )
 
-                //         event.preventDefault();
+        allLanguageSelect.classList.add("notranslate")
 
-                //         let myLang = translateLink.getAttribute('data-lang');
+        const langSelectObserverOptions = {
+          childList: true,
+        }
 
-                //         setLanguage(myLang);
+        const langSelectObserver = new MutationObserver(() => {
+          if (allLanguageSelect.childElementCount === 0) {
+            const languagesList =
+              googleTranslateSelect.querySelectorAll("option")
 
-                //     });
-                // });
+            languagesList.forEach(language => {
+              let value = language.getAttribute("value")
+              let text = language.innerHTML
+              let option = document.createElement("option")
 
-                const allLanguageSelect = document.getElementById('custom-language-select');
-                const allLanguageButton = document.getElementById('custom-language-update');
+              option.setAttribute("value", value)
+              option.innerHTML = text
 
-                allLanguageSelect.classList.add('notranslate');
+              allLanguageSelect.appendChild(option)
+            })
+          } else {
+            allLanguageSelect.value = googleTranslateSelect.value
+          }
+        })
 
-                const langSelectObserverOptions = {
-                    childList: true
-                }
+        langSelectObserver.observe(
+          googleTranslateSelect,
+          langSelectObserverOptions
+        )
 
-                const langSelectObserver = new MutationObserver(() => {
+        allLanguageButton.addEventListener("click", event => {
+          event.preventDefault()
+          if (allLanguageSelect.value !== "") {
+            setLanguage(allLanguageSelect.value)
+          }
+        })
+      }
 
-                    if(allLanguageSelect.childElementCount === 0) {
+      // Observe RTL
 
-                        const languagesList = googleTranslateSelect.querySelectorAll('option');
+      const rtlTarget = document.querySelector("html")
 
-                        languagesList.forEach((language) => {
+      const rtlObserverOptions = {
+        attributes: true,
+        attributeFilter: ["class"],
+      }
 
-                            let value = language.getAttribute('value');
-                            let text = language.innerHTML;
-                            let option = document.createElement('option');
+      const rtlObserver = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          if (mutation.type === "attributes") {
+            const rtlClass = "translated-rtl"
 
-                            option.setAttribute('value', value);
-                            option.innerHTML = text;
-                            
-                            allLanguageSelect.appendChild(option);
-                        });
-                    } else {
-                        allLanguageSelect.value = googleTranslateSelect.value;
-                    }
-
-                });
-                
-                langSelectObserver.observe(googleTranslateSelect, langSelectObserverOptions);
-
-                allLanguageButton.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    if(allLanguageSelect.value !== '') {
-                        setLanguage(allLanguageSelect.value)
-                    }
-                });
-
+            if (rtlTarget.classList.contains(rtlClass)) {
+              rtlTarget.setAttribute("dir", "rtl")
+            } else {
+              rtlTarget.setAttribute("dir", "ltr")
             }
+          }
+        })
+      })
 
-            // Observe RTL
-
-            const rtlTarget = document.querySelector('html');
-
-            const rtlObserverOptions = {
-                attributes: true,
-                attributeFilter: ['class']
-            }
-
-            const rtlObserver = new MutationObserver((mutations) => {
-
-                mutations.forEach((mutation) => {
-
-                    if(mutation.type === 'attributes') {
-
-                        const rtlClass = 'translated-rtl';
-
-                        if (rtlTarget.classList.contains(rtlClass)) {
-                            rtlTarget.setAttribute('dir', 'rtl');
-                        } else {
-                            rtlTarget.setAttribute('dir', 'ltr');
-                        }
-                    }
-
-                });
-            });
-
-            rtlObserver.observe(rtlTarget, rtlObserverOptions);
-
-        });
-        
-    }
+      rtlObserver.observe(rtlTarget, rtlObserverOptions)
+    })
+  }
 }

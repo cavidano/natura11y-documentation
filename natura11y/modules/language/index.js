@@ -3,54 +3,46 @@
 //////////////////////////////////////////////
 
 export default class GoogleTranslateButtons {
+  constructor() {
+    window.addEventListener("load", () => {
+      const googleSelect = document.querySelector(".goog-te-combo")
 
-    constructor() {
+      if (typeof googleSelect != "undefined" && googleSelect != null) {
+        const translateLinkList = document.querySelectorAll("[data-lang]")
 
-        window.addEventListener('load', () => {
+        translateLinkList.forEach(translateLink => {
+          translateLink.addEventListener("click", event => {
+            event.preventDefault()
 
-            const googleSelect = document.querySelector(".goog-te-combo");
+            let myLang = translateLink.getAttribute("data-lang")
 
-            if (typeof(googleSelect) != 'undefined' && googleSelect != null) {
-              
-                const translateLinkList = document.querySelectorAll("[data-lang]");
+            setLanguage(myLang)
+          })
+        })
 
-                translateLinkList.forEach((translateLink) => {
-                    
-                    translateLink.addEventListener("click", (event) => {
+        const setLanguage = myLang => {
+          googleSelect.value = myLang
+          googleSelect.querySelector(
+            'option[value="' + myLang + '"]'
+          ).selected = true
 
-                        event.preventDefault();
+          fireEvent(googleSelect, "change")
+        }
 
-                        let myLang = translateLink.getAttribute("data-lang");
+        const fireEvent = (element, event) => {
+          var evt
 
-                        setLanguage(myLang);
-
-                    });
-                });
-
-                const setLanguage = (myLang) => {
-                    googleSelect.value = myLang;
-                    googleSelect.querySelector('option[value="' + myLang + '"]').selected = true;
-
-                    fireEvent(googleSelect,'change');
-                }
-
-                const fireEvent = (element, event) => {
-
-                    var evt;
-                    
-                    if (document.createEventObject){
-                        evt = document.createEventObject();
-                        return element.fireEvent('on' + event, evt)
-                    } else {
-                        evt = document.createEvent("HTMLEvents"); 
-                        // event type, bubbling, cancelable
-                        evt.initEvent(event, false, true);
-                        return !element.dispatchEvent(evt);
-                    }
-                }  
-
-            }
-
-        });
-    }
+          if (document.createEventObject) {
+            evt = document.createEventObject()
+            return element.fireEvent("on" + event, evt)
+          } else {
+            evt = document.createEvent("HTMLEvents")
+            // event type, bubbling, cancelable
+            evt.initEvent(event, false, true)
+            return !element.dispatchEvent(evt)
+          }
+        }
+      }
+    })
+  }
 }

@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react"
 
 function Figure() {
-    return (
-        <figure className="theme-primary padding-4">
-            THIS IS A FIGURE
-        </figure>
-    )
+  return <figure className="theme-primary padding-4">THIS IS A FIGURE</figure>
 }
 
-export default Figure;
+export default Figure

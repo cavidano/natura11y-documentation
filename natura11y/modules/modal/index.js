@@ -1,139 +1,127 @@
-import './_style.scss';
+import "./_style.scss"
 
-import { getFocusableElements } from '../../utilities/focus';
+import { getFocusableElements } from "../../utilities/focus"
 
 //////////////////////////////////////////////
 // Modal
 //////////////////////////////////////////////
 
 export default class Modal {
+  constructor() {
+    const modalList = document.querySelectorAll(".modal")
+    const modalButtonList = document.querySelectorAll("[data-modal-open]")
 
-    constructor() {
+    const initModal = modalTarget => {
+      document.querySelector("body").classList.add("modal-open")
 
-        const modalList = document.querySelectorAll('.modal');
-        const modalButtonList = document.querySelectorAll('[data-modal-open]');
+      modalTarget.setAttribute("aria-hidden", false)
 
-        const initModal = (modalTarget) => {
-            
-            document.querySelector('body').classList.add('modal-open');
-            
-            modalTarget.setAttribute('aria-hidden', false);
-            
-            const lastFocusedElement = document.activeElement;
-            
-            const modalContent = modalTarget.querySelector('.modal__content');
+      const lastFocusedElement = document.activeElement
 
-            modalContent.setAttribute('tabindex', 0);
-            modalContent.focus();
-            modalContent.setAttribute('tabindex', -1);
+      const modalContent = modalTarget.querySelector(".modal__content")
 
-            if(modalTarget.classList.contains('modal--scroll-all')) {
-                modalTarget.scrollTop = 0;
-            }
+      modalContent.setAttribute("tabindex", 0)
+      modalContent.focus()
+      modalContent.setAttribute("tabindex", -1)
 
-            const modalCloseList = modalTarget.querySelectorAll('[data-modal-close]');
+      if (modalTarget.classList.contains("modal--scroll-all")) {
+        modalTarget.scrollTop = 0
+      }
 
-            const handleCloseOutside = (event) => {
-                let modalContentClick = modalContent.contains(event.target);
+      const modalCloseList = modalTarget.querySelectorAll("[data-modal-close]")
 
-                if (!modalContentClick) {
-                    handleClose();
-                }
-            };
+      const handleCloseOutside = event => {
+        let modalContentClick = modalContent.contains(event.target)
 
-            const handleClose = () => {
-                
-                modalTarget.setAttribute('aria-hidden', true);
+        if (!modalContentClick) {
+          handleClose()
+        }
+      }
 
-                lastFocusedElement.focus();
-                
-                document.querySelector('body').classList.remove('modal-open');
+      const handleClose = () => {
+        modalTarget.setAttribute("aria-hidden", true)
 
-                window.removeEventListener('click', handleCloseOutside);
-            }
+        lastFocusedElement.focus()
 
-            const focusableElements = getFocusableElements(modalTarget);
+        document.querySelector("body").classList.remove("modal-open")
 
-            const firstElementOfModal = focusableElements[0];
-            const lastElementOfModal = focusableElements[focusableElements.length - 1];
+        window.removeEventListener("click", handleCloseOutside)
+      }
 
-            modalTarget.addEventListener('keydown', (event) => {
+      const focusableElements = getFocusableElements(modalTarget)
 
-                const keyCodes = {
-                    tab: 9,
-                    esc: 27
-                };
+      const firstElementOfModal = focusableElements[0]
+      const lastElementOfModal = focusableElements[focusableElements.length - 1]
 
-                const key = event.keyCode;
-
-                switch (key) {
-                    case keyCodes.tab:
-
-                        if (document.activeElement === lastElementOfModal) {
-                            if(!event.shiftKey){
-                                event.preventDefault();
-                                firstElementOfModal.focus();
-                            }
-                        }
-
-                        if(document.activeElement === firstElementOfModal){
-                            if(event.shiftKey){
-                                event.preventDefault();
-                                lastElementOfModal.focus();
-                            }
-                        }
-
-                        if(document.activeElement === modalContent){
-                            if(event.shiftKey){
-                                event.preventDefault();
-                                firstElementOfModal.focus();
-                            }
-                        }
-
-                        break;
-                    
-                    case keyCodes.esc:
-                        handleClose();
-                        break;
-                }
-
-            });
-
-            modalCloseList.forEach((modalClose) => {
-                modalClose.addEventListener('click', handleClose);
-                modalClose.setAttribute('aria-label', 'Close Modal Window');
-            });
-
-            if( modalTarget.hasAttribute('data-modal-close-outside')) {
-                window.addEventListener('click', handleCloseOutside);
-            }
+      modalTarget.addEventListener("keydown", event => {
+        const keyCodes = {
+          tab: 9,
+          esc: 27,
         }
 
-        modalList.forEach((modal) => {
+        const key = event.keyCode
 
-            const modalContainer = modal.querySelector('.modal__content');
-    
-            modalContainer.setAttribute('role', 'dialog');
-            modalContainer.setAttribute('aria-modal', true);
-    
-            modal.setAttribute('aria-hidden', true);
+        switch (key) {
+          case keyCodes.tab:
+            if (document.activeElement === lastElementOfModal) {
+              if (!event.shiftKey) {
+                event.preventDefault()
+                firstElementOfModal.focus()
+              }
+            }
 
-        });
+            if (document.activeElement === firstElementOfModal) {
+              if (event.shiftKey) {
+                event.preventDefault()
+                lastElementOfModal.focus()
+              }
+            }
 
-        modalButtonList.forEach((modalButton) => {
-            
-            modalButton.addEventListener('click', (event) => {
+            if (document.activeElement === modalContent) {
+              if (event.shiftKey) {
+                event.preventDefault()
+                firstElementOfModal.focus()
+              }
+            }
 
-                const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
-                const modalTarget = document.getElementById(modalTargetID);
-    
-                initModal(modalTarget);
+            break
 
-                event.stopPropagation();
-                
-            });
+          case keyCodes.esc:
+            handleClose()
+            break
+        }
+      })
 
-        });
-        
+      modalCloseList.forEach(modalClose => {
+        modalClose.addEventListener("click", handleClose)
+        modalClose.setAttribute("aria-label", "Close Modal Window")
+      })
+
+      if (modalTarget.hasAttribute("data-modal-close-outside")) {
+        window.addEventListener("click", handleCloseOutside)
+      }
     }
+
+    modalList.forEach(modal => {
+      const modalContainer = modal.querySelector(".modal__content")
+
+      modalContainer.setAttribute("role", "dialog")
+      modalContainer.setAttribute("aria-modal", true)
+
+      modal.setAttribute("aria-hidden", true)
+    })
+
+    modalButtonList.forEach(modalButton => {
+      modalButton.addEventListener("click", event => {
+        const modalTargetID = event.target
+          .getAttribute("data-modal-open")
+          .replace(/#/, "")
+        const modalTarget = document.getElementById(modalTargetID)
+
+        initModal(modalTarget)
+
+        event.stopPropagation()
+      })
+    })
+  }
 }

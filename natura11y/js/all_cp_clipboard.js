@@ -1,119 +1,120 @@
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
+  const copyButtonText = "Copy"
+  const copyButtonActionText = "Copied!"
 
-    const copyButtonText = 'Copy';
-    const copyButtonActionText = 'Copied!';
+  const initClipboard = () => {
+    const allCPButtonList = document.querySelectorAll('[data-clipboard="all"]')
+    const cpButtonList = document.querySelectorAll('[data-clipboard="single"]')
 
-    const initClipboard = () => {
+    allCPButtonList.forEach(cpButton => {
+      cpButton.addEventListener("click", event => {
+        event.preventDefault()
 
-        const allCPButtonList = document.querySelectorAll('[data-clipboard="all"]');
-        const cpButtonList = document.querySelectorAll('[data-clipboard="single"]');
+        let currentTable = event.target.closest("table")
+        let currentTableRowsList = currentTable.querySelectorAll("tbody > tr")
+        let currentTableSingleButtonList = currentTable.querySelectorAll(
+          '[data-clipboard="single"]'
+        )
 
-        allCPButtonList.forEach((cpButton) => {
+        currentTableSingleButtonList.forEach(singleButton => {
+          singleButton.innerHTML = copyButtonActionText.toString()
+        })
 
-            cpButton.addEventListener('click', (event) => {
+        let currentCPArray = []
 
-                event.preventDefault();
+        currentTableRowsList.forEach(row => {
+          let cpName = row
+            .querySelector("[data-prop]")
+            .innerHTML.trim()
+            .replace(/&nbsp;/g, "")
+          let cpValue = row
+            .querySelector("[data-val]")
+            .innerHTML.trim()
+            .replace(/&nbsp;/g, "")
+          let cpText = `${cpName}: ${cpValue};`
 
-                let currentTable = event.target.closest('table');
-                let currentTableRowsList = currentTable.querySelectorAll('tbody > tr');
-                let currentTableSingleButtonList = currentTable.querySelectorAll('[data-clipboard="single"]');
+          currentCPArray.push(cpText)
+        })
 
-                currentTableSingleButtonList.forEach((singleButton) => {
-                    singleButton.innerHTML = copyButtonActionText.toString(); 
-                });
+        let myClipboardProperties = currentCPArray
+          .map(property => {
+            return `    ${property}`
+          })
+          .join("\n")
 
-                let currentCPArray = [];
-
-                currentTableRowsList.forEach((row) => {
-
-                    let cpName = row.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
-                    let cpValue = row.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
-                    let cpText = `${cpName}: ${cpValue};`;
-
-                    currentCPArray.push(cpText);
-
-                });
-
-                let myClipboardProperties = currentCPArray.map((property) => {
-
-                    return `    ${property}`
-                
-                }).join('\n');
-                
-                let myClipboardText = `
+        let myClipboardText = `
                     :root {
                         ${myClipboardProperties}
-                    }`;
+                    }`
 
-                // Create an auxiliary hidden input
-                var aux = document.createElement( 'textarea' );
+        // Create an auxiliary hidden input
+        var aux = document.createElement("textarea")
 
-                // Get the text from the element passed into the input
-                aux.innerHTML = myClipboardText.trim();
+        // Get the text from the element passed into the input
+        aux.innerHTML = myClipboardText.trim()
 
-                // Append the aux input to the body
-                document.body.appendChild(aux);
+        // Append the aux input to the body
+        document.body.appendChild(aux)
 
-                // Highlight the content
-                aux.select();
+        // Highlight the content
+        aux.select()
 
-                // Execute the copy command
-                document.execCommand( 'copy' );
+        // Execute the copy command
+        document.execCommand("copy")
 
-                // Remove the input from the body
-                document.body.removeChild(aux);
+        // Remove the input from the body
+        document.body.removeChild(aux)
+      })
+    })
 
-            });
+    cpButtonList.forEach(cpButton => {
+      const resetButton = () => {
+        cpButtonList.forEach(otherButtons => {
+          otherButtons.innerHTML = copyButtonText
+        })
+      }
 
-        });
+      cpButton.addEventListener("click", event => {
+        event.preventDefault()
 
-        cpButtonList.forEach((cpButton) => {
+        resetButton()
 
-            const resetButton = () => {
-                cpButtonList.forEach((otherButtons)=> {
-                    otherButtons.innerHTML = copyButtonText;
-                });
-            }
+        let currentRow = event.target.closest("tr")
 
-            cpButton.addEventListener('click', (event) => {
+        let myCustomPropertyName = currentRow
+          .querySelector("[data-prop]")
+          .innerHTML.trim()
+          .replace(/&nbsp;/g, "")
+        let myCustomPropertyValue = currentRow
+          .querySelector("[data-val]")
+          .innerHTML.trim()
+          .replace(/&nbsp;/g, "")
+        let myClipboardText = `${myCustomPropertyName}: ${myCustomPropertyValue};`
 
-                event.preventDefault();
+        if (myClipboardText) {
+          event.target.innerHTML = copyButtonActionText
+        }
 
-                resetButton();
-                
-                let currentRow = event.target.closest('tr');
+        // Create an auxiliary hidden input
+        var aux = document.createElement("input")
 
-                let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
-                let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
-                let myClipboardText = `${myCustomPropertyName}: ${myCustomPropertyValue};`;
+        // Get the text from the element passed into the input
+        aux.setAttribute("value", myClipboardText)
 
-                if( myClipboardText ){
-                    event.target.innerHTML = copyButtonActionText;
-                }
+        // Append the aux input to the body
+        document.body.appendChild(aux)
 
-                // Create an auxiliary hidden input
-                var aux = document.createElement( 'input' );
+        // Highlight the content
+        aux.select()
 
-                // Get the text from the element passed into the input
-                aux.setAttribute( 'value', myClipboardText );
+        // Execute the copy command
+        document.execCommand("copy")
 
-                // Append the aux input to the body
-                document.body.appendChild(aux);
+        // Remove the input from the body
+        document.body.removeChild(aux)
+      })
+    })
+  }
 
-                // Highlight the content
-                aux.select();
-
-                // Execute the copy command
-                document.execCommand( 'copy' );
-
-                // Remove the input from the body
-                document.body.removeChild(aux);
-
-            });
-
-        });
-
-    };
-
-    initClipboard();
-});
+  initClipboard()
+})

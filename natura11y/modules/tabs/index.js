@@ -1,112 +1,100 @@
-import './_style.scss';
+import "./_style.scss"
 
 //////////////////////////////////////////////
 // Tabs
 //////////////////////////////////////////////
 
 export default class Tabs {
+  constructor() {
+    const tabsList = document.querySelectorAll(".tabs")
 
-    constructor() {
+    tabsList.forEach(tab => {
+      const tabsButtonList = tab.querySelectorAll('[role="tab"]')
+      const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]')
 
-        const tabsList = document.querySelectorAll('.tabs');
+      tabsButtonList.forEach((tabsButton, index) => {
+        const activateTab = tab => {
+          // Deactivate all other tabs
+          deactivateTabs()
 
-        tabsList.forEach((tab) => {
+          // Set the tab as selected
+          tab.setAttribute("aria-selected", "true")
 
-            const tabsButtonList = tab.querySelectorAll('[role="tab"]');
-            const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]');
+          // Get the value of aria-controls (which is an ID)
+          let controls = tab.getAttribute("aria-controls")
 
-            tabsButtonList.forEach((tabsButton, index) => {
+          let currentTabPanel = document.getElementById(controls)
 
-                const activateTab = (tab) => {
-                
-                    // Deactivate all other tabs
-                    deactivateTabs();
+          currentTabPanel.classList.add("shown")
+          currentTabPanel.removeAttribute("hidden")
+        }
 
-                    // Set the tab as selected
-                    tab.setAttribute('aria-selected', 'true');
+        const deactivateTabs = () => {
+          tabsButtonList.forEach(tab => {
+            tab.setAttribute("aria-selected", "false")
+          })
 
-                    // Get the value of aria-controls (which is an ID)
-                    let controls = tab.getAttribute('aria-controls');
+          tabsPanelList.forEach(panel => {
+            panel.classList.remove("shown")
+            panel.setAttribute("hidden", "")
+          })
+        }
 
-                    let currentTabPanel = document.getElementById(controls);
+        const focusLastTab = event => {
+          event.preventDefault()
+          tabsButtonList[tabsButtonList.length - 1].focus()
+        }
 
-                    currentTabPanel.classList.add('shown');
-                    currentTabPanel.removeAttribute('hidden');
+        const focusFirstTab = event => {
+          event.preventDefault()
+          tabsButtonList[0].focus()
+        }
 
-                }
+        tabsButton.addEventListener("click", event => {
+          let tab = event.target
+          activateTab(tab)
+        })
 
-                const deactivateTabs = () => {
+        tabsButton.addEventListener("keydown", event => {
+          const directionalFocus = dir => {
+            event.preventDefault()
 
-                    tabsButtonList.forEach((tab) => {
-                        tab.setAttribute('aria-selected', 'false');
-                    });
+            let targetFocus = index + dir
 
-                    tabsPanelList.forEach((panel) => {
-                        panel.classList.remove('shown');
-                        panel.setAttribute('hidden', '');
-                    });
-                    
-                };
+            if (dir === -1 && targetFocus < 0) {
+              tabsButtonList[tabsButtonList.length - 1].focus()
+            } else if (dir === 1 && targetFocus >= tabsButtonList.length) {
+              tabsButtonList[0].focus()
+            } else {
+              tabsButtonList[targetFocus].focus()
+            }
+          }
 
-                const focusLastTab = (event) => {
-                    event.preventDefault();
-                    tabsButtonList[tabsButtonList.length - 1].focus();
-                };
+          const keyCodes = {
+            arrowLeft: 37,
+            arrowRight: 39,
+            home: 36,
+            end: 35,
+          }
 
-                const focusFirstTab = (event) => {
-                    event.preventDefault();
-                    tabsButtonList[0].focus();
-                };
+          const key = event.keyCode
 
-                tabsButton.addEventListener('click', (event) => {
-                    let tab = event.target;
-                    activateTab(tab);
-                });
-
-                tabsButton.addEventListener('keydown', (event) => {
-
-                    const directionalFocus = (dir) => {
-                        event.preventDefault();
-
-                        let targetFocus = index + dir;
-
-                        if (dir === -1 && targetFocus < 0) {
-                            tabsButtonList[tabsButtonList.length - 1].focus();
-                        } else if (dir === 1 && targetFocus >= tabsButtonList.length) {
-                            tabsButtonList[0].focus();
-                        } else {
-                            tabsButtonList[targetFocus].focus();
-                        }
-                    }
-
-                    const keyCodes = {
-                        arrowLeft: 37,
-                        arrowRight: 39,
-                        home: 36,
-                        end: 35
-                    };
-                    
-                    const key = event.keyCode;
-
-                    switch (key) {
-                        case keyCodes.home:
-                            focusFirstTab(event)
-                            break;
-                        case keyCodes.end:
-                            focusLastTab(event)
-                            break;
-                        case keyCodes.arrowLeft:
-                            directionalFocus(-1);
-                            break;
-                        case keyCodes.arrowRight:
-                            directionalFocus(1);
-                            break;
-                    }
-
-                });
-
-            });
-
-        });
-    }
+          switch (key) {
+            case keyCodes.home:
+              focusFirstTab(event)
+              break
+            case keyCodes.end:
+              focusLastTab(event)
+              break
+            case keyCodes.arrowLeft:
+              directionalFocus(-1)
+              break
+            case keyCodes.arrowRight:
+              directionalFocus(1)
+              break
+          }
+        })
+      })
+    })
+  }
 }

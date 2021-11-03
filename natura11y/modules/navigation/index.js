@@ -1,49 +1,44 @@
-import './_style.scss';
+import "./_style.scss"
 
 //////////////////////////////////////////////
 // Navigation
 //////////////////////////////////////////////
 
 export default class Navigation {
+  constructor() {
+    const dropdownButtonList = document.querySelectorAll(
+      "[data-toggle='dropdown']"
+    )
 
-    constructor() {
+    dropdownButtonList.forEach(dropdownButton => {
+      let dropdownButtonParent = dropdownButton.closest("li")
+      let dropdownMenu = dropdownButton.nextElementSibling
 
-        const dropdownButtonList = document.querySelectorAll("[data-toggle='dropdown']");
-            
-        dropdownButtonList.forEach((dropdownButton) => {
+      dropdownButton.setAttribute("aria-expanded", false)
+      dropdownButton.setAttribute("aria-haspopup", true)
 
-            let dropdownButtonParent = dropdownButton.closest("li");
-            let dropdownMenu = dropdownButton.nextElementSibling;
+      dropdownButton.addEventListener("click", event => {
+        event.preventDefault()
 
-            dropdownButton.setAttribute("aria-expanded", false);
-            dropdownButton.setAttribute("aria-haspopup", true);
+        dropdownMenu.classList.toggle("shown")
 
-            dropdownButton.addEventListener("click", (event) => {
+        let expanded = dropdownButton.getAttribute("aria-expanded")
 
-                event.preventDefault();
+        if (expanded === "true") {
+          dropdownButton.setAttribute("aria-expanded", false)
+        } else if (expanded === "false") {
+          dropdownButton.setAttribute("aria-expanded", true)
+        }
+      })
 
-                dropdownMenu.classList.toggle("shown");
+      window.addEventListener("click", event => {
+        let dropdownButtonClick = dropdownButtonParent.contains(event.target)
 
-                let expanded = dropdownButton.getAttribute("aria-expanded");
-
-                if (expanded === "true") {
-                    dropdownButton.setAttribute("aria-expanded", false);
-                } else if (expanded === "false") {
-                    dropdownButton.setAttribute("aria-expanded", true);
-                }
-            });
-
-            window.addEventListener("click", (event) => {
-
-                let dropdownButtonClick = dropdownButtonParent.contains(event.target);
-
-                if (!dropdownButtonClick) {
-                    dropdownMenu.classList.remove("shown");
-                    dropdownButton.setAttribute("aria-expanded", false);
-                }
-            });
-
-        });
-
-    }
+        if (!dropdownButtonClick) {
+          dropdownMenu.classList.remove("shown")
+          dropdownButton.setAttribute("aria-expanded", false)
+        }
+      })
+    })
+  }
 }

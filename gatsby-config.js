@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "Natura11y Inclusive Framework",
-    version: "1.0.0-alpha"
+    version: "1.0.0-alpha",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -19,13 +19,20 @@ module.exports = {
       options: {
         name: `docs`,
         path: `${__dirname}/src/docs/`,
-      }
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
       },
-    }
-  ]
+    },
+  ],
 }
