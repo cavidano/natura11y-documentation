@@ -16,6 +16,7 @@ const Documentation = ({ data }) => {
     const { title } = data.singleDoc.frontmatter;
 
     const imgSrc  = `../images/backdrop-${slug}.jpg`; 
+    
     const FeatureImage  = (
         <GatsbyImage
             className="opacity-40"
