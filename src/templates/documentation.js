@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXRenderer} from 'gatsby-plugin-mdx';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
@@ -14,18 +14,8 @@ const Documentation = ({ data }) => {
     const { slug } = data.singleDoc;
     const { body } = data.singleDoc;
     const { title } = data.singleDoc.frontmatter;
-
-    const imgSrc  = `../images/backdrop-${slug}.jpg`; 
+    const image = getImage(data.singleDoc.frontmatter.bannerImage); 
     
-    const FeatureImage  = (
-        <GatsbyImage
-            className="opacity-40"
-            image={imgSrc}
-        />
-    ); 
-
-    console.log("Slug == ", imgSrc)
-
     return (
         <Layout>
             <div className="article article--two-column">
@@ -43,7 +33,11 @@ const Documentation = ({ data }) => {
                         <div className="backdrop backdrop--fixed theme-dark">
 
                             <div className="backdrop__image">
-                                {FeatureImage}
+                                <GatsbyImage
+                                    className="opacity-40"
+                                    image={image}
+                                    alt=""
+                                />
                             </div>
 
                             <div className="backdrop__cover">
@@ -97,23 +91,27 @@ export default Documentation;
 
 export const query = graphql`
     query queryDocPage($slug: String) {
-    allDocs: allMdx {
-        nodes {
-            frontmatter {
-                title
+        allDocs: allMdx {
+            nodes {
+                frontmatter {
+                    title
+                }
+                slug
+                id
             }
+        }
+        singleDoc: mdx(slug: {eq: $slug}) {
             slug
-            id
-        }
+            body
+            frontmatter {
+              title
+              bannerImage {
+                childImageSharp {
+                    gatsbyImageData                }
+              }
+            }
+          }
     }
-    singleDoc: mdx(slug: {eq: $slug}) {
-        slug
-        body
-        frontmatter {
-            title
-        }
-    }
-  }
 `;
 
 
