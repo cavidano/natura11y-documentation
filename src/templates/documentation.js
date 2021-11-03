@@ -12,7 +12,12 @@ const Documentation = ({ data }) => {
 
   const { body } = data.singleDoc;
   const { title } = data.singleDoc.frontmatter;
+  const { bannerCreditName } = data.singleDoc.frontmatter;
+  const { bannerCreditHandle } = data.singleDoc.frontmatter;
   const image = getImage(data.singleDoc.frontmatter.bannerImage);
+
+  console.log("Banner Credit", bannerCreditName)
+
 
   return (
     <Layout>
@@ -44,11 +49,11 @@ const Documentation = ({ data }) => {
 
               <div className="backdrop__credit">
                 <p>
-                  Photo by{" "}
-                  <a href="#1" target="_blank">
-                    Jane Doe
-                  </a>{" "}
-                  on Unsplash
+                    Photo by &nbsp;
+                    <a href={`https://unsplash.com/${bannerCreditHandle}`} target="_blank">
+                        {bannerCreditName}
+                    </a>&nbsp;
+                    on Unsplash
                 </p>
               </div>
             </div>
@@ -75,7 +80,7 @@ const Documentation = ({ data }) => {
 export default Documentation
 
 export const query = graphql`
-  query queryDocPage($slug: String) {
+query queryDocPage($slug: String) {
     allDocs: allMdx {
       nodes {
         frontmatter {
@@ -86,16 +91,18 @@ export const query = graphql`
       }
     }
     singleDoc: mdx(slug: { eq: $slug }) {
-      slug
-      body
-      frontmatter {
-        title
-        bannerImage {
-          childImageSharp {
-            gatsbyImageData
-          }
+        slug
+        body
+        frontmatter {
+            title
+            bannerCreditName
+            bannerCreditHandle
+            bannerImage {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
         }
-      }
     }
-  }
+}
 `;
