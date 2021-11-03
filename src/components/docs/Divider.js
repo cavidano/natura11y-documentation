@@ -1,7 +1,7 @@
 import React from "react"
 
-function Divider() {
-  return <div></div>
+function Divider({ id }) {
+  return <hr className="section-start" id={id} />
 }
 
 export default Divider
