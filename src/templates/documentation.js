@@ -2,17 +2,28 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXRenderer} from 'gatsby-plugin-mdx';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
 
-function Documentation({ data }) {
+const Documentation = ({ data }) => {
 
     const docPages = data.allDocs.nodes;
 
+    const { slug } = data.singleDoc;
     const { body } = data.singleDoc;
     const { title } = data.singleDoc.frontmatter;
+
+    const imgSrc  = `../images/backdrop-${slug}.jpg`; 
+    const FeatureImage  = (
+        <GatsbyImage
+            className="opacity-40"
+            image={imgSrc}
+        />
+    ); 
+
+    console.log("Slug == ", imgSrc)
 
     return (
         <Layout>
@@ -31,7 +42,7 @@ function Documentation({ data }) {
                         <div className="backdrop backdrop--fixed theme-dark">
 
                             <div className="backdrop__image">
-                                <img className="opacity-40" src="https://via.placeholder.com/1600x900" alt="" />
+                                {FeatureImage}
                             </div>
 
                             <div className="backdrop__cover">
@@ -95,6 +106,7 @@ export const query = graphql`
         }
     }
     singleDoc: mdx(slug: {eq: $slug}) {
+        slug
         body
         frontmatter {
             title
