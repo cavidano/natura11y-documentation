@@ -11,10 +11,10 @@ const Documentation = ({ data }) => {
 
     const docPages = data.allDocs.nodes;
 
-    const { slug } = data.singleDoc;
+    // const { slug } = data.singleDoc;
     const { body } = data.singleDoc;
     const { title } = data.singleDoc.frontmatter;
-    const image = getImage(data.singleDoc.frontmatter.bannerImage); 
+    const bannerImage = getImage(data.singleDoc.frontmatter.bannerImage); 
     
     return (
         <Layout>
@@ -35,7 +35,7 @@ const Documentation = ({ data }) => {
                             <div className="backdrop__image">
                                 <GatsbyImage
                                     className="opacity-40"
-                                    image={image}
+                                    image={bannerImage}
                                     alt=""
                                 />
                             </div>
@@ -104,15 +104,13 @@ export const query = graphql`
             slug
             body
             frontmatter {
-              title
-              bannerImage {
-                childImageSharp {
-                    gatsbyImageData                }
-              }
+                title
+                bannerImage {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
             }
-          }
+        }
     }
 `;
-
-
-  
