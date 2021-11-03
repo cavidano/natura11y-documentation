@@ -1,11 +1,16 @@
-import React from "react"
+import React from "react";
 
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Layout from "../components/Layout"
-import DocSidebar from "../components/DocSidebar"
+import { MDXProvider } from "@mdx-js/react";
+import CodeBlock from "../components/docs/CodeBlock";
+
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import Layout from "../components/Layout";
+import DocSidebar from "../components/DocSidebar";
 
 const Documentation = ({ data }) => {
 
@@ -17,6 +22,10 @@ const Documentation = ({ data }) => {
   const { bannerCreditHandle } = data.singleDoc.frontmatter;
   const image = getImage(data.singleDoc.frontmatter.bannerImage);
   
+  const components = {
+    pre: CodeBlock
+  }
+
   return (
     <Layout>
       <div className="article article--two-column">
@@ -66,7 +75,9 @@ const Documentation = ({ data }) => {
             <hr />
 
             <div className="margin-y-5">
+            <MDXProvider components={components}>
               <MDXRenderer>{body}</MDXRenderer>
+            </MDXProvider>
             </div>
           </div>
         </div>
