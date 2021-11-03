@@ -8,6 +8,7 @@ import Layout from "../components/Layout"
 import DocSidebar from "../components/DocSidebar"
 
 const Documentation = ({ data }) => {
+
   const docPages = data.allDocs.nodes
 
   const { body } = data.singleDoc;
@@ -15,10 +16,7 @@ const Documentation = ({ data }) => {
   const { bannerCreditName } = data.singleDoc.frontmatter;
   const { bannerCreditHandle } = data.singleDoc.frontmatter;
   const image = getImage(data.singleDoc.frontmatter.bannerImage);
-
-  console.log("Banner Credit", bannerCreditName)
-
-
+  
   return (
     <Layout>
       <div className="article article--two-column">
