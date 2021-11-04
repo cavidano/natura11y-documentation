@@ -11,85 +11,52 @@ In this file:
 // B. Modules
 //////////////////////////////////////////////
 
-/* eslint-disable import/first */
+/* eslint-disable */
 
-import "./modules/accents"
+import "./modules/accents";
 
-import Accessibility from "./modules/accessibility"
-new Accessibility()
+import "./modules/article";
 
-import Accordion from "./modules/accordion"
-new Accordion()
+import "./modules/aspect-ratios";
 
-import Alerts from "./modules/alerts"
-new Alerts()
+import "./modules/backdrops";
 
-import "./modules/article"
+import "./modules/borders";
 
-import "./modules/aspect-ratios"
+import "./modules/breakpoints";
 
-import "./modules/backdrops"
+import "./modules/cards";
 
-import "./modules/borders"
+import "./modules/color";
 
-import "./modules/breakpoints"
+import "./modules/containers";
 
-import Buttons from "./modules/buttons"
-new Buttons()
+import "./modules/display";
 
-import "./modules/cards"
+import "./modules/flex";
 
-import Collapse from "./modules/collapse"
-new Collapse()
+import "./modules/grid";
 
-import "./modules/color"
+import "./modules/icons";
 
-import "./modules/containers"
+import "./modules/language";
 
-import "./modules/display"
+import "./modules/links";
 
-import Document from "./modules/document"
-new Document()
+import "./modules/opacity";
 
-import "./modules/flex"
+import "./modules/overflow";
 
-import Forms from "./modules/forms"
-new Forms()
+import "./modules/position";
 
-import "./modules/grid"
+import "./modules/shadows";
 
-import "./modules/icons"
+import "./modules/sizing";
 
-import "./modules/language"
+import "./modules/spacing";
 
-import "./modules/links"
+import "./modules/typography";
 
-import Modal from "./modules/modal"
-new Modal()
+import "./modules/z-index/index";
 
-import Navigation from "./modules/navigation"
-new Navigation()
-
-import "./modules/opacity"
-
-import "./modules/overflow"
-
-import "./modules/position"
-
-import "./modules/shadows"
-
-import "./modules/sizing"
-
-import "./modules/spacing"
-
-import Tabs from "./modules/tabs"
-new Tabs()
-
-import Tables from "./modules/tables"
-new Tables()
-
-import "./modules/typography"
-
-import "./modules/z-index/index"
-
-import "./modules/theme"
+import "./modules/theme";

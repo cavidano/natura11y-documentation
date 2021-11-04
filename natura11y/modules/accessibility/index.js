@@ -34,7 +34,8 @@ export default class Accessibility {
         })
       })
     }
+    
+    initFocus();
 
-    window.addEventListener("load", initFocus, { once: true })
   }
 }
