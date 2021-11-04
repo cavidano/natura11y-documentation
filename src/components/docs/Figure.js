@@ -7,7 +7,7 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/show-language/prism-show-language';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
-function Figure() {
+function Figure({language}) {
 
     const exampleStyles = {
         '--primary': '#440381',
@@ -33,7 +33,6 @@ function Figure() {
 
     const nw = Prism.plugins.NormalizeWhitespace;
         
-    const language = 'html';
 
     let code = (`
         <div
