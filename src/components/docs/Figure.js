@@ -9,12 +9,27 @@ import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
 function Figure() {
 
-    const myComponentStyle = {
-        color: 'blue',
-        lineHeight: 10,
-        padding: '1.5em',
-     }
-     
+    const exampleStyles = {
+        '--primary': '#440381',
+        '--secondary:': '#ffcc66',
+        '--dark': '#1f163f',
+        '--light': '#f2edeb',
+        '--primary-text': 'white',
+        '--primary-confirm': '#00cc55',
+        '--primary-warn': '#ff6090',
+        '--secondary-text': 'var(--dark)',
+        '--secondary-confirm': '#165a2d',
+        '--secondary-warn': '#a40e36',
+        '--dark-confirm': '#00cc53',
+        '--dark-warn': '#ff5557',
+        '--a11y-link': '#0066cc',
+        '--dark-link': '#21b2fa',
+        '--body-font-family': 'Source Sans Pro',
+        '--body-line-height': '1.4',
+        '--article-sidebar-width': '200px',
+        fontFamily: 'var(--body-font-family)',
+        lineHeight: 'var(--body-line-height)'
+    }
 
     const nw = Prism.plugins.NormalizeWhitespace;
         
@@ -50,9 +65,9 @@ function Figure() {
   }, []);
 
   return (
-    <figure className="container medium margin-y-4" style={myComponentStyle}>
+    <figure className="container medium margin-y-4">
         <div className="example">
-            <div className="padding-y-5 box-shadow-1">
+            <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
 
                 <div className="container narrow">
                 
