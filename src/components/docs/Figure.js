@@ -7,11 +7,11 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/show-language/prism-show-language';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
-function Figure({language}) {
+function Figure({language, code}) {
 
     const exampleStyles = {
         '--primary': '#440381',
-        '--secondary:': '#ffcc66',
+        '--secondary': '#ffcc66',
         '--dark': '#1f163f',
         '--light': '#f2edeb',
         '--primary-text': 'white',
@@ -32,30 +32,6 @@ function Figure({language}) {
     }
 
     const nw = Prism.plugins.NormalizeWhitespace;
-        
-
-    let code = (`
-        <div
-            class="alert alert--confirm"
-            aria-labelledby="alert-label"
-            aria-describedby="alert-description"
-            role="alert">
-
-            <div class="alert__title h5">
-                <span class="icon icon-confirm" aria-hidden="true"></span>
-                <span class="alert__title__text" id="alert-label">
-                    Alert Confirm
-                </span>
-            </div>
-
-            <div class="alert__description" id="alert-description">
-                <p>
-                    Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
-                </p>
-            </div>
-
-        </div>
-    `);
 
     code = nw.normalize(code);
 
@@ -75,7 +51,7 @@ function Figure({language}) {
                         aria-labelledby="alert-confirm-label"
                         aria-describedby="alert-confirm-description"
                         role="alert">
-
+                        
                         <div className="alert__title h5">
                             <span className="icon icon-confirm" aria-hidden="true"></span>
                             <span className="alert__title__text" id="alert-confirm-label">
