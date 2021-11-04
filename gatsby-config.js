@@ -10,6 +10,7 @@ module.exports = {
     version: "1.0.0-alpha",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

@@ -3,10 +3,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { MDXProvider } from "@mdx-js/react";
-import CodeBlock from "../components/docs/CodeBlock";
-
-
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
@@ -21,10 +17,6 @@ const Documentation = ({ data }) => {
   const { bannerCreditName } = data.singleDoc.frontmatter;
   const { bannerCreditHandle } = data.singleDoc.frontmatter;
   const image = getImage(data.singleDoc.frontmatter.bannerImage);
-  
-  const components = {
-    pre: CodeBlock
-  }
 
   return (
     <Layout>
@@ -75,9 +67,7 @@ const Documentation = ({ data }) => {
             <hr />
 
             <div className="margin-y-5">
-            <MDXProvider components={components}>
               <MDXRenderer>{body}</MDXRenderer>
-            </MDXProvider>
             </div>
           </div>
         </div>

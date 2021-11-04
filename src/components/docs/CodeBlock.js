@@ -1,32 +1,39 @@
 import React from 'react';
-import Highlight, {defaultProps} from 'prism-react-renderer';
 
-const CodeBlock = (props) => {
-    const className = props.children.props.className || ''
-    const matches = className.match(/language-(?<lang>.*)/)
+const CodeBlock = ({highlightLines}) => {
+
+    const code = (`
+    // Primary as a SASS Variable:
+    
+    $primary: navy;
+    
+    .selector--primary{
+        background-color: $primary
+    }
+    
+    // Primary as a CSS Variable:
+    
+    --primary: navy;
+    
+    .selector--primary{
+        background-color: var(--primary);
+    }
+    `);
+
     return (
-        <Highlight
-            {...defaultProps}
-            code={props.children.props.children.trim()}
-            language={
-                matches && matches.groups && matches.groups.lang
-                ? matches.groups.lang
-                : ''
-            }
-            theme={undefined}>
+        <figure className="container narrow margin-y-4">
 
-            {({className, tokens, getLineProps, getTokenProps}) => (
-                <pre className={className}>
-                    {tokens.map((line, i) => (
-                    <div key={i} {...getLineProps({line, key: i})}>
-                        {line.map((token, key) => (
-                        <span key={key} {...getTokenProps({token, key})} />
-                        ))}
-                    </div>
-                    ))}
-                </pre>
-            )}
-        </Highlight>
+        <pre>
+        <code className="language-css">
+        {code}
+        </code>
+    </pre>
+
+    <figcaption>
+        Figure 1
+    </figcaption>
+
+</figure>
     )
 }
 

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react"
-import Layout from "../components/Layout"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useEffect } from 'react';
+import Layout from '../components/Layout';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Home = () => {
   const bannerHeight = () => {
-    const headerHeight = document.getElementById("global-header").offsetHeight
-    const bannerTarget = document.getElementById("introduction")
+    const headerHeight = document.getElementById('global-header').offsetHeight
+    const bannerTarget = document.getElementById('introduction')
 
     const initBannerHeight = () => {
       const windowHeight = window.innerHeight
