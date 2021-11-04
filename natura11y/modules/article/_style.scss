@@ -67,7 +67,7 @@ In this file:
             position: relative;
             grid-area: sidebar;
 
-            .sticky-top {
+            .position-sticky-top {
                 max-height: 100vh;
                 overflow-y: auto;
             }

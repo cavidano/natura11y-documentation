@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -10,7 +10,7 @@ import DocSidebar from "../components/DocSidebar";
 
 const Documentation = ({ data }) => {
 
-  const docPages = data.allDocs.nodes
+  const docPages = data.allDocs.nodes;
 
   const { body } = data.singleDoc;
   const { title } = data.singleDoc.frontmatter;
@@ -22,9 +22,7 @@ const Documentation = ({ data }) => {
     <Layout>
       <div className="article article--two-column">
         <div className="article__sidebar">
-          <ul className="nav">
             <DocSidebar pages={docPages} />
-          </ul>
         </div>
 
         <div className="article__body border-left--lg" id="primary-content">
@@ -83,6 +81,7 @@ query queryDocPage($slug: String) {
     allDocs: allMdx {
       nodes {
         frontmatter {
+          category
           title
         }
         slug

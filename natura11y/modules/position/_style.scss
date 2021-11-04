@@ -57,9 +57,9 @@ $positions: static, relative, absolute, fixed, sticky;
 
 @supports (position: sticky) {
     
-    .sticky-top {
+    .position-sticky-top {
         position: sticky;
-        top: -1px;
+        inset-inline-start: -1px;
     }
 
 }
