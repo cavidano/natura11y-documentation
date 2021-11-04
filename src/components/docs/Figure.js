@@ -7,7 +7,7 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/show-language/prism-show-language';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
-function Figure({language, code}) {
+function Figure({ language, code }) {
 
     const exampleStyles = {
         '--primary': '#440381',
