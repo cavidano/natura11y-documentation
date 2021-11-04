@@ -21,8 +21,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-
-      <script defer src="/prism.js"></script>
+        <script defer src="/prism.js"></script>
       </body>
     </html>
   )
