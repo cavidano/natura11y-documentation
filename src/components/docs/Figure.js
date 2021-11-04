@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import Prism from "prismjs";
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
+import 'prismjs/plugins/line-highlight/prism-line-highlight';
+
+// node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js
 
 function Figure() {
     
@@ -41,7 +44,7 @@ function Figure() {
 
   return (
     <div className="Code">
-      <pre>
+      <pre data-line="2-5,7-12,14-18">
         <code className={`language-${language}`}>{code}</code>
       </pre>
     </div>
