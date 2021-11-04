@@ -9,25 +9,32 @@ import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
 function Figure() {
 
+    const myComponentStyle = {
+        color: 'blue',
+        lineHeight: 10,
+        padding: '1.5em',
+     }
+     
+
     const nw = Prism.plugins.NormalizeWhitespace;
         
     const language = 'html';
 
     let code = (`
         <div
-            className="alert alert--confirm margin-y-3"
-            aria-labelledby="alert-confirm-label"
-            aria-describedby="alert-confirm-description"
+            class="alert alert--confirm"
+            aria-labelledby="alert-label"
+            aria-describedby="alert-description"
             role="alert">
 
-            <div className="alert__title h5">
-                <span className="icon icon-confirm" aria-hidden="true"></span>
-                <span className="alert__title__text" id="alert-confirm-label">
+            <div class="alert__title h5">
+                <span class="icon icon-confirm" aria-hidden="true"></span>
+                <span class="alert__title__text" id="alert-label">
                     Alert Confirm
                 </span>
             </div>
 
-            <div className="alert__description" id="alert-confirm-description">
+            <div class="alert__description" id="alert-description">
                 <p>
                     Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
                 </p>
@@ -43,7 +50,7 @@ function Figure() {
   }, []);
 
   return (
-    <figure className="container medium margin-y-4">
+    <figure className="container medium margin-y-4" style={myComponentStyle}>
         <div className="example">
             <div className="padding-y-5 box-shadow-1">
 
