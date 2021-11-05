@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
+import TableOfContents from '../components/TableOfContents';
 
 import Divider from '../components/docs/Divider';
 import AccessibilitySpotlight from '../components/docs/AccessibilitySpotlight'
@@ -26,7 +27,33 @@ const shortcodes = {
   };
 
 const Documentation = ({ data }) => {
+  
+  const [sections, setSections] = useState([]);
 
+  const getPageSections = () => {
+
+    let pageSections = [];
+
+    const sectionDividers = document.querySelectorAll('hr.section-start');
+
+    sectionDividers.forEach(section => {
+
+      let sectionId = section.getAttribute('id');
+      let sectionText = section.nextElementSibling.querySelector('h2').textContent;
+
+      if(sectionId && sectionText){
+        pageSections.push({ id: sectionId, text: sectionText });
+      }
+
+    });
+
+    setSections(pageSections);
+  }
+
+  useEffect(() => {
+    getPageSections();
+  }, []);
+    
   const docPages = data.allDocs.nodes;
 
   const { body } = data.singleDoc;
@@ -72,12 +99,11 @@ const Documentation = ({ data }) => {
               </div>
             </div>
 
-            <div className="padding-y-4">
-              <div className="container narrow font-size-rg">
-                <h2 className="screen-reader-only">On this Page:</h2>
-                <nav id="table-of-contents"></nav>
-              </div>
-            </div>
+            {console.log("from below ", sections)}
+
+            {sections.length && (
+              <TableOfContents sections={sections} />
+            )}
 
             <hr />
 

@@ -22,7 +22,7 @@ const DocSidebar = ({ pages }) => {
           ))}
         </ul>
 
-        <hr class="margin-y-2 margin-x-n3--lg" />
+        <hr className="margin-y-2 margin-x-n3--lg" />
         
         <ul className="nav font-size-md">
           {pages
