@@ -101,27 +101,162 @@ Every instance of an alert should include an icon to help convey meaning. Across
 
 <TableLineDescRow lines="2-5">
 
-Lorem ipsum `nano` sit amet consectetur adipisicing elit. Hic ex inventore sunt impedit eos dolorem quos quia vel, natus nihil dolore amet reiciendis saepe possimus expedita aliquid deleniti consequatur suscipit!
+The parent `.alert` selector is required.
+
+The `.alert--{x}` is the modifier class that provides the alert's color, where *x* equals *confirm*, *attention*, or *warn*. 
+
+The `aria-labelledby` attribute equals the alert title's `id` attribute.
+
+The `aria-describedby` attribute equals the alert description's `id` attribute.
+
+Include `role="alert"` if the alert includes urgent information.
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="6-12">
+<TableLineDescRow lines="7-12">
 
-Lorem ipsum carl sit amet consectetur adipisicing elit. Hic ex inventore sunt impedit eos dolorem quos quia vel, natus nihil dolore amet reiciendis saepe possimus expedita aliquid deleniti consequatur suscipit!    
+The `.alert__title` selector is required. 
+
+It holds the alert's title and visual icon.
+
+The `.alert__title__text` selector holds the alert title's text. It is required. It
+includes the unique `id` targeted by the `aria-labelledby` attribute
+present on the `.alert` selector.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="14-18">
+
+The `.alert__description` selector is not required.
+
+It holds the alert's description message. It includes the unique `id` targeted by the `aria-describedby` attribute present on the `.alert` selector.
+
+All links (`<a>` tags) within the `<p>` tags, will automatically inherit the alert's text color.
 
 </TableLineDescRow>
 
 </TableLineDescBlock>
 
-<Divider id="holyMoly" />
+<TextBlock>
 
+### Inverse Color Modifier
+
+For a bolder look, chain `--inverse` to the `alert--confirm` or `alert--warn` modifier classes respectively.
+    
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    language="html"
+    highlightedLines="1,5"
+    visualExample={(
+        <Fragment>
+            <div
+                className="alert alert--confirm--inverse margin-y-3"
+                aria-labelledby="alert-confirm-label"
+                aria-describedby="alert-confirm-description"
+                role="alert">
+                <div className="alert__title h5">
+                    <span className="icon icon-confirm" aria-hidden="true"></span>
+                    <span className="alert__title__text" id="alert-confirm-label">
+                        Alert Confirm
+                    </span>
+                </div>
+                <div className="alert__description" id="alert-confirm-description">
+                    <p>
+                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
+                    </p>
+                </div>
+            </div>
+            <div
+                className="alert alert--warn--inverse margin-y-3"
+                aria-labelledby="alert-warn-label"
+                aria-describedby="alert-warn-description"
+                role="alert">
+                <div className="alert__title h5">
+                    <span className="icon icon-warn" aria-hidden="true"></span>
+                    <span className="alert__title__text" id="alert-warn-label">
+                        Alert Warn
+                    </span>
+                </div>
+                <div className="alert__description" id="alert-warn-description">
+                    <p>
+                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
+                    </p>
+                </div>
+            </div>
+        </Fragment>
+    )}
+    codeExample={(`
+        <div class="alert alert--confirm--inverse">
+            ...
+        </div> \n
+        <div class="alert alert--warn--inverse">
+            ...
+        </div>
+    `)}
+/>
 
 <TextBlock>
 
-## Holy Moly
+### Title Only Alert
 
-The Natura11y provides two types of alerts: <strong>Confirm</strong> implied with <em>green</em>, and <strong>Warn</strong> implied with <em>red</em>.
-
-Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.url }}/icons">Natura11y Icons</a>, our open-source icon library, is used for all icons.
+The `.alert__description` is not required. Leaving it out creates a title only alert.
     
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    language="html"
+    visualExample={(
+        <Fragment>
+            <div
+                class="alert alert--confirm--inverse margin-y-3"
+                aria-labelledby="alert-confirm-title-only-label">
+                <div class="alert__title h5">
+                    <span class="icon icon-confirm" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-confirm-title-only-label">
+                        Alert Confirm
+                    </span>
+                </div>
+            </div>
+            <div
+                class="alert alert--warn--inverse margin-y-3"
+                aria-labelledby="alert-title-only-warn-label"
+                aria-describedby="alert-04-desc"
+                role="alert">
+                <div class="alert__title h5">
+                    <span class="icon icon-warn" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-title-only-warn-label">
+                        Alert Warn
+                    </span>
+                </div>
+            </div> 
+        </Fragment>
+    )}
+    codeExample={(`
+        <div
+            class="alert alert--confirm--inverse margin-y-3"
+            aria-labelledby="alert-title-only-label"> \n
+            <div class="alert__title h5">
+                <span class="icon icon-confirm" aria-hidden="true"></span>
+                <span class="alert__title__text" id="alert-title-only-label">
+                    Alert Confirm
+                </span>
+            </div> \n
+        </div>
+    `)}
+/>
+
+<Divider id="dismissableAlerts" />
+
+<TextBlock>
+
+## Dismissable Alerts
+
+For dismissable alerts, add the `.alert--dismissable` modifier class. Doing so automatically places a close button inside the `.alert`.
+
+When the close button is pressed, the alert fades out, then the entire `.alert` selector is removed
+from the DOM.
+
 </TextBlock>
