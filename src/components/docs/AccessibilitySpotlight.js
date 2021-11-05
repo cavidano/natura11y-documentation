@@ -2,13 +2,13 @@ import React from 'react';
 
 const AccessibilitySpotlight = ({ children }) => {
     return (
-        <div class="container narrow margin-y-4">
-            <div class="alert accessibility-spotlight border-left margin-y-3">
-                <div class="alert__title h6">
-                    <span class="icon icon-accessibility" aria-hidden="true"></span>
-                    <span class="alert__title__text">Accessibility Spotlight</span>
+        <div className="container narrow margin-y-4">
+            <div className="alert accessibility-spotlight border-left margin-y-3">
+                <div className="alert__title h6">
+                    <span className="icon icon-accessibility" aria-hidden="true"></span>
+                    <span className="alert__title__text">Accessibility Spotlight</span>
                 </div>
-                <div class="alert__description">
+                <div className="alert__description">
                     {children}    
                 </div>
             </div>

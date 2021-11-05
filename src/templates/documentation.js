@@ -13,8 +13,17 @@ import Divider from '../components/docs/Divider';
 import AccessibilitySpotlight from '../components/docs/AccessibilitySpotlight'
 import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
+import TableLineDescBlock from '../components/docs/TableLineDescBlock';
+import TableLineDescRow from '../components/docs/TableLineDescRow';
 
-const shortcodes = { Divider, AccessibilitySpotlight, TextBlock, FigureBlock };
+const shortcodes = {
+    Divider,
+    AccessibilitySpotlight,
+    TextBlock,
+    FigureBlock,
+    TableLineDescBlock,
+    TableLineDescRow
+  };
 
 const Documentation = ({ data }) => {
 
