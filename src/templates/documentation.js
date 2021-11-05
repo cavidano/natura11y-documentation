@@ -1,12 +1,19 @@
 import React from "react";
 
 import { graphql } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import DocSidebar from "../components/DocSidebar";
+
+import TextBlock from '../components/docs/TextBlock';
+import Divider from '../components/docs/Divider';
+import Figure from '../components/docs/Figure';
+
+const shortcodes = { TextBlock, Divider, Figure };
 
 const Documentation = ({ data }) => {
 
@@ -65,7 +72,9 @@ const Documentation = ({ data }) => {
             <hr />
 
             <div className="margin-y-5">
-              <MDXRenderer>{body}</MDXRenderer>
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{body}</MDXRenderer>
+              </MDXProvider>
             </div>
           </div>
         </div>

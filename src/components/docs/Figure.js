@@ -7,7 +7,7 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/show-language/prism-show-language';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
-function Figure({ figureNumber, language, code, highlightedLines }) {
+const Figure = ({ figureNumber, figureWidth, language, code, highlightedLines }) => {
 
     const exampleStyles = {
         '--primary': '#440381',
@@ -40,7 +40,7 @@ function Figure({ figureNumber, language, code, highlightedLines }) {
     }, []);
 
     return (
-        <figure className="container medium margin-y-4">
+        <figure className={`container ${figureWidth} margin-y-4`}>
             <div className="example">
                 <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
 
@@ -102,6 +102,10 @@ function Figure({ figureNumber, language, code, highlightedLines }) {
             </figcaption>
         </figure>
     );
+}
+
+Figure.defaultProps = {
+    figureWidth: 'medium'
 }
 
 export default Figure;
