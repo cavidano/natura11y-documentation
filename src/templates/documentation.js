@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
@@ -23,7 +23,8 @@ const shortcodes = {
     TextBlock,
     FigureBlock,
     TableLineDescBlock,
-    TableLineDescRow
+    TableLineDescRow,
+    StaticImage
   };
 
 const Documentation = ({ data }) => {
