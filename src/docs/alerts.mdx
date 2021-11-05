@@ -12,7 +12,29 @@ Alerts help draw attention to brief confirmation or warning messages—or any ot
 
 </TextBlock>
 
-<Figure
+<AccessibilitySpotlight>
+
+When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
+
+Never rely on color alone to convey meaning. Include a visual icon in alerts for those who experience colors differently.
+
+Include an appropriate <a href="#1"><em>alert role</em></a> for assistive technology.
+
+</AccessibilitySpotlight>
+
+<Divider id="confirmAndWarn" />
+
+<TextBlock>
+
+## Confirm and Warn
+
+The Natura11y provides two types of alerts: <strong>Confirm</strong> implied with <em>green</em>, and <strong>Warn</strong> implied with <em>red</em>.
+
+Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.url }}/icons">Natura11y Icons</a>, our open-source icon library, is used for all icons.
+    
+</TextBlock>
+
+<FigureBlock
     figureNumber="1"
     language="html"
     highlightedLines="2-5,7-12,14-18"
@@ -75,4 +97,4 @@ Alerts help draw attention to brief confirmation or warning messages—or any ot
     `)}
 />
 
-<Figure codeToolbar={false} />
+<FigureBlock codeToolbar={false} />

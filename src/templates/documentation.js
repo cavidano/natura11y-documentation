@@ -9,11 +9,12 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import DocSidebar from '../components/DocSidebar';
 
-import TextBlock from '../components/docs/TextBlock';
 import Divider from '../components/docs/Divider';
-import Figure from '../components/docs/Figure';
+import AccessibilitySpotlight from '../components/docs/AccessibilitySpotlight'
+import TextBlock from '../components/docs/TextBlock';
+import FigureBlock from '../components/docs/FigureBlock';
 
-const shortcodes = { TextBlock, Divider, Figure };
+const shortcodes = { Divider, AccessibilitySpotlight, TextBlock, FigureBlock };
 
 const Documentation = ({ data }) => {
 
