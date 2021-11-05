@@ -16,7 +16,45 @@ Alerts help draw attention to brief confirmation or warning messages—or any ot
     figureNumber="1"
     language="html"
     highlightedLines="2-5,7-12,14-18"
-    code={(`
+    visualExample={(
+        <Fragment>
+            <div
+                className="alert alert--confirm margin-y-3"
+                aria-labelledby="alert-confirm-label"
+                aria-describedby="alert-confirm-description"
+                role="alert">
+                <div className="alert__title h5">
+                    <span className="icon icon-confirm" aria-hidden="true"></span>
+                    <span className="alert__title__text" id="alert-confirm-label">
+                        Alert Confirm
+                    </span>
+                </div>
+                <div className="alert__description" id="alert-confirm-description">
+                    <p>
+                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
+                    </p>
+                </div>
+            </div>
+            <div
+                className="alert alert--warn margin-y-3"
+                aria-labelledby="alert-warn-label"
+                aria-describedby="alert-warn-description"
+                role="alert">
+                <div className="alert__title h5">
+                    <span className="icon icon-warn" aria-hidden="true"></span>
+                    <span className="alert__title__text" id="alert-warn-label">
+                        Alert Warn
+                    </span>
+                </div>
+                <div className="alert__description" id="alert-warn-description">
+                    <p>
+                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
+                    </p>
+                </div>
+            </div>
+        </Fragment>
+    )}
+    codeExample={(`
         <div
             class="alert alert--confirm"
             aria-labelledby="alert-label"
@@ -37,9 +75,4 @@ Alerts help draw attention to brief confirmation or warning messages—or any ot
     `)}
 />
 
-<Figure
-    language="html"
-    code={(`
-        <p>XEROP</p>
-    `)}
-/>
+<Figure codeToolbar={false} />

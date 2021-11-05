@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Prism from 'prismjs';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
@@ -7,53 +7,9 @@ import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/show-language/prism-show-language';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
-const Figure = ({ figureNumber, figureWidth, language, code, highlightedLines }) => {
+import Pre from './Pre';
 
-    const example = (
-        <Fragment>
-            <div
-                className="alert alert--confirm margin-y-3"
-                aria-labelledby="alert-confirm-label"
-                aria-describedby="alert-confirm-description"
-                role="alert">
-                
-                <div className="alert__title h5">
-                    <span className="icon icon-confirm" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-confirm-label">
-                        Alert Confirm
-                    </span>
-                </div>
-
-                <div className="alert__description" id="alert-confirm-description">
-                    <p>
-                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
-                    </p>
-                </div>
-
-            </div>
-
-            <div
-                className="alert alert--warn margin-y-3"
-                aria-labelledby="alert-warn-label"
-                aria-describedby="alert-warn-description"
-                role="alert">
-
-                <div className="alert__title h5">
-                    <span className="icon icon-warn" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-warn-label">
-                        Alert Warn
-                    </span>
-                </div>
-
-                <div className="alert__description" id="alert-warn-description">
-                    <p>
-                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
-                    </p>
-                </div>
-
-            </div>
-        </Fragment>
-    )
+const Figure = (props) => {
 
     const exampleStyles = {
         '--primary': '#440381',
@@ -77,9 +33,20 @@ const Figure = ({ figureNumber, figureWidth, language, code, highlightedLines })
         lineHeight: 'var(--body-line-height)'
     }
 
-    const nw = Prism.plugins.NormalizeWhitespace;
+    const {
+        figureNumber,
+        visualExample,
+        codeToolbar,
+        codeLanguage, 
+        codeExample,
+        highlightedLines
+    } = props;
 
-    code = nw.normalize(code);
+    const nw = Prism.plugins.NormalizeWhitespace;
+    let code = nw.normalize(codeExample);
+
+    let figureWidth;
+    visualExample ? figureWidth = 'medium' : figureWidth = 'narrow'; 
 
     useEffect(() => {
         Prism.highlightAll();
@@ -88,23 +55,29 @@ const Figure = ({ figureNumber, figureWidth, language, code, highlightedLines })
     return (
         <figure className={`container ${figureWidth} margin-y-4`}>
 
-            <div className="example">
-        
-                <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
-
-                    <div className="container narrow">
-                    
-                        {example}
-            
+            {visualExample ? (
+                <div className="example">
+                    <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
+                        <div className="container narrow">
+                            {visualExample}
+                        </div>
                     </div>
-
+                    <Pre
+                        highlightedLines={highlightedLines} 
+                        codeToolbar={codeToolbar}
+                        codeLanguage={codeLanguage}
+                        code={code}
+                    />
                 </div>
-                <pre data-line={highlightedLines}>
-                    <code className={`language-${language}`}>
-                        {code}
-                    </code>
-                </pre>
-            </div>
+            ) : (
+                <Pre 
+                    highlightedLines={highlightedLines} 
+                    codeToolbar={codeToolbar}
+                    codeLanguage={codeLanguage}
+                    code={code}
+                />
+            )}
+
             <figcaption>
                 Figure {figureNumber}
             </figcaption>
@@ -113,8 +86,10 @@ const Figure = ({ figureNumber, figureWidth, language, code, highlightedLines })
 }
 
 Figure.defaultProps = {
-    figureWidth: 'medium',
-    example: null
+    visualExample: null,
+    codeToolbar: true,
+    codeExample: '<p>Code</p>',
+    codeLanguage: 'html',
 }
 
 export default Figure;
