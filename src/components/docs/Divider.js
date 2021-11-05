@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-function Divider({ id }) {
+const Divider = ({ id }) => {
   return <hr className="section-start" id={id} />
 }
 
-export default Divider
+export default Divider;

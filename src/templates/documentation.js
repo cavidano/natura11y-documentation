@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { graphql } from "gatsby";
-import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import Layout from "../components/Layout";
-import DocSidebar from "../components/DocSidebar";
+import Layout from '../components/Layout';
+import DocSidebar from '../components/DocSidebar';
 
 import TextBlock from '../components/docs/TextBlock';
 import Divider from '../components/docs/Divider';
@@ -80,10 +80,10 @@ const Documentation = ({ data }) => {
         </div>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default Documentation
+export default Documentation;
 
 export const query = graphql`
 query queryDocPage($slug: String) {
