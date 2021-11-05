@@ -1,7 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const Header = ({ version }) => {
+
+  if (window.location.href.indexOf("/docs") > -1) {
+    // alert("You are in the docs");
+  }
+
   const logo = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -43,10 +48,11 @@ const Header = ({ version }) => {
         <path d="M143.5186,42.0342h-1.9034v-9.99h1.9034v5.711l2.5244-3.1992h2.5791l-3.3213,3.7793,3.3213,3.6992H146.084l-2.5654-3.1182Z" />
       </g>
     </svg>
-  )
+  );
 
   return (
     <header className="box-shadow-1 z-index-2500" id="global-header">
+
       <a className="focusable-only" href="#nav-docs">
         Skip Header
       </a>
@@ -93,9 +99,8 @@ const Header = ({ version }) => {
               href="https://github.com/cavidano/natura11y"
               aria-label="GitHub"
               target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon icon-github"></span>
+              rel="noopener noreferrer">
+                <span className="icon icon-github"></span>
             </a>
           </div>
         </div>

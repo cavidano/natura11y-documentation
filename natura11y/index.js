@@ -59,4 +59,30 @@ import "./modules/typography";
 
 import "./modules/z-index/index";
 
+
+
+import Accessibility from './modules/accessibility';
+new Accessibility();
+import Accordion from './modules/accordion';
+new Accordion();
+import Alerts from './modules/alerts';
+new Alerts();
+import Buttons from './modules/buttons';
+new Buttons();
+import Collapse from './modules/collapse';
+new Collapse();
+import Document from './modules/document';
+new Document();
+import Forms from './modules/forms';
+new Forms();
+import Modal from './modules/modal';
+new Modal();
+import Navigation from './modules/navigation';
+new Navigation();
+import Tabs from './modules/tabs';
+new Tabs();
+import Tables from './modules/tables';
+new Tables();
+
+
 import "./modules/theme";
