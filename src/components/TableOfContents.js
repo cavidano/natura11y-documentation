@@ -2,8 +2,6 @@ import React from 'react';
 
 const TableOfContents = ({ sections }) => {
 
-    console.log("Sections from TOC >>>>>> ", sections);  
-
     return (
         <div className="padding-y-4">
             <div className="container narrow font-size-rg">

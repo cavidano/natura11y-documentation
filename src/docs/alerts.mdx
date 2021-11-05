@@ -260,3 +260,135 @@ When the close button is pressed, the alert fades out, then the entire `.alert` 
 from the DOM.
 
 </TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    language="html"
+    visualExample={(
+        <Fragment>
+            <div
+                class="alert alert--confirm alert--dismissable margin-y-3"
+                aria-labelledby="alert-dismissable-confirm-label"
+                aria-describedby="alert-dismissable-confirm-description"
+                role="alert">
+                <div class="alert__title h5">
+                    <span class="icon icon-confirm" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-dismissable-confirm-label">
+                        Alert Confirm
+                    </span>
+                </div>
+                <div class="alert__description" id="alert-dismissable-confirm-description">
+                    <p>
+                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="alert alert--warn alert--dismissable margin-y-3"
+                aria-labelledby="alert-dismissable-warn-label"
+                aria-describedby="alert-dismissable-warn-description"
+                role="alert">
+                <div class="alert__title h5">
+                    <span class="icon icon-warn" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-dismissable-warn-label">
+                        Alert Warn
+                    </span>
+                </div>
+                <div class="alert__description" id="alert-dismissable-warn-description">
+                    <p>
+                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
+                    </p>
+                </div>
+            </div>
+        </Fragment>
+    )}
+    codeExample={(`
+        <div class="alert alert--confirm alert--dismissable">
+            ...
+        </div>
+    `)}
+/>
+
+
+<Divider id="moreStyleVariations" />
+
+<TextBlock>
+
+## More Style Variations
+
+Looking for even more alert styles? Exclude the `.alert--confirm` or `.alert--warn`
+modifier classes. Instead, add the color utilities or border utilities for different accents and style
+variations.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="5"
+    language="html"
+    visualExample={(
+        <Fragment>
+            <div
+                class="alert text-color-link border-left margin-bottom-3"
+                aria-labelledby="alert-07-label"
+                aria-describedby="alert-07-desc"
+                role="alert">
+                <div class="alert__title h5">
+                    <span class="icon icon-warn" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-07-label">
+                        Alert Indicator
+                    </span>
+                </div>
+                <div class="alert__description" id="alert-07-desc">
+                    <p>
+                        You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="alert theme-dark border-radius text-align-center"
+                aria-labelledby="alert-06-label"
+                aria-describedby="alert-06-desc"
+                role="alert">
+                <div class="alert__title h5 text-color-secondary">
+                    <span class="icon icon-warn" aria-hidden="true"></span>
+                    <span class="alert__title__text" id="alert-06-label">
+                        Alert Title
+                    </span>
+                </div>
+                <div class="alert__description" id="alert-06-desc">
+                    <p>
+                        You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
+                    </p>
+                </div>
+            </div>
+        </Fragment>
+    )}
+    codeExample={(`
+        <div class="alert text-color-link border-left" role="alert"> \n
+            <div class="alert__title h5">
+                <span class="icon icon-warn" aria-hidden="true"></span>
+                <span class="alert__title__text" id="alert-07-label">
+                    Alert Title
+                </span>
+            </div> \n
+            <div class="alert__description" id="alert-07-desc">
+                <p>
+                    You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
+                </p>
+            </div> \n
+        </div> \n
+        <div class="alert theme-dark border-radius text-align-center" role="alert"> \n
+            <div class="alert__title h5 text-color-secondary">
+                <span class="icon icon-warn" aria-hidden="true"></span>
+                <span class="alert__title__text" id="alert-06-label">
+                    Alert Title
+                </span>
+            </div> \n
+            <div class="alert__description" id="alert-06-desc">
+                <p>
+                    You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
+                </p>
+            </div> \n
+        </div>
+    `)}
+/>
