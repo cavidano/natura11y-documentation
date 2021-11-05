@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
@@ -38,10 +38,16 @@ const Documentation = ({ data }) => {
 
     sectionDividers.forEach(section => {
 
-      let sectionId = section.getAttribute('id');
-      let sectionText = section.nextElementSibling.querySelector('h2').textContent;
+      const sectionId = section.getAttribute('id');
+      const sectionDividerSibling = section.nextElementSibling;
+      const sectionHeader = sectionDividerSibling.querySelector('h2');
+      let sectionText = '';
 
-      if(sectionId && sectionText){
+      if(sectionHeader){
+        sectionText = section.nextElementSibling.querySelector('h2').textContent;
+      }
+      
+      if(sectionId && sectionText !== ''){
         pageSections.push({ id: sectionId, text: sectionText });
       }
 
@@ -101,11 +107,12 @@ const Documentation = ({ data }) => {
 
             {console.log("from below ", sections)}
 
-            {sections.length && (
-              <TableOfContents sections={sections} />
+            {sections.length > 0 && (
+              <Fragment>
+                <TableOfContents sections={sections} />
+                <hr />
+              </Fragment>
             )}
-
-            <hr />
 
             <div className="margin-y-5">
               <MDXProvider components={shortcodes}>
