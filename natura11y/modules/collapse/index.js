@@ -38,7 +38,7 @@ export default class Collapse {
           handleClose(collapseButton, collapseTarget)
         } else if (isExpanded === "false") {
           handleOpen(collapseButton, collapseTarget)
-          firstFocusableElement.focus()
+          firstFocusableElement.focus();
         }
 
         collapseTarget.addEventListener("keydown", event => {
