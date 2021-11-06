@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 
 const DocSidebar = ({ pages }) => {
 
-  // console.log("Page Data", pages);
-
   return (
     <Fragment>
       
