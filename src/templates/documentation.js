@@ -24,7 +24,7 @@ const shortcodes = {
     FigureBlock,
     TableLineDescBlock,
     TableLineDescRow,
-    StaticImage
+    StaticImage,
   };
 
 const Documentation = ({ data }) => {

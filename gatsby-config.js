@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
+    `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -33,6 +34,17 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              path: `${__dirname}/src/images/`,
+              maxWidth: 1400,
+              linkImagesToOriginal: false,
+              quality: 90
+            },
+          },
+        ],
       },
     },
   ],
