@@ -48,6 +48,7 @@ import "../../natura11y/modules/theme";
 function Layout({ children }) {
 
   useEffect(() => {
+    console.log('Layout is loaded');
     new Accessibility();
     new Accordion();
     new Alerts();
@@ -59,7 +60,6 @@ function Layout({ children }) {
     new Navigation();
     new Tabs();
     new Tables();
-    console.log('Layout is loaded');
   }, []);
 
   const data = useStaticQuery(graphql`

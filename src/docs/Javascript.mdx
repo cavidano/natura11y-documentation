@@ -1,0 +1,49 @@
+---
+category: "a-z"
+title: "Javascript"
+bannerCreditName: "Zdeněk Macháček"
+bannerCreditHandle: "https://unsplash.com/@zmachacek"
+bannerImage: ../images/banner/alerts.jpg
+---
+
+<TextBlock>
+
+Alerts help draw attention to brief confirmation or warning messages—or any other important information—that shouldn't be overlooked while your visitor scans the page.
+
+</TextBlock>
+
+<div
+    class="alert alert--confirm alert--dismissable margin-y-3"
+    aria-labelledby="alert-dismissable-confirm-label"
+    aria-describedby="alert-dismissable-confirm-description"
+    role="alert">
+    <div class="alert__title h5">
+        <span class="icon icon-confirm" aria-hidden="true"></span>
+        <span class="alert__title__text" id="alert-dismissable-confirm-label">
+            Alert Confirm
+        </span>
+    </div>
+    <div class="alert__description" id="alert-dismissable-confirm-description">
+        <p>
+            Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
+        </p>
+    </div>
+</div>
+<div
+    class="alert alert--warn alert--dismissable margin-y-3"
+    aria-labelledby="alert-dismissable-warn-label"
+    aria-describedby="alert-dismissable-warn-description"
+    role="alert">
+    <div class="alert__title h5">
+        <span class="icon icon-warn" aria-hidden="true"></span>
+        <span class="alert__title__text" id="alert-dismissable-warn-label">
+            Alert Warn
+        </span>
+    </div>
+    <div class="alert__description" id="alert-dismissable-warn-description">
+        <p>
+            Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
+        </p>
+    </div>
+</div>
+
