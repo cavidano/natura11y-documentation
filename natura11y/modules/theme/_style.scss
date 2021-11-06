@@ -380,4 +380,27 @@ kbd {
     }
 
   }
-  
+// 
+
+.gv-dir{
+    font-size: var(--font-size-md);
+    padding: var(--spacer-3);
+}
+
+.gv-dir--top {
+    margin-bottom: auto;
+}
+
+.gv-dir--right {
+    writing-mode: vertical-rl;
+    margin-left: auto;
+}
+
+.gv-dir--bottom {
+    margin-top: auto;
+}
+
+.gv-dir--left {
+    writing-mode: vertical-lr;
+    margin-right: auto;
+}

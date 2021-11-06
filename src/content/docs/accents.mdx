@@ -6,6 +6,8 @@ bannerCreditHandle: "@zmachacek"
 bannerImage: ../../images/banner/accents.jpg
 ---
 
+import GradientVeneerDirections from '../../components/docs/examples/GradientVeneerDirections';
+
 <TextBlock>
 
 Natura11y provides the following mechanisms to add visual interest to your layouts. 
@@ -31,6 +33,14 @@ Apply a directional gradient to any selector using the `.gradient-veneer-{x}` ut
         <div class="gradient-veneer-left">...</div>
     `)}
 />
+
+<TextBlock>
+
+For a gradient that is transparent at the top, and opaque at the bottom, use `.gradient-veneer-bottom`. Consider the following visual representation of the four directional gradient veneer utilities.
+    
+</TextBlock>
+
+<GradientVeneerDirections />
 
 <figure class="container medium margin-y-4">
     <div class="grid grid--column-2--md gap-3 font-size-md text-align-center">
@@ -92,3 +102,10 @@ Apply a directional gradient to any selector using the `.gradient-veneer-{x}` ut
         </div>
     </div>
 </figure>
+
+<TextBlock>
+
+Gradient veneers use a single color, fully transparent to fully opaque. They inherit their color from the nearest ancestrial background color (usually applied with <a href="#1">theme color utilities</a>).
+
+</TextBlock>
+
