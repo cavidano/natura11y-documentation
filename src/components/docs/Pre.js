@@ -10,7 +10,7 @@ const Pre = (props) => {
     } = props;
 
     return (
-        <pre data-line={highlightedLines} className={codeToolbar === false && `hide-toolbar`}>
+        <pre data-line={highlightedLines} className={codeToolbar === false ? `hide-toolbar` : ``}>
             <code className={`language-${codeLanguage}`}>
                 {code}
             </code>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TableLineDescRow = ({ children, lines, ...props }) => {
     return (
-        <tr>
+        <tr key={`${props.targetFigure}_${lines}`}>
             <td>
                 <a href={`#figure_${props.targetFigure}.${lines}`} data-line-anchor>
                     {lines}

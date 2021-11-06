@@ -6,14 +6,16 @@ import "./_style.scss"
 
 export default class Alerts {
   constructor() {
+
     const alertDismissableList = document.querySelectorAll(
       ".alert--dismissable"
-    )
+    );
 
-    const closeButtonHTML = `
-        <button className="button button--icon-only">
-            <span className="icon icon-close" aria-label="Close" aria-hidden="true">
-        </button>`
+    const closeButtonHTML = (`
+        <button class="button button--icon-only">
+            <span class="icon icon-close" aria-hidden="true">
+        </button>
+    `);
 
     alertDismissableList.forEach(alertDismissable => {
       alertDismissable.insertAdjacentHTML("afterbegin", closeButtonHTML)

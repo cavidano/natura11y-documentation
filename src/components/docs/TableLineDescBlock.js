@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 
 const TableLineDescBlock = ({ children, ...props }) => {
 
-    children = children.map(child => React.cloneElement(child, props));
+    children = children.map(child => cloneElement(child, props));
 
     return (
         <figure className="container narrow margin-y-4">
