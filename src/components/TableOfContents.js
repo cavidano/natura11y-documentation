@@ -10,7 +10,7 @@ const TableOfContents = ({ sections }) => {
                     <ul className="nav font-size-md">
                         {sections
                         .map(section => (
-                            <li>
+                            <li key={`${section.id}`}>
                                 <a href={`#${section.id}`}>
                                     {section.text}
                                 </a>
