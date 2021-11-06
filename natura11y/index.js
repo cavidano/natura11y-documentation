@@ -11,7 +11,6 @@ In this file:
 // B. Modules
 //////////////////////////////////////////////
 
-/* eslint-disable */
 
 import "./modules/accents";
 
