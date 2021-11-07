@@ -13,44 +13,40 @@ const GradientVeneerDirections = () => {
     return (
         <figure className="container narrow margin-y-4">
 
-            <div className="font-size-sm">
-
-                <ul className="nav nav--horizontal justify-content-center margin-bottom-4" data-react-nav>
-                    <li>
-                        <button
-                            className={direction === 'top' ? `active` : ``}
-                            onClick={handleClick}
-                            data-direction="top">
-                            Top
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            className={direction === 'right' ? `active` : ``}
-                            onClick={handleClick}
-                            data-direction="right">
-                            Right
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            className={direction === 'bottom' ? `active` : ``}
-                            onClick={handleClick}
-                            data-direction="bottom">
-                            Bottom
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            className={direction === 'left' ? `active` : ``}
-                            onClick={handleClick}
-                            data-direction="left">
-                            Left
-                        </button>
-                    </li>
-                </ul>
-
-            </div>
+            <ul className="nav nav--horizontal justify-content-center margin-bottom-4" data-react-nav>
+                <li>
+                    <button
+                        className={direction === 'top' ? `active` : ``}
+                        onClick={handleClick}
+                        data-direction="top">
+                        Top
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className={direction === 'right' ? `active` : ``}
+                        onClick={handleClick}
+                        data-direction="right">
+                        Right
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className={direction === 'bottom' ? `active` : ``}
+                        onClick={handleClick}
+                        data-direction="bottom">
+                        Bottom
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className={direction === 'left' ? `active` : ``}
+                        onClick={handleClick}
+                        data-direction="left">
+                        Left
+                    </button>
+                </li>
+            </ul>
 
             <div className="backdrop">
                 <div className={`backdrop__image gradient-veneer-${direction}`}>

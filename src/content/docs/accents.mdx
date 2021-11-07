@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/accents.jpg
 ---
 
 import GradientVeneerDirections from '../../components/docs/examples/GradientVeneerDirections';
+import GradientVeneerThemes from '../../components/docs/examples/GradientVeneerThemes';
 
 <TextBlock>
 
@@ -26,6 +27,9 @@ Apply a directional gradient to any selector using the `.gradient-veneer-{x}` ut
 
 <FigureBlock
     figureNumber="1"
+    visualExample={
+        <GradientVeneerDirections />
+    }
     codeExample={(`
         <div class="gradient-veneer-top">...</div>
         <div class="gradient-veneer-right">...</div>
@@ -36,15 +40,29 @@ Apply a directional gradient to any selector using the `.gradient-veneer-{x}` ut
 
 <TextBlock>
 
-For a gradient that is transparent at the top, and opaque at the bottom, use `.gradient-veneer-bottom`. Consider the following visual representation of the four directional gradient veneer utilities.
-    
-</TextBlock>
-
-<GradientVeneerDirections />
-
-<TextBlock>
-
 Gradient veneers use a single color, fully transparent to fully opaque. They inherit their color from the nearest ancestrial background color (usually applied with <a href="#1">theme color utilities</a>).
 
 </TextBlock>
 
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <GradientVeneerThemes />
+    )}
+    codeExample={(`
+        <div class="backdrop theme-primary"> \n
+            <div class="backdrop__image gradient-veneer-bottom">
+                <!-- <img src="./path/to/image.jpg" alt="Placeholder"> -->
+            </div> \n
+            <div class="backdrop__cover">
+                ...
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+Gradient veneer utilities place the gradient (as a psuedo element) above all child selectors on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">z index</a>. With the above examples, we applied a gradient veneer utility to the `.backdrop-image` selector. This allows the gradient to appear above its child `<img>` tag (Figure 2, lines 3-5).
+
+</TextBlock>
