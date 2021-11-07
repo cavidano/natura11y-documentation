@@ -15,24 +15,36 @@ const GradientVeneerDirections = () => {
 
             <div className="font-size-sm">
 
-                <ul className="nav nav--horizontal justify-content-center margin-bottom-4">
+                <ul className="nav nav--horizontal justify-content-center margin-bottom-4" data-react-nav>
                     <li>
-                        <button onClick={handleClick} data-direction="top">
+                        <button
+                            className={direction === 'top' ? `active` : ``}
+                            onClick={handleClick}
+                            data-direction="top">
                             Top
                         </button>
                     </li>
                     <li>
-                        <button onClick={handleClick} data-direction="right">
+                        <button
+                            className={direction === 'right' ? `active` : ``}
+                            onClick={handleClick}
+                            data-direction="right">
                             Right
                         </button>
                     </li>
                     <li>
-                        <button onClick={handleClick} data-direction="bottom">
+                        <button
+                            className={direction === 'bottom' ? `active` : ``}
+                            onClick={handleClick}
+                            data-direction="bottom">
                             Bottom
                         </button>
                     </li>
                     <li>
-                        <button onClick={handleClick} data-direction="left">
+                        <button
+                            className={direction === 'left' ? `active` : ``}
+                            onClick={handleClick}
+                            data-direction="left">
                             Left
                         </button>
                     </li>
@@ -40,10 +52,10 @@ const GradientVeneerDirections = () => {
 
             </div>
 
-            <div className="backdrop border-radius">
+            <div className="backdrop">
                 <div className={`backdrop__image gradient-veneer-${direction}`}>
                     <StaticImage
-                        src="../images/gradient-veneer-directions.jpg"
+                        src="../../../images/gradient-veneer-directions.jpg"
                         alt="whoa"
                         placeholder="dominantColor"
                         layout="fullWidth"

@@ -379,12 +379,24 @@ kbd {
         }
     }
 
-  }
-// 
+}
 
-.gv-dir{
+// React Components 
+
+[data-react-nav] {
+    button { opacity: 0.8;}
+
+    button.active {
+        color: var(--primary) !important;
+        font-weight: bold !important;
+        text-decoration: underline;
+        opacity: 1;
+    }
+}
+
+.gv-dir {
     font-size: var(--font-size-md);
-    padding: var(--spacer-3);
+    padding: var(--spacer-2);
 }
 
 .gv-dir--top {
