@@ -35,7 +35,6 @@ The following is a basic accordion component. All accordion panels are closed by
 
 <FigureBlock
     figureNumber="1"
-    language="html"
     highlightedLines="1,3-10,12-25"
     visualExample={(
         <div className="accordion">
@@ -166,3 +165,231 @@ The following is a basic accordion component. All accordion panels are closed by
         </div>
     `)}
 />
+
+<TableLineDescBlock targetFigure="1">
+
+<TableLineDescRow lines="1">
+
+The parent `.accordion` class is required.
+
+This selector uses JavaScript to group a set of topics (accordion headers) with one another.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3-10">
+
+The child `.accordion__button` selector is required.
+
+The `id` attribute equals the value of its associated panel's `aria-labelledby` attribute.
+
+The `data-toggle="accordion"` attribute is present on the accordion button for JavaScript purposes.
+
+The `aria-controls` attribute equals its associated panel's `id` attribute. 
+
+The `aria-expanded="false"` attribute is present on the button where its associated accordion panel should be closed when the page loads.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="12-25">
+
+The child `.accordion__panel` selector is required.
+
+The `id` attribute equals the value of its associated button's `aria-controls` attribute.
+
+The `data-accordion="panel"` attribute is present on the accordion panel for JavaScript purposes.
+
+The `aria-labelledby` attribute equals the value of its associated buttons's `id` attribute.
+
+The `role="region"` attribute is present on the accordion panel for assistive technology.
+
+The granchild `.accordion__panel__content` selector holds the panel's content. Padding applied to this selector allows a clean open and close transition, without using jQuery.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<Divider id="semanticHeaders" />
+
+<TextBlock>
+
+## Semantic Headers
+
+The the `.accordion__button` selector doesn't have to be a button tag. In fact, header tags in the accordion help describe the architecture of a page. For example, if an accordion group lives below a page's `<h1>`, the accordion headers could be `<h2>` tags.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    highlightedLines="2"
+    codeToolbar={false}
+    codeExample={(`
+        <h2
+            class="accordion__button h5"
+            id="..."
+            data-toggle="accordion"
+            aria-controls="..."
+            aria-expanded="false">
+                Danaus Plexippus
+        </h2>
+    `)}
+/>
+
+<TextBlock>
+
+In Figure 2 (line 2) notice the `.h5` class. Header utility classes are particularly useful in this example. When a semantic header (e.g. `<h1>`) needs to be smaller (in visual size) than its natural markup style. You can use <a href="/docs/typography/#sectionHeadings">header utilities</a> on non-semantic tags (e.g., `<button>`), that need the appearance of a header.
+
+</TextBlock>
+
+<Divider id="openByDefault" />
+
+<TextBlock>
+
+## Open by Default
+
+You may want one of your accordion topics to be open by default (when the page loads), like the following example:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    highlightedLines="6,11"
+    visualExample={(
+        <div className="accordion">
+            <button
+                className="accordion__button h5"
+                id="acc-button-example-01"
+                data-toggle="accordion"
+                aria-controls="acc-panel-example-01"
+                aria-expanded="true">
+                    Danaus Plexippus
+            </button>
+            <div
+                className="accordion__panel shown"
+                id="acc-panel-example-01"
+                data-accordion="panel"
+                aria-labelledby="acc-button-example-01"
+                role="region">
+                <div className="accordion__panel__content">
+                    <p>
+                        The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar <a href="#1">North American</a> butterfly, and is considered an iconic pollinator species.
+                    </p>
+                </div>
+            </div>
+            <button
+                className="accordion__button h5"
+                id="acc-button-example-01"
+                data-toggle="accordion"
+                aria-controls="acc-panel-example-01"
+                aria-expanded="false">
+                    Papilio Polyxenes
+            </button>
+            <div className="accordion__panel"
+                id="acc-panel-example-01"
+                data-accordion="panel"
+                aria-labelledby="acc-button-example-01"
+                role="region">
+                <div className="accordion__panel__content">
+                    <p>
+                        The black swallowtail, American swallowtail, or parsnip swallowtail, is a butterfly found throughout much of <a href="#1">North America</a>. It is the state butterfly of Oklahoma and New Jersey.
+                    </p>
+                </div>
+            </div>
+            <button
+                className="accordion__button h5"
+                id="acc-button-example-01"
+                data-toggle="accordion"
+                aria-controls="acc-panel-example-01"
+                aria-expanded="false">
+                    Hyalophora Cecropia
+            </button>
+            <div
+                className="accordion__panel"
+                id="acc-panel-example-01"
+                data-accordion="panel"
+                aria-labelledby="acc-button-example-01"
+                role="region">
+                <div className="accordion__panel__content">
+                    <p>
+                        The cecropia moth is <a href="#1">North America's</a> largest native moth. It is a member of the family Saturniidae, or giant silk moths. Females have been documented with a wingspan of five to seven inches or more.
+                    </p>
+                </div>
+            </div>
+            <button
+                className="accordion__button h5"
+                id="acc-button-example-01"
+                data-toggle="accordion"
+                aria-controls="acc-panel-example-01"
+                aria-expanded="false">
+                    Deilephila Elpenor
+            </button>
+            <div
+                className="accordion__panel"
+                id="acc-panel-example-01"
+                data-accordion="panel"
+                aria-labelledby="acc-button-example-01"
+                role="region">
+                <div className="accordion__panel__content">
+                    <p>
+                        The elephant hawk moth or large elephant hawk moth, is a moth in the family Sphingidae. Its common name is derived from the caterpillar's resemblance to an elephant's trunk. It is most common in <a href="#1">central Europe</a> and is distributed throughout the Palearctic region.
+                    </p>
+                </div>
+            </div>
+            <button
+                className="accordion__button h5"
+                id="acc-button-example-01"
+                data-toggle="accordion"
+                aria-controls="acc-panel-example-01"
+                aria-expanded="false">
+                    Papilio Troilus
+            </button>
+            <div
+                className="accordion__panel"
+                id="acc-panel-example-01"
+                data-accordion="panel"
+                aria-labelledby="acc-button-example-01"
+                role="region">
+                <div className="accordion__panel__content">
+                    <p>
+                        The spicebush swallowtail or green-clouded butterfly, is a common black swallowtail butterfly found in <a href="#1">North America</a>. It has two subspecies, Papilio troilus troilus and Papilio troilus ilioneus, the latter found mainly in the Florida peninsula.
+                    </p>
+                </div>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+        <button
+            class="accordion__button h5"
+            id="acc-button-id"
+            data-toggle="accordion"
+            aria-controls="acc-panel-id"
+            aria-expanded="true">
+                Danaus Plexippus
+        </button>\n
+        <div
+            class="accordion__panel show"
+            id="acc-panel-id"
+            data-accordion="panel"
+            aria-labelledby="acc-button-id"
+            role="region">
+            <div class="accordion__panel__content">
+                ...
+            </div>
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="3">
+
+<TableLineDescRow lines="6">
+
+On the `.accordion__button` selector, set the `aria-expanded` attribute to `"true"`
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="11">
+
+On the related `.accordion__panel` selector, include the class `.show`.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
