@@ -25,15 +25,16 @@ const DocSidebar = ({ pages }) => {
         <div className="container narrow margin-y-3 font-size-md">
       
           <ul className="nav font-size-md">
-            {pages
-            .filter(page => page.frontmatter.category === 'introduction')
-            .map(page => (
-              <li key={page.id}>
-                <Link to={`/docs/${page.slug}`}>
-                  {page.frontmatter.title}
+          <li>
+                <Link to="/docs/get-started/">
+                  Get Started
                 </Link>
               </li>
-            ))}
+              <li>
+                <Link to="/docs/customization/">
+                  Customization
+                </Link>
+              </li>
           </ul>
 
           <hr className="margin-y-2 margin-x-n3--lg" />
