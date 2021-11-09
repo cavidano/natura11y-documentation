@@ -78,6 +78,7 @@ const Documentation = ({ data }) => {
 
         <div className="article__body border-left--lg" id="primary-content">
           <div className="article__body__content">
+          
             <div className="backdrop backdrop--fixed theme-dark">
               <div className="backdrop__image">
                 <GatsbyImage
