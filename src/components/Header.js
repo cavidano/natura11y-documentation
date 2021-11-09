@@ -72,7 +72,7 @@ const Header = ({ version }) => {
               </span>
             </li>
             <li>
-              <Link to="/docs/get-started">Docs</Link>
+              <Link to="/docs/get-started/">Docs</Link>
             </li>
             <li>
               <Link to="/icons/">Icons</Link>

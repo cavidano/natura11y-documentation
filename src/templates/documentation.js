@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
+import Banner from '../components/Banner';
 import DocSidebar from '../components/DocSidebar';
 import TableOfContents from '../components/TableOfContents';
 
@@ -77,53 +78,35 @@ const Documentation = ({ data }) => {
         </div>
 
         <div className="article__body border-left--lg" id="primary-content">
+
           <div className="article__body__content">
-          
-            <div className="backdrop backdrop--fixed theme-dark">
-              <div className="backdrop__image">
-                <GatsbyImage
-                  className="opacity-40"
-                  image={image}
-                  alt=""
-                />
-              </div>
 
-              <div className="backdrop__cover">
-                <div className="margin-y-5">
-                  <div className="container narrow">
-                    <h1 className="banner-headline text-shadow">{title}</h1>
-                  </div>
-                </div>
-              </div>
+          <Banner
+            title={title}
+            image={image}
+            creditHandle={bannerCreditHandle}
+            creditName={bannerCreditName}
+          />
+  
+          {sections.length > 0 && (
+            <Fragment>
+              <TableOfContents sections={sections} />
+              <hr />
+            </Fragment>
+          )}
 
-              <div className="backdrop__credit">
-                <p>
-                    Photo by &nbsp;
-                    <a href={`https://unsplash.com/${bannerCreditHandle}`} target="_blank">
-                        {bannerCreditName}
-                    </a>&nbsp;
-                    on Unsplash
-                </p>
-              </div>
-            </div>
-
-            {console.log("from below ", sections)}
-
-            {sections.length > 0 && (
-              <Fragment>
-                <TableOfContents sections={sections} />
-                <hr />
-              </Fragment>
-            )}
-
-            <div className="margin-y-5">
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{body}</MDXRenderer>
-              </MDXProvider>
-            </div>
+          <div className="margin-y-5">
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer>{body}</MDXRenderer>
+            </MDXProvider>
           </div>
+
+          </div>
+
         </div>
+
       </div>
+      
     </Layout>
   );
 }
