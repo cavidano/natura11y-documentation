@@ -1,65 +1,54 @@
 import React from 'react';
 import { Link } from "gatsby";
 
-import Banner from '../../components/Banner';
 import Layout from '../../components/Layout';
+import IconLeader from '../../components/supplementary/IconLeader';
 
-import Natura11yIcons from '../../content/data/Natura11yIcons.yaml';
-import { graphql } from "gatsby";
+import Natura11yIcons from '../../content/data/Natura11yIcons.yaml'
 
-const Icons = ({ data }) => {
-
-    const image = data.bannerImage.childImageSharp.gatsbyImageData;
-    const bannerCreditName = 'Zdeněk Macháček';
-    const bannerCreditHandle = 'zmachacek';
+const Icons = () => {
 
     return (
+
         <Layout>
-            <Banner
-                title="Natura11y Icons"
-                image={image}
-                creditHandle={bannerCreditHandle}
-                creditName={bannerCreditName}
-            />
 
-            <div className="container narrow margin-y-5">
-                <h2>
-                    Introducing Natura11y's own icon library.
-                </h2>
-                <p>
-                    Natura11y icons are free to use for commercial or personal use. Include them as a web font or an SVG sprite.
-                </p>
+            <IconLeader />
+
+            <div className="container medium">
+
+                <div class="grid gap-1 grid--column-3 grid--column-6--md text-align-center" id="natura11yIconGrid">
+
+                    {Natura11yIcons.map(icon => {
+
+                        let name = icon.className;
+                        let tags = icon.tags;
+                        let svg = icon.svg
+
+                        return (
+                            <a href="#1">
+
+                                <div class="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">
+                                    <svg width="100%" height="2.5em" fill="currentColor" viewBox="0 0 48 48">
+                                        {svg}
+                                    </svg>
+                                </div>
+                        
+                                <p class="font-size-sm opacity-70">
+                                    {name}
+                                </p>
+
+                            </a>
+                        );
+                    })}
+
+                </div>
+
+
             </div>
-
-            <div className="container medium">    
-                <ul className="tabs-nav tabs-nav--horizontal">
-                    <li>
-                        <Link
-                            id="tab-button-example-01"
-                            to="/icons/"
-                            role="tab">
-                                Icons
-                        </Link>
-                    </li>
-                    <li>
-                    <Link
-                            id="tab-button-example-01"
-                            to="/icons/usage"
-                            role="tab">
-                                Usage
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-
 
             <ul>
-                {Natura11yIcons.map(icon => {
-                    return (
-                        <li>{icon.className}</li>
-                    );
-                })}
             </ul>
+            
         </Layout>
     );
 }
