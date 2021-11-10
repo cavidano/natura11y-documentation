@@ -1,0 +1,115 @@
+---
+category: "supplemental"
+title: "Using the Icons"
+---
+
+<TextBlock>
+
+## Icon Font (CDN)
+
+Place the Natura11y icon font link tag in the `<head>` your document. Create icons with `<span>` or `<i>` tags. The first .icon class is required for general styling. The second `.icon-{x}` class specifies which icon to use. Here x equals the icon name (Figure 1).
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="1"
+    visualExample={(
+        <ul class="ul nav nav--horizontal font-size-lg">
+            <li>
+                <span class="icon icon-home"></span>
+            </li>
+            <li>
+                <span class="icon icon-heart"></span>
+            </li>
+            <li>
+                <span class="icon icon-info"></span>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <!-- Natura11y Icon CSS -->
+        <link href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css" rel="stylesheet"> \n
+        <!-- Icon HTML: your choice of <span> or <i> tags -->
+        <span class="icon icon-home"></span>
+    `)}
+/>
+
+<Divider id="svgSprites" />
+
+<TextBlock>
+
+## SVG Sprites
+
+Include Natura11y Icons with the svg sprite and the `use` element. Because of cross-origin issues, it's best to host the svg sprite file locally.
+
+### Step 1: Get the sprite file
+
+With the button below, download the natura11y-icons-sprite.svg file and place it somewhere within your project's directory.
+
+<a
+    class="button button--has-icon button--outline font-size-md text-color-link"
+    href="#"
+    download>
+    <span class="icon icon-file-download"></span>
+    <span class="button__text">
+        <span class="Download"></span>
+        <span>Download SVG Sprite</span>
+    </span>
+</a>  
+
+</TextBlock>
+
+<TextBlock>
+
+### Step 2: Include the Javascript
+
+For sake of example, include the script tag from Figure 2 in your document's footer. Preferably, just before the closing `</body>` tag.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="2"
+    codeExample={(`
+    <script>
+        const ajax = new XMLHttpRequest(); \n
+        ajax.open('GET', './path/to/natura11y-icons-sprite.svg', true);
+        ajax.send();
+        ajax.onload = () => {
+            const div = document.createElement('div');
+            div.className = 'natura11y-icons-sprite';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        };
+    </script>
+    `)}
+/>
+
+<TextBlock>
+
+### Step 3: Reference the icons
+
+Create an SVG icon with the code from Figure 3. Instead of using a class to specificy the icon, include the icon name in the `<use>` tags href.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="3"
+    visualExample={(
+        <ul class="ul nav nav--horizontal font-size-lg">
+            <li>
+                <span class="icon icon-home"></span>
+            </li>
+            <li>
+                <span class="icon icon-heart"></span>
+            </li>
+            <li>
+                <span class="icon icon-info"></span>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <svg class="icon">
+            <use href="#home"></use>
+        </svg>
+    `)}
+/>

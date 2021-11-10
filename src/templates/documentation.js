@@ -12,21 +12,21 @@ import DocSidebar from '../components/DocSidebar';
 import TableOfContents from '../components/TableOfContents';
 
 import Divider from '../components/docs/Divider';
-import AccessibilitySpotlight from '../components/docs/AccessibilitySpotlight'
+import AccessibilitySpotlight from '../components/docs/AccessibilitySpotlight';
 import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
 import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
 
 const shortcodes = {
-    Divider,
-    AccessibilitySpotlight,
-    TextBlock,
-    FigureBlock,
-    TableLineDescBlock,
-    TableLineDescRow,
-    StaticImage,
-  };
+  Divider,
+  AccessibilitySpotlight,
+  TextBlock,
+  FigureBlock,
+  TableLineDescBlock,
+  TableLineDescRow,
+  StaticImage,
+};
 
 const Documentation = ({ data }) => {
   
