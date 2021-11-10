@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { Link } from "gatsby";
 import { graphql } from 'gatsby';
 
-import IconSprite from '../../icons/natura11y-icons-sprite.svg';
-
-
-
 import Layout from '../../components/Layout';
 import IconLeader from '../../components/supplementary/IconLeader';
+
+import IconSprite from '../../icons/natura11y-icons-sprite.svg';
 
 const Icons = ({ data }) => {
 
     const Natura11yIcons = data.allNatura11YiconsYaml.nodes;
 
-
     const ajax = new XMLHttpRequest();
 	
-	const who = () => {
+	const appendSprite = () => {
         ajax.open('GET', IconSprite, true);
         ajax.send();
         ajax.onload = () => {
@@ -27,8 +25,7 @@ const Icons = ({ data }) => {
         }
     }
 
-    who();
-
+    appendSprite();
 
     return (
 
@@ -67,7 +64,7 @@ const Icons = ({ data }) => {
                         console.log(svg)
 
                         return (
-                            <a href="#1">
+                            <Link>
 
                                 <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
                                     <svg className="icon">
@@ -79,18 +76,14 @@ const Icons = ({ data }) => {
                                     {name}
                                 </p>
 
-                            </a>
+                            </Link>
                         );
                     })}
 
                 </div>
 
-
             </div>
 
-            <ul>
-            </ul>
-            
         </Layout>
     );
 }
@@ -98,7 +91,7 @@ const Icons = ({ data }) => {
 export default Icons;
 
 export const query = graphql`
-query MyQuery {
+query queryIcons {
     allNatura11YiconsYaml {
         nodes {
           className
