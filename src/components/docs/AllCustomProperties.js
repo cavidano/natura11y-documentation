@@ -1,12 +1,25 @@
 import React from 'react';
-
-import CustomPropertiesData from '../../content/data/AllCustomProperties.yaml';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const AllCustomProperties = () => {
 
-    const cpButtonList = document.querySelectorAll('[data-clipboard="single"]');
+    const data = useStaticQuery(graphql`
+        query queryCustomProperties {
+            allNatura11YcustompropertiesYaml {
+                nodes {
+                    customProperties {
+                    description
+                    name
+                    value
+                    }
+                    type
+                }
+            }
+        }
+    `);
 
-    const CustomProperties = CustomPropertiesData;
+    const CustomProperties = data.allNatura11YcustompropertiesYaml.nodes;
+
     const copyButtonText = 'Copy';
     const copyButtonActionText = 'Copied';
 
@@ -189,4 +202,3 @@ const AllCustomProperties = () => {
 }
 
 export default AllCustomProperties;
-
