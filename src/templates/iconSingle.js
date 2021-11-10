@@ -44,11 +44,11 @@ const iconSingle = ({ data }) => {
             </p>
         </div>
 
-        <div class="padding-y-4">
-                    <svg width="100%" height="20em" viewBox="0 0 48 48">
-                        { pageInfo.svg }
-                    </svg>
-                </div>
+        <div class="padding-y-4 theme-primary">
+            <svg width="100%" height="20em" viewBox="0 0 48 48">
+                { pageInfo.svg }
+            </svg>
+        </div>
 
     </Layout>
   );

@@ -6,7 +6,7 @@
     - name: accordion-button-padding-x
       value: var(--spacer-3)
       description: >
-        Left and right padding of the <em>accordion</em> component button
+        Left and right padding of the *accordion* component button
     - name: accordion-button-padding-y
       value: var(--spacer-3)
       description: >

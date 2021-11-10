@@ -19,7 +19,9 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-yaml-full',
       options: {
-        plugins: [`mdx-yaml-full`]
+        plugins: [
+          `mdx-yaml-full`
+        ]
       }
     },
     {
