@@ -16,14 +16,7 @@ module.exports = {
     `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-transformer-yaml-full',
-      options: {
-        plugins: [
-          `mdx-yaml-full`
-        ]
-      }
-    },
+    'gatsby-transformer-yaml-full',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
