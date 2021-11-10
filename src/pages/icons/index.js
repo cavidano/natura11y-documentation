@@ -10,8 +10,6 @@ import IconSprite from '../../icons/natura11y-icons-sprite.svg';
 
 const Icons = ({ data }) => {
 
-    const Natura11yIcons = data.allNatura11YiconsYaml.nodes;
-
     const ajax = new XMLHttpRequest();
 	
 	const appendSprite = () => {
@@ -26,6 +24,26 @@ const Icons = ({ data }) => {
     }
 
     appendSprite();
+
+    const allIcons = data.allNatura11YiconsYaml.nodes;
+
+    const [displayedIcons, setDisplayedIcons] = useState(allIcons);
+
+    const searchHandler = (event) => {
+
+        const enteredSearch = event.target.value.toLowerCase();
+        		
+        let filteredIcons = allIcons.filter(icon => {
+            return (
+                icon.className.toLowerCase().includes(enteredSearch) ||
+                icon.tags.toString().includes(enteredSearch)
+            );
+        });
+
+        enteredSearch !== '' ? 
+            setDisplayedIcons(filteredIcons) :
+            setDisplayedIcons(allIcons);
+    }
 
     return (
 
@@ -46,6 +64,7 @@ const Icons = ({ data }) => {
                                 name="natura11y-icon-search"
                                 id="natura11y-icon-search"
                                 placeholder="Filter Icons" 
+                                onChange={searchHandler}
                             />
                         </span>
 
@@ -55,13 +74,11 @@ const Icons = ({ data }) => {
 
                 <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center" id="natura11yIconGrid">
 
-                    {Natura11yIcons.map(icon => {
+                    {displayedIcons.map(icon => {
 
                         let name = icon.className;
                         let tags = icon.tags;
                         let svg = icon.svg
-
-                        console.log(svg)
 
                         return (
                             <Link>
