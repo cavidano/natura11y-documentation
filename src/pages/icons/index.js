@@ -1,12 +1,34 @@
 import React from 'react';
 import { Link } from "gatsby";
+import { graphql } from 'gatsby';
+
+import IconSprite from '../../icons/natura11y-icons-sprite.svg';
+
+
 
 import Layout from '../../components/Layout';
 import IconLeader from '../../components/supplementary/IconLeader';
 
-import Natura11yIcons from '../../content/data/Natura11yIcons.yaml'
+const Icons = ({ data }) => {
 
-const Icons = () => {
+    const Natura11yIcons = data.allNatura11YiconsYaml.nodes;
+
+
+    const ajax = new XMLHttpRequest();
+	
+	const who = () => {
+        ajax.open('GET', IconSprite, true);
+        ajax.send();
+        ajax.onload = () => {
+            const div = document.createElement('div');
+            div.className = 'natura11y-icons-sprite';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    }
+
+    who();
+
 
     return (
 
@@ -16,7 +38,25 @@ const Icons = () => {
 
             <div className="container medium">
 
-                <div class="grid gap-1 grid--column-3 grid--column-6--md text-align-center" id="natura11yIconGrid">
+                <div class="form-entry margin-y-4">
+
+                    <div class="form-entry__field">
+
+                        <span class="form-entry__field__input">
+                            <span class="icon icon-search opacity-50"></span>
+                            <input
+                                type="text"
+                                name="natura11y-icon-search"
+                                id="natura11y-icon-search"
+                                placeholder="Filter Icons" 
+                            />
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center" id="natura11yIconGrid">
 
                     {Natura11yIcons.map(icon => {
 
@@ -24,16 +64,18 @@ const Icons = () => {
                         let tags = icon.tags;
                         let svg = icon.svg
 
+                        console.log(svg)
+
                         return (
                             <a href="#1">
 
-                                <div class="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">
-                                    <svg width="100%" height="2.5em" fill="currentColor" viewBox="0 0 48 48">
-                                        {svg}
+                                <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
+                                    <svg className="icon">
+                                        <use href={`#${name}`}></use>
                                     </svg>
                                 </div>
                         
-                                <p class="font-size-sm opacity-70">
+                                <p className="font-size-sm opacity-70">
                                     {name}
                                 </p>
 
@@ -56,11 +98,17 @@ const Icons = () => {
 export default Icons;
 
 export const query = graphql`
-query {
-    bannerImage: file(relativePath: {eq: "banner/icons.jpg"}) {
-      childImageSharp {
-        gatsbyImageData
+query MyQuery {
+    allNatura11YiconsYaml {
+        nodes {
+          className
+          codePoint
+          icon
+          id
+          svg
+          tags
+          unicode
+        }
       }
     }
-  }  
-`
+`;
