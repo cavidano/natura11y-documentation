@@ -81,7 +81,7 @@ const Icons = ({ data }) => {
                         let svg = icon.svg
 
                         return (
-                            <Link>
+                            <Link to={`/icons/${name}`}>
 
                                 <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
                                     <svg className="icon">
