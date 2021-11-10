@@ -5,40 +5,40 @@
   customProperties:
     - name: accordion-button-padding-x
       value: var(--spacer-3)
-      description: >
-        Left and right padding of the *accordion* component button
+      description: !mdx |
+        Left and right padding of the *accordion* component button    
     - name: accordion-button-padding-y
       value: var(--spacer-3)
-      description: >
-        Top and bottom padding of the <em>accordion</em> component button
+      description: !mdx |
+        Top and bottom padding of the *accordion* component button
     - name: accordion-panel-padding-x
       value: var(--spacer-3)
-      description: >
-        Left and right padding of the <em>accordion</em> component panel
+      description: !mdx |
+        Left and right padding of the *accordion* component panel
     - name: accordion-panel-padding-y
       value: var(--spacer-3)
-      description: >
-        Top and bottom padding of the <em>accordion</em> component panel
+      description: !mdx |
+        Top and bottom padding of the *accordion* component panel
     - name: accordion-active-color
       value: currentColor
-      description: >
-        Color of <em>active</em> <em>accordion</em> component button
+      description: !mdx |
+        Color of *active* *accordion* component button
 
 - type: Alerts
   scope: .alert
   customProperties:
     - name: alert-padding-x
       value: var(--spacer-2)
-      description: >
-        Left and right padding of the <em>alert</em> component header and body
+      description: !mdx |
+        Left and right padding of the *alert* component header and body
     - name: alert-padding-y
       value: var(--spacer-2)
-      description: >
-        Top and bottom padding of the <em>alert</em> component header and body
+      description: !mdx |
+        Top and bottom padding of the *alert* component header and body
     - name: alert-background-opacity
       value: '0.075'
-      description: >
-        Opacity of the <em>alert</em> component background (without the dark
+      description: !mdx |
+        Opacity of the *alert* component background (without the dark
         modifier class applied)
 
 - type: Backdrops
@@ -46,8 +46,8 @@
   customProperties:
     - name: backdrop-fixed-height
       value: 350px
-      description: >
-        Height of the <em>backdrop</em> component with the fixed height modifier
+      description: !mdx |
+        Height of the *backdrop* component with the fixed height modifier
         class
 
 - type: Borders
@@ -55,57 +55,57 @@
   customProperties:
     - name: default-border-width
       value: 1px
-      description: >
+      description: !mdx |
         Width of all borders applied across your stylesheet
     - name: default-border-style
       value: solid
-      description: >
+      description: !mdx |
         Style of all borders applied across your stylesheet
     - name: border-radius
       value: 0.5em
-      description: >
-        Border radius of the <em>border-radius</em> utility classes
+      description: !mdx |
+        Border radius of the *border-radius* utility classes
 
 - type: Buttons
   scope: ':root'
   customProperties:
     - name: button-padding-x
       value: 1em
-      description: >
-        Left and right padding of the <em>button</em> utility class
+      description: !mdx |
+        Left and right padding of the *button* utility class
     - name: button-padding-y
       value: 0.625em
-      description: >
-        Top and bottom padding of the <em>button</em> utility class
+      description: !mdx |
+        Top and bottom padding of the *button* utility class
     - name: button-font-weight
       value: var(--body-font-weight-bold)
-      description: >
-        Weight of text elements within the <em>button</em> utility class
+      description: !mdx |
+        Weight of text elements within the *button* utility class
     - name: button-border-radius
       value: 0.25em
-      description: >
-        Default Border radius of all <em>button</em> selectors
+      description: !mdx |
+        Default Border radius of all *button* selectors
     - name: button-outline-border-width
       value: calc( var(--default-border-width) * 2)
-      description: >
-        Border width of the <em>button outline</em> modifier class
+      description: !mdx |
+        Border width of the *button outline* modifier class
     - name: button-icon-only-size
       value: 2.25em
-      description: >
-        Width and height of the <em>button icon only</em> modifier class
+      description: !mdx |
+        Width and height of the *button icon only* modifier class
 
 - type: Cards
   scope: .card
   customProperties:
     - name: card-padding-x
       value: var(--spacer-2)
-      description: >
-        Left and right padding of the <em>card</em> component header, body, and
+      description: !mdx |
+        Left and right padding of the *card* component header, body, and
         footer
     - name: card-padding-y
       value: var(--spacer-2)
-      description: >
-        Top and bottom padding of the <em>card</em> component header, body, and
+      description: !mdx |
+        Top and bottom padding of the *card* component header, body, and
         footer
 
 - type: Color
@@ -113,242 +113,242 @@
   customProperties:
     - name: primary
       value: '#1E00B3'
-      description: >
-        The <em>primary</em> color applied within the <em>theme</em> and
-        <em>color</em> utility classes
+      description: !mdx |
+        The *primary* color applied within the *theme* and
+        *color* utility classes
     - name: primary-text
       value: white
-      description: >
-        Color of text elements within the <em>primary theme</em> utility class
+      description: !mdx |
+        Color of text elements within the *primary theme* utility class
     - name: primary-border
       value: hsla(0, 0%, 0%, 0.25);
-      description: >
-        Color of borders within the <em>primary theme</em> utility class
+      description: !mdx |
+        Color of borders within the *primary theme* utility class
     - name: primary-link
       value: currentColor
-      description: >
-        Color of links within the <em>primary theme</em> utility class
+      description: !mdx |
+        Color of links within the *primary theme* utility class
     - name: primary-confirm
       value: currentColor
-      description: >
-        Color of confirmation alerts within the <em>primary theme</em> utility
+      description: !mdx |
+        Color of confirmation alerts within the *primary theme* utility
         class
     - name: primary-warn
       value: currentColor
-      description: >
-        Color of warning alerts within the <em>primary theme</em> utility class
+      description: !mdx |
+        Color of warning alerts within the *primary theme* utility class
     - name: secondary
       value: '#64cc7e'
-      description: >
-        The <em>secondary</em> color applied within the <em>theme</em> and
-        <em>color</em> utility classes
+      description: !mdx |
+        The *secondary* color applied within the *theme* and
+        *color* utility classes
     - name: secondary-text
       value: var(--dark)
-      description: >
-        Color of text elements within the <em>secondary theme</em> utility class
+      description: !mdx |
+        Color of text elements within the *secondary theme* utility class
     - name: secondary-border
       value: hsla(0, 0%, 0%, 0.25)
-      description: >
-        Color of borders within the <em>secondary theme</em> utility class
+      description: !mdx |
+        Color of borders within the *secondary theme* utility class
     - name: secondary-link
       value: currentColor
-      description: >
-        Color of links within the <em>secondary theme</em> utility class
+      description: !mdx |
+        Color of links within the *secondary theme* utility class
     - name: secondary-confirm
       value: currentColor
-      description: >
-        Color of confirmation alerts within the <em>secondary theme</em> utility
+      description: !mdx |
+        Color of confirmation alerts within the *secondary theme* utility
         class
     - name: secondary-warn
       value: currentColor
-      description: >
-        Color of warning alerts within the <em>secondary theme</em> utility
+      description: !mdx |
+        Color of warning alerts within the *secondary theme* utility
         class
     - name: dark
       value: '#191b35'
-      description: >
-        The <em>dark</em> color applied within the <em>theme</em> and
-        <em>color</em> utility classes
+      description: !mdx |
+        The *dark* color applied within the *theme* and
+        *color* utility classes
     - name: dark-text
       value: currentColor
-      description: >
-        Color of text elements within the <em>dark theme</em> utility class
+      description: !mdx |
+        Color of text elements within the *dark theme* utility class
     - name: dark-border
       value: currentColor
-      description: >
-        Color of borders within the <em>dark theme</em> utility class
+      description: !mdx |
+        Color of borders within the *dark theme* utility class
     - name: dark-link
       value: currentColor
-      description: >
-        Color of links within the <em>dark theme</em> utility class
+      description: !mdx |
+        Color of links within the *dark theme* utility class
     - name: dark-confirm
       value: currentColor
-      description: >
-        Color of confirmation alerts within the <em>dark theme</em> utility
+      description: !mdx |
+        Color of confirmation alerts within the *dark theme* utility
         class
     - name: dark-warn
       value: currentColor
-      description: >
-        Color of warning alerts within the <em>dark theme</em> utility class
+      description: !mdx |
+        Color of warning alerts within the *dark theme* utility class
     - name: light
       value: '#191b35'
-      description: >
-        The <em>light</em> color applied within the <em>theme</em> and
-        <em>color</em> utility classes
+      description: !mdx |
+        The *light* color applied within the *theme* and
+        *color* utility classes
     - name: light-text
       value: var(--dark)
-      description: >
-        Color of text elements within the <em>light theme</em> utility class
+      description: !mdx |
+        Color of text elements within the *light theme* utility class
     - name: light-border
       value: hsla(0, 0%, 50%, 0.25)
-      description: >
-        Color of borders within the <em>light theme</em> utility class
+      description: !mdx |
+        Color of borders within the *light theme* utility class
     - name: light-link
       value: var(--a11y-link)
-      description: >
-        Color of links within the <em>light theme</em> utility class
+      description: !mdx |
+        Color of links within the *light theme* utility class
     - name: light-confirm
       value: '#007e35'
-      description: >
-        Color of confirmation alerts within the <em>light theme</em> utility
+      description: !mdx |
+        Color of confirmation alerts within the *light theme* utility
         class
     - name: light-warn
       value: '#ce1736'
-      description: >
-        Color of warning alerts within the <em>light theme</em> utility class
+      description: !mdx |
+        Color of warning alerts within the *light theme* utility class
     - name: white-text
       value: var(--dark)
-      description: >
-        Color of text elements within the <em>white theme</em> (default) utility
+      description: !mdx |
+        Color of text elements within the *white theme* (default) utility
         class
     - name: white-border
       value: hsla(0, 0%, 50%, 0.25)
-      description: >
-        Color of borders within the <em>white theme</em> (default) utility class
+      description: !mdx |
+        Color of borders within the *white theme* (default) utility class
     - name: white-link
       value: var(--a11y-link)
-      description: >
-        Color of links within the <em>white theme</em> (default) utility class
+      description: !mdx |
+        Color of links within the *white theme* (default) utility class
     - name: white-confirm
       value: '#008237'
-      description: >
-        Color of confirmation alerts within the <em>white theme</em> (default)
+      description: !mdx |
+        Color of confirmation alerts within the *white theme* (default)
         utility class
     - name: white-warn
       value: '#e4193c'
-      description: >
-        Color of warning alerts within the <em>white theme</em> (default)
+      description: !mdx |
+        Color of warning alerts within the *white theme* (default)
         utility class
     - name: a11y-link
       value: blue
-      description: >
-        Accessible link color applied to links within <em>white</em> and
-        <em>light</em> themes
+      description: !mdx |
+        Accessible link color applied to links within *white* and
+        *light* themes
 
 - type: Containers
   scope: ':root'
   customProperties:
     - name: container-padding-x
       value: var(--spacer-3)
-      description: >
-        Left and right padding of the <em>container</em> component
+      description: !mdx |
+        Left and right padding of the *container* component
     - name: narrow-width
       value: 40rem
-      description: >
-        Maximum width of the <em>narrow</em> utility class
+      description: !mdx |
+        Maximum width of the *narrow* utility class
     - name: medium-width
       value: calc( var(--narrow-width) * 1.75)
-      description: >
-        Maximum width of the <em>medium</em> utility class
+      description: !mdx |
+        Maximum width of the *medium* utility class
     - name: wide-width
       value: calc( var(--narrow-width) * 2.5)
-      description: >
-        Maximum width of the <em>wide</em> utility class
+      description: !mdx |
+        Maximum width of the *wide* utility class
 
 - type: Forms
   scope: ':root'
   customProperties:
     - name: form-field-padding-x
       value: var(--spacer-3)
-      description: >
-        Left and right padding of certain <em>form entry</em> elements
+      description: !mdx |
+        Left and right padding of certain *form entry* elements
     - name: form-field-padding-y
       value: var(--button-padding-y)
-      description: >
-        Top and bottom padding of certain <em>form entry</em> elements
+      description: !mdx |
+        Top and bottom padding of certain *form entry* elements
     - name: form-field-border-radius
       value: 0.25em
-      description: >
-        Maximum width of the <em>medium</em> utility class
+      description: !mdx |
+        Maximum width of the *medium* utility class
 
 - type: Gradient Veneer
   scope: .gradient-veneer-{x}
   customProperties:
     - name: gradient-veneer-start
       value: 50%
-      description: >
+      description: !mdx |
         Gradient's starting position (relative to its direction) of the
-        <em>gradient veneer</em> utilities
+        *gradient veneer* utilities
     - name: gradient-veneer-opacity
       value: '1'
-      description: >
-        Opacity of the gradient utility class within the <em>gradient
-        veneer</em> utilities
+      description: !mdx |
+        Opacity of the gradient utility class within the *gradient
+        veneer* utilities
 
 - type: Modal
   scope: .modal
   customProperties:
     - name: modal-padding-x
       value: var(--spacer-2)
-      description: >
-        Left and right padding of the <em>modal</em> component header, body, and
+      description: !mdx |
+        Left and right padding of the *modal* component header, body, and
         footer
     - name: modal-padding-y
       value: var(--spacer-2)
-      description: >
-        Top and bottom padding of the <em>modal</em> component header, body, and
+      description: !mdx |
+        Top and bottom padding of the *modal* component header, body, and
         footer
     - name: modal-overlay-opacity
       value: '0.8'
-      description: >
-        Opacity of the <em>modal</em> overlay
+      description: !mdx |
+        Opacity of the *modal* overlay
     - name: modal-z-index
       value: '8000'
-      description: >
-        Z-index value of the entire <em>modal</em> component
+      description: !mdx |
+        Z-index value of the entire *modal* component
 
 - type: Navigation
   scope: ':root'
   customProperties:
     - name: nav-gap
       value: 0.75em
-      description: >
-        Size of <em>spacer 1</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 1*, used in CSS including margin and padding
         utility classes
     - name: nav-divider-padding-y
       value: 0.625em
-      description: >
-        Size of <em>spacer 2</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 2*, used in CSS including margin and padding
         utility classes
     - name: nav-divider-padding-x
       value: var(--spacer-3)
-      description: >
-        Size of <em>spacer 3</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 3*, used in CSS including margin and padding
         utility classes
     - name: primary-nav-padding-x
       value: var(--spacer-3)
-      description: >
-        Size of <em>spacer 4</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 4*, used in CSS including margin and padding
         utility classes
     - name: primary-nav-padding-y
       value: var(--spacer-2)
-      description: >
-        Size of <em>spacer 5</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 5*, used in CSS including margin and padding
         utility classes
     - name: primary-nav-search-width
       value: 200px
-      description: >
-        Size of <em>spacer 5</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 5*, used in CSS including margin and padding
         utility classes
 
 - type: Spacing
@@ -356,33 +356,33 @@
   customProperties:
     - name: spacer-base
       value: 1rem
-      description: >
-        Size of <em>base</em> spacer value, used in multiplying the five spacer
+      description: !mdx |
+        Size of *base* spacer value, used in multiplying the five spacer
         values
     - name: spacer-1
       value: calc(var(--spacer-base) * 0.5)
-      description: >
-        Size of <em>spacer 1</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 1*, used in CSS including margin and padding
         utility classes
     - name: spacer-2
       value: calc(var(--spacer-base) * 1)
-      description: >
-        Size of <em>spacer 2</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 2*, used in CSS including margin and padding
         utility classes
     - name: spacer-3
       value: calc(var(--spacer-base) * 1.5)
-      description: >
-        Size of <em>spacer 3</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 3*, used in CSS including margin and padding
         utility classes
     - name: spacer-4
       value: calc(var(--spacer-base) * 2.5)
-      description: >
-        Size of <em>spacer 4</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 4*, used in CSS including margin and padding
         utility classes
     - name: spacer-5
       value: calc(var(--spacer-base) * 5)
-      description: >
-        Size of <em>spacer 5</em>, used in CSS including margin and padding
+      description: !mdx |
+        Size of *spacer 5*, used in CSS including margin and padding
         utility classes
 
 - type: Subtle Fill
@@ -390,99 +390,99 @@
   customProperties:
     - name: subtle-fill-opacity
       value: '0.075'
-      description: >
-        Opacity of the <em>subtle fill</em> when used globally
+      description: !mdx |
+        Opacity of the *subtle fill* when used globally
 
 - type: Tables
   scope: .table
   customProperties:
     - name: table-cell-padding-x
       value: var(--spacer-3)
-      description: >
+      description: !mdx |
         Left and right padding of the table cells
     - name: table-cell-padding-y
       value: 0.75em
-      description: >
+      description: !mdx |
         Top and bottom padding of the table cells
     - name: table-scroll-min-width
       value: 800px
-      description: >
-        Minimum width of the table within the <em>table scroll</em> component
+      description: !mdx |
+        Minimum width of the table within the *table scroll* component
 
 - type: Typography
   scope: ':root'
   customProperties:
     - name: body-font-family
       value: Source Sans Pro
-      description: >
+      description: !mdx |
         Font family applied to the entire document
     - name: body-font-weight-normal
       value: '400'
-      description: >
-        Numeric font weight value for <em>normal</em> fonts
+      description: !mdx |
+        Numeric font weight value for *normal* fonts
     - name: body-font-weight-medium
       value: '600'
-      description: >
-        Numeric font weight value for <em>medium</em> fonts
+      description: !mdx |
+        Numeric font weight value for *medium* fonts
     - name: body-font-weight-bold
       value: '700'
-      description: >
-        Numeric font weight value for <em>bold</em> fonts
+      description: !mdx |
+        Numeric font weight value for *bold* fonts
     - name: body-font-size
       value: 22px
-      description: >
+      description: !mdx |
         Base font size applied to the entire document
     - name: body-line-height
       value: '1.5'
-      description: >
+      description: !mdx |
         Line height applied to the entire document (excluding headers)
     - name: font-size-sm
       value: calc(var(--body-font-size) * 0.7)
-      description: >
-        Small font size used in CSS including <em>font size</em> utility classes
+      description: !mdx |
+        Small font size used in CSS including *font size* utility classes
     - name: font-size-md
       value: calc(var(--body-font-size) * 0.8)
-      description: >
-        Medium font size used in CSS including <em>font size</em> utility
+      description: !mdx |
+        Medium font size used in CSS including *font size* utility
         classes
     - name: font-size-lg
       value: calc(var(--body-font-size) * 1)
-      description: >
-        Large font size used in CSS including <em>font size</em> utility classes
+      description: !mdx |
+        Large font size used in CSS including *font size* utility classes
     - name: font-size-xl
       value: calc(var(--body-font-size) * 1.4)
-      description: >
-        Extra large font size used in CSS including <em>font size</em> utility
+      description: !mdx |
+        Extra large font size used in CSS including *font size* utility
         classes
     - name: banner-headline-font-size
       value: calc(var(--body-font-size) * 3.5)
-      description: >
-        Font size of the <em>Banner Headline</em> utility class
+      description: !mdx |
+        Font size of the *Banner Headline* utility class
     - name: h1-font-size
       value: calc(var(--body-font-size) * 3)
-      description: >
-        Font size of <em>Section Header Level 1</em>
+      description: !mdx |
+        Font size of *Section Header Level 1*
     - name: h2-font-size
       value: calc(var(--body-font-size) * 2.2)
-      description: >
-        Font size of <em>Section Header Level 2</em>
+      description: !mdx |
+        Font size of *Section Header Level 2*
     - name: h3-font-size
       value: calc(var(--body-font-size) * 1.8)
-      description: >
-        Font size of <em>Section Header Level 3</em>
+      description: !mdx |
+        Font size of *Section Header Level 3*
     - name: h4-font-size
       value: calc(var(--body-font-size) * 1.6)
-      description: >
-        Font size of <em>Section Header Level 4</em>
+      description: !mdx |
+        Font size of *Section Header Level 4*
     - name: h5-font-size
       value: calc(var(--body-font-size) * 1.4)
-      description: >
-        Font size of <em>Section Header Level 5</em>
+      description: !mdx |
+        Font size of *Section Header Level 5*
     - name: h6-font-size
       value: calc(var(--body-font-size) * 1.2)
-      description: >
-        Font size of <em>Section Header Level 6</em>
+      description: !mdx |
+        Font size of *Section Header Level 6*
     - name: header-line-height
       value: '1.125'
-      description: >
+      description: !mdx |
         Line height applied to headers

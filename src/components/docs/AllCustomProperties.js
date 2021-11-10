@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+
 const AllCustomProperties = () => {
 
     const data = useStaticQuery(graphql`
@@ -8,9 +10,11 @@ const AllCustomProperties = () => {
             allNatura11YcustompropertiesYaml {
                 nodes {
                     customProperties {
-                    description
                     name
                     value
+                    description {
+                        body
+                        }
                     }
                     type
                 }
@@ -181,7 +185,9 @@ const AllCustomProperties = () => {
                                                     </button>
                                                 </td>
                                                 <td>
-                                                    {description}
+                                                  <MDXRenderer>
+                                                    {description.body}
+                                                  </MDXRenderer> 
                                                 </td>
                                             </tr>
                                         );
