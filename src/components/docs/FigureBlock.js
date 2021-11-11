@@ -37,18 +37,22 @@ const Figure = (props) => {
 
     const {
         figureNumber,
+        figureWidth,
         visualExample,
+        visualExampleClass,
         codeToolbar,
-        codeLanguage, 
+        codeLanguage,
         codeExample,
-        highlightedLines
+        highlightedLines,
+        hideFigCaption
     } = props;
 
     const nw = Prism.plugins.NormalizeWhitespace;
     let code = nw.normalize(codeExample);
 
-    let figureWidth;
-    visualExample ? figureWidth = 'medium' : figureWidth = 'narrow'; 
+    // let figureWidth;
+
+    // visualExample ? figureWidth = 'medium' : figureWidth = 'narrow'; 
 
     useEffect(() => {
         Prism.highlightAll();
@@ -58,7 +62,7 @@ const Figure = (props) => {
         <figure className={`container ${figureWidth} margin-y-4`} id={`figure_${figureNumber}`}>
 
             {visualExample ? (
-                <div className="example">
+                <div className={visualExampleClass !== null ? `example ${visualExampleClass}` : `example`}>
                     <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
                         <div className="container narrow">
                             {visualExample}
@@ -80,7 +84,7 @@ const Figure = (props) => {
                 />
             )}
 
-            <figcaption>
+            <figcaption className={hideFigCaption === true ? `screen-reader-only` : ``}>
                 Figure {figureNumber}
             </figcaption>
         </figure>
@@ -88,10 +92,13 @@ const Figure = (props) => {
 }
 
 Figure.defaultProps = {
+    figureWidth: 'medium',
     visualExample: null,
+    visualExampleClass: null,
     codeToolbar: true,
     codeExample: '<p>Code</p>',
     codeLanguage: 'html',
+    hideFigCaption: false
 }
 
 export default Figure;
