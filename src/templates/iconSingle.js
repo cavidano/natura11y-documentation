@@ -25,7 +25,7 @@ const iconSingle = ({ data }) => {
   const svg = data.singleIcon.svgCode.body;
   const tags = data.singleIcon.tags;
 
-  const cool = {
+  const iconBackground = {
     backgroundImage: `url(${iconBG})`
   }
 
@@ -60,7 +60,7 @@ const iconSingle = ({ data }) => {
 
       <div className="container medium">
         <div className="icon-preview box-shadow-1">
-            <div className="flex-row justify-content-center align-items-center one" style={cool}>
+            <div className="flex-row justify-content-center align-items-center one" style={iconBackground}>
                 <div className="height-100 padding-y-4">
                     <svg width="100%" height="20em" viewBox="0 0 48 48">
                         <MDXRenderer>{svg}</MDXRenderer>
@@ -88,39 +88,39 @@ const iconSingle = ({ data }) => {
         <FigureBlock
             figureNumber="1"
             language="html"
+            hideFigCaption={true}
             codeExample={(`
             <!-- Icon Font --> \n
-            <span class="icon icon-bell"></span> \n
+            <span class="icon icon-${className}"></span> \n
             <!-- SVG Sprite --> \n
             <svg class="icon">
-                <use href="#bell"></use>
+                <use href="#${className}"></use>
             </svg>
             `)}
         />
 
-<hr />
+      <hr />
 
-<div class="container narrow text-align-center margin-y-4">
-    <div class="margin-y-3">
-        <a
-            class="button button--has-icon button--outline font-size-md"
-            href="#"
-            download>
-            <span class="icon icon-file-download"></span>
-            <span class="button__text">
-                <span class="Download"></span>
-                <span>Download SVG</span>
-            </span>
-        </a>  
-    </div>
-    <p>
-        Natura11y Icons are free to use for commercial or personal use. If you wish to contribute, <a href="#1">please Let me know</a>.
-    </p>
-    <p class="font-size-md">
-        <a href="https://github.com/cavidano/natura11y-icons" target="_blank">Natura11y Icons on Github</a>
-    </p>
-</div>
-
+      <div className="container narrow text-align-center margin-y-4">
+          <div className="margin-y-3">
+              <a
+                  className="button button--has-icon button--outline font-size-md"
+                  href="#"
+                  download>
+                  <span className="icon icon-file-download"></span>
+                  <span className="button__text">
+                      <span className="Download"></span>
+                      <span>Download SVG</span>
+                  </span>
+              </a>  
+          </div>
+          <p>
+              Natura11y Icons are free to use for commercial or personal use. If you wish to contribute, <a href="#1">please Let me know</a>.
+          </p>
+          <p className="font-size-md">
+              <a href="https://github.com/cavidano/natura11y-icons" target="_blank">Natura11y Icons on Github</a>
+          </p>
+      </div>
 
     </Layout>
   );
