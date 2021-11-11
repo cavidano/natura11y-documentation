@@ -50,10 +50,6 @@ const Figure = (props) => {
     const nw = Prism.plugins.NormalizeWhitespace;
     let code = nw.normalize(codeExample);
 
-    // let figureWidth;
-
-    // visualExample ? figureWidth = 'medium' : figureWidth = 'narrow'; 
-
     useEffect(() => {
         Prism.highlightAll();
     }, []);

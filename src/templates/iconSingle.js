@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
@@ -125,9 +125,6 @@ const iconSingle = ({ data }) => {
     </Layout>
   );
 }
-
-
-
 
 export const query = graphql`
 query queryIconPage($className: String) {
