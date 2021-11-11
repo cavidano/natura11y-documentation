@@ -115,7 +115,9 @@ query queryIcons {
           codePoint
           icon
           id
-          svg
+          svgCode {
+              body
+          }
           tags
           unicode
         }

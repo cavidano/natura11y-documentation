@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 
@@ -16,12 +17,9 @@ const shortcodes = {
 
 const iconSingle = ({ data }) => {
   
-  const pageInfo = data.singleDoc;
+  const pageInfo = data.singleIcon;
 
   const tags = pageInfo.tags;
-    
-  console.log("SVG", pageInfo.svg);
-
 
   return (
     <Layout components={shortcodes}>
@@ -45,8 +43,9 @@ const iconSingle = ({ data }) => {
         </div>
 
         <div class="padding-y-4 theme-primary">
+        
             <svg width="100%" height="20em" viewBox="0 0 48 48">
-                { pageInfo.svg }
+            <MDXRenderer>{pageInfo.svgCode.body}</MDXRenderer>
             </svg>
         </div>
 
@@ -54,17 +53,20 @@ const iconSingle = ({ data }) => {
   );
 }
 
-export default iconSingle;
-
 export const query = graphql`
 query queryIconPage($className: String) {
-    singleDoc: natura11YiconsYaml(className: { eq: $className }) {
-        svg
-        tags
-        icon
-        codePoint
-        className
-        unicode
+    singleIcon: natura11YiconsYaml(className: {eq: $className}) {
+    className
+      codePoint
+      icon
+      id
+      tags
+      unicode
+      svgCode {
+        body
+      }
     }
-}
+  }
 `;
+
+export default iconSingle;

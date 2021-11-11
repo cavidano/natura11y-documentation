@@ -11,12 +11,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
       allNatura11YiconsYaml {
         nodes {
-          tags
-          svg
-          id
-          icon
-          codePoint
           className
+          codePoint
+          icon
+          id
+          svgCode {
+              body
+          }
+          tags
           unicode
         }
       }
