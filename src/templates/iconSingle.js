@@ -16,36 +16,42 @@ const shortcodes = {
 };
 
 const iconSingle = ({ data }) => {
-  
-  const pageInfo = data.singleIcon;
 
-  const tags = pageInfo.tags;
+  const title = data.singleIcon.icon;
+  const className = data.singleIcon.className;
+  const unicode = data.singleIcon.unicode;
+  const codePoint = data.singleIcon.codePoint;
+  const svg = data.singleIcon.svgCode.body;
+  const tags = data.singleIcon.tags;
 
   return (
     <Layout components={shortcodes}>
 
         <div className="container medium text-align-center margin-y-4">
             <h1 className="font-weight-normal">
-                { pageInfo.icon }
+                {title}
             </h1>
             
             <p className="font-size-md margin-bottom-0">
                 <strong>Tags:</strong> 
             
                 {tags.map((tag, index) => (
-                   <span className="margin-left-1">{tag}</span> 
+                  <span key={`${tag}_${index}`} className="margin-left-1">
+                    {tag}
+                  </span> 
                 ))}
             
             </p>
             <p className="font-size-sm">
-                <strong>Unicode:</strong> <em className="opacity-70">{ pageInfo.unicode }</em>
+                <strong>Unicode:</strong> <em className="opacity-70">
+                  {unicode}
+                </em>
             </p>
         </div>
 
         <div class="padding-y-4 theme-primary">
-        
             <svg width="100%" height="20em" viewBox="0 0 48 48">
-            <MDXRenderer>{pageInfo.svgCode.body}</MDXRenderer>
+              <MDXRenderer>{svg}</MDXRenderer>
             </svg>
         </div>
 
@@ -56,7 +62,7 @@ const iconSingle = ({ data }) => {
 export const query = graphql`
 query queryIconPage($className: String) {
     singleIcon: natura11YiconsYaml(className: {eq: $className}) {
-    className
+      className
       codePoint
       icon
       id
