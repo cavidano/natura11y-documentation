@@ -50,6 +50,11 @@ const Header = ({ version }) => {
     </svg>
   );
 
+  const active = {
+    fontWeight: 'bold',
+    textDecoration: 'underline'
+  }
+
   return (
     <header className="box-shadow-1 z-index-2500" id="global-header">
 
@@ -72,10 +77,20 @@ const Header = ({ version }) => {
               </span>
             </li>
             <li>
-              <Link to="/docs/get-started/">Docs</Link>
+              <Link 
+              to="/docs"
+              activeStyle={active}
+              partiallyActive={true}>
+                Docs
+              </Link>
             </li>
             <li>
-              <Link to="/icons/">Icons</Link>
+              <Link
+                to="/icons"
+                activeStyle={active}
+                partiallyActive={true}>
+                  Icons
+              </Link>
             </li>
             <li>
               <Link to="/examples/">Examples</Link>

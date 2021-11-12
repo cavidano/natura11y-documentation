@@ -50,12 +50,12 @@ const Home = () => {
               </p>
 
               <div className="grid grid--column-2--sm gap-3">
-                <a className="button theme-white width-100" href="#1">
+                <a className="button theme-white width-100" href="/docs/get-started">
                   Get Started
                 </a>
                 <a
                   className="button button--outline width-100"
-                  href="{{ site.url }}/examples"
+                  href="/docs/alerts"
                 >
                   Examples
                 </a>

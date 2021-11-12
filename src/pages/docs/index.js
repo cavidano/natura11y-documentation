@@ -1,12 +1,15 @@
-import React from 'react';
-
-import Layout from '../../components/Layout';
+import React, { Fragment } from 'react';
+import { navigate } from "gatsby";
 
 const Docs = () => {
+
+    navigate(
+      "/docs/get-started",
+      { replace: true }
+    )
+
   return (
-    <Layout>
-      {/* Content */}
-    </Layout>
+    <Fragment></Fragment>
   );
 }
 

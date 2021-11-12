@@ -26,12 +26,12 @@ const DocSidebar = ({ pages }) => {
       
           <ul className="nav font-size-md">
           <li>
-                <Link to="/docs/get-started/">
+                <Link to="/docs/get-started">
                   Get Started
                 </Link>
               </li>
               <li>
-                <Link to="/docs/customization/">
+                <Link to="/docs/customization">
                   Customization
                 </Link>
               </li>
