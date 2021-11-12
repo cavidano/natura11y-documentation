@@ -18,4 +18,104 @@ There are two ways to customize Natura11y. The CDN Stylesheet allows you to rede
 
 </TextBlock>
 
+<Divider id="customizableCDN" />
+
+<TextBlock>
+
+## Customizable CDN
+
+Our <a href="/docs/get-started/#quickStart">Quick Start</a> guide shows you how to include the framework's core stylesheet via CDN. Within the framework, we
+use CSS custom properties to declare styles. People often refer to CSS custom properties as <strong>CSS variables</strong>. We use this term throughout our documentation.
+
+If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using a SASS variable and a CSS Variable to achieve the same result.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    figureWidth="narrow"
+    codeToolbar={false}
+    codeLanguage="css"
+    codeExample={(`
+    /* Primary as a SASS Variable: */\n
+    $primary: navy;\n
+    .selector--primary{
+        background-color: $primary
+    }\n
+    // Primary as a CSS Variable:\n
+    --primary: navy;\n
+    .selector--primary{
+        background-color: var(--primary);
+    }
+    `)}
+/>
+
+<TextBlock>
+
+CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime? You can declare new values from **natura11y.css** anytime after that stylesheet reference.
+
+There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values using JavaScript.
+
+In the following exercise, learn how to change your theme colors with a second stylesheet.
+
+</TextBlock>
+
+<Divider id="customizingColors" />
+
+<TextBlock>
+
+## Practice Exercise: Customizing Colors
+
+Make new directory somewhere on your computer. Call it **color-example**. Copy and paste the markup from Figure 2 (below) into a new HTML document. Save this document as **index.html** inside of the **color-example** directory.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    codeExample={(`
+    <!DOCTYPE html> \n
+    <html lang="en" dir="ltr"> \n
+        <head> \n
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> \n
+            <title>Color Example • Natura11y</title> \n
+            <!-- Natura11y Icons -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css"> \n
+            <!-- Natura11y Stylesheet -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
+        </head> \n
+        <body> \n
+            <main class="overflow-hidden" id="skip-header-content"> \n
+                <div class="container narrow margin-y-5"> \n
+                    <div class="theme-primary padding-3 margin-y-2">
+                        <p>Primary</p>
+                    </div>
+                    <div class="theme-secondary padding-3 margin-y-2">
+                        <p>Secondary</p>
+                    </div>
+                    <div class="theme-dark padding-3 margin-y-2">
+                        <p>Dark</p>
+                    </div>
+                    <div class="theme-light padding-3 margin-y-2">
+                        <p>Light</p>
+                    </div> \n
+                </div> \n
+            </main> \n
+            <!-- Natura11y Javascript -->
+            <script src="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js"></script>\n
+        </body> \n
+    </html>
+    `)}
+/>
+
+<TextBlock>
+
+Preview **index.html** in a browser. It should resemble the following.
+
+</TextBlock>
+
+<BrowserFrame frameSrc="../../iframe-examples/iframe-example.html" />
+
+<BrowserFrame frameSrc="../../iframe-examples/iframe-example.html" />
+
 <AllCustomProperties />

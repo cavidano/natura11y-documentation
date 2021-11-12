@@ -57,14 +57,16 @@ const Home = () => {
               </p>
 
               <div className="grid grid--column-2--sm gap-3">
-                <Link className="button theme-white width-100" to="/docs/get-started">
-                  Get Started
+                <Link
+                  className="button theme-white width-100"
+                  to="/docs/get-started">
+                    Get Started
                 </Link>
-                <a
+                <Link
                   className="button button--outline width-100"
-                  href="/docs/alerts">
-                  Examples
-                </a>
+                  to="/docs/alerts">
+                    Examples
+                </Link>
               </div>
             </div>
           
@@ -115,9 +117,11 @@ const Home = () => {
                                 Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
                             </p>
                             
-                            <a className="button theme-white box-shadow font-size-md" href="{{ site.url }}/docs/accessibility">
+                            <Link
+                              className="button theme-white box-shadow font-size-md"
+                              to="/docs/accessibility">
                                 What's Included
-                            </a>
+                            </Link>
 
                         </div>
 
@@ -151,7 +155,12 @@ const Home = () => {
                                 ratio throughout your layouts.
                             </p>
                             
-                            <a className="button theme-white box-shadow font-size-md" href="{{ site.url }}/docs/color">Color</a>
+                            <Link
+                              className="button theme-white box-shadow font-size-md"
+                              to="/docs/color">
+                                Color
+                            </Link>
+                            
 
                         </div>
 
@@ -183,7 +192,12 @@ const Home = () => {
                                 Style declarations use CSS Variables. You can redefine styles without the need for compiling Sass.  
                             </p>
                             
-                            <a className="button theme-white box-shadow font-size-md" href="{{ site.url }}/docs/customization">Customization</a>
+                            <Link
+                              className="button theme-white box-shadow font-size-md"
+                              to="/docs/customization">
+                                Customization
+                            </Link>
+                            
 
                         </div>
 
@@ -216,7 +230,11 @@ const Home = () => {
                                 ideal for any developer.
                             </p>
                             
-                            <a className="button theme-white box-shadow font-size-md" href="{{ site.url }}/docs/get-started">Get Started</a>
+                            <Link
+                              className="button theme-white box-shadow font-size-md"
+                              to="/docs/get-started">
+                                Get Started
+                            </Link>
 
                         </div>
 

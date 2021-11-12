@@ -17,12 +17,14 @@ import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
 import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
+import BrowserFrame from '../components/docs/BrowserFrame';
 
 const shortcodes = {
   Divider,
   AccessibilitySpotlight,
   TextBlock,
   FigureBlock,
+  BrowserFrame,
   TableLineDescBlock,
   TableLineDescRow,
   StaticImage,
