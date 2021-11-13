@@ -8,6 +8,7 @@ bannerImage: ../../images/banner/accents.jpg
 
 import GradientVeneerDirections from '../../components/docs/examples/GradientVeneerDirections';
 import GradientVeneerThemes from '../../components/docs/examples/GradientVeneerThemes';
+import SubtleFill from '../../components/docs/examples/SubtleFill'
 
 <TextBlock>
 
@@ -62,6 +63,7 @@ Gradient veneers use a single color, fully transparent to fully opaque. They inh
     
 />
 
+
 <TextBlock>
 
 Gradient veneer utilities place the gradient (as a psuedo element) above all child selectors on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">z index</a>. With the above examples, we applied a gradient veneer utility to the `.backdrop-image` selector. This allows the gradient to appear above its child `<img>` tag (Figure 2, lines 3-5).
@@ -82,8 +84,38 @@ Further <a href="/docs/customization/#customizableCDN">customization</a> options
 
 ## Subtle Fill
 
-The `.subtle-fill` utility class adds a light tint background to any selector. Subtle fills inherit their color from the text color of the element on which they are placed.
+The `.subtle-fill` utility class adds a light tint background to any selector. Subtle fills inherit their color from the **text color** of the element on which they are placed.
 
 With the card examples below, we can add soft emphasis to the action buttons within the `.card__footer` selector.
+
+Notice the subtle fill appears darker within the *white theme* card, while appearing lighter on the *dark theme* card.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <SubtleFill />
+    )}
+    highlightedLines="7"
+    codeExample={(`
+    <div class="card theme-dark"> \n
+        <div class="card__body">
+            ...
+        </div> \n
+        <div class="card__foot subtle-fill">
+            ...
+        </div> \n
+    </div>
+    `)}
+/>
+
+
+<TextBlock>
+
+### Related CSS Variables
+
+Further <a href="/docs/customization/#customizableCDN">customization</a>
+options are available with <a href="/docs/customization/#cp_subtle-fill">CSS variables</a>.
 
 </TextBlock>
