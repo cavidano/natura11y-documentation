@@ -50,9 +50,6 @@ const Figure = (props) => {
         hideFigCaption
     } = props;
 
-    const nw = Prism.plugins.NormalizeWhitespace;
-    let code = nw.normalize(codeExample);
-
     useEffect(() => {
         Prism.highlightAll();
     }, []);
@@ -71,7 +68,7 @@ const Figure = (props) => {
                         highlightedLines={highlightedLines} 
                         codeToolbar={codeToolbar}
                         codeLanguage={codeLanguage}
-                        code={code}
+                        code={codeExample}
                     />
                 </div>
             ) : (
@@ -79,7 +76,7 @@ const Figure = (props) => {
                     highlightedLines={highlightedLines} 
                     codeToolbar={codeToolbar}
                     codeLanguage={codeLanguage}
-                    code={code}
+                    code={codeExample}
                 />
             )}
 
