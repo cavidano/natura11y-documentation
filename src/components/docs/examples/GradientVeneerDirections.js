@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+
 import { StaticImage } from 'gatsby-plugin-image';
 
 const GradientVeneerDirections = () => {
@@ -11,7 +12,7 @@ const GradientVeneerDirections = () => {
     } 
 
     return (
-        <figure className="container narrow margin-y-4">
+        <Fragment>
 
             <ul className="nav nav--horizontal justify-content-center margin-bottom-4" data-react-nav>
                 <li>
@@ -67,8 +68,8 @@ const GradientVeneerDirections = () => {
                     </div>
                 </div>
             </div>
-        </figure>
-    )
+        </Fragment>
+    );
 }
 
 export default GradientVeneerDirections;
