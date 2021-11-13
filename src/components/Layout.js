@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
+
+import { useStaticQuery, graphql } from 'gatsby';
+
 import Header from './Header';
 import Footer from './Footer';
 
