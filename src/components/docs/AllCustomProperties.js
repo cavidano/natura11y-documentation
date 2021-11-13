@@ -17,6 +17,7 @@ const AllCustomProperties = () => {
                         }
                     }
                     type
+                    scope
                 }
             }
         }
@@ -28,6 +29,7 @@ const AllCustomProperties = () => {
     const copyButtonActionText = 'Copied';
 
     const handleCopyAll = (event) => {
+        
         let currentTable = event.target.closest('table');
         let currentTableRowsList = currentTable.querySelectorAll('tbody > tr');
         let currentTableSingleButtonList = currentTable.querySelectorAll('[data-clipboard="single"]');
@@ -49,15 +51,15 @@ const AllCustomProperties = () => {
         });
 
         let myClipboardProperties = currentCPArray.map((property) => {
-
             return `    ${property}`
         
         }).join('\n');
         
-        let myClipboardText = `
+        let myClipboardText = (`
             :root {
                 ${myClipboardProperties}
-            }`;
+            }
+        `);
 
         // Create an auxiliary hidden input
         var aux = document.createElement( 'textarea' );
@@ -82,6 +84,7 @@ const AllCustomProperties = () => {
     const handleCopySingle = (event) => {
 
         event.preventDefault();
+        const cpButtonList = document.querySelectorAll('[data-clipboard="single"]');
 
         cpButtonList.forEach((otherButtons)=> {
             otherButtons.innerHTML = copyButtonText;
