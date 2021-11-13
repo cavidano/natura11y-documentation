@@ -114,7 +114,6 @@ Preview **index.html** in a browser. It should resemble the following.
 
 </TextBlock>
 
-
 <BrowserFrame frameSrc="../../iframe-examples/custom-properties-01.html" />
 
 <TextBlock>
@@ -130,7 +129,78 @@ Open your HTML document. Add a link to **new-colors.css** somewhere below
 
 </TextBlock>
 
+<FigureBlock
+    figureNumber="3"
+    highlightedLines="5"
+    codeExample={(`
+        <!-- Natura11y Stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
+        <!-- Custom Theme Properties -->
+        <link rel="stylesheet" href="./css/new-colors.css">
+    `)}
+/>
+
+<TextBlock>
+
+With **new-colors.css** open, include the CSS from Figure 4. Save this file and refresh your browser.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    figureWidth="narrow"
+    codeLanguage="css"
+    codeExample={(`
+    /* Scoped to the root */ \n
+    :root {
+        --primary: #0080f8;
+    } \n
+    /* Scoped to a parent selector */ \n
+    .card {
+        --card-padding-y: 1em;
+    }
+    `)}
+/>
 
 
+<BrowserFrame frameSrc="../../iframe-examples/custom-properties-02.html" />
+
+<TextBlock>
+
+Did your colors update to the new palette? With your new stylesheet in place, you have the ability to customize much more than just colors. In fact, you have full control over your design.
+
+</TextBlock>
+
+<Divider id="referenceGuideCSSVariables" />
+
+<TextBlock>
+
+## Reference Guide: CSS Variables
+
+CSS Variables are hierarchal, or scoped. A variable's scope determines its reach throughout the DOM tree.
+
+All CSS Variables in the framework are either **scoped** to the document or to a block. Document scoped variables use the `:root` psuedo selector (available to the entire page). Block scoped variables use their selector class (e.g., `.card`). These variables are available only to their selector (Figure 5).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="5"
+    figureWidth="narrow"
+    codeLanguage="css"
+    codeExample={(`
+    /* Scoped to the root */ \n
+    :root {
+        --primary: #0080f8;
+    } \n
+    /* Scoped to a parent selector */ \n
+    .card {
+        --card-padding-y: 1em;
+    }
+    `)}
+/>
+
+<FigureBlock
+    figureNumber="6"
+/>
 
 <AllCustomProperties />
