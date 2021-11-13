@@ -12,7 +12,7 @@ import '../../prismjs/plugins/treeview/prism-treeview';
 
 import '../../prismjs/themes/prism-carl.css';
 
-import Pre from './Pre';
+import CodeBlock from './CodeBlock';
 
 const Figure = (props) => {
 
@@ -64,19 +64,19 @@ const Figure = (props) => {
                             {visualExample}
                         </div>
                     </div>
-                    <Pre
+                    <CodeBlock
                         highlightedLines={highlightedLines} 
                         codeToolbar={codeToolbar}
                         codeLanguage={codeLanguage}
-                        code={codeExample}
+                        codeExample={codeExample}
                     />
                 </div>
             ) : (
-                <Pre 
+                <CodeBlock 
                     highlightedLines={highlightedLines} 
                     codeToolbar={codeToolbar}
                     codeLanguage={codeLanguage}
-                    code={codeExample}
+                    codeExample={codeExample}
                 />
             )}
 

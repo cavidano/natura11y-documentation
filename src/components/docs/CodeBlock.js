@@ -1,21 +1,25 @@
 import React from 'react';
 
-const Pre = (props) => {
+const CodeBlock = (props) => {
     
     const {
         highlightedLines, 
         codeToolbar,
         codeLanguage,
-        code
+        codeExample
     } = props;
 
     return (
-        <pre data-line={highlightedLines} className={codeToolbar === false ? `hide-toolbar` : ``}>
+        <pre
+            data-line={highlightedLines}
+            className={codeToolbar === false ? `hide-toolbar` : ``}>
+
             <code className={`language-${codeLanguage}`}>
-                {code}
+                {codeExample}
             </code>
+        
         </pre>
     )
 }
 
-export default Pre;
+export default CodeBlock;
