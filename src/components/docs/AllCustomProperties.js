@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 const AllCustomProperties = () => {
 
     const data = useStaticQuery(graphql`
-        query queryCustomProperties {
+        query queryAllCPs {
             allNatura11YcustompropertiesYaml {
                 nodes {
                     customProperties {

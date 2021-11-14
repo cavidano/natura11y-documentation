@@ -1,16 +1,4 @@
-import React, { useEffect } from 'react';
-
-import Prism from '../../prismjs/prism';
-
-import '../../prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
-import '../../prismjs/plugins/line-highlight/prism-line-highlight';
-import '../../prismjs/plugins/line-numbers/prism-line-numbers';
-import '../../prismjs/plugins/toolbar/prism-toolbar';
-import '../../prismjs/plugins/show-language/prism-show-language';
-import '../../prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
-import '../../prismjs/plugins/treeview/prism-treeview';
-
-import '../../prismjs/themes/prism-carl.css';
+import React from 'react';
 
 import CodeBlock from './CodeBlock';
 
@@ -49,10 +37,6 @@ const Figure = (props) => {
         highlightedLines,
         hideFigCaption
     } = props;
-
-    useEffect(() => {
-        Prism.highlightAll();
-    }, []);
 
     return (
         <figure className={`container ${figureWidth} margin-y-4`} id={`figure_${figureNumber}`}>

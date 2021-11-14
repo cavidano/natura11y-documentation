@@ -6,6 +6,9 @@ exports.createPages = async ({ graphql, actions }) => {
     query Docs {
       allMdx {
         nodes {
+          frontmatter {
+            title
+          }
           slug
         }
       }
@@ -29,7 +32,10 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: "/docs/" + node.slug,
       component: path.resolve("./src/templates/documentation.js"),
-      context: { slug: node.slug },
+      context: { 
+        slug: node.slug,
+        title: node.frontmatter.title 
+       },
     });
   });
 

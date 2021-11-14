@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
@@ -18,8 +18,10 @@ import FigureBlock from '../components/docs/FigureBlock';
 import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
 import BrowserFrame from '../components/docs/BrowserFrame';
+import RelatedCustomProperties from '../components/docs/RelatedCustomProperties';
 
 const shortcodes = {
+  StaticImage,
   Divider,
   AccessibilitySpotlight,
   TextBlock,
@@ -27,7 +29,7 @@ const shortcodes = {
   BrowserFrame,
   TableLineDescBlock,
   TableLineDescRow,
-  StaticImage,
+  RelatedCustomProperties
 };
 
 const Documentation = ({ data }) => {
@@ -72,6 +74,10 @@ const Documentation = ({ data }) => {
   const { bannerCreditHandle } = data.singleDoc.frontmatter;
   const image = getImage(data.singleDoc.frontmatter.bannerImage);
 
+  const relatedCustomProperties = data.relatedCPs.nodes;
+
+  console.log("related custom properties ", relatedCustomProperties)
+
   return (
     <Layout>
       <div className="article article--two-column">
@@ -83,25 +89,31 @@ const Documentation = ({ data }) => {
 
           <div className="article__body__content">
 
-          <Banner
-            title={title}
-            image={image}
-            creditHandle={bannerCreditHandle}
-            creditName={bannerCreditName}
-          />
-  
-          {sections.length > 0 && (
-            <Fragment>
-              <TableOfContents sections={sections} />
-              <hr />
-            </Fragment>
-          )}
+            <Banner
+              title={title}
+              image={image}
+              creditHandle={bannerCreditHandle}
+              creditName={bannerCreditName}
+            />
+    
+            {sections.length > 0 && (
+              <Fragment>
+                <TableOfContents sections={sections} />
+                <hr />
+              </Fragment>
+            )}
 
-          <div className="margin-y-5">
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>{body}</MDXRenderer>
-            </MDXProvider>
-          </div>
+            <div className="margin-y-5">
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{body}</MDXRenderer>
+              </MDXProvider>
+
+              {relatedCustomProperties.length > 0 && (
+                <RelatedCustomProperties customProperties={relatedCustomProperties} />
+              )}
+
+
+            </div>
 
           </div>
 
@@ -116,7 +128,7 @@ const Documentation = ({ data }) => {
 export default Documentation;
 
 export const query = graphql`
-query queryDocPage($slug: String) {
+query queryPageData($slug: String, $title: String) {
     allDocs: allMdx {
       nodes {
         frontmatter {
@@ -141,5 +153,18 @@ query queryDocPage($slug: String) {
             }
         }
     }
+    relatedCPs: allNatura11YcustompropertiesYaml(filter: {type: { eq: $title  }}) {
+      nodes {
+          customProperties {
+              name
+              value
+              description {
+                  body
+              }
+          }
+          type
+          scope
+      }
+  }
 }
 `;
