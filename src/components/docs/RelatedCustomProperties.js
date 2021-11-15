@@ -40,14 +40,13 @@ const RelatedCustomProperties = ({ customProperties }) => {
 
                             <CodeBlock
                                 codeLanguage="css"
-codeExample={(`
-${scope} {
-${cps.map((property, index) => {
-const { name, value } = property;
-return `    --${name}: ${value}`
-}).join('\n')}
-}
-`).trim()}
+                                codeExample={(`
+                                ${scope} {
+                                    ${cps.map((property) => {
+                                    return `    --${property.name}: ${property.value}`
+                                    }).join('\n')}
+                                }
+                                `).trim()}
                             />
 
                             </figure>

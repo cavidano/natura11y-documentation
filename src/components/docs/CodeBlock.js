@@ -25,13 +25,23 @@ const CodeBlock = (props) => {
         codeExample
     } = props;
 
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true,
+    });
+    
+
+    const nw = Prism.plugins.NormalizeWhitespace;
+    const code = nw.normalize(codeExample);
     return (
         <pre
             data-line={highlightedLines}
             className={codeToolbar === false ? `hide-toolbar` : ``}>
 
             <code className={`language-${codeLanguage}`}>
-                {codeExample}
+                {code}
             </code>
         
         </pre>
