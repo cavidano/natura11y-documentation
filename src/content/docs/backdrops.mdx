@@ -1,0 +1,114 @@
+---
+category: "a-z"
+title: "Backdrops"
+bannerCreditName: "Luca Micheli"
+bannerCreditHandle: "@lucamicheli" 
+bannerImage: ../../images/banner/backdrops.jpg
+---
+
+<TextBlock>
+
+Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>. 
+
+</TextBlock>
+
+
+<AccessibilitySpotlight>
+
+Backdrops remove the need for CSS background images. Feature images exist within the HTML, so screen readers can read the text of the image's *alt* attribute.
+
+</AccessibilitySpotlight>
+
+<Divider id="aspect-ratio-sizes" />
+
+<TextBlock>
+
+## Image Proportional
+
+Image proportional backdrops scale and stack responsively. Below is an example of a basic image proportional backdrop.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <div class="backdrop theme-dark border-radius">
+            <div class="backdrop__credit">
+                <p>
+                    Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Zdeněk Macháček</a> on <a href="https://unsplash.com/collections/4468315/landscapes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+                </p>
+            </div>
+            <div class="backdrop__image">
+                <StaticImage
+                    class="opacity-50"
+                    src="../../images/examples/backdrop-example-01.jpg"
+                    alt="whoa"
+                    placeholder="dominantColor"
+                    layout="fullWidth"
+                />
+            </div>
+            <div class="backdrop__cover">
+                <div class="container text-align-center">
+                    <p class="h4 text-shadow margin-bottom-3">
+                    <em>In Their Eternal Faces<br />The Sun&#8212;with just delight</em>
+                    </p>
+                    <a class="button font-size-md theme-secondary" href="#1">Emily Dickenson Poetry</a>
+                </div>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+    <div class="aspect-ratio-16x9">...</div> \n
+    <div class="aspect-ratio-3x2">...</div> \n
+    <div class="aspect-ratio-4x3">...</div> \n
+    <div class="aspect-ratio-1x1">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Aspect ratio utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="2"
+    codeExample={(`
+    <!-- With breakpoint modifier --> \n
+    <div class="aspect-ratio-16x9--lg">...</div>
+    `)}
+/>
+
+<Divider id="embedding-video" />
+
+<TextBlock>
+
+## Embedding Video
+
+A practical use for aspect ratios is for embedding video into a page. Consider the following example:  
+    
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="3"
+    visualExample={(
+        <iframe
+            class="aspect-ratio-16x9 background-color-dark"
+            src="https://player.vimeo.com/video/261715638"
+            title="Arches National Park (YouTube)"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    )}
+    codeExample={(`
+    <iframe
+        class="aspect-ratio-16x9"
+        src="..."
+        frameborder="0"
+        allow="autoplay;"
+        allowfullscreen>
+    </iframe>
+    `)}
+/>

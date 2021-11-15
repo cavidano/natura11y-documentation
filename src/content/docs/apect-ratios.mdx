@@ -1,0 +1,97 @@
+---
+category: "a-z"
+title: "Aspect Ratios"
+bannerCreditName: "Jenna Brummond"
+bannerCreditHandle: "@jbru922" 
+bannerImage: ../../images/banner/aspect-ratios.jpg
+---
+
+<TextBlock>
+
+Aspect Ratio components are ideal for embedding video, maps, or anything where a width to height ratio must be maintained. 
+
+</TextBlock>
+
+<Divider id="aspect-ratio-sizes" />
+
+<TextBlock>
+
+## Aspect Ratio Sizes
+
+Available aspect ratio sizes shown in Figure 1.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <div class="grid grid--column-4--md gap-3 align-items-end">
+            <div class="aspect-ratio-16x9 border border-color-dark display-flex align-items-center justify-content-center">
+                <p>16x9</p>
+            </div> 
+            <div class="aspect-ratio-3x2 border border-color-dark display-flex align-items-center justify-content-center">
+                <p>3x2</p>
+            </div>
+            <div class="aspect-ratio-4x3 border border-color-dark display-flex align-items-center justify-content-center">
+                <p>4x3</p>
+            </div>
+            <div class="aspect-ratio-1x1 border border-color-dark display-flex align-items-center justify-content-center">
+                <p>1x1</p>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+    <div class="aspect-ratio-16x9">...</div> \n
+    <div class="aspect-ratio-3x2">...</div> \n
+    <div class="aspect-ratio-4x3">...</div> \n
+    <div class="aspect-ratio-1x1">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Aspect ratio utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="2"
+    codeExample={(`
+    <!-- With breakpoint modifier --> \n
+    <div class="aspect-ratio-16x9--lg">...</div>
+    `)}
+/>
+
+<Divider id="embedding-video" />
+
+<TextBlock>
+
+## Embedding Video
+
+A practical use for aspect ratios is for embedding video into a page. Consider the following example:  
+    
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="3"
+    visualExample={(
+        <iframe
+            class="aspect-ratio-16x9 background-color-dark"
+            src="https://player.vimeo.com/video/261715638"
+            title="Arches National Park (YouTube)"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    )}
+    codeExample={(`
+    <iframe
+        class="aspect-ratio-16x9"
+        src="..."
+        frameborder="0"
+        allow="autoplay;"
+        allowfullscreen>
+    </iframe>
+    `)}
+/>

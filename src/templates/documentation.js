@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { StaticImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
@@ -22,6 +22,7 @@ import RelatedCustomProperties from '../components/docs/RelatedCustomProperties'
 
 const shortcodes = {
   StaticImage,
+  GatsbyImage,
   Divider,
   AccessibilitySpotlight,
   TextBlock,
