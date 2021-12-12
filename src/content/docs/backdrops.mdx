@@ -6,7 +6,7 @@ bannerCreditHandle: "@lucamicheli"
 bannerImage: ../../images/banner/backdrops.jpg
 ---
 
-import {codeImgPlaceholderBackdrop} from '../../mdxVars.js';
+import { codeImgPlaceholderBackdrop } from '../../mdxVars.js';
 import BackdropImageProportional from '../../components/docs/examples/BackdropImageProportional';
 
 <TextBlock>
@@ -36,6 +36,7 @@ Image proportional backdrops scale and stack responsively. Below is an example o
     visualExample={(
         <BackdropImageProportional />
     )}
+    highlightedLines="1,3-5,7-9,11-22"
     codeExample={(`
     <div class="backdrop theme-dark border-radius"> \n
         <div class="backdrop__credit">
@@ -57,3 +58,33 @@ Image proportional backdrops scale and stack responsively. Below is an example o
     </div>
     `)}
 />
+
+<TableLineDescBlock targetFigure="1">
+
+<TableLineDescRow lines="1">
+
+The parent `.backdrop` selector is required.
+
+The `.theme-dark` utility class is optional. It provides the background and text color. If not present, these colors are inherited from the backdrop's nearest ancestor (with a theme color applied).
+
+The `.border-radius` utility class is optional.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3-5">
+
+The `.backdrop__credit` selector is optional.
+
+It is where you provide a credit for the image.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="7-9">
+
+The `.backdrop__image` selector is required.
+
+It contains the feature image.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
