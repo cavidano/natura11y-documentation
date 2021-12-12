@@ -6,6 +6,8 @@ bannerCreditHandle: "@lucamicheli"
 bannerImage: ../../images/banner/backdrops.jpg
 ---
 
+import BackdropImageProportional from '../../components/docs/examples/BackdropImageProportional';
+
 <TextBlock>
 
 Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>. 
@@ -31,28 +33,26 @@ Image proportional backdrops scale and stack responsively. Below is an example o
 <FigureBlock
     figureNumber="1"
     visualExample={(
-        <div class="backdrop theme-dark border-radius">
-            <div class="backdrop__credit">
-                <p>
-                    Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Zdeněk Macháček</a> on <a href="https://unsplash.com/collections/4468315/landscapes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-                </p>
-            </div>
-            <div class="backdrop__image">
-            </div>
-            <div class="backdrop__cover">
-                <div class="container text-align-center">
-                    <p class="h4 text-shadow margin-bottom-3">
-                    <em>In Their Eternal Faces<br />The Sun&#8212;with just delight</em>
-                    </p>
-                    <a class="button font-size-md theme-secondary" href="#1">Emily Dickenson Poetry</a>
-                </div>
-            </div>
-        </div>
+        <BackdropImageProportional />
     )}
     codeExample={(`
-    <div class="aspect-ratio-16x9">...</div> \n
-    <div class="aspect-ratio-3x2">...</div> \n
-    <div class="aspect-ratio-4x3">...</div> \n
-    <div class="aspect-ratio-1x1">...</div>
+    <div class="backdrop theme-dark border-radius"> \n
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div> \n
+        <div class="backdrop__image">
+            <img class="opacity-50" src="https://via.placeholder.com/1600x900" alt="Placeholder">
+        </div> \n
+        <div class="backdrop__cover"> \n
+            <div class="container text-align-center">
+                <p class="h4 text-shadow margin-bottom-3">
+                    <em>In Their Eternal Faces<br>The Sun—with just delight</em>
+                </p>
+                <a class="button font-size-md theme-primary" href="#1">
+                    Emily Dickenson Poetry
+                </a>
+            </div> \n
+        </div> \n
+    </div>
     `)}
 />
