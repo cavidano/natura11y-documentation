@@ -7,7 +7,7 @@ bannerImage: ../../images/banner/borders.jpg
 ---
 
 <TextBlock>
-    
+
 Maintain the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank">border</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank">border radius</a> styles globally and on specific selectors.
 
 </TextBlock>
@@ -15,9 +15,244 @@ Maintain the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" t
 <Divider id="borderUtilities" />
 
 <TextBlock>
-    
+
 ## Border Utilities
 
 Add a border to any element with Natura11y's border utilities. Include a <a href="#1">breakpoint modifier</a> to apply a border at a specific breakpoint (Figure 1).
 
 </TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <div
+            class="container theme-white narrow"
+            style={{'--subtle-fill-opacity': '.0375', '--white-border': 'hsla(0, 0%, 50%, 0.375)'}}>
+                <div class="grid grid--column-2 gap-2 text-align-center font-size-md">
+                    <div class="grid__colspan-2 padding-3 subtle-fill border">
+                        <p class="margin-bottom-1">
+                            Border (all sides)
+                        </p>
+                        <p><code>.border</code></p>
+                    </div>
+                    <div class="padding-3 subtle-fill border-top">
+                        <p class="margin-bottom-1">
+                            Border (top side only)
+                        </p>
+                        <p><code>.border-top</code></p>
+                    </div>
+                    <div class="padding-3 subtle-fill border-right">
+                        <p class="margin-bottom-1">
+                            Border (right side only)
+                        </p>
+                        <p><code>.border-right</code></p>
+                    </div>
+                    <div class="padding-3 subtle-fill border-bottom">
+                        <p class="margin-bottom-1">
+                            Border (bottom side only)
+                        </p>
+                        <p><code>.border-bottom</code></p>
+                    </div>
+                    <div class="padding-3 subtle-fill border-left">
+                        <p class="margin-bottom-1">
+                            Border (left side only)
+                        </p>
+                        <p><code>.border-left</code></p>
+                    </div>
+                </div>
+        </div>
+    )}
+    codeExample={(`
+        <div class="border">...</div>
+        <div class="border-top">...</div>
+        <div class="border-right">...</div>
+        <div class="border-bottom">...</div>
+        <div class="border-left">...</div> \n
+        <!-- Breakpoint Specific (e.g., medium breakpoint) --> \n
+        <div class="border--md">...</div>
+        <div class="border-top--md">...</div>
+        <div class="border-right--md">...</div>
+        <div class="border-bottom--md">...</div>
+        <div class="border-left--md">...</div>
+    `)}
+/>
+
+<Divider id="" />
+
+<TextBlock>
+
+## Border Color Utilities
+
+Specify a border color to a bordered element with the border color utilities (Figure 2). <a href="{{ site.url }}/docs/color/#themeColors">Theme colors</a> generate these available colors.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <div class="grid grid--column-5 gap-2">
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-color-primary">
+                        <p class="screen-reader-only">Border Color Primary</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-color-secondary">
+                        <p class="screen-reader-only">Border Color Secondary</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-color-dark">
+                        <p class="screen-reader-only">Border Color Dark</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-color-light">
+                        <p class="screen-reader-only">Border Color Light</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1 theme-dark">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-color-white">
+                        <p class="screen-reader-only">Border Color Dark</p>
+                    </div>
+                </div>
+            </div>         
+        </div>
+    )}
+    codeExample={(`
+        <div class="border border-top-color-primary">...</div>
+        <div class="border border-right-color-secondary">...</div>
+        <div class="border border-bottom-color-dark">...</div>
+        <div class="border border-left-color-white">...</div>
+        <div class="border border-top-color-secondary border-bottom-color-secondary">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+Border color utilities do not have breakpoint modifiers. Directional border color utilities are available (Figure 3).  
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <div class="grid grid--column-5 gap-2">    
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-top-color-primary">
+                        <p class="screen-reader-only">Border Top Color Primary</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-right-color-secondary">
+                        <p class="screen-reader-only">Border Right Color Secondary</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aspect-ratio-1x1 box-shadow-1">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-bottom-color-dark">
+                        <p class="screen-reader-only">Border Bottom Color Dark</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aspect-ratio-1x1 box-shadow-1 theme-dark">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-left-color-white">
+                        <p class="screen-reader-only">Border Color Dark</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="aspect-ratio-1x1 box-shadow-1 theme-dark">
+                <div class="width-100 height-100 padding-1">
+                    <div class="width--100 height-100 border border-top-color-secondary border-bottom-color-secondary">
+                        <p class="screen-reader-only">Border Color Dark</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+        <div class="border border-top-color-primary">...</div>
+        <div class="border border-right-color-secondary">...</div>
+        <div class="border border-bottom-color-dark">...</div>
+        <div class="border border-left-color-white">...</div>
+        <div class="border border-top-color-secondary border-bottom-color-secondary">...</div>
+    `)}
+/>
+
+
+<TextBlock>
+
+Of course the above examples will rarely be necassary, but they are available nonetheless.
+
+</TextBlock>
+
+<Divider id="borderRadiusUtilities" />
+
+<TextBlock>
+
+## Border Radius Utilities
+
+Add a border radius to any element with Natura11y's border utilities. Include a <a href="#1">breakpoint modifier</a> to apply a border-radius at a specific breakpoint (Figure 3).   
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <div class="grid grid--column-2 gap-2 text-align-center font-size-md">
+            <div class="grid__colspan-2 padding-3 border-radius border border-dark">
+                <p class="margin-bottom-1">
+                    Border Radius (all sides)
+                </p>
+                <p><code>.border-radius</code></p>
+            </div>
+            <div class="padding-3 border-radius-top border border-dark">
+                <p class="margin-bottom-1">
+                    Border Radius (top side only)
+                </p>
+                <p><code>.border-radius-top</code></p>
+            </div>
+            <div class="padding-3 border-radius-right border border-dark">
+                <p class="margin-bottom-1">
+                    Border Radius (right side only)
+                </p>
+                <p><code>.border-radius-right</code></p>
+            </div>
+            <div class="padding-3 border-radius-bottom border border-dark">
+                <p class="margin-bottom-1">
+                    Border Radius (bottom side only)
+                </p>
+                <p><code>.border-radius-bottom</code></p>
+            </div>
+            <div class="padding-3 border-radius-left border border-dark">
+                <p class="margin-bottom-1">
+                    Border Radius (left side only)
+                </p>
+                <p><code>.border-radius-left</code></p>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+        <div class="border-radius">...</div>
+        <div class="border-radius-top">...</div>
+        <div class="border-radius-right">...</div>
+        <div class="border-radius-bottom">...</div>
+        <div class="border-radius-left">...</div> \n
+        <!-- Breakpoint Specific (e.g., medium breakpoint) --> \n
+        <div class="border-radius--md">...</div>
+    `)}
+/>
