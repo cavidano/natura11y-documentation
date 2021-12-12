@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-
 import Divider from '../../components/docs/Divider';
 import CodeBlock from '../../components/docs/CodeBlock';
 
