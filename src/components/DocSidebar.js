@@ -1,5 +1,5 @@
-import React, { Fragment } from "react"
-import { Link } from "gatsby"
+import React, { Fragment } from "react";
+import { Link } from "gatsby";
 
 const DocSidebar = ({ pages }) => {
 
@@ -25,16 +25,16 @@ const DocSidebar = ({ pages }) => {
         <div className="container narrow margin-y-3 font-size-md">
       
           <ul className="nav font-size-md">
-          <li>
-                <Link to="/docs/get-started">
-                  Get Started
-                </Link>
-              </li>
-              <li>
-                <Link to="/docs/customization">
-                  Customization
-                </Link>
-              </li>
+            <li>
+              <Link to="/docs/get-started">
+                Get Started
+              </Link>
+            </li>
+            <li>
+              <Link to="/docs/customization">
+                Customization
+              </Link>
+            </li>
           </ul>
 
           <hr className="margin-y-2 margin-x-n3--lg" />
