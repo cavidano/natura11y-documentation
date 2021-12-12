@@ -81,7 +81,9 @@ const Documentation = ({ data }) => {
 
   return (
     <Layout>
+
       <div className="article article--two-column">
+
         <div className="article__sidebar">
             <DocSidebar pages={docPages} />
         </div>
@@ -113,7 +115,6 @@ const Documentation = ({ data }) => {
                 <RelatedCustomProperties customProperties={relatedCustomProperties} />
               )}
 
-
             </div>
 
           </div>
@@ -130,7 +131,7 @@ export default Documentation;
 
 export const query = graphql`
 query queryPageData($slug: String, $title: String) {
-    allDocs: allMdx {
+    allDocs: allMdx(sort: {fields: frontmatter___title, order: ASC}) {
       nodes {
         frontmatter {
           category
