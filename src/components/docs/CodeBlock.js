@@ -31,10 +31,10 @@ const CodeBlock = (props) => {
         'left-trim': true,
         'right-trim': true,
     });
-    
 
     const nw = Prism.plugins.NormalizeWhitespace;
     const code = nw.normalize(codeExample);
+
     return (
         <pre
             data-line={highlightedLines}
