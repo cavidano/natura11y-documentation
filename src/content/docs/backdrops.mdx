@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/backdrops.jpg
 ---
 
 import BackdropImageProportional from '../../components/docs/examples/BackdropImageProportional';
+const backdropImgPlaceholder = `<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">`;
 
 <TextBlock>
 
@@ -41,7 +42,7 @@ Image proportional backdrops scale and stack responsively. Below is an example o
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
         </div> \n
         <div class="backdrop__image">
-            <img class="opacity-50" src="https://via.placeholder.com/1600x900" alt="Placeholder">
+           ${backdropImgPlaceholder}
         </div> \n
         <div class="backdrop__cover"> \n
             <div class="container text-align-center">
