@@ -6,6 +6,10 @@ bannerCreditHandle: "@lucamicheli"
 bannerImage: ../../images/banner/backdrops.jpg
 ---
 
+<StaticImage src="../../images/backdrop-introduction.jpg" alt=""
+                        placeholder="dominantColor"
+                        layout="fullWidth" />
+
 <TextBlock>
 
 Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>. 
@@ -55,53 +59,5 @@ Image proportional backdrops scale and stack responsively. Below is an example o
     <div class="aspect-ratio-3x2">...</div> \n
     <div class="aspect-ratio-4x3">...</div> \n
     <div class="aspect-ratio-1x1">...</div>
-    `)}
-/>
-
-<TextBlock>
-
-### Breakpoint Modifiers
-
-Aspect ratio utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
-
-</TextBlock>
-
-<FigureBlock 
-    figureNumber="2"
-    codeExample={(`
-    <!-- With breakpoint modifier --> \n
-    <div class="aspect-ratio-16x9--lg">...</div>
-    `)}
-/>
-
-<Divider id="embedding-video" />
-
-<TextBlock>
-
-## Embedding Video
-
-A practical use for aspect ratios is for embedding video into a page. Consider the following example:  
-    
-</TextBlock>
-
-<FigureBlock 
-    figureNumber="3"
-    visualExample={(
-        <iframe
-            class="aspect-ratio-16x9 background-color-dark"
-            src="https://player.vimeo.com/video/261715638"
-            title="Arches National Park (YouTube)"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-    )}
-    codeExample={(`
-    <iframe
-        class="aspect-ratio-16x9"
-        src="..."
-        frameborder="0"
-        allow="autoplay;"
-        allowfullscreen>
-    </iframe>
     `)}
 />

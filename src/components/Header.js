@@ -3,10 +3,6 @@ import { Link } from "gatsby";
 
 const Header = ({ version }) => {
 
-  if (window.location.href.indexOf("/docs") > -1) {
-    // alert("You are in the docs");
-  }
-
   const logo = (
     <svg
       xmlns="http://www.w3.org/2000/svg"

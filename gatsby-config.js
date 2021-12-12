@@ -55,7 +55,7 @@ module.exports = {
               linkImagesToOriginal: false,
               quality: 90
             },
-          },
+          }
         ],
       },
     },
