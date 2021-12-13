@@ -202,3 +202,95 @@ Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. `.borde
         </a>
     `)}
 />
+
+<Divider id="sizingButtons" />
+
+<TextBlock>
+
+## Sizing Buttons
+
+With Natura11y, `.button` selectors inherit their font size. Padding is set with relative (em) sizes. This allows you to resize multiple buttons at once. Use our <a href="#1">font size</a> utility classes, or declare your own CSS values.
+
+The example below applies the `.font-size-sm` utility class to a `<ul>` containing buttons. Each button within this `<ul>` becomes smaller with this single declaration.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="7"
+    visualExample={(
+        <ul class="nav nav--horizontal justify-content-center font-size-sm">
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <ul class="nav nav--horizontal font-size-sm">
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+        </ul>
+    `)}
+/>
+
+<Divider id="textAndIconButtons" />
+
+<TextBlock>
+
+## Text and Icon Buttons
+
+Add an icon to a `.button` selector with the `.button--has-icon` modifier class (Figure 7). Buttons with icons require two child selectors.
+
+The first child is is a `&lt;span&gt;` with its combined <a href="{{ site.url }}/icons">icon</a> classes. The second child is a `&lt;span&gt;` with a `.button__text` class. This holds the button's text. Further, the `.button__text` selector is our target for underlining the text on `:hover` and `:focus` states. Further still, it provides a small margin to separate the text from the icon.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="8"
+    visualExample={(
+        <div class="grid grid--column-2--md gap-3">
+            <a class="button button--has-icon width-100 theme-primary" href="#1">
+                <span class="icon icon-edit"></span>
+                <span class="button__text">Edit</span>
+            </a>  
+            <a class="button button--has-icon width-100 button--outline" href="#1">
+                <span class="icon icon-delete"></span>
+                <span class="button__text">Delete</span>
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button button--has-icon theme-primary" href="#1">
+            <span class="icon icon-edit"></span>
+            <span class="button__text">Button</span>
+        </a> \n
+        <a class="button button--has-icon button--outline" href="#1">
+            <span class="icon icon-delete"></span>
+            <span class="button__text">Delete</span>
+        </a>
+    `)}
+/>
