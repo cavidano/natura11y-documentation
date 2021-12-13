@@ -1,0 +1,204 @@
+---
+category: "a-z"
+title: "Buttons"
+bannerCreditName: "Karl Anderson"
+bannerCreditHandle: "@karlkiwi90" 
+bannerImage: ../../images/banner/buttons.jpg
+---
+
+<TextBlock>
+
+Distinct, actionable styles for text and icon buttons.
+
+</TextBlock>
+
+<AccessibilitySpotlight>
+
+Like our <a href="{{ site.url }}/docs/navigation">navigation</a> links, buttons include visible hover and focus
+states for keyboard users.
+
+Icon buttons include <a href="aria labels"></a> for screen readers, and visible tooltips for sighted users.
+
+</AccessibilitySpotlight>
+
+<Divider id="theBasicButton" />
+
+<TextBlock>
+
+## The Button Selector
+
+Buttons within Natura11y require a `.button` utility class on an `<a>` or `<button>` tag, shown in Figure 1. By default, `.button` selectors inherit text color and font size from their parent.
+
+The example below is a generic `.button` selector with no other styles yet applied.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <div class="text-align-center">
+            <a class="button" href="#1">
+                Button
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button" href="#1">
+            Button
+        </a> \n
+        <button class="button">
+            Button
+        </button>
+    `)}
+/>
+
+<Divider id="coloringButtons" />
+
+<TextBlock>
+
+## Coloring Buttons
+
+Add color to a <code>.button</code> selector with our <a href="{{ site.url }}/docs/color/#themeColorUtilities">theme color utilities</a>. These classes apply the button's appropriate text color automatically (Figure 2).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <ul class="nav nav--horizontal--sm justify-content-center text-align-center">
+            <li>
+                <a class="button theme-primary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-secondary" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button theme-dark" href="#1">
+                    Button
+                </a>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <a class="button theme-primary" href="#1">
+            Button
+        </a> \n
+        <a class="button theme-secondary" href="#1">
+            Button
+        </a> \n
+        <a class="button theme-dark" href="#1">
+            Button
+        </a>
+    `)}
+/>
+
+
+<Divider id="full-widthButtons" />
+
+<TextBlock>
+
+## Full-width Buttons
+
+For buttons that span the width of their parent, add the .width-100 <a href="#1">size utility class</a> (Figure 3).
+
+Do not use `.display-block` for full-width buttons. Buttons have a display property of flex (for vertical centering text with icons). Using use `.display-block` changes the buttons display property from `flex` to `block`. This breaks the vertical centering of the icon within the button (See <a href="#1">buttons with text and icon</a> below).
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <button class="button width-100 theme-primary">
+            Button
+        </button>
+    )}
+    codeExample={(`
+        <a class="button width-100 theme-primary" href="#1">
+            Button
+        </a>
+    `)}
+/>
+
+
+<Divider id="outlinedButtons" />
+
+<TextBlock>
+
+## Outlined Buttons
+
+Create a button with an outline instead of a fill. Add the outline modifier class `.button--outline` to the `.button` selector. The outline width is a <strong>2x</strong> multiple of your theme's body border width.
+
+The outline color inherits the button's text color. You can change the color using our <a href="#1">text color utility classes</a>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <div class="grid grid--column-2--md gap-3">            
+            <a class="button button--outline display-block" href="#1">
+                Button
+            </a>
+            <a class="button button--outline display-block text-color-link" href="#1">
+                Button
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button button--outline" href="#1">
+            Button
+        </a> \n
+        <a class="button button--outline text-color-link" href="#1">
+            Button
+        </a>
+    `)}
+/>
+
+<Divider id="borderRadius" />
+
+<TextBlock>
+
+## Button Border Radius
+
+Globally, all <code>.button</code> selectors have a border radius. This value is set with the <code>:root</code> scoped CSS Variable <code>--button-border-radius</code> (see Figure 5). Learn how to <a href="{{ site.url }}/docs/customization/#referenceGuideCSSVariables">customize CSS Variables</a>. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="5"
+    codeLanguage="css"
+    visualExample={(
+        <a class="button width-100 theme-primary" style={{'--button-border-radius': '0'}} href="#1">
+            Button
+        </a>
+    )}
+    codeExample={(`
+        /* Globally remove border radius in CSS */ \n
+        :root {
+            --button-border-radius: 0;
+        }
+    `)}
+/>
+
+<TextBlock>
+
+Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. `.border-radius-pill`) on `.button` selectors.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="6"
+    visualExample={(
+        <a class="button width-100 theme-primary border-radius-pill" href="#1">
+            Button
+        </a>
+    )}
+    codeExample={(`
+        <a class="button theme-primary border-radius-pill" href="#1">
+            Button
+        </a>
+    `)}
+/>
