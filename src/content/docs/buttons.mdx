@@ -294,3 +294,134 @@ The first child is is a `<span>` with its combined <a href="{{ site.url }}/icons
         </a>
     `)}
 />
+
+
+<TextBlock>
+
+### Dispersing the text and icon
+
+Create a button where the text and icon sit on opposing sides. Add the chain modifier class `--disperse` to `.button--has-icon` class. Chained together, the class is `.button--has-icon--disperse`. By default, this class makes the button full-width of its parent.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="9"
+    visualExample={(
+        <a class="button button--has-icon--disperse theme-dark" href="#1">
+            <span class="button__text">Button</span>
+            <span class="icon icon-arrow-right"></span>
+        </a>
+    )}
+    codeExample={(`
+        <a class="button button--has-icon--disperse theme-dark" href="#1">
+            <span class="button__text">Button</span>
+            <span class="icon icon-arrow-right"></span>
+        </a>
+    `)}
+/>
+
+<Divider id="icon-onlyButtons" />
+
+<TextBlock>
+
+## Icon-only Buttons
+
+For icon-only buttons, apply the `.button--icon--only` modifier class to the `.button` selector.
+
+Icon-only buttons require a single child selector. A `<span>` with its combined icon classes (just like the text and icon buttons described above).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="10"
+    visualExample={(
+        <div class="button-group font-size-lg">
+            <a class="button button--icon-only" href="#1" aria-label="Home">
+                <span class="icon icon-home" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Print">
+                <span class="icon icon-print" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Settings">
+                <span class="icon icon-settings" aria-hidden="true"></span>
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button button--icon-only" href="#1" aria-label="Home">
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+    `)}
+/>
+
+
+<TextBlock>
+
+Icon-only buttons are transparent by default. Like our other buttons, color can be applied with <a href="{{ site.url }}/docs/color-system/#backgroundColorClasses">background-color</a> and <a href="#1">text color</a> utility classes.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="11"
+    visualExample={(
+        <div class="button-group font-size-lg">
+            <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
+                <span class="icon icon-home" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only theme-secondary" href="#1" aria-label="Print">
+                <span class="icon icon-print" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only theme-dark" href="#1" aria-label="Settings">
+                <span class="icon icon-settings" aria-hidden="true"></span>
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+    `)}
+/>
+
+<TextBlock>
+
+Do not use the <code>title</code> attribute to describe the button(on its hover state). Instead apply the <code>aria-label</code> attribute (see Figure 10). Icon-only buttons with the aria-label attribute offer a custom visible tooltip. The core
+javascript file (<strong>natura11y.js</strong>) adds these tooltips to the DOM when the document loads.
+
+</TextBlock>
+
+<Divider id="theButtonGroup" />
+
+<TextBlock>
+
+## The Button Group
+
+Need a horizontal list of buttons? You can place mixed button types (text and icon) within the `.nav` <a href="/docs/navigation">component</a>. You would need to include the `.nav--horizonal` modifier class. We designed the `.nav` component mostly for response text navigation. For legibility and cognitive accessibility, a healthy space is present between each item within the `.nav` component.
+
+This is not always your best option for horizontal buttons. Particularly for grouping icon-only buttons (or mixed icon and text buttons) along the horizontal axis. 
+
+The `.button-group` selector aligns buttons horizontally while giving them the same height. The value of `--button-icon-size` determines the height of `.button-group`. All buttons within `.button-group` stretch to fit this height.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="12"
+    visualExample={(
+        <div class="button-group font-size-lg">
+            <a class="button button--outline" href="#1">
+                Sign In  
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Language">
+                <span class="icon icon-language" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Search">
+                <span class="icon icon-search" aria-hidden="true"></span>
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+    `)}
+/>
