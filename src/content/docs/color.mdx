@@ -6,7 +6,7 @@ bannerCreditHandle: "@nicolegeri"
 bannerImage: ../../images/banner/color.jpg
 ---
 
-import ColorPrinciplePalette from '../../components/docs/examples/ColorPrinciplePalette.js'
+import PrinciplePalette from '../../components/docs/examples/Color/PrinciplePalette.js'
 
 <TextBlock>
 
@@ -32,7 +32,7 @@ Your principal theme colors include ***Primary***, ***Secondary***, ***Dark***, 
 
 </TextBlock>
 
-<ColorPrinciplePalette />
+<PrinciplePalette />
 
 <TextBlock>
 
@@ -90,12 +90,9 @@ Figure 2 (below) provides the five theme color utilities:
 
 </TextBlock>
 
-
 <FigureBlock 
     figureNumber="2"
     figureWidth="narrow"
-    codeToolbar={false}
-    highlightedLines="3,7-11"
     codeExample={(`
         <div class="theme-primary">...</div>
         <div class="theme-secondary">...</div>
@@ -104,3 +101,10 @@ Figure 2 (below) provides the five theme color utilities:
         <div class="theme-white">...</div>
     `)}
 />
+
+<TextBlock>
+
+You may apply theme colors to any containing block-level element within the DOM. Consider the following five cards, each colored with a different theme color utility.
+
+</TextBlock>
+

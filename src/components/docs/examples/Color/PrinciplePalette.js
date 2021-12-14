@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { exampleStyles } from '../../../mdxVars';
+import { exampleStyles } from '../../../../mdxVars';
 
-const ColorPrinciplePalette = (props) => {
+const PrinciplePalette = () => {
 
     return (
         <figure class="container narrow margin-y-4">
@@ -31,4 +31,4 @@ const ColorPrinciplePalette = (props) => {
     );
 }
 
-export default ColorPrinciplePalette;
+export default PrinciplePalette;
