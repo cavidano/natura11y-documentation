@@ -6,6 +6,8 @@ bannerCreditHandle: "https://unsplash.com/@zmachacek"
 bannerImage: ../../images/banner/alerts.jpg
 ---
 
+import AlertExample from '../../components/docs/examples/Alerts';
+
 <TextBlock>
 
 Alerts help draw attention to brief confirmation or warning messages—or any other important information—that shouldn't be overlooked while your visitor scans the page.
@@ -38,42 +40,7 @@ Every instance of an alert should include an icon to help convey meaning. Across
     figureNumber="1"
     highlightedLines="2-5,7-12,14-18"
     visualExample={(
-        <Fragment>
-            <div
-                className="alert alert--confirm margin-y-3"
-                aria-labelledby="alert-confirm-label"
-                aria-describedby="alert-confirm-description"
-                role="alert">
-                <div className="alert__title h5">
-                    <span className="icon icon-confirm" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-confirm-label">
-                        Alert Confirm
-                    </span>
-                </div>
-                <div className="alert__description" id="alert-confirm-description">
-                    <p>
-                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
-                    </p>
-                </div>
-            </div>
-            <div
-                className="alert alert--warn margin-y-3"
-                aria-labelledby="alert-warn-label"
-                aria-describedby="alert-warn-description"
-                role="alert">
-                <div className="alert__title h5">
-                    <span className="icon icon-warn" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-warn-label">
-                        Alert Warn
-                    </span>
-                </div>
-                <div className="alert__description" id="alert-warn-description">
-                    <p>
-                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
-                    </p>
-                </div>
-            </div>
-        </Fragment>
+        <AlertExample />
     )}
     codeExample={(`
         <div
@@ -149,42 +116,7 @@ For a bolder look, chain `--inverse` to the `alert--confirm` or `alert--warn` mo
     language="html"
     highlightedLines="1,5"
     visualExample={(
-        <Fragment>
-            <div
-                className="alert alert--confirm--inverse margin-y-3"
-                aria-labelledby="alert-confirm-label"
-                aria-describedby="alert-confirm-description"
-                role="alert">
-                <div className="alert__title h5">
-                    <span className="icon icon-confirm" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-confirm-label">
-                        Alert Confirm
-                    </span>
-                </div>
-                <div className="alert__description" id="alert-confirm-description">
-                    <p>
-                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
-                    </p>
-                </div>
-            </div>
-            <div
-                className="alert alert--warn--inverse margin-y-3"
-                aria-labelledby="alert-warn-label"
-                aria-describedby="alert-warn-description"
-                role="alert">
-                <div className="alert__title h5">
-                    <span className="icon icon-warn" aria-hidden="true"></span>
-                    <span className="alert__title__text" id="alert-warn-label">
-                        Alert Warn
-                    </span>
-                </div>
-                <div className="alert__description" id="alert-warn-description">
-                    <p>
-                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
-                    </p>
-                </div>
-            </div>
-        </Fragment>
+        <AlertExample inverse={true} />
     )}
     codeExample={(`
         <div class="alert alert--confirm--inverse">
@@ -208,30 +140,10 @@ The `.alert__description` is not required. Leaving it out creates a title only a
     figureNumber="3"
     language="html"
     visualExample={(
-        <Fragment>
-            <div
-                class="alert alert--confirm--inverse margin-y-3"
-                aria-labelledby="alert-confirm-title-only-label">
-                <div class="alert__title h5">
-                    <span class="icon icon-confirm" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-confirm-title-only-label">
-                        Alert Confirm
-                    </span>
-                </div>
-            </div>
-            <div
-                class="alert alert--warn--inverse margin-y-3"
-                aria-labelledby="alert-title-only-warn-label"
-                aria-describedby="alert-04-desc"
-                role="alert">
-                <div class="alert__title h5">
-                    <span class="icon icon-warn" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-title-only-warn-label">
-                        Alert Warn
-                    </span>
-                </div>
-            </div> 
-        </Fragment>
+        <AlertExample
+            inverse={true}
+            description={false}
+        />
     )}
     codeExample={(`
         <div
@@ -264,42 +176,7 @@ from the DOM.
     figureNumber="4"
     language="html"
     visualExample={(
-        <Fragment>
-            <div
-                class="alert alert--confirm alert--dismissable margin-y-3"
-                aria-labelledby="alert-dismissable-confirm-label"
-                aria-describedby="alert-dismissable-confirm-description"
-                role="alert">
-                <div class="alert__title h5">
-                    <span class="icon icon-confirm" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-dismissable-confirm-label">
-                        Alert Confirm
-                    </span>
-                </div>
-                <div class="alert__description" id="alert-dismissable-confirm-description">
-                    <p>
-                        Thank you for your feedback. A confirmation message has been sent to your email. Return to our <a href="#1">homepage</a>.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="alert alert--warn alert--dismissable margin-y-3"
-                aria-labelledby="alert-dismissable-warn-label"
-                aria-describedby="alert-dismissable-warn-description"
-                role="alert">
-                <div class="alert__title h5">
-                    <span class="icon icon-warn" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-dismissable-warn-label">
-                        Alert Warn
-                    </span>
-                </div>
-                <div class="alert__description" id="alert-dismissable-warn-description">
-                    <p>
-                        Your feedback was not sent. Complete <a href="#1">all required fields</a> below and submit the form again.
-                    </p>
-                </div>
-            </div>
-        </Fragment>
+        <AlertExample dismissable={true} />
     )}
     codeExample={(`
         <div class="alert alert--confirm alert--dismissable">
@@ -333,7 +210,7 @@ variations.
                 <div class="alert__title h5">
                     <span class="icon icon-warn" aria-hidden="true"></span>
                     <span class="alert__title__text" id="alert-07-label">
-                        Alert Indicator
+                        Attention
                     </span>
                 </div>
                 <div class="alert__description" id="alert-07-desc">
@@ -350,7 +227,7 @@ variations.
                 <div class="alert__title h5 text-color-secondary">
                     <span class="icon icon-warn" aria-hidden="true"></span>
                     <span class="alert__title__text" id="alert-06-label">
-                        Alert Title
+                        Attention
                     </span>
                 </div>
                 <div class="alert__description" id="alert-06-desc">
