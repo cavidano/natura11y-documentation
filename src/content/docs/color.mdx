@@ -28,8 +28,79 @@ Learn more about <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-m
 
 ## Theme Colors: Your Principle Palette
 
-Your principal theme colors include <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
+Your principal theme colors include ***Primary***, ***Secondary***, ***Dark***, ***Light***, and ***White***.
 
 </TextBlock>
 
 <ColorPrinciplePalette />
+
+<TextBlock>
+
+These five colors produce utility classes for <a href="#themeColorUtilities">theme colors</a>, <a href="#backgroundColorUtilities">background colors</a>, <a href="#1">text colors</a>, and <a href="#1">border colors</a>.
+
+Natura11y treats ***white*** as a color&#8212;and this is important&#8212;it serves as your default theme. Natura11y's CSS file applies the white theme (and its <a href="#correlatedColors">correlated colors</a>) to the <code>&lt;body&gt;</code>.
+
+</TextBlock>
+
+<Divider id="correlatedColors" />
+
+<TextBlock>
+
+## Correlated Colors
+
+Every theme color has five correlated colors. These are for text, borders, and certain links&#8212;along with instances of **confirm** and **warn**. Correlated colors work in isolation within their corresponding <a href="#themeColorUtilities">theme color utility</a> class.
+
+Figure 1 (below) depicts the css variable declared for the ***primary*** theme on line 3. Lines 7-11 provide css variables for primary's correlated colors.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="1"
+    codeLanguage="css"
+    figureWidth="narrow"
+    codeToolbar={false}
+    highlightedLines="3,7-11"
+    codeExample={(`
+        // Primary Theme Color \n
+        --primary: #440381; \n
+        // Primary Correlated Colors \n
+        --primary-text: var(--dark);
+        --primary-border: hsla(0, 0%, 0%, 0.25);
+        --primary-link: currentColor;
+        --primary-confirm: #16db93;
+        --primary-warn: #ff73aa;
+    `)}
+/>
+
+<TextBlock>
+
+For a descriptive list of all colors available, jump over to the <a href="/docs/customization/#cp_color" target="blank">css variable reference guide</a>.
+
+</TextBlock>
+
+<Divider id="themeColorUtilities" />
+
+<TextBlock>
+
+## Theme Color Utilities
+
+Natura11y's theme color utility classes are one of its most useful features. Each theme color utility provides predefined colors for <strong>background</strong>, <strong>text</strong>, <strong>borders</strong>, and <strong>links</strong> (within paragraphs). Theme color utilities also provide colors for instances of <strong>confirm</strong> and <strong>warn</strong>.   
+
+Figure 2 (below) provides the five theme color utilities:
+
+</TextBlock>
+
+
+<FigureBlock 
+    figureNumber="2"
+    figureWidth="narrow"
+    codeToolbar={false}
+    highlightedLines="3,7-11"
+    codeExample={(`
+        <div class="theme-primary">...</div>
+        <div class="theme-secondary">...</div>
+        <div class="theme-dark">...</div>
+        <div class="theme-light">...</div>
+        <div class="theme-white">...</div>
+    `)}
+/>
