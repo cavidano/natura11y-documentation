@@ -7,7 +7,8 @@ bannerImage: ../../images/banner/backdrops.jpg
 ---
 
 import { codeImgPlaceholderBackdrop } from '../../mdxVars.js';
-import BackdropImageProportional from '../../components/docs/examples/BackdropImageProportional';
+import ImageProportional from '../../components/docs/examples/Backdrops/ImageProportional';
+import StackBreakpointModifier from '../../components/docs/examples/Backdrops/StackBreakpointModifier';
 
 <TextBlock>
 
@@ -34,7 +35,7 @@ Image proportional backdrops scale and stack responsively. Below is an example o
 <FigureBlock
     figureNumber="1"
     visualExample={(
-        <BackdropImageProportional />
+        <ImageProportional />
     )}
     highlightedLines="1,3-5,7-9,11-22"
     codeExample={(`
@@ -87,6 +88,14 @@ It contains the feature image.
 
 </TableLineDescRow>
 
+<TableLineDescRow lines="11-22">
+
+The `.backdrop__cover` selector is required. 
+
+It holds the backdrop's contextual content.
+
+</TableLineDescRow>
+
 </TableLineDescBlock>
 
 <TextBlock>
@@ -96,3 +105,13 @@ The size of this backdrop (proportional width and height) is determined by the s
 The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image, allows the background color to show through.
 
 </TextBlock>
+
+<TextBlock>
+
+## Stack Breakpoint Modifiers
+
+When using image size proportional backdrops for featured content (like the full-width example below) the backdrop may become too tall for the image on smaller viewport sizes.
+
+</TextBlock>
+
+<StackBreakpointModifier />
