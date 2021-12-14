@@ -18,7 +18,7 @@ const StackBreakpointModifier = () => {
             <div class="backdrop__image">
                 <StaticImage
                     className="opacity-40--lg"
-                    src="../../../images/examples/backdrop-example-02.jpg"
+                    src="../../../images/examples/backdrop-example-03.jpg"
                     alt=""
                     placeholder="dominantColor"
                     layout="fullWidth"
