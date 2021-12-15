@@ -10,6 +10,7 @@ import { exampleStyles } from '../../mdxVars.js';
 
 import FullWidth from '../../components/docs/examples/Containers/FullWidth.js';
 import WidthVariations from '../../components/docs/examples/Containers/WidthVariations.js';
+import BreakpointModifier from '../../components/docs/examples/Containers/BreakpointModifier.js';
 
 <TextBlock>
 
@@ -59,12 +60,24 @@ Width variation utilities come in three sizes: ***narrow***, ***medium***, and *
     `)}
 />
 
+
 <TextBlock>
 
 ### Breakpoint Modifiers
 
 Width variation utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
 
-Consider the HTML in Figure 3. The container starts at the <em>narrow</em> width. It then changes to the <em>medium</em> width at the large breakpoint. Finally, the container changes to the <em>wide</em> width at the extra-large breakpoint.
+Consider the HTML in Figure 3. The container starts at the **narrow** width. It then changes to the **medium** width at the large breakpoint. Finally, the container changes to the **wide** width at the extra-large breakpoint.
 
 </TextBlock>
+
+<BreakpointModifier />
+
+<FigureBlock 
+    figureNumber="3"
+    figureWidth="medium"
+    codeExample={(`
+        <!-- With breakpoint modifiers --> \n
+        <div class="container narrow medium--lg wide--xl">...</div>
+    `)}
+/>

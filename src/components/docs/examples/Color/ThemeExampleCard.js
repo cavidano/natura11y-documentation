@@ -60,7 +60,7 @@ const ThemeExampleCard = (props) => {
             case 'link': 
                 return (
                     <Fragment>
-                        <div class="card__body">
+                        <div className="card__body">
                             <p>
                                 It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
                             </p>
@@ -70,20 +70,20 @@ const ThemeExampleCard = (props) => {
             case 'feedback': 
                 return (
                     <Fragment>
-                        <div class="card__body">
-                            <div class="grid grid--column-2 gap-2 text-align-center">
-                                <div class="alert alert--confirm border">
-                                    <div class="alert__title">
-                                        <span class="icon icon-confirm" aria-hidden="true"></span>
-                                        <span class="alert__title__text">
+                        <div className="card__body">
+                            <div className="grid grid--column-2 gap-2 text-align-center">
+                                <div className="alert alert--confirm border">
+                                    <div className="alert__title">
+                                        <span className="icon icon-confirm" aria-hidden="true"></span>
+                                        <span className="alert__title__text">
                                             Alert Confirm
                                         </span>
                                     </div>
                                 </div>
-                                <div class="alert alert--warn border">
-                                    <div class="alert__title">
-                                        <span class="icon icon-warn" aria-hidden="true"></span>
-                                        <span class="alert__title__text">
+                                <div className="alert alert--warn border">
+                                    <div className="alert__title">
+                                        <span className="icon icon-warn" aria-hidden="true"></span>
+                                        <span className="alert__title__text">
                                             Alert Warn
                                         </span>
                                     </div>
@@ -98,7 +98,7 @@ const ThemeExampleCard = (props) => {
 
     return (
         <div className={`card border-radius ${themeClass} ${border && 'border'} `}>
-            <div class="card__head border-bottom font-size-rg">
+            <div className="card__head border-bottom font-size-rg">
                 <p>
                     <strong>{themeColor}</strong>
                 </p>
