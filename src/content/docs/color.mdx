@@ -6,8 +6,10 @@ bannerCreditHandle: "@nicolegeri"
 bannerImage: ../../images/banner/color.jpg
 ---
 
-import PrinciplePalette from '../../components/docs/examples/Color/PrinciplePalette.js'
-import ThemeColors from '../../components/docs/examples/Color/ThemeColors.js'
+import PrinciplePalette from '../../components/docs/examples/Color/PrinciplePalette.js';
+import ThemeColors from '../../components/docs/examples/Color/ThemeColors.js';
+import LinkColors from '../../components/docs/examples/Color/LinkColors.js';
+import FeedbackColors from '../../components/docs/examples/Color/FeedbackColors.js';
 
 <TextBlock>
 
@@ -152,3 +154,66 @@ In Figure 3 (below), on line 1, notice the `.theme-primary` utility present. No 
         </div>
     `)}
 />
+
+<TextBlock>
+
+### Links
+
+Refer to Figure 1 (above), on line 9. The correlated link color (e.g. <code>--primary-link</code>) value sets the color of generic links (<code>&lt;a&gt;</code> tags) within paragraphs (<code>&lt;p&gt;</code> tags). This is not only convenient, it keeps paragraph links visible and accessible.
+
+</TextBlock>
+
+<LinkColors />
+
+<TextBlock>
+
+Beyond generic links, a <a href="#textColorUtilities">text color utility</a> named <code>.text-color-link</code> is available. With the following example, <code>.text-color-link</code> (Figure 4, Line 5) colors the buttons within the <a href="/docs/buttons/#theButtonGroup">button group</a> selector blue.   
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    highlightedLines="1"
+    visualExample={(
+        <div class="button-group font-size-lg text-color-link">
+            <a class="button button--outline" href="#1">
+                Sign In
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Language">
+                <span class="icon icon-language" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Search">
+                <span class="icon icon-search" aria-hidden="true"></span>
+            </a>
+        </div>
+    )}
+    codeExample={(`
+        <div class="button-group text-color-link"> \n
+            <a class="button button--outline" href="#1">
+                Sign In
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Language">
+                <span class="icon icon-language" aria-hidden="true"></span>
+            </a>
+            <a class="button button--icon-only" href="#1" aria-label="Search">
+                <span class="icon icon-search" aria-hidden="true"></span>
+            </a> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+### Confirm and Warn
+
+In Figure 1 (above), on lines 10 and 11, you will find declarations for ***confirm*** and ***warn*** color values. Natura11y allows you to specify confirm and warn values for each theme color!
+
+</TextBlock>
+
+<FeedbackColors />
+
+<TextBlock>
+
+Instances of <em>confirm</em> and <em>warn</em> appear in <a href="/docs/alerts">alerts</a>, and <a href="/docs/forms">forms</a>. 
+
+</TextBlock>
