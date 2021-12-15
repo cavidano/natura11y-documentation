@@ -237,7 +237,6 @@ Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. 
 
 </TextBlock>
 
-
 <FigureBlock
     figureNumber="5"
     highlightedLines="1"
@@ -278,3 +277,44 @@ Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. 
 On smaller viewports The above example uses the default ***white*** theme. It instead used the ***primary*** theme when the viewport reaches the large breakpoint. Scale your browser horizontally to see this change occur.
 
 </TextBlock>
+
+<Divider id="backgroundColorUtilities" />
+
+<TextBlock>
+
+## Background Color Utilities
+
+Need to apply only a background color? Our background color utilities (shown in Figure 6) apply a background color to its selector.
+
+</TextBlock>
+
+
+<FigureBlock
+    figureNumber="6"
+    visualExample={(
+        <div class="grid grid--column-5 gap-2">
+            <div class="aspect-ratio-1x1 background-color-primary">
+                <p class="screen-reader-only">Primary</p>
+            </div> 
+            <div class="aspect-ratio-1x1 background-color-secondary">
+                <p class="screen-reader-only">Secondary</p>
+            </div> 
+            <div class="aspect-ratio-1x1 background-color-dark">
+                <p class="screen-reader-only">Dark</p>
+            </div> 
+            <div class="aspect-ratio-1x1 background-color-light">
+                <p class="screen-reader-only">Light</p>
+            </div> 
+            <div class="aspect-ratio-1x1 border">
+                <p class="screen-reader-only">White</p>
+            </div>
+        </div>
+    )}
+    codeExample={(`
+        <div class="background-color-primary">...</div>
+        <div class="background-color-secondary">...</div>
+        <div class="background-color-dark">...</div>
+        <div class="background-color-light">...</div>
+        <div class="background-color-white">...</div>
+    `)}
+/>
