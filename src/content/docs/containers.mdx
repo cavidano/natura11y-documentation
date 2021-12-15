@@ -9,6 +9,7 @@ bannerImage: ../../images/banner/containers.jpg
 import { exampleStyles } from '../../mdxVars.js';
 
 import FullWidth from '../../components/docs/examples/Containers/FullWidth.js';
+import WidthVariations from '../../components/docs/examples/Containers/WidthVariations.js';
 
 <TextBlock>
 
@@ -27,3 +28,43 @@ The container utility (`.container`) applies consistent padding on the left and 
 </TextBlock>
 
 <FullWidth />
+
+<FigureBlock 
+    figureNumber="1"
+    figureWidth="medium"
+    codeExample={(`
+        <div class="container">...</div>
+    `)}
+/>
+
+<Divider id="widthVariations" />
+
+<TextBlock>
+
+## Width Variations
+
+Width variation utilities come in three sizes: ***narrow***, ***medium***, and ***wide*** (Figure 2). Apply them to containers or use them independently. Width variation utilities horizontally center their selectors.    
+
+</TextBlock>
+
+<WidthVariations />
+
+<FigureBlock 
+    figureNumber="2"
+    figureWidth="medium"
+    codeExample={(`
+        <div class="container narrow">...</div>
+        <div class="container medium">...</div>
+        <div class="container wide">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Width variation utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+Consider the HTML in Figure 3. The container starts at the <em>narrow</em> width. It then changes to the <em>medium</em> width at the large breakpoint. Finally, the container changes to the <em>wide</em> width at the extra-large breakpoint.
+
+</TextBlock>
