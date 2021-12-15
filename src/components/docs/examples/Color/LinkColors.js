@@ -4,7 +4,7 @@ import { exampleStyles } from '../../../../mdxVars';
 
 import ThemeExampleCard from './ThemeExampleCard';
 
-const LinkColor = () => {
+const LinkColors = () => {
 
     return (
         <figure className="margin-y-4">

@@ -5,8 +5,8 @@ import { exampleStyles } from '../../../../mdxVars';
 const InfinitelyNestable = () => {
 
     return (
-        <figure className="margin-y-4">
-            <div className="theme-primary padding-3">
+        <figure className="container narrow margin-y-4">
+            <div className="theme-primary padding-3" style={exampleStyles}>
                 <p><strong>Primary</strong></p>
                 <div className="theme-secondary padding-3 box-shadow-1">
                     <p><strong>Secondary</strong></p>
