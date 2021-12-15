@@ -1,0 +1,55 @@
+---
+category: "a-z"
+title: "Display"
+bannerCreditName: "Julian Andres Carmona Serrato"
+bannerCreditHandle: "@juliancs" 
+bannerImage: ../../images/banner/display.jpg
+---
+
+<TextBlock>
+
+Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">display</a> property of an element. 
+
+</TextBlock>
+
+<Divider id="displayUtilities" />
+
+<TextBlock>
+
+## Display Utilities
+
+Natura11y provides the following display utilities:
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="1"
+    figureWidth="medium"
+    codeExample={(`
+        <div class="display-block">...</div>
+        <div class="display-inline">...</div>
+        <div class="display-inline-block">...</div>
+        <div class="display-flex">...</div>
+        <div class="display-inline-flex">...</div>
+        <div class="display-grid">...</div>
+        <div class="display-inline-grid">...</div>
+        <div class="display-none">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Display utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="2"
+    figureWidth="medium"
+    codeExample={(`
+        <!-- With breakpoint modifier --> \n
+        <div class="display-none display-block--lg">...</div>
+    `)}
+/>
