@@ -1,8 +1,8 @@
 ---
 category: "a-z"
 title: "Color"
-bannerCreditName: "Nicole Geri"
-bannerCreditHandle: "@nicolegeri" 
+bannerCreditName: "David Clode"
+bannerCreditHandle: "@davidclode" 
 bannerImage: ../../images/banner/color.jpg
 ---
 
@@ -242,19 +242,17 @@ Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. 
     highlightedLines="1"
     visualExampleClass="theme-primary--lg"
     visualExample={(
-        <div class="container narrow">
-            <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
-                <li>
-                    <a href="#1">Link</a>
-                </li>
-                <li>
-                    <a href="#1">Link</a>
-                </li>
-                <li>
-                    <a href="#1">Link</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
+            <li>
+                <a href="#1">Link</a>
+            </li>
+            <li>
+                <a href="#1">Link</a>
+            </li>
+            <li>
+                <a href="#1">Link</a>
+            </li>
+        </ul>
     )}
     codeExample={(`
         <div class="theme-primary--lg">  \n
@@ -272,6 +270,7 @@ Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. 
         </div>
     `)}
 />
+
 
 <TextBlock>
 
@@ -316,5 +315,84 @@ Need to apply only a background color? Our background color utilities (shown in 
         <div class="background-color-dark">...</div>
         <div class="background-color-light">...</div>
         <div class="background-color-white">...</div>
+    `)}
+/>
+
+<Divider id="textColorUtilities" />
+
+<TextBlock>
+
+## Text Color Utilities
+
+Natura11y's text color utilities are useful for applying text color specificly to certain selectors.
+
+Consider the following example in Figure 7. With our primary theme applied to the containing element (line 1), `.text-color-secondary` is present on the third button selector.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="7"
+    highlightedLines="1,15"
+    visualExampleClass="theme-primary"
+    visualExample={(
+        <ul class="nav nav--horizontal justify-content-center">
+            <li>
+                <a class="button" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button" href="#1">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a class="button text-color-secondary" href="#1">
+                    Button
+                </a>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <div class="theme-light"> \n
+            <ul class="nav nav--horizontal justify-content-center">
+                <li>
+                    <a class="button" href="#1">
+                        Button
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="#1">
+                        Button
+                    </a>
+                </li>
+                <li>
+                    <a class="button text-color-secondary" href="#1">
+                        Button
+                    </a>
+                </li>
+            </ul> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+Keep in mind that text color utilities take priority over color applied with theme color utilies. This, of course allows for even more variations within your themes.
+
+Available text color utilities shown in figure 8:
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="8"
+    figureWidth="narrow"
+    codeExample={(`
+        <div class="text-color-primary">...</div>
+        <div class="text-color-secondary">...</div>
+        <div class="text-color-dark">...</div>
+        <div class="text-color-light">...</div>
+        <div class="text-color-white">...</div>
+        <div class="text-color-link">...</div>
     `)}
 />
