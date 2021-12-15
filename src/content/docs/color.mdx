@@ -228,3 +228,53 @@ You can nest theme color utilities throughout the DOM.
 </TextBlock>
 
 <InfinitelyNestable />
+
+<TextBlock>
+
+### Breakpoint Specific
+
+Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. `--lg` for a *large* breakpoint) to a the color utility. In the following example, `.theme-primary--lg` is present on the parent selector of our nav (Figure 5, line 1).  
+
+</TextBlock>
+
+
+<FigureBlock
+    figureNumber="5"
+    highlightedLines="1"
+    visualExample={(
+        <div class="container narrow theme-primary--lg padding-4 border-radius">
+            <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+            </ul>
+        </div>
+    )}
+    codeExample={(`
+        <div class="theme-primary--lg">  \n
+            <ul class="nav nav--divider nav--horizontal border border-radius">
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+                <li>
+                    <a href="#1">Link</a>
+                </li>
+            </ul> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+On smaller viewports The above example uses the default ***white*** theme. It instead used the ***primary*** theme when the viewport reaches the large breakpoint. Scale your browser horizontally to see this change occur.
+
+</TextBlock>
