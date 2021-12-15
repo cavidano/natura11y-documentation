@@ -34,12 +34,6 @@ const ThemeExampleCard = (props) => {
                 return (
                     <Fragment>
 
-                        <div className="card__head border-bottom font-size-rg">
-                            <p>
-                                <strong>{themeColor}</strong>
-                            </p>
-                        </div>
-
                         <div className="card__body">
                             <h2 className="h4">
                                 Rainbow lorikeet
@@ -63,15 +57,9 @@ const ThemeExampleCard = (props) => {
                         </div>
                     </Fragment>
                 );
-            case 'cool': 
+            case 'link': 
                 return (
                     <Fragment>
-                        <div class="card__head border-bottom font-size-rg">
-                            <p>
-                                <strong>{themeColor}</strong>
-                            </p>
-                        </div>
-
                         <div class="card__body">
                             <p>
                                 It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
@@ -82,12 +70,6 @@ const ThemeExampleCard = (props) => {
             case 'feedback': 
                 return (
                     <Fragment>
-                        <div class="card__head border-bottom font-size-rg">
-                            <p>
-                                <strong>{themeColor}</strong>
-                            </p>
-                        </div>
-
                         <div class="card__body">
                             <div class="grid grid--column-2 gap-2 text-align-center">
                                 <div class="alert alert--confirm border">
@@ -116,6 +98,11 @@ const ThemeExampleCard = (props) => {
 
     return (
         <div className={`card border-radius ${themeClass} ${border && 'border'} `}>
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>{themeColor}</strong>
+                </p>
+            </div>
             {cardContent()}
         </div>
     )

@@ -7,19 +7,21 @@ import ThemeExampleCard from './ThemeExampleCard';
 function LinkColors() {
 
     return (
-        <div className="container narrow grid gap-3 margin-y-4" style={exampleStyles}>
+        <figure className="margin-y-4">
+            <div className="container narrow grid gap-3" style={exampleStyles}>
 
-            <ThemeExampleCard cardType="cool" themeColor="Primary" border={false} />
+                <ThemeExampleCard cardType="link" themeColor="Primary" border={false} />
 
-            <ThemeExampleCard cardType="cool" themeColor="Secondary" border={false} />
+                <ThemeExampleCard cardType="link" themeColor="Secondary" border={false} />
 
-            <ThemeExampleCard cardType="cool" themeColor="Dark" border={false} />
+                <ThemeExampleCard cardType="link" themeColor="Dark" border={false} />
 
-            <ThemeExampleCard cardType="cool" themeColor="Light" border={false} />
+                <ThemeExampleCard cardType="link" themeColor="Light" border={false} />
 
-            <ThemeExampleCard cardType="cool" />
+                <ThemeExampleCard cardType="link" />
 
-        </div>            
+            </div>
+        </figure>         
     )
 }
 

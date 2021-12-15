@@ -5,9 +5,8 @@ import { exampleStyles } from '../../../../mdxVars';
 const PrinciplePalette = () => {
 
     return (
-        <figure class="container narrow margin-y-4">
-
-            <div style={exampleStyles}>
+        <figure class="margin-y-4">
+            <div className="container narrow" style={exampleStyles}>
 
                 <div class="theme-primary padding-3 margin-y-2">
                     <p><strong>Primary</strong></p>
@@ -26,7 +25,6 @@ const PrinciplePalette = () => {
                 </div>
 
             </div>
-
         </figure>
     );
 }
