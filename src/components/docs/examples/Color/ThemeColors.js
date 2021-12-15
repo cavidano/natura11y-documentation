@@ -4,7 +4,7 @@ import { exampleStyles } from '../../../../mdxVars';
 
 import ThemeExampleCard from './ThemeExampleCard';
 
-function ThemeColors() {
+const ThemeColors = () => {
 
     return (
         <figure className="margin-y-4"> 
