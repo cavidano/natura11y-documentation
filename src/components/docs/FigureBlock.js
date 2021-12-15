@@ -21,8 +21,8 @@ const Figure = (props) => {
         <figure className={`container ${figureWidth} margin-y-4`} id={`figure_${figureNumber}`}>
 
             {visualExample ? (
-                <div className={visualExampleClass !== null ? `example ${visualExampleClass}` : `example`}>
-                    <div className="padding-y-5 box-shadow-1" style={exampleStyles}>
+                <div className="example">
+                    <div className={(`padding-y-5 box-shadow-1 ${visualExampleClass && visualExampleClass}`)} style={exampleStyles}>
                         <div className="container narrow">
                             {visualExample}
                         </div>
