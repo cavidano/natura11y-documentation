@@ -9,6 +9,8 @@ bannerImage: ../../images/banner/backdrops.jpg
 import { codeImgPlaceholderBackdrop } from '../../mdxVars.js';
 import ImageProportional from '../../components/docs/examples/Backdrops/ImageProportional';
 import StackBreakpointModifier from '../../components/docs/examples/Backdrops/StackBreakpointModifier';
+import FixedHeight from '../../components/docs/examples/Backdrops/FixedHeight';
+import FixedHeightStretch from '../../components/docs/examples/Backdrops/FixedHeightStretch';
 
 <TextBlock>
 
@@ -190,4 +192,126 @@ For a fixed height backdrop, append the `.backdrop--fixed` modifier to the `.bac
 
 </TextBlock>
 
+<FixedHeight />
 
+<TextBlock>
+
+Figure 3 gives us the HTML for the above example:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    highlightedLines="1"
+    codeExample={(`
+        <div class="backdrop backdrop--fixed theme-dark"> \n
+            <div class="backdrop__credit">
+                <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            </div> \n
+            <div class="backdrop__image">
+                ${codeImgPlaceholderBackdrop}
+            </div> \n
+            <div class="backdrop__cover"> \n
+                <div class="container medium margin-y-4">
+                    <h1 class="banner-headline text-color-secondary text-shadow">
+                        The Mountain sat upon the Plain
+                    </h1>
+                </div> \n
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+The `.backdrop--fixed` selector stretches to fit the content within `.backdrop__cover`. Consider the following layout:
+
+</TextBlock>
+
+<FixedHeightStretch />
+
+<FigureBlock
+    figureNumber="4"
+    codeExample={(`
+        <div class="backdrop backdrop--fixed theme-dark"> \n
+            <div class="backdrop__credit">
+                <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            </div> \n
+            <div class="backdrop__image">
+                ${codeImgPlaceholderBackdrop}
+            </div> \n
+            <div class="backdrop__cover"> \n
+                <div class="margin-y-5"> \n
+                    <div class="container narrow">
+                        <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
+                        <em>Nature in Poetry</em>
+                        </h1>
+                    </div> \n
+                    <div class="container narrow medium--xl"> \n
+                        <div class="grid grid--column-2--xl gap-2 justify-content-center"> \n
+                            <div class="card border-radius theme-light box-shadow-2"> \n
+                                <div class="card__head border-bottom"> \n
+                                    <p>
+                                        <em>Featured Poem</em>
+                                    </p>
+                                </div> \n
+                                <div class="card__body">
+                                    <h2 class="h6">
+                                        This—is the land—the Sunset washes—
+                                    </h2>
+                                    <p>
+                                        <em>
+                                            This—is the land—the Sunset washes—<br>
+                                            These—are the Banks of the Yellow Sea—<br>
+                                            Where it rose—or whither it rushes—<br>
+                                            These—are the Western Mystery!
+                                        </em>
+                                    </p>
+                                    <p>
+                                        <em>
+                                            Night after Night<br>
+                                            Her purple traffic<br>
+                                            Strews the landing with Opal Bales—<br>
+                                            Merchantmen—poise upon Horizons—<br>
+                                            Dip—and vanish like Orioles!
+                                        </em>
+                                    </p>
+                                </div> \n
+                                <div class="card__foot border-top">
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">Emily Dickenson Poetry</span>
+                                        <span class="icon icon-arrow-right button__icon"></span>
+                                    </a>
+                                </div> \n
+                            </div> \n
+                            <div class="card border-radius theme-light box-shadow-2"> \n
+                                <div class="card__head border-bottom">
+                                    <p>
+                                        <em>About the Poet</em>
+                                    </p>
+                                </div> \n
+                                <div class="card__body">
+                                    <h2 class="h4">
+                                        Emily Dickenson
+                                    </h2>
+                                    <p>
+                                        Emily Elizabeth Dickinson was an American poet. Little-known during her life, she has since been regarded as one of the most important figures in American poetry.
+                                    </p>
+                                    <p>
+                                        Dickinson was born in Amherst, Massachusetts into a prominent family with strong ties to its community.
+                                    </p>
+                                </div> \n
+                                <div class="card__foot border-top">
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">About Emily Dickenson</span>
+                                        <span class="icon icon-arrow-right button__icon"></span>
+                                    </a>
+                                </div> \n
+                            </div> \n
+                        </div> \n
+                    </div> \n
+                </div> \n
+            </div> \n
+        </div>
+    `)}
+/>
