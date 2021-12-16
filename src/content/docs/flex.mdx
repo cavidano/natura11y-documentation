@@ -22,77 +22,12 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">fl
 
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md text-align-center">
-
-                <div class="flex-row subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row-reverse subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>3</p>
-                    </div>
-                </div>
-
-                <div class="flex-column subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>3</p>
-                    </div>
-                </div>
-
-                <div class="flex-column-reverse subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>3</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="flex-row"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row-reverse"&gt;...&lt;/div&gt;
-                &lt;div class="flex-column"&gt;...&lt;/div&gt;
-                &lt;div class="flex-column-reverse"&gt;...&lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 1
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
-    Need a flex row that doesn't wrap? Replace <code>.flex-row</code> with <code>.display-flex</code> (from the <a href="{{ site.url }}/docs/display/">display utilities</a>).
+
+Need a flex row that doesn't wrap? Replace <code>.flex-row</code> with <code>.display-flex</code> (from the <a href="{{ site.url }}/docs/display/">display utilities</a>).
+
 </TextBlock>
 
 <TextBlock>
@@ -105,37 +40,7 @@ With the HTML in Figure 2, the flex container starts with the <em>column</em> di
 
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md text-align-center">
-
-                <div class="flex-column flex-row--lg subtle-fill">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>3</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;!-- With breakpoint modifiers --&gt;
-
-                &lt;div class="flex-column flex-row--lg"&gt;...&lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 2
-    </figcaption>
-</figure>
+{/* figure */}
 
 <Divider id="flexGrowUtilities" />
 
@@ -147,17 +52,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
 
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;div class="flex-grow-1"&gt;...&lt;/div&gt;
-            &lt;div class="flex-grow-0"&gt;...&lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        Figure 3
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
     <p>
@@ -166,39 +61,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
 </TextBlock>
 <!-- .container -->
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md text-align-center">
-
-                <div class="display-flex subtle-fill">
-                    <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Item</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Item</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="display-flex subtle-fill"&gt;
-                    &lt;div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border"&gt;
-                        &lt;p&gt;Flex Item&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;div class="padding-x-3 padding-y-2 theme-white border"&gt;
-                        &lt;p&gt;Flex Item&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 4
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
     <p>
@@ -207,41 +70,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
 </TextBlock>
 <!-- .container -->
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow text-align-center font-size-lg">
-
-                <div class="button-group">
-                    <a class="button button--outline button--has-icon--disperse flex-grow-1" href="#1">                    
-                        <span class="button__text">Sign In</span>
-                        <span class="icon icon-arrow-right button__icon"></span>
-                    </a>
-                    <a class="button button--icon-only theme-dark" href="#1">
-                        <span class="icon icon-person" aria-hidden="true"></span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="button-group"&gt;
-                    &lt;a class="button button--outline button--has-icon--disperse flex-grow-1" href="#1"&gt;                    
-                        &lt;span class="button__text"&gt;Sign In&lt;/span&gt;
-                        &lt;span class="icon icon-arrow-right button__icon"&gt;&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a class="button button--icon-only theme-dark" href="#1"&gt;
-                        &lt;span class="icon icon-person" aria-hidden="true"&gt;&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 5
-    </figcaption>
-</figure>
+{/* figure */}
 
 <Divider id="flexShrinkUtilities" />
 
@@ -252,18 +81,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
     </p>
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;
-            &lt;div class="flex-shrink-1"&gt;...&lt;/div&gt;
-            &lt;div class="flex-shrink-2"&gt;...&lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        Figure 6
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
     <p>
@@ -274,75 +92,9 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
     </p>
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md text-align-center">
+{/* figure */}
 
-                <div class="display-flex">
-                    <div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Shrink</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border"
-                    style="flex-basis: 100%;">
-                        <p>Width 100</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="display-flex"&gt;
-                    &lt;div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border"&gt;
-                        &lt;p&gt;Flex Shrink&lt;/p&gt;
-                    &lt;/div&gt;
-                    &lt;div class="padding-x-3 width-100 padding-y-2 theme-white border"&gt;
-                        &lt;p&gt;2&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 4
-    </figcaption>
-</figure>
-
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md text-align-center">
-
-                <div class="display-flex subtle-fill">
-                    <div class="flex-shrink-0 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Shrink 0</p>
-                    </div>
-                    <div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Shrink 1</p>
-                    </div>
-                    <div class="flex-shrink-2 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Shrink 2</p>
-                    </div>
-                    <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
-                        <p>Flex Grow 1</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;
-                &lt;div class="flex-shrink-1"&gt;...&lt;/div&gt;
-                &lt;div class="flex-shrink-2"&gt;...&lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 5
-    </figcaption>
-</figure>
+{/* figure */}
 
 <Divider id="justifyContentUtilites" />
 
@@ -353,102 +105,7 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
     </p>
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md">
-
-                <div class="flex-row justify-content-start subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row justify-content-end subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row justify-content-center subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row justify-content-between subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row justify-content-around subtle-fill margin-bottom-4">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                </div>
-
-                <div class="flex-row justify-content-evenly subtle-fill">
-
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="flex-row justify-content-start"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row justify-content-end"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row justify-content-center"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row justify-content-between"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row justify-content-around"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row justify-content-evenly"&gt;...&lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 6
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
     <h3>### Breakpoint Modifiers</h3>
@@ -460,35 +117,10 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
     </p>
 </TextBlock>
 <!-- .container -->
+ 
+{/* figure */}
 
-<figure class="container narrow margin-y-4" {{ site.custom-properties-example }}>
-    <div class="font-size-md">
-        <div class="flex-row justify-content-end--lg subtle-fill">
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 1</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 2</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 3</p>
-            </div>
-        </div>
-    </div>
-</figure>
-
-<figure class="container medium margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;!-- With breakpoint modifiers --&gt;
-
-            &lt;div class="flex-row justify-content-end--lg"&gt;...&lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        Figure 7
-    </figcaption>
-</figure>
+{/* figure */}
 
 <Divider id="alignContentUtilites" />
 
@@ -500,239 +132,7 @@ The <a href="#1">align content</a> utilites distribute the space between and aro
 
 </TextBlock>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow font-size-md">
-                
-                <div class="flex-row justify-content-center align-content-start subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-                                
-                <div class="flex-row justify-content-center align-content-end subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-                
-                <div class="flex-row justify-content-center align-content-center subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-            
-                <div class="flex-row justify-content-center align-content-between subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-            
-                <div class="flex-row justify-content-center align-content-around subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-        
-                <div class="flex-row justify-content-center align-content-evenly subtle-fill margin-bottom-4" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-            
-                <div class="flex-row justify-content-center align-content-stretch subtle-fill" style="height: 240px">
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 1</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 2</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 3</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 4</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 5</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 6</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 7</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 8</p>
-                    </div>
-                    <div class="padding-x-3 padding-y-2 theme-white border">
-                        <p>Item 9</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="flex-row align-content-start"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-end"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-center"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-between"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-around"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-evenly"&gt;...&lt;/div&gt;
-                &lt;div class="flex-row align-content-stretch"&gt;...&lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 8
-    </figcaption>
-</figure>
+{/* figure */}
 
 <TextBlock>
 
@@ -744,49 +144,6 @@ With the HTML in Figure 6. The flex container starts its alignment with <em>star
 
 </TextBlock>
 
-<figure class="container narrow margin-y-4" {{ site.custom-properties-example }}>
-    <div class="font-size-md">
-        <div class="flex-row justify-content-center align-content-start align-content-end--lg subtle-fill margin-bottom-4" style="height: 240px">
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 1</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 2</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 3</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 4</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 5</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 6</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 7</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 8</p>
-            </div>
-            <div class="padding-x-3 padding-y-2 theme-white border">
-                <p>Item 9</p>
-            </div>
-        </div>
-    </div>
-</figure>
+{/* figure */}
 
-<figure class="container medium margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;!-- With breakpoint modifiers --&gt;
-
-            &lt;div class="flex-row align-content-start align-content-end--lg"&gt;...&lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        Figure 9
-    </figcaption>
-</figure>
+{/* figure */}
