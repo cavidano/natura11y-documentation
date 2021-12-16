@@ -6,6 +6,9 @@ bannerCreditHandle: "@zmachacek"
 bannerImage: ../../images/banner/display.jpg
 ---
 
+import Direction from '../../components/docs/examples/Flex/Direction.js'
+import DirectionBreakpointModifier from '../../components/docs/examples/Flex/DirectionBreakpointModifier.js'
+
 <TextBlock>
 
 Natura11y's <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">flexbox</a> utilities provide options for creating one-dimensional layouts. Some flexbox utilities deal with horizontal and vertical alignment. These utilities work alongside the <a href="#1">navigation</a>, <a href="#1">grid</a>, and in some cases, <a href="#1">backdrop</a> components.
@@ -22,7 +25,18 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">fl
 
 </TextBlock>
 
-{/* figure */}
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <Direction />
+    )}
+    codeExample={(`
+        <div class="flex-row">...</div>
+        <div class="flex-row-reverse">...</div>
+        <div class="flex-column">...</div>
+        <div class="flex-column-reverse">...</div>
+    `)}
+/>
 
 <TextBlock>
 
@@ -40,7 +54,16 @@ With the HTML in Figure 2, the flex container starts with the *column* direction
 
 </TextBlock>
 
-{/* figure */}
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <DirectionBreakpointModifier />
+    )}
+    codeExample={(`
+        <!-- With breakpoint modifiers --> \n
+        <div class="flex-column flex-row--lg">...</div>
+    `)}
+/>
 
 <Divider id="flexGrowUtilities" />
 
@@ -52,44 +75,48 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
 
 </TextBlock>
 
+<FigureBlock
+    figureNumber="3"
+    codeExample={(`
+        <div class="flex-grow-1">...</div>
+        <div class="flex-grow-0">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+With `.flex-grow-1`, applied to a flex item, it will grow to fill any available space.
+
+</TextBlock>
+
 {/* figure */}
 
 <TextBlock>
-    <p>
-        With `.flex-grow-1`, applied to a flex item, it will grow to fill any available space.
-    </p>
-</TextBlock>
-<!-- .container -->
 
-{/* figure */}
+Finally, Figure 5 shows the effect of each flex item with a different grow factor. 
 
-<TextBlock>
-    <p>
-        Finally, Figure 5 shows the effect of each flex item with a different grow factor. 
-    </p>
 </TextBlock>
-<!-- .container -->
 
 {/* figure */}
 
 <Divider id="flexShrinkUtilities" />
 
 <TextBlock>
-    ## Flex Shrink Utilities
-    <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">Flex skrink</a> utilities (e.g., `.flex-grow-{x}`) set the shrink factor of a flex item, where <strong>*x*</strong> equals *0*, *1*, or *2*.These three decimals represent the amount which the flex item shrinks.
-    </p>
+
+## Flex Shrink Utilities
+
+The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">Flex skrink</a> utilities (e.g., `.flex-grow-{x}`) set the shrink factor of a flex item, where <strong>*x*</strong> equals *0*, *1*, or *2*.These three decimals represent the amount which the flex item shrinks.
+
 </TextBlock>
 
 {/* figure */}
 
 <TextBlock>
-    <p>
-        With a flex shrink value of *0*, a flex item will not shrink as it's flex container gets smaller. With a shrink value of *1*, the flex item will shrink, but no smaller than it’s content. Finally, a flex item with a flex shrink value of *2* will shrink smaller than it’s content.
-    </p>
-    <p>
-        With the examples below, `.flex-shrink-1` applied to the first flex item allows it to shrink along it's main axis. 
-    </p>
+
+With a flex shrink value of *0*, a flex item will not shrink as it's flex container gets smaller. With a shrink value of *1*, the flex item will shrink, but no smaller than it’s content. Finally, a flex item with a flex shrink value of *2* will shrink smaller than it’s content.
+
+With the examples below, `.flex-shrink-1` applied to the first flex item allows it to shrink along it's main axis. 
+
 </TextBlock>
 
 {/* figure */}
@@ -99,24 +126,23 @@ The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target=
 <Divider id="justifyContentUtilites" />
 
 <TextBlock>
-    ## Justify Content Utilites
-    <p>
-        The <a href="#1">justify content</a> utilites (Figure 3) align items along the main-axis of their flex container.  
-    </p>
+
+## Justify Content Utilites
+
+The <a href="#1">justify content</a> utilites (Figure 3) align items along the main-axis of their flex container.  
+
 </TextBlock>
 
 {/* figure */}
 
 <TextBlock>
-    <h3>### Breakpoint Modifiers</h3>
-    <p>
-        Justify content utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
-    </p>
-    <p>
-        With the HTML in Figure 4. The flex container changes it's justification to *end* at the large breakpoint.
-    </p>
+
+### Breakpoint Modifiers
+
+Justify content utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+With the HTML in Figure 4. The flex container changes it's justification to *end* at the large breakpoint.
+
 </TextBlock>
-<!-- .container -->
  
 {/* figure */}
 
