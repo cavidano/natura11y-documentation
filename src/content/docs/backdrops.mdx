@@ -102,7 +102,7 @@ It holds the backdrop's contextual content.
 
 The size of this backdrop (proportional width and height) is determined by the size of its feature image.
 
-The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image, allows the background color to show through.
+The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. `.theme-dark`) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. `.opacity-30`) applied to the backdrop's feature image, allows the background color to show through.
 
 </TextBlock>
 
@@ -115,3 +115,79 @@ When using image size proportional backdrops for featured content (like the full
 </TextBlock>
 
 <StackBreakpointModifier />
+
+<TextBlock>
+
+To occomodate small viewports, include a *stack breakpoint modifier* (e.g. `.backdrop--stack--{x}`) to the `.backdrop` selector. Where ***x*** equals the desired breakpoint (e.g., *lg* for large). The backdrop's image is placed above the content vertically until the viewport reaches the desired breakpoint specified in the modifier.
+
+</TextBlock>
+
+<BrowserFrame frameSrc="../../iframe-examples/backdrop-stack-mobile.html" frameWidth="narrow" />
+
+<TextBlock>
+
+The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
+
+Notice, too, the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding `.opacity-40--lg` to the `.backdrop__image` selector gives that image a specified opacity (40%) at the large (lg) breakpoint.
+
+Figure 2 (below) provides code used to create the backdrop above. Refer specifically to line 1, where the `.backdrop--stack--lg` breakpoint modifier is present.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    highlightedLines="1"
+    codeExample={(`
+        <div class="backdrop backdrop--stack--lg theme-dark"> \n
+            <div class="backdrop__credit">
+                <p>
+                    Photo by <a href="#1">Jane Doe</a> on Unsplash
+                </p>
+            </div> \n
+            <div class="backdrop__image">
+                ${codeImgPlaceholderBackdrop}
+            </div> \n
+            <div class="backdrop__cover"> \n
+                <div class="container narrow margin-y-5"> \n
+                    <div class="text-shadow text-align-center margin-bottom-4">
+                        <h1 class="banner-headline">
+                            The mountain at a given distance<br>
+                            In amber lies
+                        </h1>
+                        <p>
+                            —Excerpt from <em>Delight becomes pictoral</em>
+                        </p>
+                    </div> \n
+                    <div class="grid grid--column-2--md gap-2"> \n
+                        <a class="button button--outline width-100" href="#1">
+                            About Emily Dickenson
+                        </a> \n
+                        <a class="button theme-secondary width-100 box-shadow-1" href="#1">
+                            Emily Dickenson Poetry
+                        </a> \n
+                    </div> \n
+                </div> \n
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+All of this together makes it easy to create responsive backdrops with different flavors of color and content. What if we don't want our backdrop's size to be dictated by its feature image?
+
+</TextBlock>
+
+<Divider id="fixedHeight" />
+
+<TextBlock>
+
+## Fixed Height
+
+Fixed height backdrops retain their height across viewport sizes. When needed, they adjust to the height of their inner content.
+
+For a fixed height backdrop, append the `.backdrop--fixed` modifier to the `.backdrop` selector.
+
+</TextBlock>
+
+

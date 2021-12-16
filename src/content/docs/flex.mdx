@@ -8,6 +8,9 @@ bannerImage: ../../images/banner/display.jpg
 
 import Direction from '../../components/docs/examples/Flex/Direction.js'
 import DirectionBreakpointModifier from '../../components/docs/examples/Flex/DirectionBreakpointModifier.js'
+import Grow from '../../components/docs/examples/Flex/Grow.js'
+import Shrink from '../../components/docs/examples/Flex/Shrink.js'
+import JustifyContent from '../../components/docs/examples/Flex/JustifyContent.js'
 
 <TextBlock>
 
@@ -89,15 +92,23 @@ With `.flex-grow-1`, applied to a flex item, it will grow to fill any available 
 
 </TextBlock>
 
-{/* figure */}
 
-<TextBlock>
-
-Finally, Figure 5 shows the effect of each flex item with a different grow factor. 
-
-</TextBlock>
-
-{/* figure */}
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <Grow />
+    )}
+    codeExample={(`
+        <div class="display-flex subtle-fill">
+            <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
+                <p>Flex Item</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Flex Item</p>
+            </div>
+        </div>
+    `)}
+/>
 
 <Divider id="flexShrinkUtilities" />
 
@@ -105,11 +116,26 @@ Finally, Figure 5 shows the effect of each flex item with a different grow facto
 
 ## Flex Shrink Utilities
 
-The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">Flex skrink</a> utilities (e.g., `.flex-grow-{x}`) set the shrink factor of a flex item, where <strong>*x*</strong> equals *0*, *1*, or *2*.These three decimals represent the amount which the flex item shrinks.
+The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">Flex shrink</a> utilities (e.g., `.flex-shrink-{x}`) set the shrink factor of a flex item, where <strong>*x*</strong> equals *0*, *1*, or *2*.These three decimals represent the amount which the flex item shrinks.
 
 </TextBlock>
 
-{/* figure */}
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <Shrink />
+    )}
+    codeExample={(`
+        <div class="display-flex subtle-fill">
+            <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
+                <p>Flex Item</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Flex Item</p>
+            </div>
+        </div>
+    `)}
+/>
 
 <TextBlock>
 
@@ -133,7 +159,20 @@ The <a href="#1">justify content</a> utilites (Figure 3) align items along the m
 
 </TextBlock>
 
-{/* figure */}
+<FigureBlock
+    figureNumber="6"
+    visualExample={(
+        <JustifyContent />
+    )}
+    codeExample={(`
+        <div class="flex-row justify-content-start">...</div>
+        <div class="flex-row justify-content-end">...</div>
+        <div class="flex-row justify-content-center">...</div>
+        <div class="flex-row justify-content-between">...</div>
+        <div class="flex-row justify-content-around">...</div>
+        <div class="flex-row justify-content-evenly">...</div>
+    `)}
+/>
 
 <TextBlock>
 
