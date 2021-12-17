@@ -43,11 +43,25 @@ In Figure 1, the `.form-entry` selector contains an `<input>` field with the `ty
     visualExample={(
         <FormEntry />
     )}
+    highlightedLines="1,3-17,19-21"
     codeExample={(`
-        <div class="flex-row">...</div>
-        <div class="flex-row-reverse">...</div>
-        <div class="flex-column">...</div>
-        <div class="flex-column-reverse">...</div>
+        <div class="form-entry"> \n
+            <label class="form-entry__field"> \n
+                <span class="form-entry__field__label">
+                    Form Entry Label
+                </span> \n
+                <span class="form-entry__field__input">
+                    <input
+                        type="text"
+                        name="textInputExample"
+                        id="text-input-example"
+                        aria-describedby="help-text-input-example">
+                </span> \n
+            </label> \n
+            <small class="form-entry__help" id="help-text-input-example">
+                Form entry help text
+            </small> \n
+        </div>
     `)}
 />
 
