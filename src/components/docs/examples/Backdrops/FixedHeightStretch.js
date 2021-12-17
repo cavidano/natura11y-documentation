@@ -8,7 +8,7 @@ const FixedHeightStretch = () => {
 
     return (
 
-        <div class="backdrop backdrop--fixed theme-dark" style={exampleStyles}>
+        <div class="backdrop backdrop--fixed theme-dark margin-y-5" style={exampleStyles}>
 
             <div class="backdrop__credit">
                 <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>

@@ -8,7 +8,7 @@ const FixedHeight = () => {
 
     return (
 
-        <div className="backdrop backdrop--fixed theme-dark" style={exampleStyles}>
+        <div className="backdrop backdrop--fixed theme-dark margin-y-5" style={exampleStyles}>
 
             <div className="backdrop__credit">
                 <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
