@@ -6,6 +6,8 @@ bannerCreditHandle: "@vikceo"
 bannerImage: ../../images/banner/forms.jpg
 ---
 
+import FormEntry from '../../components/docs/examples/Forms/FormEntry.js';
+
 <TextBlock>
 
 Forms are notoriously challenging to style and make accessible. Natura11y provides basic style and behavior for building user friendly, accessible forms. 
@@ -35,3 +37,17 @@ The form entry parent selector (`.form-entry`) wraps each entry within a form. C
 In Figure 1, the `.form-entry` selector contains an `<input>` field with the `type="text"` attribute. 
 
 </TextBlock>
+
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <FormEntry />
+    )}
+    codeExample={(`
+        <div class="flex-row">...</div>
+        <div class="flex-row-reverse">...</div>
+        <div class="flex-column">...</div>
+        <div class="flex-column-reverse">...</div>
+    `)}
+/>
