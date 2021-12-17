@@ -37,7 +37,7 @@ At the same time, the framework is ideal for seasoned developers and complex pro
 
 ## Framework at a Glance
 
-We build and maintain the framework using modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the general folder and file tree that makes up the framework proper:
+Natura11y is built with modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the general folder and file tree that makes up the framework proper:
 
 </TextBlock>
 
@@ -74,3 +74,83 @@ We use a module bundler to process all modules into a single CSS file, and a sin
 These files are two of the three required dependencies of the framework. The third dependency is for icons. Follow our *Quick Start* instructions for including these dependencies (via CDN).
 
 </TextBlock>
+
+<Divider id="quickStart" />
+
+<TextBlock>
+
+## Quick Start
+
+Get up and running with Natura11y. Create a plain HTML document and add the code from Figure 2 (below).
+
+</TextBlock>
+
+<FigureBlock 
+    figureNumber="2"
+    figureWidth="medium"
+    highlightedLines="3,13,16,31"
+    codeExample={(`
+    <!DOCTYPE html> \n
+        <html lang="en" dir="ltr"> \n
+            <head> \n
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> \n
+                <title>Page Title • Your Website Name</title> \n
+                <!-- Natura11y Icons -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css"> \n
+                <!-- Natura11y Stylesheet -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
+            </head> \n
+            <body> \n
+                <header id="global-header"></header> \n
+                <main id="skip-header-content">
+                    <h1>Hello Nature</h1>
+                </main> \n
+                <footer id="global-footer"></footer> \n
+                <!-- Natura11y Javascript -->
+                <script src="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js"></script> \n
+            </body> \n
+        </html>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="2">
+
+<TableLineDescRow lines="3">
+
+On the HTML tag, the `lang="en"` attribute sets the default language (English). The `dir="ltr"` attribute sets the default text direction (left to right).
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="13">
+
+CDN Stylesheet link to <a href="/icons">Natura11y Icons</a>, our very own open-source icon library.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="16">
+
+CDN link to the framework's latest stable version of the core stylesheet.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="31">
+
+CDN link The framework's latest stable core Javascript file.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<TextBlock>
+
+That's it! With the the required scripts in place, you are ready to start building with the Natura11y. Next, learn how to customize your layout's look and feel.
+
+</TextBlock>
+
+<div class="container narrow margin-y-4">
+    <a class="button button--has-icon theme-primary" href="/docs/customization">
+        <span class="button__text">Customization</span>
+        <span class="icon icon-arrow-right" aria-hidden="true"></span>
+    </a>
+</div>
