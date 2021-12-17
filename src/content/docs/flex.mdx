@@ -11,6 +11,9 @@ import DirectionBreakpointModifier from '../../components/docs/examples/Flex/Dir
 import Grow from '../../components/docs/examples/Flex/Grow.js';
 import Shrink from '../../components/docs/examples/Flex/Shrink.js';
 import JustifyContent from '../../components/docs/examples/Flex/JustifyContent.js';
+import JustifyContentBreakpointModifier from '../../components/docs/examples/Flex/JustifyContentBreakpointModifier.js';
+import AlignContent from '../../components/docs/examples/Flex/AlignContent.js';
+import AlignContentBreakpointModifier from '../../components/docs/examples/Flex/AlignContentBreakpointModifier.js';
 
 <TextBlock>
 
@@ -188,9 +191,16 @@ With the HTML in Figure 4. The flex container changes it's justification to *end
 
 </TextBlock>
  
-{/* figure */}
-
-{/* figure */}
+<FigureBlock
+    figureNumber="8"
+    visualExample={(
+        <JustifyContentBreakpointModifier />
+    )}
+    codeExample={(`
+        <!-- With breakpoint modifiers --> \n
+        <div class="flex-row justify-content-end--lg">...</div>
+    `)}
+/>
 
 <Divider id="alignContentUtilites" />
 
@@ -202,7 +212,21 @@ The <a href="#1">align content</a> utilites distribute the space between and aro
 
 </TextBlock>
 
-{/* figure */}
+<FigureBlock
+    figureNumber="9"
+    visualExample={(
+        <AlignContent />
+    )}
+    codeExample={(`
+        <div class="flex-row align-content-start">...</div>
+        <div class="flex-row align-content-end">...</div>
+        <div class="flex-row align-content-center">...</div>
+        <div class="flex-row align-content-between">...</div>
+        <div class="flex-row align-content-around">...</div>
+        <div class="flex-row align-content-evenly">...</div>
+        <div class="flex-row align-content-stretch">...</div>
+    `)}
+/>
 
 <TextBlock>
 
@@ -214,6 +238,13 @@ With the HTML in Figure 6. The flex container starts its alignment with *start* 
 
 </TextBlock>
 
-{/* figure */}
-
-{/* figure */}
+<FigureBlock
+    figureNumber="10"
+    visualExample={(
+        <AlignContentBreakpointModifier />
+    )}
+    codeExample={(`
+        <!-- With breakpoint modifiers --> \n
+        <div class="flex-row justify-content-end--lg">...</div>
+    `)}
+/>
