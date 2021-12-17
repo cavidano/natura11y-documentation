@@ -5,7 +5,7 @@ function FlexItem(props) {
     const { label, itemClass } = props;
 
     return (
-        <div class={`${itemClass && itemClass } padding-x-3 padding-y-2 theme-white border text-align-center`}>
+        <div class={`${itemClass !== null ? itemClass : '' } padding-x-3 padding-y-2 theme-white border text-align-center`}>
             <p>{label}</p>
         </div>
     )
