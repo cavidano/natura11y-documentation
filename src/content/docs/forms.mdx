@@ -14,6 +14,8 @@ import Checkboxes from '../../components/docs/examples/Forms/Checkboxes.js';
 import CheckboxSingle from '../../components/docs/examples/Forms/CheckboxSingle.js';
 import CheckboxSwitch from '../../components/docs/examples/Forms/CheckboxSwitch.js';
 import Radios from '../../components/docs/examples/Forms/Radios.js';
+import RequiredFields from '../../components/docs/examples/Forms/RequiredFields.js';
+import FloatingLabels from '../../components/docs/examples/Forms/FloatingLabels.js';
 
 <TextBlock>
 
@@ -575,6 +577,76 @@ It holds the actual text label for the checkbox.
 
 ## Required Fields
 
+Natura11y makes it easy to mark required fields. Add `data-required="true"` to the parent `.form-group` element of the required field. On the same `.form-group` element, include a custom error message using the `data-error-message={x}` attribute. Here <strong><em>x</em></strong> equals the message displayed to the user during the validation process. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="9"
+    visualExample={(
+        <RequiredFields />
+    )}
+    highlightedLines="3-4"
+    codeExample={(`
+        <div
+            class="form-entry"
+            data-required="true"
+            data-error-message="Custom error message"> \n
+            <div class="form-entry__field">
+                ...
+            </div> \n
+        </div>
+    `)}
+/>
+
+
+<TextBlock>
+
+The two data attributes mentioned above are shown in Figure 9, lines 3 and 4. When present on the `.form group` selector, Naturally's Javascript adds the necessary `required` and `data-required` attributes to the form entry's child `&lt;input&gt;` element automatically.
+
+With the previous example, notice the red asterisk placed *before* the label. This too, is added automatically to required fields (via Natura11y's CSS file). The asterisk has become the standard identifier for required fields.   
+
+</TextBlock>
+
+<Divider id="formValidation" />
+
+<TextBlock>
+
+## Form Validation
+
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
 
 </TextBlock>
+
+<Divider id="floatingLabels" />
+
+<TextBlock>
+
+## Floating Labels
+
+For short forms (such as a sign in form) floating labels would be fine to use. Add the `.form-entry__field--float` modifier class to the `.form-entry__field` selector (see Figure 11, line 6).   
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="11"
+    visualExample={(
+        <FloatingLabels />
+    )}
+    highlightedLines="6"
+    codeExample={(`
+        <div
+            class="form-entry"
+            data-required="true"
+            data-error-message="Username is required!"> \n
+            <label class="form-entry__field form-entry__field--float"> \n
+                <span class="form-entry__field__label">
+                    Username
+                </span> \n
+                <span class="form-entry__field__input">
+                    <input type="text" id="account-username" name="accountUsername">
+                </span> \n
+            </label> \n
+        </div>
+    `)}
+/>
