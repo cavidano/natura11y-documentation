@@ -6,7 +6,7 @@ const GridExample = () => {
     return (
         <figure className="container medium margin-y-4">
 
-            <div className="grid grid--column-4 gap-border text-align-center font-size-md">
+            <div className="grid grid--column-4 gap-border text-align-center font-size-md" style={exampleStyles}>
 
                 <div className="theme-primary padding-2 flex-column justify-content-center grid__colspan-2 grid__rowspan-4 aspect-ratio-1x1">
                     <p>Item</p>

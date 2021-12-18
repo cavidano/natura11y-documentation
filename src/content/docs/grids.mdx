@@ -12,6 +12,9 @@ import MatrixCellWidth from '../../components/docs/examples/Grids/MatrixCellWidt
 import MatrixCellWidthChild from '../../components/docs/examples/Grids/MatrixCellWidthChild';
 import MatrixFitAndFill from '../../components/docs/examples/Grids/MatrixFitAndFill';
 import MatrixCellWidthBreakpointModifiers from '../../components/docs/examples/Grids/MatrixCellWidthBreakpointModifiers';
+import GridExample from '../../components/docs/examples/Grids/GridExample';
+import GridStack from '../../components/docs/examples/Grids/GridStack';
+import GridColumnWidth from '../../components/docs/examples/Grids/GridColumnWidth';
 
 <TextBlock>
 
@@ -78,7 +81,6 @@ When a width modifier (specific to a breakpoint) is present, Matrix cells remain
 </TableLineDescRow>
 
 </TableLineDescBlock>
-
 
 <TextBlock>
 
@@ -208,6 +210,88 @@ For example, to make a three-column layout at the *medium* breakpoint, apply `.m
             <div class="matrix__cell">
                 <!-- ... -->
             </div> \n
+        </div>
+    `)}
+/>
+
+<Divider id="cssGrid" />
+
+<TextBlock>
+
+## CSS Grid
+
+Natura11y's CSS grid component provides some fundamental grid layout options (via utility classes).
+
+</TextBlock>
+
+<GridExample />
+
+<TextBlock>
+
+Attempting to reproduce the limitless layout options available with CSS Grid Layout would be altogether misguided. You can and *should* create grid layouts yourself—writing custom CSS—alongside Natura11y's styles.
+
+With that out of the way, let's look at the `.grid` component beginning with Figure 1.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="6"
+    visualExample={(
+        <GridStack />
+    )}
+    highlightedLines="1,3-13"
+    codeExample={(`
+        <div class="grid"> \n
+            <div>
+                <p>01</p>
+            </div> \n
+            <div>
+                <p>02</p>
+            </div> \n
+            <div>
+                <p>03</p>
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="6">
+
+<TableLineDescRow lines="1">
+
+The parent `.grid` selector is required.
+
+It provides applies the css grid specification.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3-13">
+
+All direct children of the `.grid` selector are automatically grid items.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<TextBlock>
+
+### Grid Columns
+
+To create columns within a `.grid selector`, apply the `.grid--column-{x}` modifier. Here x equals the actual column count (from 1 to 12). This works in direct contrast with the `.matrix` grid system mentioned above.
+
+As shown is Figure 7 below, the `.grid--column-3` modifier class creates a three column grid.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="7"
+    visualExample={(
+        <GridColumnWidth />
+    )}
+    highlightedLines="1,3-13"
+    codeExample={(`
+        <div class="grid grid--column-3">
+            ...
         </div>
     `)}
 />
