@@ -2,7 +2,7 @@ import React from 'react';
 
 import MatrixCell from './MatrixCell';
 
-const MatrixCellWidthBreakpointModifiers = () => {
+const MatrixCellWidthBreakpoints = () => {
     return (
         <div className="matrix matrix matrix--cell-4--md border">
 
@@ -17,4 +17,4 @@ const MatrixCellWidthBreakpointModifiers = () => {
     );
 };
 
-export default MatrixCellWidthBreakpointModifiers;
+export default MatrixCellWidthBreakpoints;

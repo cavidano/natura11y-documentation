@@ -11,11 +11,13 @@ import MatrixStack from '../../components/docs/examples/Grids/MatrixStack';
 import MatrixCellWidth from '../../components/docs/examples/Grids/MatrixCellWidth';
 import MatrixCellWidthChild from '../../components/docs/examples/Grids/MatrixCellWidthChild';
 import MatrixFitAndFill from '../../components/docs/examples/Grids/MatrixFitAndFill';
-import MatrixCellWidthBreakpointModifiers from '../../components/docs/examples/Grids/MatrixCellWidthBreakpointModifiers';
+import MatrixCellWidthBreakpoints from '../../components/docs/examples/Grids/MatrixCellWidthBreakpoints';
 import GridExample from '../../components/docs/examples/Grids/GridExample';
 import GridStack from '../../components/docs/examples/Grids/GridStack';
 import GridColumnWidth from '../../components/docs/examples/Grids/GridColumnWidth';
 import GridColumnSpan from '../../components/docs/examples/Grids/GridColumnSpan';
+import GridRowSpan from '../../components/docs/examples/Grids/GridRowSpan';
+import GridColumnWidthBreakpoints from '../../components/docs/examples/Grids/GridColumnWidthBreakpoints';
 
 <TextBlock>
 
@@ -332,15 +334,40 @@ With the grid component, rows are implicit. Grid items can span up to *6* rows. 
 <FigureBlock
     figureNumber="9"
     visualExample={(
-        <GridColumnSpan />
+        <GridRowSpan />
     )}
     highlightedLines="1"
     codeExample={(`
-        <div class="grid grid--column-4"> \n
+        <div class="grid grid--column-2"> \n
             <div class="grid__rowspan-2">
                 <p>01</p>
             </div> \n
             ... \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+All column and row utilites in `.grid` accept breakpoint modifiers.
+
+For responsive layouts, chain a breakpoint modifier (e.g. `.grid--column-{x}--{y}` where ***x*** equals the column count, and y specifies the desired breakpoint.
+
+For example, to make a three-column layout at the medium breakpoint, apply `.grid--column-3--md` to the `.grid selector` (Figure 10, line 1).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="10"
+    visualExample={(
+        <GridColumnWidthBreakpoints />
+    )}
+    highlightedLines="1"
+    codeExample={(`
+        <div class="grid grid--column-3--md">
+            ...
         </div>
     `)}
 />
