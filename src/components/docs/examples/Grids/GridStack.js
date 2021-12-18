@@ -1,16 +1,16 @@
 import React from 'react';
 
-import GridCell from './GridCell';
+import GridItem from './GridItem';
 
 const GridStack = () => {
     return (
         <div className="grid border font-size-md text-align-center">
 
-            <GridCell label="01" />
+            <GridItem label="01" />
             
-            <GridCell label="02" />
+            <GridItem label="02" />
 
-            <GridCell label="03" />
+            <GridItem label="03" />
 
         </div>
     );

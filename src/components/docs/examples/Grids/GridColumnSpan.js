@@ -2,11 +2,11 @@ import React from 'react';
 
 import GridItem from './GridItem';
 
-const GridColumnWidth = () => {
+const GridColumnSpan = () => {
     return (
-        <div className="grid grid--column-3 border font-size-md text-align-center">
+        <div className="grid grid--column-4 border font-size-md text-align-center">
 
-            <GridItem label="01" />
+            <GridItem label="01" itemClass="grid__colspan-3" />
             
             <GridItem label="02" />
 
@@ -22,4 +22,4 @@ const GridColumnWidth = () => {
     );
 };
 
-export default GridColumnWidth;
+export default GridColumnSpan;

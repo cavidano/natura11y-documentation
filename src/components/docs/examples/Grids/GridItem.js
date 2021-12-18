@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GridCell = (props) => {
+const GridItem = (props) => {
     
     const { label, itemClass } = props;
 
@@ -11,9 +11,9 @@ const GridCell = (props) => {
     );
 };
 
-GridCell.defaultProps = {
+GridItem.defaultProps = {
     label: 'Cell',
     itemClass: null
 }
 
-export default GridCell;
+export default GridItem;
