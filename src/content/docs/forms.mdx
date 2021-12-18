@@ -15,6 +15,7 @@ import CheckboxSingle from '../../components/docs/examples/Forms/CheckboxSingle.
 import CheckboxSwitch from '../../components/docs/examples/Forms/CheckboxSwitch.js';
 import Radios from '../../components/docs/examples/Forms/Radios.js';
 import RequiredFields from '../../components/docs/examples/Forms/RequiredFields.js';
+import FormValidation from '../../components/docs/examples/Forms/FormValidation.js';
 import FloatingLabels from '../../components/docs/examples/Forms/FloatingLabels.js';
 
 <TextBlock>
@@ -617,6 +618,28 @@ With the previous example, notice the red asterisk placed *before* the label. Th
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
 
 </TextBlock>
+
+<FigureBlock
+    figureNumber="10"
+    visualExample={(
+        <FormValidation />
+    )}
+    codeExample={(`
+        <div
+            class="form-entry"
+            data-required="true"
+            data-error-message="Username is required!"> \n
+            <label class="form-entry__field form-entry__field--float"> \n
+                <span class="form-entry__field__label">
+                    Username
+                </span> \n
+                <span class="form-entry__field__input">
+                    <input type="text" id="account-username" name="accountUsername">
+                </span> \n
+            </label> \n
+        </div>
+    `)}
+/>
 
 <Divider id="floatingLabels" />
 
