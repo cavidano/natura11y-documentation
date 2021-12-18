@@ -7,6 +7,9 @@ bannerImage: ../../images/banner/forms.jpg
 ---
 
 import FormEntry from '../../components/docs/examples/Forms/FormEntry.js';
+import FormEntrySelect from '../../components/docs/examples/Forms/FormEntrySelect.js';
+import FormEntryTextarea from '../../components/docs/examples/Forms/FormEntryTextarea.js';
+import FormEntryFileUpload from '../../components/docs/examples/Forms/FormEntryFileUpload.js';
 
 <TextBlock>
 
@@ -43,7 +46,7 @@ In Figure 1, the `.form-entry` selector contains an `<input>` field with the `ty
     visualExample={(
         <FormEntry />
     )}
-    highlightedLines="1,3-17,19-21"
+    highlightedLines="1,3-17,18-21"
     codeExample={(`
         <div class="form-entry"> \n
             <label class="form-entry__field"> \n
@@ -65,4 +68,246 @@ In Figure 1, the `.form-entry` selector contains an `<input>` field with the `ty
     `)}
 />
 
+<TableLineDescBlock targetFigure="1">
 
+<TableLineDescRow lines="1">
+
+The `.form-entry` parent selector is required.
+
+It contains each entries elements, including help text and feedback messages.
+
+When more than one `.form-entry` selector is present, spacing between them occurs automatically.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3-17">
+
+The `.form-entry__field` child selector is required.
+
+It holds the field's label and input elements.
+
+The `.form-entry__field__label` grandchild selector is required.
+
+It holds the actual label text, and required indicator (when present).
+
+The `.form-entry__field__input` grandchild selector is required.
+
+It holds the field's actual input elements.
+
+When using help text, `aria-describedby` is present on the `input` tag for assistive technology. It equals the help text's `id` attribute (below).
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="18-21">
+
+The `.form-entry__help` child selector is not required.
+
+Its id equals its associated `aria-describedby` attribute.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<Divider id="selectElement" />
+
+<TextBlock>
+
+## Select Element
+
+With the example in Figure 2, the same `.form-entry` container holds a `<select>` element.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <FormEntrySelect />
+    )}
+    highlightedLines="5-7,9-21"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <label class="form-entry__field"> \n
+                <span class="form-entry__field__label">
+                    Form Entry Label
+                </span> \n
+                <span class="form-entry__field__select">
+                    <select
+                        id="select-example"
+                        name="selectExample"
+                        aria-describedby="help-select-example">
+                            <option value="">Select</option>
+                            <option value="Option One">Option One</option>
+                            <option value="Option Two">Option Two</option>
+                            <option value="Option Three">Option Three</option>
+                            <option value="Option Four">Option Four</option>
+                            <option value="Option Five">Option Five</option>
+                    </select>
+                </span> \n
+            </label> \n
+            <small class="form-entry__help" id="help-select-example">
+                Form entry help text
+            </small> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="2">
+
+<TableLineDescRow lines="5-7">
+
+The `.form-entry__field__label` grandchild selector is required.
+
+The `for` attribute equals its associated `<select>` tags `id`.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="9-21">
+
+The `.form-entry__field__select` grandchild selector is required.
+
+It holds the actual `<select>` tag.
+
+The `<select>` tag's `id` equals its associated `for` attribute.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<Divider id="selectElement" />
+
+<TextBlock>
+
+## Text Area
+
+Following the previous example's pattern, Figure 3 shows the `.form-entry` parent selector with a `<textarea>` element.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <FormEntryTextarea />
+    )}
+    highlightedLines="11,13-15,17-22,24-27"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <label class="form-entry__field"> \n
+                <span class="form-entry__field__label">
+                    Form Entry Label
+                </span> \n
+                <span class="form-entry__field__input">
+                    <textarea
+                        rows="8"
+                        name="textInputExample"
+                        id="text-input-example"
+                        aria-describedby="help-textarea-example"
+                    ></textarea>
+                </span> \n
+            </label> \n
+            <small class="form-entry__help" id="help-textarea-example">
+                Form entry help text
+            </small> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="3">
+
+<TableLineDescRow lines="5-7">
+
+The `.form-entry__field__label` grandchild selector is required.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="9-16">
+
+The `.form-entry__field__input` grandchild selector is required.
+
+It holds the actual `<textarea>` tag.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<Divider id="fileUpload" />
+
+<TextBlock>
+
+## File Upload
+
+Natura11y offers a simple file upload component, as shown in Figure 4 below.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <FormEntryFileUpload />
+    )}
+    highlightedLines="11,13-15,17-22,24-27"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <div class="form-entry__field"> \n
+                <span class="form-entry__field__label">
+                    Upload a Single File
+                </span> \n
+                <div class="form-entry__field__input"> \n
+                    <label class="file-upload"> \n
+                        <span class="file-upload__drop">
+                            <span class="file-upload__drop__text">Drag and Drop</span>
+                        </span> \n
+                        <input
+                            class="file-upload__input"
+                            type="file"
+                            name="fileUploadExample"
+                            id="file-upload-example"
+                            accept="image/*" /> \n
+                        <span class="button button--outline button--has-icon file-upload__button">
+                            <span class="icon icon-upload"></span>
+                            <span class="button__text">Browse for a File</span>
+                        </span> \n
+                    </label> \n
+                </div> \n
+            </div> \n
+            <small class="form-entry__help" id="help-file-upload-example">
+                Form entry help text
+            </small> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="4">
+
+<TableLineDescRow lines="11">
+
+The `.file-upload` selector is required.
+
+It holds the drop area and actual `<input>` tag.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="13-15">
+
+The `.file-upload__drop` child selector is required.
+
+It holds the `.file-upload__drop__text` selector.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="17-22">
+
+The `.file-upload__input` child selector is required.
+
+It includes the `type="file"` attribute.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="24-27">
+
+The `.button` selector is required.
+
+It can be styled with any of the <a href="/docs/buttons">button</a> utilities.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
