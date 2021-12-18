@@ -10,6 +10,8 @@ import MatrixExample from '../../components/docs/examples/Grids/MatrixExample';
 import MatrixStack from '../../components/docs/examples/Grids/MatrixStack';
 import MatrixCellWidth from '../../components/docs/examples/Grids/MatrixCellWidth';
 import MatrixCellWidthChild from '../../components/docs/examples/Grids/MatrixCellWidthChild';
+import MatrixFitAndFill from '../../components/docs/examples/Grids/MatrixFitAndFill';
+import MatrixCellWidthBreakpointModifiers from '../../components/docs/examples/Grids/MatrixCellWidthBreakpointModifiers';
 
 <TextBlock>
 
@@ -56,7 +58,6 @@ The example in Figure 1 shows the HTML needed to get started using the Matrix co
         </div>
     `)}
 />
-
 
 <TableLineDescBlock targetFigure="1">
 
@@ -147,6 +148,64 @@ Bulding from the previous example, we can remove the sixth cell and allow the fi
                 <!-- ... -->
             </div> \n
             <div class="matrix__cell matrix--cell-8">
+                <!-- ... -->
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+### Fill and Fit
+
+In addition to the 12 width values, `.matrix--cell-fill` and `.matrix-cell-fit` modifier classes are available.
+
+Using `.matrix--cell-fill` divides the remaining space (width) and fills it. While `.matrix--cell-fit` allows the cell's content to determine it's width (Figure 4).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <MatrixFitAndFill />
+    )}
+    codeExample={(`
+        <div class="matrix matrix--cell-fit">
+            <!-- ... -->
+        </div> \n
+        <div class="matrix matrix--cell-fill">
+            <!-- ... -->
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+All *matrix cell* width utilites in `.matrix` accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+For responsive layouts, chain a breakpoint modifier (e.g. `.matrix--cell-{x}--{y}` where ***x*** equals the cell width, and ***y*** specifies the desired breakpoint.
+
+For example, to make a three-column layout at the *medium* breakpoint, apply `.matrix--cell-4--md` to the `.matrix` selector (Figure 4, line 1).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="5"
+    visualExample={(
+        <MatrixCellWidthBreakpointModifiers />
+    )}
+    highlightedLines="1"
+    codeExample={(`
+        <div class="matrix matrix--cell-4--md"> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
                 <!-- ... -->
             </div> \n
         </div>

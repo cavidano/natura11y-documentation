@@ -6,13 +6,12 @@ const MatrixCell = (props) => {
 
     return (
         <div className={`matrix__cell ${itemClass !== null ? itemClass : '' }`}>
-            <div className="padding-2 border">
+            <div className="theme-light padding-2 border font-size-md text-align-center">
                 <p>{label}</p>
             </div>
         </div>
     );
 };
-
 
 MatrixCell.defaultProps = {
     label: 'Cell',
