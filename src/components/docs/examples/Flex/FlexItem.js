@@ -8,7 +8,7 @@ function FlexItem(props) {
         <div class={`${itemClass !== null ? itemClass : '' } padding-x-3 padding-y-2 theme-white border text-align-center`}>
             <p>{label}</p>
         </div>
-    )
+    );
 }
 
 FlexItem.defaultProps = {

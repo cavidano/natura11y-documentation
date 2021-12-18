@@ -16,7 +16,7 @@ const DirectionBreakpointModifier = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default DirectionBreakpointModifier;

@@ -7,7 +7,7 @@ const CardImage = () => {
     return (
         <div className="card border">
             <StaticImage
-                src="../../../images/examples/card-example-01.jpg"
+                src="../../../../images/examples/card-example-01.jpg"
                 alt=""
                 placeholder="dominantColor"
                 layout="fullWidth"

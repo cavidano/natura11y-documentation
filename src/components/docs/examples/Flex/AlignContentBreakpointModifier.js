@@ -26,7 +26,7 @@ const AlignContentBreakpointModifier = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default AlignContentBreakpointModifier;

@@ -7,7 +7,7 @@ import FlexItem from './FlexItem';
 const Shrink = () => {
 
     return (
-        <div className="container narrow font-size-md" style={exampleStyles}>
+        <div className="font-size-md" style={exampleStyles}>
 
             <div className="display-flex subtle-fill">
                 <FlexItem label="Flex Item (Shrink 2)" itemClass="flex-shrink-1" />

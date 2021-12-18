@@ -111,7 +111,7 @@ const AccordionExample = (props) => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 AccordionExample.defaultProps = {

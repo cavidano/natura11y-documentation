@@ -7,7 +7,7 @@ import FlexItem from './FlexItem';
 const Grow = () => {
 
     return (
-        <div className="container narrow font-size-md" style={exampleStyles}>
+        <div className="font-size-md" style={exampleStyles}>
 
             <div className="flex-row subtle-fill">
                 <FlexItem label="Flex Item (grow)" itemClass="flex-grow-1" />

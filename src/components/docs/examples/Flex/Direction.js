@@ -34,7 +34,7 @@ const Direction = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default Direction;

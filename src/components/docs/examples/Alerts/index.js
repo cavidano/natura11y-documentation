@@ -64,7 +64,7 @@ const AlertExample = (props) => {
             </div>
 
         </Fragment>
-    )
+    );
 }
 
 AlertExample.defaultProps = {

@@ -98,7 +98,7 @@ const AlignContent = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default AlignContent;
