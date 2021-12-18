@@ -7,6 +7,9 @@ bannerImage: ../../images/banner/grids.jpg
 ---
 
 import MatrixExample from '../../components/docs/examples/Grids/MatrixExample';
+import MatrixStack from '../../components/docs/examples/Grids/MatrixStack';
+import MatrixCellWidth from '../../components/docs/examples/Grids/MatrixCellWidth';
+import MatrixCellWidthChild from '../../components/docs/examples/Grids/MatrixCellWidthChild';
 
 <TextBlock>
 
@@ -25,3 +28,127 @@ Natura11y offers a 12 column <a href="https://developer.mozilla.org/en-US/docs/L
 </TextBlock>
 
 <MatrixExample />
+
+<TextBlock>
+
+### Matrix Component
+
+The example in Figure 1 shows the HTML needed to get started using the Matrix component.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <MatrixStack />
+    )}
+    codeExample={(`
+        <div class="matrix"> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+        </div>
+    `)}
+/>
+
+
+<TableLineDescBlock targetFigure="1">
+
+<TableLineDescRow lines="1">
+
+The parent `.matrix selector` is required.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3">
+
+The `.matrix__cell` selector is required.
+
+Matrix cells inherit the width of their parent `.matrix` and stack on top of one another when a width modifier class is not present.
+
+When a width modifier (specific to a breakpoint) is present, Matrix cells remain stacked until the viewport width reaches that breakpoint.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+
+<TextBlock>
+
+### Matrix Cell Width
+
+To specify the width of matrix cells, use the `.matrix--cell-{x}` modifier class, where ***x*** equals their desired width (a number from 1 to 12).
+
+For example, to make a three-column matrix using the 12 column grid system, apply `.matrix--cell-4` directly to the `.matrix` selector (Figure 2, line 1).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <MatrixCellWidth />
+    )}
+    codeExample={(`
+        <div class="matrix matrix--cell-4"> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TextBlock>
+
+The `.matrix--cell-{x}` modifier class works on individual `.matrix__cell` selectors, too.
+
+Bulding from the previous example, we can remove the sixth cell and allow the fifth cell to fill the remaining space. On the fifth `.matrix__cell` instance, notice the `.matrix--cell-8` modifier class (Figure 3, line 19).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <MatrixCellWidthChild />
+    )}
+    highlightedLines="1,19"
+    codeExample={(`
+        <div class="matrix matrix--cell-4"> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell">
+                <!-- ... -->
+            </div> \n
+            <div class="matrix__cell matrix--cell-8">
+                <!-- ... -->
+            </div> \n
+        </div>
+    `)}
+/>
