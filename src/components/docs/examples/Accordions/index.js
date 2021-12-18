@@ -6,6 +6,7 @@ const AccordionExample = (props) => {
 
     return (
         <div className="accordion">
+
             <button
                 className="accordion__button h5"
                 id="acc-button-example-01"
@@ -26,6 +27,7 @@ const AccordionExample = (props) => {
                     </p>
                 </div>
             </div>
+
             <button
                 className="accordion__button h5"
                 id="acc-button-example-01"
@@ -45,6 +47,7 @@ const AccordionExample = (props) => {
                     </p>
                 </div>
             </div>
+
             <button
                 className="accordion__button h5"
                 id="acc-button-example-01"
@@ -65,6 +68,7 @@ const AccordionExample = (props) => {
                     </p>
                 </div>
             </div>
+
             <button
                 className="accordion__button h5"
                 id="acc-button-example-01"
@@ -85,6 +89,7 @@ const AccordionExample = (props) => {
                     </p>
                 </div>
             </div>
+
             <button
                 className="accordion__button h5"
                 id="acc-button-example-01"
