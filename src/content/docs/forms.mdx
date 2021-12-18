@@ -10,6 +10,10 @@ import FormEntry from '../../components/docs/examples/Forms/FormEntry.js';
 import FormEntrySelect from '../../components/docs/examples/Forms/FormEntrySelect.js';
 import FormEntryTextarea from '../../components/docs/examples/Forms/FormEntryTextarea.js';
 import FormEntryFileUpload from '../../components/docs/examples/Forms/FormEntryFileUpload.js';
+import Checkboxes from '../../components/docs/examples/Forms/Checkboxes.js';
+import CheckboxSingle from '../../components/docs/examples/Forms/CheckboxSingle.js';
+import CheckboxSwitch from '../../components/docs/examples/Forms/CheckboxSwitch.js';
+import Radios from '../../components/docs/examples/Forms/Radios.js';
 
 <TextBlock>
 
@@ -276,21 +280,90 @@ Natura11y offers a simple file upload component, as shown in Figure 4 below.
     `)}
 />
 
-<TableLineDescBlock targetFigure="4">
+<Divider id="checkboxes" />
 
-<TableLineDescRow lines="11">
+<TextBlock>
 
-The `.file-upload` selector is required.
+## Checkboxes
 
-It holds the drop area and actual `<input>` tag.
+Checkbox (and radio) groups use semantic `<fieldset>` and `<legend>` tags. They stack vertically, with a healthy amount of padding. This helps to ensure an accessible target size.
+
+Figure 5 provides the markup required to create a checkbox group.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="5"
+    visualExample={(
+        <Checkboxes />
+    )}
+    highlightedLines="9,11,18-20"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <fieldset class="form-entry__field"> \n
+                <legend class="form-entry__field__label">
+                    Form Entry Label
+                </legend> \n
+                <div class="form-entry__option"> \n
+                    <div class="form-entry__option__check">
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="check-option-one"
+                                value="optionOne">
+                                <span class="option__label">
+                                    Option One
+                                </span>
+                        </label>
+                    </div> \n
+                    <div class="form-entry__option__check">
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="check-option-two"
+                                value="optionTwo">
+                                <span class="option__label">
+                                    Option Two
+                                </span>
+                        </label>
+                    </div> \n
+                    <div class="form-entry__option__check">
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="check-option-three"
+                                value="optionThree">
+                                <span class="option__label">
+                                    Option Three
+                                </span>
+                        </label>
+                    </div> \n
+                </div> \n
+            </fieldset> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="5">
+
+<TableLineDescRow lines="9">
+
+The `.form-entry__option` child selector is required.
+
+It holds the options markup for the `<fieldset>`.
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="13-15">
+<TableLineDescRow lines="11">
 
-The `.file-upload__drop` child selector is required.
+The `.form-entry__option__check` grandchild selector is required.
 
-It holds the `.file-upload__drop__text` selector.
+It holds the actual `<label>` and `<input>` tags.
+
+The `.form-entry__option__check` selector is repeatable for multiple options.
 
 </TableLineDescRow>
 
@@ -302,11 +375,195 @@ It includes the `type="file"` attribute.
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="24-27">
+<TableLineDescRow lines="18-20">
 
-The `.button` selector is required.
+The `.option__label` child selector is required.
 
-It can be styled with any of the <a href="/docs/buttons">button</a> utilities.
+It holds the actual text label for the checkbox.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<TextBlock>
+
+### Single Checkbox
+
+For a single checkbox, do not use a `<fieldset>` and `<legend>`. Instead, provide an id on the `.form-entry__field__label` selector (Figure 6, line 5). Then associate it with `aria-labeledby` placed on the surrounding `<label>` tag (Figure 6, lines 13).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="6"
+    visualExample={(
+        <CheckboxSingle />
+    )}
+    highlightedLines="5,13"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <div class="form-entry__field"> \n
+                <span class="form-entry__field__label" id="single-option-label">
+                    Form Entry Label
+                </span> \n
+                <div class="form-entry__option"> \n
+                    <div class="form-entry__option__check"> \n
+                        <label aria-labeledby="single-option-label">
+                            <input
+                                type="checkbox"
+                                name="singleOption"
+                                id="single-option"
+                                value="option">
+                                <span class="option__label">
+                                    Option
+                                </span>
+                        </label> \n
+                    </div> \n
+                </div> \n
+            </div> \n
+        </div> \n
+    `)}
+/>
+
+<TextBlock>
+
+### Checkbox Switch
+
+Checkboxes can transform into switches with just a couple of of changes to the markup.
+
+First, change the `.form-entry__option__check` to `.form-entry__option__switch` (Figure 7, line 11). Then, above the switch label, add an empty `<span>` with a `.switch__slider` class (Figure 7, line 19).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="7"
+    visualExample={(
+        <CheckboxSwitch />
+    )}
+    highlightedLines="11,19"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <div class="form-entry__field"> \n
+                <span class="form-entry__field__label" id="switch-option-label">
+                    Form Entry Label
+                </span> \n
+                <div class="form-entry__option"> \n
+                    <div class="form-entry__option__switch"> \n
+                        <label aria-labeledby="switch-option-label">
+                            <input
+                                type="checkbox"
+                                name="singleOption"
+                                id="switch-option"
+                                value="option">
+                                <span class="switch__slider"></span>
+                                <span class="option__label">
+                                    Recieve Notifications
+                                </span>
+                        </label> \n
+                    </div> \n
+                </div> \n
+            </div> \n
+        </div>
+    `)}
+/>
+
+<Divider id="radios" />
+
+<TextBlock>
+
+## Radios
+
+Like checkboxes, radio groups use semantic `<fieldset>` and `<legend>` tags.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="8"
+    visualExample={(
+        <Radios />
+    )}
+    highlightedLines="9,11,18-20"
+    codeExample={(`
+        <div class="form-entry"> \n
+            <fieldset class="form-entry__field"> \n
+                <legend class="form-entry__field__label">
+                    Form Entry Label
+                </legend> \n
+                <div class="form-entry__option"> \n
+                    <div class="form-entry__option__radio">
+                        <label>
+                            <input
+                                type="radio"
+                                name="radioGroupExample"
+                                id="radio-option-one"
+                                value="optionOne">
+                                <span class="option__label">
+                                    Option One
+                                </span>
+                        </label>
+                    </div> \n
+                    <div class="form-entry__option__radio">
+                        <label>
+                            <input
+                                type="radio"
+                                name="radioGroupExample"
+                                id="radio-option-two"
+                                value="optionTwo">
+                                <span class="option__label">
+                                    Option Two
+                                </span>
+                        </label>
+                    </div> \n
+                    <div class="form-entry__option__radio">
+                        <label>
+                            <input
+                                type="radio"
+                                name="radioGroupExample"
+                                id="radio-option-three"
+                                value="optionThree">
+                                <span class="option__label">
+                                    Option Three
+                                </span>
+                        </label>
+                    </div> \n
+                </div> \n
+            </fieldset> \n
+        </div> \n
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="8">
+
+<TableLineDescRow lines="9">
+
+The `.form-entry__option` child selector is required.
+
+It holds each `.form-entry__option__radio` grandchild selector.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="11">
+
+The `.form-entry__option__radio` grandchild selector is required.
+
+It holds the actual `<label>` and `<input>` tags.
+
+The `.form-entry__option__radio` selector is repeatable for multiple options.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="17-22">
+
+The `.file-upload__input` child selector is required.
+
+It includes the `type="file"` attribute.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="18-20">
+
+The `.option__label` child selector is required.
+
+It holds the actual text label for the checkbox.
 
 </TableLineDescRow>
 
