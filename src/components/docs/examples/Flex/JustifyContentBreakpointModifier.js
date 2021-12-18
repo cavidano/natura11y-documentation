@@ -16,7 +16,7 @@ const JustifyContentBreakpointModifier = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default JustifyContentBreakpointModifier;

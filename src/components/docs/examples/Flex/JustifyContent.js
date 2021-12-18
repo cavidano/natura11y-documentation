@@ -46,7 +46,7 @@ const JustifyContent = () => {
             </div>
 
         </div>   
-    )
+    );
 }
 
 export default JustifyContent;

@@ -7,14 +7,10 @@ import FlexItem from './FlexItem';
 const Shrink = () => {
 
     return (
-        <div className="font-size-md" style={exampleStyles}>
-
-            <div className="display-flex subtle-fill">
-                <FlexItem label="Flex Item (Shrink 2)" itemClass="flex-shrink-1" />
-                <FlexItem itemClass="width-100" />
-            </div>
-
-        </div>   
+        <div className="display-flex subtle-fill font-size-md" style={exampleStyles}>
+            <FlexItem label="Flex Item (Shrink 2)" itemClass="flex-shrink-1" />
+            <FlexItem itemClass="width-100" />
+        </div>
     )
 }
 

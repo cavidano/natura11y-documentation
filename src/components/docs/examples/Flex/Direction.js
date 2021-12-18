@@ -7,7 +7,7 @@ import FlexItem from './FlexItem';
 const Direction = () => {
 
     return (
-        <div className="container narrow grid gap-3 font-size-md" style={exampleStyles}>
+        <div className="grid gap-3 font-size-md" style={exampleStyles}>
 
             <div className="flex-row subtle-fill">
                 <FlexItem label="1" />
