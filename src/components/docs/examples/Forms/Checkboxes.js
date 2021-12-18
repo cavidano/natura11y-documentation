@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Radios = () => {
+const Checkboxes = () => {
     return (
         <div class="form-entry">
 
@@ -12,12 +12,12 @@ const Radios = () => {
 
                 <div class="form-entry__option">
 
-                    <div class="form-entry__option__radio">
+                    <div class="form-entry__option__check">
                         <label>
                             <input
-                                type="radio"
-                                name="radioGroupExample"
-                                id="radio-option-one"
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="checkbox-option-one"
                                 value="optionOne"
                             />
                                 <span class="option__label">
@@ -26,12 +26,12 @@ const Radios = () => {
                         </label>
                     </div>
 
-                    <div class="form-entry__option__radio">
+                    <div class="form-entry__option__check">
                         <label>
                             <input
-                                type="radio"
-                                name="radioGroupExample"
-                                id="radio-option-two"
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="checkbox-option-two"
                                 value="optionTwo"
                             />
                                 <span class="option__label">
@@ -40,12 +40,12 @@ const Radios = () => {
                         </label>
                     </div>
 
-                    <div class="form-entry__option__radio">
+                    <div class="form-entry__option__check">
                         <label>
                             <input
-                                type="radio"
-                                name="radioGroupExample"
-                                id="radio-option-three"
+                                type="checkbox"
+                                name="checkboxGroupExample"
+                                id="checkbox-option-three"
                                 value="optionThree"
                             />
                             <span class="option__label">
@@ -62,4 +62,4 @@ const Radios = () => {
     );
 };
 
-export default Radios;
+export default Checkboxes;
