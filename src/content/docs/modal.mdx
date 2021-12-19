@@ -1,0 +1,48 @@
+---
+category: "a-z"
+title: "Modal"
+bannerCreditName: "Rachel Hannah Photo"
+bannerCreditHandle: "@rachyhannahphoto" 
+bannerImage: ../../images/banner/modal.jpg
+---
+
+import ModalExample from '../../components/docs/examples/Modal';
+
+<TextBlock>
+
+Present actionable content to visitors with dismissable modal dialog overlays. 
+
+</TextBlock>
+
+<AccessibilitySpotlight>
+
+Modals have keyboard support for focusable elements. Use the *Tab* and *Shift + Tab* keys without leaving the model by accident. Using the *Esc* key closes the model.
+
+When a modal closes, keyboard user return to the last active element in the document.
+
+Include *role="dialog"* on the modal element.
+
+Provide an accessible name with *aria-describedby*, referring to the modal title element.
+
+</AccessibilitySpotlight>
+
+<Divider id="defaultBehavior" />
+
+<TextBlock>
+
+## Default Behavior
+
+Use the button below to launch the modal component with default behavior. Modals center horizontally and vertically. Content within the `.modal__content__body` selector scrolls (vertically) when its content's height exceeds the height of the viewport. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <ModalExample />
+    )}
+    highlightedLines=""
+    codeExample={(`
+        hello
+    `)}
+/>
