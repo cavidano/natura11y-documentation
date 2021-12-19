@@ -5,8 +5,6 @@ import MatrixCell from './MatrixCell';
 
 const Gap = () => {
     return (
-        <Fragment>
-            
         <div className="grid gap-3">
 
             <div>
@@ -47,8 +45,6 @@ const Gap = () => {
             </div>
 
         </div>
-
-        </Fragment>
     );
 };
 
