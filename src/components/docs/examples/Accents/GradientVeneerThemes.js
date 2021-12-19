@@ -35,7 +35,7 @@ const GradientVeneerThemes = () => {
             <div className={`backdrop border-radius theme-${theme}`}>
                 <div className="backdrop__image gradient-veneer-bottom">
                     <StaticImage
-                        src="../../../images/gradient-veneer-themes.jpg"
+                        src="../../../../images/gradient-veneer-themes.jpg"
                         className="opacity-80"
                         alt="whoa"
                         placeholder="dominantColor"

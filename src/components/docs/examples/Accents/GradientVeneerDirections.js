@@ -52,7 +52,7 @@ const GradientVeneerDirections = () => {
             <div className="backdrop">
                 <div className={`backdrop__image gradient-veneer-${direction}`}>
                     <StaticImage
-                        src="../../../images/gradient-veneer-directions.jpg"
+                        src="../../../../images/gradient-veneer-directions.jpg"
                         alt="whoa"
                         placeholder="dominantColor"
                         layout="fullWidth"
