@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 
 const GridColumnWidth = () => {
     return (
-        <div className="grid grid--column-3 border font-size-md text-align-center">
+        <div className="grid grid--column-3">
 
             <GridItem label="01" />
             

@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 
 const GridColumnSpan = () => {
     return (
-        <div className="grid grid--column-2 border font-size-md text-align-center">
+        <div className="grid grid--column-2">
 
             <GridItem label="01" itemClass="grid__rowspan-2" />
             

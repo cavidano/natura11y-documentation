@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 
 const GridColumnWidthBreakpoints = () => {
     return (
-        <div className="grid grid--column-3--lg border font-size-md text-align-center">
+        <div className="grid grid--column-3--lg">
 
             <GridItem label="01" />
             

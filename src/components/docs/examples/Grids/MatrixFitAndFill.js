@@ -6,7 +6,7 @@ const MatrixFitAndFill = () => {
     return (
         <div className="grid gap-2 font-size-md">
 
-            <div class="matrix matrix--cell-fill border">
+            <div class="matrix matrix--cell-fill">
 
                 <MatrixCell label="01" />
                 <MatrixCell label="02" />
@@ -14,7 +14,7 @@ const MatrixFitAndFill = () => {
 
             </div>
 
-            <div class="matrix matrix--cell-fit subtle-fill border" style={{'--subtle-fill-opacity': '.0375'}}>
+            <div class="matrix matrix--cell-fit subtle-fill">
 
                 <MatrixCell label="01" />
                 <MatrixCell label="02" />

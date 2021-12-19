@@ -4,7 +4,7 @@ import MatrixCell from './MatrixCell';
 
 const MatrixCellWidthBreakpoints = () => {
     return (
-        <div className="matrix matrix matrix--cell-4--md border">
+        <div className="matrix matrix matrix--cell-4--md">
 
             <MatrixCell label="01" />
             <MatrixCell label="02" />

@@ -4,7 +4,7 @@ import MatrixCell from './MatrixCell';
 
 const MatrixStack = () => {
     return (
-        <div className="matrix theme-light border font-size-md text-align-center">
+        <div className="matrix">
 
             <MatrixCell label="01" />
             

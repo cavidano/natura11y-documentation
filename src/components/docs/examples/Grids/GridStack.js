@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 
 const GridStack = () => {
     return (
-        <div className="grid border font-size-md text-align-center">
+        <div className="grid">
 
             <GridItem label="01" />
             
