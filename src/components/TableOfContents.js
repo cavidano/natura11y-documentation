@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'gatsby';
+
 const TableOfContents = ({ sections }) => {
 
     return (
@@ -11,9 +13,9 @@ const TableOfContents = ({ sections }) => {
                         {sections
                         .map(section => (
                             <li key={`${section.id}`}>
-                                <a href={`#${section.id}`}>
+                                <Link to={`#${section.id}`}>
                                     {section.text}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

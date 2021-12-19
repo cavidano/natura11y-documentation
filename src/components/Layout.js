@@ -50,7 +50,6 @@ import "../natura11y/modules/theme";
 function Layout({ children }) {
 
   useEffect(() => {
-    console.log('Layout is loaded');
     new Accessibility();
     new Accordion();
     new Alerts();
