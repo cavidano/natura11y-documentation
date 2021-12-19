@@ -19,6 +19,8 @@ import GridColumnSpan from '../../components/docs/examples/Grids/GridColumnSpan'
 import GridRowSpan from '../../components/docs/examples/Grids/GridRowSpan';
 import GridColumnWidthBreakpoints from '../../components/docs/examples/Grids/GridColumnWidthBreakpoints';
 import Gap from '../../components/docs/examples/Grids/Gap';
+import Order from '../../components/docs/examples/Grids/Order';
+import OrderBreakpoints from '../../components/docs/examples/Grids/OrderBreakpoints';
 
 <TextBlock>
 
@@ -406,5 +408,67 @@ With the example in Figure 9, both `.matrix`, and `.grid` have the `.gap-{x}` ap
         <div class="grid gap-3">...</div>
         <div class="grid gap-4">...</div>
         <div class="grid gap-5">...</div>
+    `)}
+/>
+
+<Divider id="order-utilities" />
+
+<TextBlock>
+
+## Order Utilities
+
+Change the layout <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order" target="_blank">order</a> of matrix cells and grid items. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="12"
+    visualExample={(
+        <Order />
+    )}
+    codeExample={(`
+        <div class="grid grid--column-3--md theme-light border font-size-md text-align-center"> \n
+            <div class="padding-2 border order-3">
+                <p>01</p>
+            </div>
+            <div class="padding-2 border">
+                <p>02</p>
+            </div>
+            <div class="padding-2 border">
+                <p>03</p>
+            </div> \n
+        </div> \n
+        <!-- All order utilities: --> \n
+        <div class="order-1">...</div>
+        <div class="order-2">...</div>
+        <div class="order-3">...</div>
+        <div class="order-4">...</div>
+        <div class="order-5">...</div>
+        <div class="order-6">...</div>
+        <div class="order-7">...</div>
+        <div class="order-8">...</div>
+        <div class="order-9">...</div>
+        <div class="order-10">...</div>
+        <div class="order-11">...</div>
+        <div class="order-12">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+*Order* utilites accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="13"
+    visualExample={(
+        <OrderBreakpoints />
+    )}
+    codeExample={(`
+        <!-- With breakpoint modifier --> \n
+        <div class="order-3--lg">...</div>
     `)}
 />
