@@ -31,6 +31,7 @@ export default class Modal {
       const modalCloseList = modalTarget.querySelectorAll("[data-modal-close]")
 
       const handleCloseOutside = event => {
+        console.log("soooooooooooot")
         let modalContentClick = modalContent.contains(event.target)
 
         if (!modalContentClick) {
@@ -97,9 +98,10 @@ export default class Modal {
         modalClose.setAttribute("aria-label", "Close Modal Window")
       })
 
-      if (modalTarget.hasAttribute("data-modal-close-outside")) {
-        window.addEventListener("click", handleCloseOutside)
+      if (modalTarget.dataset.modalCloseOutside === 'true') {
+        window.addEventListener("click", handleCloseOutside);
       }
+
     }
 
     modalList.forEach(modal => {
