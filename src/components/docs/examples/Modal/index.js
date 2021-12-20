@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 const ModalExample = (props) => {
 
-    const { id, closeOutside, scrollAll } = props;
+    const { id, buttonText, closeOutside, scrollAll } = props;
 
     return (
         <Fragment>
@@ -10,7 +10,7 @@ const ModalExample = (props) => {
             <button
                 className="button theme-primary border-radius width-100 margin-y-3"
                 data-modal-open={id}>
-                    Open Modal (Default)
+                    {buttonText}
             </button>
 
             <div 
@@ -76,8 +76,9 @@ const ModalExample = (props) => {
 
 ModalExample.defaultProps = {
     id: 'modal-example-01',
+    buttonText: 'Open Modal (Default)',
     closeOutside: false,
-    scrollAll: true,
+    scrollAll: false,
 }
 
 export default ModalExample;
