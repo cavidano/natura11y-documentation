@@ -41,8 +41,167 @@ Use the button below to launch the modal component with default behavior. Modals
     visualExample={(
         <ModalExample />
     )}
-    highlightedLines=""
+    highlightedLines="3-7,11,13-15,17-24,26-30,32-41"
     codeExample={(`
-        hello
+        <!-- Modal button --> \n
+        <button
+            class="button theme-primary"
+            data-modal-open="modal-example-01">
+                Open Modal
+        </button> \n
+        <!-- Modal dialog --> \n
+        <div class="modal padding-2" id="modal-example-01" role="dialog"> \n
+            <div
+                class="modal__content narrow border-radius box-shadow-3"
+                aria-labelledby="modal-example-01-title"> \n
+                <header class="modal__content__head border-bottom">
+                    <h2 class="h6" id="modal-example-01-title">
+                        Modal Title One
+                    </h2>
+                    <button class="button button--icon-only" data-modal-close>
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                    </button>
+                </header> \n
+                <main class="modal__content__body" id="modal-example-01-content">
+                    <p>
+                        The <strong>meerkat</strong> (Suricata suricatta) or suricate is a small <a href="#1">mongoose</a> found in southern Africa. It is characterised by a broad head, large eyes, a pointed snout, long legs, a thin tapering tail, and a brindled coat pattern. The head-and-body length is around 24–35 cm (9.4–13.8 in), and the weight is typically between 0.62 and 0.97 kg (1.4 and 2.1 lb). The coat is light grey to yellowish brown with alternate, poorly defined light and dark bands on the back. Meerkats have foreclaws adapted for digging and have the ability to thermoregulate to survive in their harsh, dry habitat. Three subspecies are recognised.
+                    </p>
+                </main> \n
+                <footer class="modal__content__foot border-top text-color-link">
+                    <ul class="nav nav--horizontal justify-content-between">
+                        <li>
+                            <a href="#1">Secondary Action</a>
+                        </li>
+                        <li>
+                            <a class="button rounded-pill" href="#1">Primary Action</a>
+                        </li>
+                    </ul>
+                </footer> \n
+            </div> \n
+        </div>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="1">
+
+<TableLineDescRow lines="3-7">
+
+A button with the `data-modal-open` attribute is required.
+
+The `data-modal-open` attribute equals its associated modal's `id` attribute.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="11">
+
+The `.modal` selector is required.
+
+The `id` attribute equals the value of its associated button's `data-modal-open` attribute.
+
+The `role="dialog"` attribute is present for for assistive technology.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="13-15">
+
+The `.modal__content` selector is required.
+
+It centers the modal and holds the modal's header, body, and footer selectors.
+
+The `.narrow` utility is optional. It sets the width of the modal.
+
+The `.border-radius` utility is optional.
+
+The `.box-shadow-3` utility is optional.
+
+The `aria-labelledby` attribute is recommended for assistive technology.
+
+The aria-labelledby attribute equals its associated header's `id` attribute. This header is present within `.modal__content__head`.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="17-24">
+
+The `.modal__content__head` selector is required.
+
+It holds the modal's header and close icon button.
+
+The `.border-bottom` utility is optional.
+
+The `.button` selector with the `data-modal-close` attribute closes the modal.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="26-30">
+
+The `.modal__content__body` selector is required.
+
+It holds the modal's main content.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="32-41">
+
+The `.card__foot` selector is not required.
+
+It selector holds the modal's actionable buttons and links.
+
+The `.border-top` utility class is not required.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<Divider id="scrollEntireModal" />
+
+<TextBlock>
+
+## Scroll Entire Modal
+
+If you wish for the entire modal to scroll, add the `.modal--scroll-all` modifier class to the `.modal` selector (Figure, 2, line 1).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <ModalExample
+            scrollAll={true}
+            buttonText="Open Modal (Scroll All)"
+            id="modal-example-02" 
+        />
+    )}
+    highlightedLines="1"
+    codeExample={(`
+        <div class="modal modal--scroll-all" id="..." role="dialog"> \n
+            ...
+        </div>
+    `)}
+/>
+
+<Divider id="closeOutside" />
+
+<TextBlock>
+
+## Close Outside
+
+With the `data-modal-close-outside="true"` attribute preset, the modal closes when the user clicks outside of the modal content (Figure 3, line 1).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <ModalExample
+            closeOutside={true}
+            buttonText="Open Modal (Close Outside)"
+            id="modal-example-03" 
+        />
+    )}
+    highlightedLines="1"
+    codeExample={(`
+        <div class="modal" id="..." data-modal-close-outside="true" role="dialog"> \n
+            ...
+        </div>
     `)}
 />
