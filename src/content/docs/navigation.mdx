@@ -10,6 +10,7 @@ import PrimaryNavigation from '../../components/docs/examples/Navigation/Primary
 import Breadcrumb from '../../components/docs/examples/Navigation/Breadcrumb';
 import GenericNavigation from '../../components/docs/examples/Navigation/GenericNavigation';
 import Justification from '../../components/docs/examples/Navigation/Justification';
+import IconsInNav from '../../components/docs/examples/Navigation/IconsInNav';
 
 <TextBlock>
 
@@ -401,6 +402,51 @@ Include the aformentioned `.nav--horizontal` and `.nav--horizontal--{bp}` modifi
     )}
     codeExample={(`
         <ul class="nav nav--divider nav--horizontal">
+            ...
+        </ul>
+    `)}
+/>
+
+
+<Divider id="iconsInNavigation" />
+
+<TextBlock>
+
+## Icons in Navigation
+
+Generic navigation can include icons. Add the `.nav--has-icons` modifier class to a `.nav` selector. Nav items with icons (`<a>` or `<button>`) require two child selectors.
+
+The first child is is a `<span>` with its combined <a href="/icons">icon</a> classes. The second child is a `<span>` with a `.nav__text` class. This holds the nav items's text. Further, the `.nav__text` selector is our target for underlining the text on `:hover` and `:focus` states. It also provides a small margin to separate the text from the icon. See Figure 9.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="9"
+    visualExample={(
+        <IconsInNav />
+    )}
+    codeExample={(`
+        <ul class="nav nav--has-icons" role="menu">
+            <li>
+                <a href="#1">
+                    <span class="icon icon-home"></span>
+                    <span class="nav__text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#1">
+                    <span class="icon icon-calendar"></span>
+                    <span class="nav__text">Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#1">
+                    <span class="icon icon-bell"></span>
+                    <span class="nav__text">Notifications</span>
+                </a>
+            </li>
+        </ul> \n
+        <ul class="nav nav--divider nav--has-icons" role="menu">
             ...
         </ul>
     `)}
