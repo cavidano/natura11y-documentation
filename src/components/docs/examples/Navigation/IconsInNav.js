@@ -5,44 +5,44 @@ const IconsInNav = () => {
     return (
         <div className="grid gap-3">
 
-            <ul class="nav nav--has-icons nav--horizontal justify-content-center">
+            <ul className="nav nav--has-icons nav--horizontal justify-content-center">
                 <li>
                     <a href="#1">
-                        <span class="icon icon-home"></span>
-                        <span class="nav__text">Home</span>
+                        <span className="icon icon-home"></span>
+                        <span className="nav__text">Home</span>
                     </a>
                 </li>
                 <li>
                     <a href="#1">
-                        <span class="icon icon-calendar"></span>
-                        <span class="nav__text">Calendar</span>
+                        <span className="icon icon-calendar"></span>
+                        <span className="nav__text">Calendar</span>
                     </a>
                 </li>
                 <li>
                     <a href="#1">
-                        <span class="icon icon-bell"></span>
-                        <span class="nav__text">Notifications</span>
+                        <span className="icon icon-bell"></span>
+                        <span className="nav__text">Notifications</span>
                     </a>
                 </li>
             </ul>
 
-            <ul class="nav nav--divider nav--has-icons border">
+            <ul className="nav nav--divider nav--has-icons border">
                 <li>
                     <a href="#1">
-                        <span class="icon icon-home"></span>
-                        <span class="nav__text">Home</span>
+                        <span className="icon icon-home"></span>
+                        <span className="nav__text">Home</span>
                     </a>
                 </li>
                 <li>
                     <a href="#1">
-                        <span class="icon icon-calendar"></span>
-                        <span class="nav__text">Calendar</span>
+                        <span className="icon icon-calendar"></span>
+                        <span className="nav__text">Calendar</span>
                     </a>
                 </li>
                 <li>
                     <a href="#1">
-                        <span class="icon icon-bell"></span>
-                        <span class="nav__text">Notifications</span>
+                        <span className="icon icon-bell"></span>
+                        <span className="nav__text">Notifications</span>
                     </a>
                 </li>
             </ul>

@@ -5,7 +5,7 @@ const GenericNavigation = (props) => {
     const { navClasses } = props;
     
     return (
-        <ul class={`nav ${navClasses !== '' && navClasses}`}>
+        <ul className={`nav ${navClasses !== '' && navClasses}`}>
             <li>
                 <a href="#1">Link</a>
             </li>

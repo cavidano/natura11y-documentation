@@ -11,6 +11,7 @@ import Breadcrumb from '../../components/docs/examples/Navigation/Breadcrumb';
 import GenericNavigation from '../../components/docs/examples/Navigation/GenericNavigation';
 import Justification from '../../components/docs/examples/Navigation/Justification';
 import IconsInNav from '../../components/docs/examples/Navigation/IconsInNav';
+import Dropdowns from '../../components/docs/examples/Navigation/Dropdowns';
 
 <TextBlock>
 
@@ -407,7 +408,6 @@ Include the aformentioned `.nav--horizontal` and `.nav--horizontal--{bp}` modifi
     `)}
 />
 
-
 <Divider id="iconsInNavigation" />
 
 <TextBlock>
@@ -447,6 +447,67 @@ The first child is is a `<span>` with its combined <a href="/icons">icon</a> cla
             </li>
         </ul> \n
         <ul class="nav nav--divider nav--has-icons" role="menu">
+            ...
+        </ul>
+    `)}
+/>
+
+<Divider id="dropdowns" />
+
+<TextBlock>
+
+## Dropdown Items
+
+Include dropdown items within `.nav`, and `.nav--divider` selectors. As well as within the `.primary-nav__menu` selector inside the *primary navigation* component.
+
+To create a dropdown, include the `data-toggle="dropdown"` attribute on a `<button>` (Figure 8, line 3). Add a sibling `<ul>` with the `.nav__dropdown` class (Figure 10, line 4).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="9"
+    visualExample={(
+        <Dropdowns navClasses="nav--horizontal" />
+    )}
+    codeExample={(`
+        <ul class="nav nav--horizontal">
+            <li>
+                <button data-toggle="dropdown">Dropdown</button>
+                <ul class="nav__dropdown">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#1">Link</a>
+            </li>
+            <li>
+                <a href="#1">Link</a>
+            </li>
+        </ul>
+    `)}
+/>
+
+<TextBlock>
+
+Dropdowns work as you might expect within vertical navigation:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="10"
+    visualExample={(
+        <Dropdowns />
+    )}
+    codeExample={(`
+        <ul class="nav nav--divider nav--horizontal">
             ...
         </ul>
     `)}
