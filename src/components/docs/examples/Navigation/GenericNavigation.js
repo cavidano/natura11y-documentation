@@ -2,7 +2,7 @@ import React from 'react';
 
 const GenericNavigation = (props) => {
 
-    const { navClasses } = props
+    const { navClasses } = props;
     
     return (
         <ul class={`nav ${navClasses !== '' && navClasses}`}>

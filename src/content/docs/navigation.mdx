@@ -355,9 +355,52 @@ Use the flex <a href="/docs/flex/#justifyContentUtilites">justify content utilit
     codeExample={(`
         <ul class="nav nav--horizontal justify-content-center">
             ...
-        </ul>
-
+        </ul> \n
         <ul class="nav nav--horizontal justify-content-end">
+            ...
+        </ul>
+    `)}
+/>
+
+<Divider id="borderedNavigation" />
+
+<TextBlock>
+
+## Bordered Navigation
+
+Add the `.nav--divider` modifier class to a `.nav` selector for a vertical, bordered navigation (Figure 7).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="7"
+    visualExample={(
+        <GenericNavigation
+            navClasses="nav--divider"
+        />
+    )}
+    codeExample={(`
+        <ul class="nav nav--horizontal--lg">
+            ...
+        </ul>
+    `)}
+/>
+
+<TextBlock>
+
+Include the aformentioned `.nav--horizontal` and `.nav--horizontal--{bp}` modifier classes to `.nav-divider` selectors. This produces a horizontal (and responsive) bordered menu (Figure 8).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="8"
+    visualExample={(
+        <GenericNavigation
+            navClasses="nav--divider nav--horizontal"
+        />
+    )}
+    codeExample={(`
+        <ul class="nav nav--divider nav--horizontal">
             ...
         </ul>
     `)}
