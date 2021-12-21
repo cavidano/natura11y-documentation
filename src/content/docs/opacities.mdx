@@ -1,0 +1,45 @@
+---
+category: "a-z"
+title: "Opacities"
+bannerCreditName: "Marat Gilyadzinov"
+bannerCreditHandle: "@m3design" 
+bannerImage: ../../images/banner/opacities.jpg
+---
+
+import Opacities from '../../components/docs/examples/Opacities';
+
+<TextBlock>
+
+Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="_blank">opacity</a> property of an element. While opacity utilities work well with <a href="/docs/backdrops">backdrops</a>, you can apply them to any element you wish. 
+
+</TextBlock>
+
+<Divider id="opacityUtilities" />
+
+<TextBlock>
+
+## Opacity Utilities
+
+The opacity utilities (Figure 1) range from ***10*** to ***90*** in increments of 10. For example, `.opacity-50` applies a 50% opacity to its selector. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <Opacities />
+    )}
+    codeExample={(`
+        <div class="opacity-10">...</div>
+        <div class="opacity-20">...</div>
+        <div class="opacity-30">...</div>
+        <div class="opacity-40">...</div>
+        <div class="opacity-50">...</div>
+        <div class="opacity-60">...</div>
+        <div class="opacity-70">...</div>
+        <div class="opacity-80">...</div>
+        <div class="opacity-90">...</div>
+    `)}
+/>
+
+
