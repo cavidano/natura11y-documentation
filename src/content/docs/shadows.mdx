@@ -1,0 +1,53 @@
+---
+category: "a-z"
+title: "Shadows"
+bannerCreditName: "Matt Thomason"
+bannerCreditHandle: "@mattthomason" 
+bannerImage: ../../images/banner/shadows.jpg
+---
+
+import Shadows from '../../components/docs/examples/Shadows';
+
+<TextBlock>
+
+Apply a beautiful <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank">box shadow</a> to any block-level element.
+
+</TextBlock>
+
+<Divider id="boxShadowUtilities" />
+
+<TextBlock>
+
+## Box Shadow Utilities
+
+Natura11y's box shadow utilities come in three sizes. Each size is represented by a number: <em>1</em> for <strong><em>small</em></strong>, <em>2</em> for <strong><em>medium</em></strong>, and <em>3</em> for <strong><em>large</em></strong>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <Shadows />
+    )}
+    codeExample={(`
+        <div class="box-shadow-1">...</div>
+        <div class="box-shadow-2">...</div>
+        <div class="box-shadow-3">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Box shadow utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    codeExample={(`
+        <!-- With breakpoint modifier --> \n
+        <div class="box-shadow-1--lg">...</div>
+    `)}
+/>

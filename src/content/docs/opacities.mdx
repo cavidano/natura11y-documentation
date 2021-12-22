@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/opacities.jpg
 ---
 
 import Opacities from '../../components/docs/examples/Opacities';
+import OpacitySwatch from '../../components/docs/examples/Opacities/OpacitySwatch';
 
 <TextBlock>
 
@@ -42,4 +43,23 @@ The opacity utilities (Figure 1) range from ***10*** to ***90*** in increments o
     `)}
 />
 
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Opacity utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+With the HTML in Figure 2, the purple rectangle changes to <em>40%</em> opacity at the large breakpoint.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <OpacitySwatch swatchClass="opacity-50--lg" />
+    )}
+    codeExample={(`
+        <div class="opacity-50--lg">...</div>
+    `)}
+/>
 

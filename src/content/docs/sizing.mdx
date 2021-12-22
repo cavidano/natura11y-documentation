@@ -1,0 +1,103 @@
+---
+category: "a-z"
+title: "Sizing"
+bannerCreditName: "Larry Li"
+bannerCreditHandle: "@larryli" 
+bannerImage: ../../images/banner/sizing.jpg
+---
+
+import Width from '../../components/docs/examples/Sizing/Width';
+import Height from '../../components/docs/examples/Sizing/Height';
+
+<TextBlock>
+
+Set specific <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank">width</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank">height</a> values to an element.
+
+</TextBlock>
+
+<Divider id="widthUtilities" />
+
+<TextBlock>
+
+## Width Utilities
+
+Natura11y provides the following width utilities. Number values represent a percentage. For example, the <code>.width-50</code> utility makes its selector 50% of its parent.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <Width />
+    )}
+    codeExample={(`
+        <div class="width-10">...</div>
+        <div class="width-20">...</div>
+        <div class="width-25">...</div>
+        <div class="width-30">...</div>
+        <div class="width-40">...</div>
+        <div class="width-50">...</div>
+        <div class="width-60">...</div>
+        <div class="width-70">...</div>
+        <div class="width-75">...</div>
+        <div class="width-80">...</div>
+        <div class="width-90">...</div>
+        <div class="width-100">...</div>
+        <div class="width-auto">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Width Utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    codeExample={(`
+        <!-- With breakpoint modifier --> \n
+        <div class="box-shadow-1--lg">...</div>
+    `)}
+/>
+
+<Divider id="heightUtilities" />
+
+<TextBlock>
+
+## Height Utilities
+
+Natura11y provides only two height utilities:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <Height />
+    )}
+    codeExample={(`
+        <div class="height-100">...</div> \n
+        <!-- 100% height of viewport -->
+        <div class="height-100vh">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Height utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    codeExample={(`
+        <!-- With breakpoint modifier --> \n
+        <div class="height-10vh--lg">...</div>
+        <div class="height-100--lg">...</div>
+    `)}
+/>
