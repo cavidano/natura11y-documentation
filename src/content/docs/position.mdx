@@ -1,0 +1,59 @@
+---
+category: "a-z"
+title: "Position"
+bannerCreditName: "Matt Thomason"
+bannerCreditHandle: "@mattthomason" 
+bannerImage: ../../images/banner/position.jpg
+---
+
+import Absolute from '../../components/docs/examples/Position/Absolute';
+
+<TextBlock>
+
+Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">position</a> property of an element. 
+
+</TextBlock>
+
+<Divider id="positionUtilities" />
+
+<TextBlock>
+
+## Position Utilities
+
+Natura11y provides the following position utilities:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    codeExample={(`
+        <div class="position-static">...</div>
+        <div class="position-relative">...</div>
+        <div class="position-absolute">...</div>
+        <div class="position-fixed">...</div>
+        <div class="position-sticky">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Position Absolute (Directional) Utilities
+
+You can swap the `.position-absolute` utility with any of the four directional utilities shown in Figure 2. Doing so applies the absolute position and direction at once.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <Absolute />
+    )}
+    codeExample={(`
+        <div class="position-relative">
+            <div class="position-top-left">...</div>
+            <div class="position-top-right">...</div>
+            <div class="position-bottom-left">...</div>
+            <div class="position-bottom-right">...</div>
+        </div>
+    `)}
+/>
