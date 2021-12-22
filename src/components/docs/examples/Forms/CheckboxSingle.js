@@ -2,17 +2,17 @@ import React from 'react';
 
 const CheckboxSwitch = () => {
     return (
-        <div class="form-entry">
+        <div className="form-entry">
 
-            <div class="form-entry__field">
+            <div className="form-entry__field">
 
-                <span class="form-entry__field__label" id="single-option-label">
+                <span className="form-entry__field__label" id="single-option-label">
                     Form Entry Label
                 </span>
 
-                <div class="form-entry__option">
+                <div className="form-entry__option">
 
-                    <div class="form-entry__option__check">
+                    <div className="form-entry__option__check">
 
                         <label aria-labeledby="single-option-label">
                             <input
@@ -21,7 +21,7 @@ const CheckboxSwitch = () => {
                                 id="single-option"
                                 value="option"
                             />
-                            <span class="option__label">
+                            <span className="option__label">
                                 Option
                             </span>
                         </label>

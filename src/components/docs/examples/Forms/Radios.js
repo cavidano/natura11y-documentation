@@ -2,17 +2,17 @@ import React from 'react';
 
 const Radios = () => {
     return (
-        <div class="form-entry">
+        <div className="form-entry">
 
-            <fieldset class="form-entry__field">
+            <fieldset className="form-entry__field">
 
-                <legend class="form-entry__field__label">
+                <legend className="form-entry__field__label">
                     Form Entry Label
                 </legend>
 
-                <div class="form-entry__option">
+                <div className="form-entry__option">
 
-                    <div class="form-entry__option__radio">
+                    <div className="form-entry__option__radio">
                         <label>
                             <input
                                 type="radio"
@@ -20,13 +20,13 @@ const Radios = () => {
                                 id="radio-option-one"
                                 value="optionOne"
                             />
-                            <span class="option__label">
+                            <span className="option__label">
                                 Option One
                             </span>
                         </label>
                     </div>
 
-                    <div class="form-entry__option__radio">
+                    <div className="form-entry__option__radio">
                         <label>
                             <input
                                 type="radio"
@@ -34,13 +34,13 @@ const Radios = () => {
                                 id="radio-option-two"
                                 value="optionTwo"
                             />
-                            <span class="option__label">
+                            <span className="option__label">
                                 Option Two
                             </span>
                         </label>
                     </div>
 
-                    <div class="form-entry__option__radio">
+                    <div className="form-entry__option__radio">
                         <label>
                             <input
                                 type="radio"
@@ -48,7 +48,7 @@ const Radios = () => {
                                 id="radio-option-three"
                                 value="optionThree"
                             />
-                            <span class="option__label">
+                            <span className="option__label">
                                 Option Three
                             </span>
                         </label>

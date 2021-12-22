@@ -10,7 +10,7 @@ const FormEntrySelect = () => {
                     Form Entry Label
                 </span>
             
-                <span class="form-entry__field__select">
+                <span className="form-entry__field__select">
                     <select
                         id="select-example"
                         name="selectExample"

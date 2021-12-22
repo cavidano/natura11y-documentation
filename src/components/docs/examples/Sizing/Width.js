@@ -2,35 +2,35 @@ import React from 'react';
 
 function Width() {
     return (
-        <div class="subtle-fill font-size-md text-align-center">
-            <div class="padding-1 theme-white border width-10">
+        <div className="subtle-fill font-size-md text-align-center">
+            <div className="padding-1 theme-white border width-10">
                 <p>10</p>
             </div>
-            <div class="padding-1 theme-white border width-20">
+            <div className="padding-1 theme-white border width-20">
                 <p>20</p>
             </div>
-            <div class="padding-1 theme-white border width-30">
+            <div className="padding-1 theme-white border width-30">
                 <p>30</p>
             </div>
-            <div class="padding-1 theme-white border width-40">
+            <div className="padding-1 theme-white border width-40">
                 <p>40</p>
             </div>
-            <div class="padding-1 theme-white border width-50">
+            <div className="padding-1 theme-white border width-50">
                 <p>50</p>
             </div>
-            <div class="padding-1 theme-white border width-60">
+            <div className="padding-1 theme-white border width-60">
                 <p>60</p>
             </div>
-            <div class="padding-1 theme-white border width-70">
+            <div className="padding-1 theme-white border width-70">
                 <p>70</p>
             </div>
-            <div class="padding-1 theme-white border width-80">
+            <div className="padding-1 theme-white border width-80">
                 <p>80</p>
             </div>
-            <div class="padding-1 theme-white border width-90">
+            <div className="padding-1 theme-white border width-90">
                 <p>90</p>
             </div>
-            <div class="padding-1 theme-white border width-100">
+            <div className="padding-1 theme-white border width-100">
                 <p>100</p>
             </div>
         </div>

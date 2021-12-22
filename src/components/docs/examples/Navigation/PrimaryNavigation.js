@@ -20,21 +20,21 @@ const PrimaryNavigation = (props) => {
         <div className="container wide margin-y-4">
             
             <div
-                class={`${navClass} box-shadow-1 z-index-1500`}
+                className={`${navClass} box-shadow-1 z-index-1500`}
                 style={{'--primary-nav-search-width': `${searchWidth}`}}>
 
-                <div class="primary-nav__logo">
+                <div className="primary-nav__logo">
                     <a href="#1" title="Home" data-logo="brand">
                         {logoPlaceholder}
                     </a>
                 </div>
 
-                <nav class="primary-nav__menu" aria-label="Main Menu" id="primary-menu-below">
+                <nav className="primary-nav__menu" aria-label="Main Menu" id="primary-menu-below">
 
                     <ul>
                         <li>
                             <button data-toggle="dropdown">Dropdown</button>
-                            <ul class="nav__dropdown box-shadow-1--lg">
+                            <ul className="nav__dropdown box-shadow-1--lg">
                                 <li>
                                     <a href="#1">Link</a>
                                 </li>
@@ -54,12 +54,12 @@ const PrimaryNavigation = (props) => {
                         </li>
                     </ul>
 
-                    <form class="form-entry" aria-label="Search" role="search">
+                    <form className="form-entry" aria-label="Search" role="search">
 
-                        <div class="form-entry__field">
+                        <div className="form-entry__field">
         
-                            <span class="form-entry__field__input">
-                                <span class="icon icon-search opacity-50" aria-hidden="true"></span>
+                            <span className="form-entry__field__input">
+                                <span className="icon icon-search opacity-50" aria-hidden="true"></span>
                                 <input type="text" name="global-search" placeholder="Search" />
                             </span>
 
@@ -69,27 +69,27 @@ const PrimaryNavigation = (props) => {
 
                 </nav>
 
-                <div class="primary-nav__actions">
+                <div className="primary-nav__actions">
 
                     <button
-                        class="button button--icon-only mobile-menu-toggle"
+                        className="button button--icon-only mobile-menu-toggle"
                         aria-label="Menu"
                         data-toggle="collapse"
                         data-target-toggle="#primary-menu-below">
-                            <span class="icon icon-menu"></span>
+                            <span className="icon icon-menu"></span>
                     </button>
                     
-                    <div class="button-group">
+                    <div className="button-group">
 
-                        <a href="#1" class="button">
+                        <a href="#1" className="button">
                             Sign In
                         </a>
 
                         <button
-                            class="button button--icon-only"
+                            className="button button--icon-only"
                             aria-label="Language"
                             data-modal-open="global-language">
-                                <span class="icon icon-language"></span>
+                                <span className="icon icon-language"></span>
                         </button>
 
                     </div>
