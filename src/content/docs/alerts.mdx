@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/alerts.jpg
 ---
 
 import AlertExample from '../../components/docs/examples/Alerts';
+import StyleVariations from '../../components/docs/examples/Alerts/StyleVariations';
 
 <TextBlock>
 
@@ -20,7 +21,7 @@ When modifying alert colors, be sure to check that your colors meet a sufficient
 
 Never rely on color alone to convey meaning. Include a visual icon in alerts for those who experience colors differently.
 
-Include an appropriate <a href="#1"><em>alert role</em></a> for assistive technology.
+Include an appropriate <a href="#1">*alert role*</a> for assistive technology.
 
 </AccessibilitySpotlight>
 
@@ -201,42 +202,7 @@ variations.
     figureNumber="5"
     language="html"
     visualExample={(
-        <Fragment>
-            <div
-                class="alert text-color-link border-left margin-bottom-3"
-                aria-labelledby="alert-07-label"
-                aria-describedby="alert-07-desc"
-                role="alert">
-                <div class="alert__title h5">
-                    <span class="icon icon-warn" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-07-label">
-                        Attention
-                    </span>
-                </div>
-                <div class="alert__description" id="alert-07-desc">
-                    <p>
-                        You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="alert theme-dark border-radius text-align-center"
-                aria-labelledby="alert-06-label"
-                aria-describedby="alert-06-desc"
-                role="alert">
-                <div class="alert__title h5 text-color-secondary">
-                    <span class="icon icon-warn" aria-hidden="true"></span>
-                    <span class="alert__title__text" id="alert-06-label">
-                        Attention
-                    </span>
-                </div>
-                <div class="alert__description" id="alert-06-desc">
-                    <p>
-                        You have <strong>4</strong> unread messages waiting in <a href="#1">your account dashboard</a>.
-                    </p>
-                </div>
-            </div>
-        </Fragment>
+        <StyleVariations />
     )}
     codeExample={(`
         <div class="alert text-color-link border-left" role="alert"> \n
