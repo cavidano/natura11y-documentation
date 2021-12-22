@@ -1,0 +1,47 @@
+---
+category: "a-z"
+title: "Z index"
+bannerCreditName: "Vincent van Zalinge"
+bannerCreditHandle: "@vincentvanzalinge" 
+bannerImage: ../../images/banner/z-index.jpg
+---
+
+import ZIndexExample from '../../components/docs/examples/ZIndex';
+
+<TextBlock>
+
+Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">z-index property</a> of an element with Natura11y's z-index utilities.
+
+</TextBlock>
+
+<Divider id="zindexUtilities" />
+
+<TextBlock>
+
+## Z-index Utilities
+
+Natura11y provides the following z-index utilities. Z-index works only with positioned elements, so these utilities apply `position: relative;` to its selector.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <ZIndexExample />
+    )}
+    codeExample={(`
+        <div class="z-index-100">...</div>
+        <div class="z-index-200">...</div>
+        <div class="z-index-300">...</div>
+        <div class="z-index-400">...</div>
+        <div class="z-index-500">...</div>
+        <div class="z-index-600">...</div>
+        <div class="z-index-700">...</div>
+        <div class="z-index-800">...</div>
+        <div class="z-index-900">...</div>
+        <div class="z-index-1000">...</div>
+        <div class="z-index-1500">...</div>
+        <div class="z-index-2000">...</div>
+        <div class="z-index-2500">...</div>
+    `)}
+/>
