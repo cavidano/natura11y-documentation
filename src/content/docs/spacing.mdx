@@ -7,6 +7,8 @@ bannerImage: ../../images/banner/spacing.jpg
 ---
 
 import SpacingExample from '../../components/docs/examples/Spacing';
+import Padding from '../../components/docs/examples/Spacing/Padding';
+import Margin from '../../components/docs/examples/Spacing/Margin';
 
 <TextBlock>
 
@@ -25,3 +27,90 @@ Natura11y provides five spacers used to generate the <a href="#1">padding and ma
 Apply the <a href="#1">padding</a> and <a href="#1">margin</a> utilites (`.padding-{x}` and `.margin-{x}`) to any selector. Here ***x*** equals the spacer amount (values 1-5). In Figure 1, each box has a different padding value applied.  
 
 </TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <Padding />
+    )}
+    codeExample={(`
+        <div class="padding-1">...</div>
+        <div class="padding-2">...</div>
+        <div class="padding-3">...</div>
+        <div class="padding-4">...</div>
+        <div class="padding-5">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+In Figure 2, each box has a different margin value applied.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <Margin />
+    )}
+    codeExample={(`
+        <div class="margin-1">...</div>
+        <div class="margin-2">...</div>
+        <div class="margin-3">...</div>
+        <div class="margin-4">...</div>
+        <div class="margin-5">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Direction Specific
+
+Apply padding or margin to a specific side, top and bottom, or left and right. Figure 3 below provides these directional utilities using spacer value of 2.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <Margin />
+    )}
+    codeExample={(`
+        <!-- Single side only (top, right, bottom, left) --> \n
+        <div class="padding-top-2">...</div>
+        <div class="padding-right-2">...</div>
+        <div class="padding-bottom-2">...</div>
+        <div class="padding-left-2">...</div> \n
+        <div class="margin-top-2">...</div>
+        <div class="margin-right-2">...</div>
+        <div class="margin-bottom-2">...</div>
+        <div class="margin-left-2">...</div> \n
+        <!-- Top and bottom only -->
+        <div class="padding-y-2">...</div>
+        <div class="margin-y-2">...</div> \n
+        <!-- Left and right only -->
+        <div class="padding-x-2">...</div>
+        <div class="margin-x-2">...</div> \n
+        <!-- Centering with margin -->
+        <div class="margin-x-auto">...</div>
+    `)}
+/>
+
+<TextBlock>
+
+### Breakpoint Modifiers
+
+Padding and margin utilities accept <a href="/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+
+With the HTML in Figure 4, the container starts with a padding value of <em>1</em>. It then changes to a padding value of <em>5</em> at the large breakpoint.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    codeExample={(`
+        <!-- With breakpoint modifiers --> \n
+        <div class="padding-1 padding-5--lg">...</div>
+        <div class="margin-1 margin-5--lg">...</div>    
+    `)}
+/>
