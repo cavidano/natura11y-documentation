@@ -36,8 +36,9 @@ const IconLeader = () => {
                     </li>
                 </ul>
             </div>
-            </Fragment>
+        
+        </Fragment>
     )
 }
 
-export default IconLeader
+export default IconLeader;
