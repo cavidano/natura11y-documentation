@@ -1,0 +1,193 @@
+---
+category: "a-z"
+title: "Typography"
+bannerCreditName: "Ashim DSilva"
+bannerCreditHandle: "@randomlies" 
+bannerImage: ../../images/banner/typography.jpg
+---
+
+<TextBlock>
+
+Natura11y's text sizes and styles were developed to balance content density and reading comfort under typical usage conditions. 
+
+</TextBlock>
+
+<Divider id="bannerHeadline" />
+
+<TextBlock>
+
+## Banner Headline
+
+The `.banner-headline` utility is named after the large headline in a newspaper that stretches across the top of the front page. It is useful for styling a header larger (or visually different) than the typical `<h1>` heading.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    visualExample={(
+        <p className="banner-headline">
+            Banner Headline
+        </p>
+    )}
+    codeExample={(`
+        <h1 class="banner-headline">
+            Banner Headline
+        </h1>
+    `)}
+/>
+
+<Divider id="headings" />
+
+<TextBlock>
+
+## Section Headings
+
+Natura11y provides six levels of section headings, `<h1>` through `<h6>`. Styles for each level are consistent for a tag header (e.g. `<h1>`) and a utility class header (e.g. `.h1`).
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="2"
+    visualExample={(
+        <Fragment>
+            <p class="h1">Header 1</p>
+            <p class="h2">Header 2</p>
+            <p class="h3">Header 3</p>
+            <p class="h4">Header 4</p>
+            <p class="h5">Header 5</p>
+            <p class="h6">Header 6</p>
+        </Fragment>
+    )}
+    codeExample={(`
+        <h1>Header 1</h1>
+        <p class="h1">Header 1</p> \n
+        <h2>Header 2</h2>
+        <p class="h2">Header 2</p> \n
+        <h3>Header 3</h3>
+        <p class="h3">Header 3</p> \n
+        <h4>Header 4</h4>
+        <p class="h4">Header 4</p> \n
+        <h5>Header 5</h5>
+        <p class="h5">Header 5</p> \n
+        <h6>Header 6</h6>
+        <p class="h6">Header 6</p>
+    `)}
+/>
+
+<Divider id="fontSizeUtilities" />
+
+<TextBlock>
+
+## Font Size Utilities
+
+Change the font-size of text, buttons, navigation, or entire forms with Natura11y's font size utilities.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    visualExample={(
+        <ul class="nav nav--horizontal--md align-items-baseline">
+            <li class="font-size-xl">
+                <span>
+                    Extra Large
+                </span>
+            </li>
+            <li>
+                <span class="font-size-lg">
+                    Large
+                </span>    
+            </li>
+            <li>
+                <span class="font-size-rg">
+                    Regular
+                </span>
+            </li>
+            <li>
+                <span class="font-size-md">
+                    Medium
+                </span>
+            </li>
+            <li>
+                <span class="font-size-sm">
+                    Small
+                </span>
+            </li>
+        </ul>
+    )}
+    codeExample={(`
+        <p class="font-size-xl">
+            Extra Large
+        </p>
+        <p class="font-size-lg">
+            Large
+        </p>
+        <p class="font-size-rg">
+            Regular
+        </p>
+        <p class="font-size-md">
+            Medium
+        </p>
+        <p class="font-size-sm">
+            Small
+        </p>
+    `)}
+/>
+
+<Divider id="paragraphs" />
+
+<TextBlock>
+
+## Paragraphs
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dolorum placeat facere.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <Fragment>
+            <p>
+                The <strong>Namib-Naukluft Park</strong> is a <a href="#1">national park</a> in western <a href="#1">Namibia</a> situated between the coast of the <a href="#1">Atlantic Ocean</a> and the edge of the <a href="#1">Great Escarpment</a>. It encompasses part of the <a href="#1">Namib Desert</a> (considered the world's oldest desert), the <a href="#1" title="Namibia">Naukluft mountain range</a>, and the lagoon at <a href="/wiki/Sandwich_Harbour">Sandwich Harbour</a>.
+            </p>
+            <p>
+                The best known area of the park and one of the main visitor attractions in Namibia is <a href="#1">Sossusvlei</a>, a clay pan surrounded by sand dunes, and <a href="#1">Sesriem</a>, a small canyon of the <a href="#1">Tsauchab</a>. The desert research station of <a href="#1">Gobabeb</a> is situated within the park.
+            </p>
+        </Fragment>
+    )}
+    codeExample={(`
+        <p>
+            The <strong>Namib-Naukluft Park</strong> is a <a href="#1">national park</a> in western <a href="#1">Namibia</a> situated between the coast of the <a href="#1">Atlantic Ocean</a> and the edge of the <a href="#1">Great Escarpment</a>. It encompasses part of the <a href="#1">Namib Desert</a> (considered the world's oldest desert), the <a href="#1" title="Namibia">Naukluft mountain range</a>, and the lagoon at <a href="/wiki/Sandwich_Harbour">Sandwich Harbour</a>.
+        </p> \n
+        <p>
+            The best known area of the park and one of the main visitor attractions in Namibia is <a href="#1">Sossusvlei</a>, a clay pan surrounded by sand dunes, and <a href="#1">Sesriem</a>, a small canyon of the <a href="#1">Tsauchab</a>. The desert research station of <a href="#1">Gobabeb</a> is situated within the park.
+        </p>
+    `)}
+/>
+
+<Divider id="textAlignUtilities" />
+
+<TextBlock>
+
+## Text Align Utilities
+
+Apply <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank">text-align</a> property to a selector.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <Fragment>
+            <p class="text-align-left">Text align left</p>
+            <p class="text-align-center">Text align center</p>
+            <p class="text-align-right">Text align right</p>
+        </Fragment>
+    )}
+    codeExample={(`
+        <p class="text-align-left">Text align left</p>
+        <p class="text-align-center">Text align center</p>
+        <p class="text-align-right">Text align right</p>
+    `)}
+/>
