@@ -6,8 +6,80 @@ bannerCreditHandle: "@zmachacek"
 bannerImage: ../../images/banner/accessibility.jpg
 ---
 
+import ColorContrast from '../../components/docs/examples/Accessibility/ColorContrast';
+
 <TextBlock>
 
-Natura11y provides the following mechanisms to add visual interest to your layouts. 
+<h2 class="h1">Create for people with all abilities.</h2>
+
+Everyone deserves equal opportunities to use the web. Natura11y makes it easier for you to implement <a href="https://www.w3.org/TR/WCAG21/" target="_blank">accessibility</a> best practices into your everyday workflow. Web accessibility is not only the right thing to do—it is now becoming <a href="https://www.searchenginejournal.com/website-accessibility-law/285199">the law</a>.
+
+On this page, learn about the high-level accessibility features built into Natura11y. For aditional guidance, visit this <a href="https://www.w3.org/WAI/tips/" target="_blank">WAI guide</a> on getting started with accessibility.
+
+</TextBlock>
+
+<Divider id="accessibleHTML" />
+
+<TextBlock>
+
+## Accessible HTML
+
+The first practical step towards accessibility is to create valid HTML, which better provides a consistent experience across all browsers and assistive technologies. 
+
+Natura11y's premade <a href="/examples">examples</a> have been validated through the <a href="https://validator.w3.org/nu/">W3C Nu Html Checker</a>. It is a good idea to periodically check your work here, too at different stages of development. 
+
+</TextBlock>
+
+<Divider id="colorContrast" />
+
+<TextBlock>
+
+## Color Contrast
+
+Contrast ratio refers the difference in color between text and background color or image. When applying your own colors to our <a href="{{site.url}}/docs/color">color system</a>, check the <a href="https://colorable.jxnblk.com/">color-contrast ratio</a> to ensure readability. To be compliant
+with <a href="https://www.w3.org/WAI/WCAG21/quickref/#use-of-color">WCAG Level AA</a>, aim for a contrast ratio of 4.5:1 or higher.
+
+</TextBlock>
+
+<ColorContrast />
+
+<TextBlock>
+
+In the examples above, the dark text on green passes readability with a color contrast ratio of <em>7.14</em>, while the white text on green fails with a color contrast ratio of <em>2.09</em>.
+
+Learn how our <a href="/docs/color">color system</a> helps you keep your accessible colors consistent throughout your layouts.
+
+</TextBlock>
+
+<Divider id="aria" />
+
+<TextBlock>
+
+## Aria
+
+Accessible Rich Internet Applications (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">WAI-ARIA</a>) roles are present throughout Natura11y's components. Some are added with Natura11y's Javascript, while others are present within the example markup. Still others you will need to add yourself, as needed. 
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    figureWidth="narrow"
+    codeExample={(`
+        <a class="button" href="#1">
+            Button
+        </a> \n
+        <button class="button">
+            Button
+        </button>
+    `)}
+/>
+
+<Divider id="focusManagement" />
+
+<TextBlock>
+
+## Focus Management
+
+Natura11y provides consistent and noticable focus indicators for those who navigate with the keyboard.
 
 </TextBlock>
