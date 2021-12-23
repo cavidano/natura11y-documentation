@@ -36,6 +36,11 @@ const DocSidebar = ({ pages }) => {
                 Customization
               </Link>
             </li>
+            <li>
+              <Link to="/docs/accessibility">
+                Accessibility
+              </Link>
+            </li>
           </ul>
 
           <hr className="margin-y-2 margin-x-n3--lg" />
