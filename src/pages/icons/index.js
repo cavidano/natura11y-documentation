@@ -72,7 +72,7 @@ const Icons = ({ data }) => {
 
                 </div>
 
-                <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center" id="natura11yIconGrid">
+                <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center  margin-y-4" id="natura11yIconGrid">
 
                     {displayedIcons.map(icon => {
 

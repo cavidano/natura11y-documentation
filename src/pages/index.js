@@ -64,7 +64,7 @@ const Home = () => {
                 </Link>
                 <Link
                   className="button button--outline width-100"
-                  to="/docs/alerts">
+                  to="/examples">
                     Examples
                 </Link>
               </div>
@@ -78,193 +78,193 @@ const Home = () => {
 
       <section className="theme-dark overflow-hidden text-align-center" id="features">
 
-    <div className="margin-y-5">
-    
-        <div className="container narrow margin-bottom-4">
-            <h2>
-                Evolution demands adaptation.
-            </h2>
-            <p>
-                Natura11y helps you adapt to today's ever-widening landscape of UX tools and processes.
-            </p>
-        </div>
+          <div className="margin-y-5">
+          
+              <div className="container narrow margin-bottom-4">
+                  <h2>
+                      Evolution demands adaptation.
+                  </h2>
+                  <p>
+                      Natura11y helps you adapt to today's ever-widening landscape of UX tools and processes.
+                  </p>
+              </div>
 
-        <div className="container wide">
+              <div className="container wide">
 
-            <div className="grid grid--column-2--lg gap-border">
+                  <div className="grid grid--column-2--lg gap-border">
 
-                <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                      <div className="backdrop backdrop--fixed theme-dark justify-content-end">
 
-                    <div className="backdrop__image">
-                      <StaticImage
-                        className="opacity-40"
-                        src="../images/backdrop-feature-accessibility.jpg"
-                        alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
-                      />
-                    </div>
+                          <div className="backdrop__image">
+                            <StaticImage
+                              className="opacity-40"
+                              src="../images/backdrop-feature-accessibility.jpg"
+                              alt=""
+                              placeholder="dominantColor"
+                              layout="fullWidth"
+                            />
+                          </div>
 
-                    <div className="backdrop__cover">
+                          <div className="backdrop__cover">
 
-                        <div className="container narrow margin-y-4">
+                              <div className="container narrow margin-y-4">
 
-                            <h3 className="text-shadow--md text-shadow">
-                                Accessibility
-                            </h3>
+                                  <h3 className="text-shadow--md text-shadow">
+                                      Accessibility
+                                  </h3>
 
-                            <p className="text-shadow">
-                                Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
-                            </p>
+                                  <p className="text-shadow">
+                                      Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
+                                  </p>
+                                  
+                                  <Link
+                                    className="button theme-white box-shadow font-size-md"
+                                    to="/docs/accessibility">
+                                      What's Included
+                                  </Link>
+
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                      <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+
+                          <div className="backdrop__image">
+                            <StaticImage
+                              className="opacity-40"
+                              src="../images/backdrop-feature-color-system.jpg"
+                              alt=""
+                              placeholder="dominantColor"
+                              layout="fullWidth"
+                            />
                             
-                            <Link
-                              className="button theme-white box-shadow font-size-md"
-                              to="/docs/accessibility">
-                                What's Included
-                            </Link>
+                          </div>
 
-                        </div>
+                          <div className="backdrop__cover">
 
-                    </div>
+                              <div className="container narrow margin-y-4">
 
-                </div>
+                                  <h3 className="text-shadow--md margin-bottom-3 text-shadow">
+                                      Dynamic Color System
+                                  </h3>
 
-                <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                                  <p className="text-shadow">
+                                      Effortlessly apply color wherever you wish while keeping an accessible contrast
+                                      ratio throughout your layouts.
+                                  </p>
+                                  
+                                  <Link
+                                    className="button theme-white box-shadow font-size-md"
+                                    to="/docs/color">
+                                      Color
+                                  </Link>
+                                  
 
-                    <div className="backdrop__image">
-                      <StaticImage
-                        className="opacity-40"
-                        src="../images/backdrop-feature-color-system.jpg"
-                        alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
-                      />
-                      
-                    </div>
+                              </div>
 
-                    <div className="backdrop__cover">
+                          </div>
 
-                        <div className="container narrow margin-y-4">
+                      </div>
 
-                            <h3 className="text-shadow--md margin-bottom-3 text-shadow">
-                                Dynamic Color System
-                            </h3>
+                      <div className="backdrop backdrop--fixed theme-dark justify-content-end">
 
-                            <p className="text-shadow">
-                                Effortlessly apply color wherever you wish while keeping an accessible contrast
-                                ratio throughout your layouts.
-                            </p>
-                            
-                            <Link
-                              className="button theme-white box-shadow font-size-md"
-                              to="/docs/color">
-                                Color
-                            </Link>
-                            
+                          <div className="backdrop__image">
+                            <StaticImage
+                              className="opacity-40"
+                              src="../images/backdrop-feature-customizable-cdn.jpg"
+                              alt=""
+                              placeholder="dominantColor"
+                              layout="fullWidth"
+                            />
+                          </div>
 
-                        </div>
+                          <div className="backdrop__cover">
 
-                    </div>
+                              <div className="container narrow margin-y-4">
 
-                </div>
+                                  <h3 className="text-shadow--md margin-bottom-3 text-shadow">
+                                      Customizable CDN
+                                  </h3>
 
-                <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                                  <p className="text-shadow">
+                                      Style declarations use CSS Variables. You can redefine styles without the need for compiling Sass.  
+                                  </p>
+                                  
+                                  <Link
+                                    className="button theme-white box-shadow font-size-md"
+                                    to="/docs/customization">
+                                      Customization
+                                  </Link>
+                                  
 
-                    <div className="backdrop__image">
-                      <StaticImage
-                        className="opacity-40"
-                        src="../images/backdrop-feature-customizable-cdn.jpg"
-                        alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
-                      />
-                    </div>
+                              </div>
 
-                    <div className="backdrop__cover">
+                          </div>
 
-                        <div className="container narrow margin-y-4">
+                      </div>
 
-                            <h3 className="text-shadow--md margin-bottom-3 text-shadow">
-                                Customizable CDN
-                            </h3>
+                      <div className="backdrop backdrop--fixed theme-dark justify-content-end">
 
-                            <p className="text-shadow">
-                                Style declarations use CSS Variables. You can redefine styles without the need for compiling Sass.  
-                            </p>
-                            
-                            <Link
-                              className="button theme-white box-shadow font-size-md"
-                              to="/docs/customization">
-                                Customization
-                            </Link>
-                            
+                          <div className="backdrop__image">
+                            <StaticImage
+                              className="opacity-40"
+                              src="../images/backdrop-feature-beginner-friendly.jpg"
+                              alt=""
+                              placeholder="dominantColor"
+                              layout="fullWidth"
+                            />
+                          </div>
 
-                        </div>
+                          <div className="backdrop__cover">
 
-                    </div>
+                              <div className="container narrow margin-y-4">
 
-                </div>
+                                  <h3 className="text-shadow--md margin-bottom-3 text-shadow">
+                                      Beginner Friendly
+                                  </h3>
 
-                <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                                  <p className="text-shadow">
+                                      An unintimidating code base and minimal dependencies make building with Natura11y
+                                      ideal for any developer.
+                                  </p>
+                                  
+                                  <Link
+                                    className="button theme-white box-shadow font-size-md"
+                                    to="/docs/get-started">
+                                      Get Started
+                                  </Link>
 
-                    <div className="backdrop__image">
-                      <StaticImage
-                        className="opacity-40"
-                        src="../images/backdrop-feature-beginner-friendly.jpg"
-                        alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
-                      />
-                    </div>
+                              </div>
 
-                    <div className="backdrop__cover">
+                          </div>
 
-                        <div className="container narrow margin-y-4">
+                      </div>
 
-                            <h3 className="text-shadow--md margin-bottom-3 text-shadow">
-                                Beginner Friendly
-                            </h3>
+                  </div>
 
-                            <p className="text-shadow">
-                                An unintimidating code base and minimal dependencies make building with Natura11y
-                                ideal for any developer.
-                            </p>
-                            
-                            <Link
-                              className="button theme-white box-shadow font-size-md"
-                              to="/docs/get-started">
-                                Get Started
-                            </Link>
+              </div>
 
-                        </div>
+              <div className="container narrow margin-y-5">
+                  <div className="grid grid--column-2--md gap-3">
+                      <a className="button button--has-icon width-100 button--outline" href="#1">
+                          <span className="icon icon-github"></span>
+                          <span className="button__text">GitHub</span>
+                      </a>  
+                      <a className="button button--has-icon width-100 button--outline" href="#1">
+                          <span className="icon icon-npm"></span>
+                          <span className="button__text">NPM</span>
+                      </a>
+                  </div>
+              </div>
 
-                    </div>
+          </div>
 
-                </div>
-
-            </div>
-
-        </div>
-
-        <div className="container narrow margin-y-5">
-            <div className="grid grid--column-2--md gap-3">
-                <a className="button button--has-icon width-100 button--outline" href="#1">
-                    <span className="icon icon-github"></span>
-                    <span className="button__text">GitHub</span>
-                </a>  
-                <a className="button button--has-icon width-100 button--outline" href="#1">
-                    <span className="icon icon-npm"></span>
-                    <span className="button__text">NPM</span>
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+      </section>
     
     </Layout>
-  )
+  );
 }
 
 export default Home;
