@@ -21,8 +21,8 @@ const Examples = () => {
 
             <section className='container medium margin-y-5'>
 
-                <div className="grid grid--column-2">
-
+                <div className="grid grid--column-2--lg align-items-center box-shadow-3">
+                    
                     <StaticImage
                         src="../images/examples/template-example-01.jpg"
                         alt=""
@@ -30,12 +30,34 @@ const Examples = () => {
                         layout="fullWidth"
                     />
 
-                    <div className="subtle-fill padding-4">
+                    <div className="padding-4 text-align-center">
 
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quos velit doloremque aliquam? Asperiores pariatur eligendi ratione mollitia quod dicta?
-                    </p>
+                        <h5>Landing Page</h5>
 
+                        <p>
+                            A simple landing page with global navigation below the logo.
+                        </p>
+
+                        <nav className="font-size-sm text-color-link">
+
+                            <ul className="nav nav--horizontal justify-content-center">
+                                <li>
+                                    <a
+                                        className="button button--outline button--has-icon"
+                                        href="https://github.com/cavidano/natura11y/blob/main/dist/html/layouts/landing-page.html"
+                                        target="_blank">
+                                        <span className="icon icon-github button__icon"></span>
+                                        <span className="button__text">View on GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cavidano.github.io/natura11y/dist/html/layouts/landing-page.html" target="_blank">
+                                        Preview in Browser
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
 
                     </div>
 

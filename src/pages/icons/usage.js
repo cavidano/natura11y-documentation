@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "gatsby";
 
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
@@ -29,10 +28,10 @@ const Icons = ({ data }) => {
             <IconLeader />
 
             <div className="margin-y-5">
-            <MDXProvider components={shortcodes}>
-                <MDXRenderer>{body}</MDXRenderer>
-            </MDXProvider>
-          </div>
+                <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{body}</MDXRenderer>
+                </MDXProvider>
+            </div>
             
         </Layout>
     );
@@ -41,9 +40,9 @@ const Icons = ({ data }) => {
 export default Icons;
 
 export const query = graphql`
-query MyQuery {
-    neat: mdx(frontmatter: {title: {eq: "Using the Icons"}}) {
-        body
-      }
-}
+    query MyQuery {
+        neat: mdx(frontmatter: {title: {eq: "Using the Icons"}}) {
+            body
+        }
+    }
 `;
