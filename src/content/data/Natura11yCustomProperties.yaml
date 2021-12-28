@@ -41,6 +41,15 @@
         Opacity of the *alert* component background (without the dark
         modifier class applied)
 
+- type: Articles
+  scope: .article--column-2
+  customProperties:
+    - name: backdrop-fixed-height
+      value: 350px
+      description: !mdx |
+        Height of the *backdrop* component with the fixed height modifier
+        class
+
 - type: Backdrops
   scope: .backdrop
   customProperties:
@@ -49,7 +58,7 @@
       description: !mdx |
         Height of the *backdrop* component with the fixed height modifier
         class
-
+        
 - type: Borders
   scope: ':root'
   customProperties:

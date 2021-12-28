@@ -1,0 +1,92 @@
+---
+category: "a-z"
+title: "Articles"
+bannerCreditName: "Jenna Brummond"
+bannerCreditHandle: "@jbru922" 
+bannerImage: ../../images/banner/articles.jpg
+---
+
+import TwoOrThreeColumns from '../../components/docs/examples/Articles/index-v2.js';
+
+<TextBlock>
+
+Naturally's article component provide a simple way create two and three column layouts.
+
+</TextBlock>
+
+<Divider id="twoOrThreeColumns" />
+
+<TextBlock>
+
+## Article Layout
+
+The *article* component includes `.article--column-{x}` selector on an `<article>` tag. Here ***x*** equals the amount of columns (2 or 3). 
+
+With the example below `.article--column-2` creates a two-column layout.
+
+</TextBlock>
+
+<TwoOrThreeColumns />
+
+
+<TextBlock>
+
+Figure 1 (below) provides the minimum HTML for the primary navigation component.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="1"
+    highlightedLines="1,3-5,7-9,11-13"
+    codeExample={(`
+        <article class="article--column-2"> \n
+            <div class="article__header">
+                ...
+            </div> \n
+            <div class="article__sidebar">
+                ...
+            </div> \n
+            <div class="article__body">
+                ...
+            </div> \n
+        </article>
+    `)}
+/>
+
+<TableLineDescBlock targetFigure="1">
+
+<TableLineDescRow lines="1">
+
+The parent `.article--column-{x}` selector is required.
+
+Here ***x*** equals the amount of columns (either 2 or 3).
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="3-5">
+
+The `.article__header` selector is optional. 
+
+It holds the article's `header` tag.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="7-9">
+
+The `.article__sidebar` selector is required.
+
+It holds the article's navigation content.
+
+</TableLineDescRow>
+
+<TableLineDescRow lines="11-13">
+
+The `.article__body` selector is required. 
+
+It holds the article's main content.
+
+</TableLineDescRow>
+
+</TableLineDescBlock>
+
+<TwoOrThreeColumns articleClass="article--column-3" />

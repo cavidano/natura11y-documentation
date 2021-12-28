@@ -82,7 +82,7 @@ const Documentation = ({ data }) => {
   return (
     <Layout>
 
-      <div className="article article--two-column">
+      <div className="article--column-2">
 
         <div className="article__sidebar">
             <DocSidebar pages={docPages} />
