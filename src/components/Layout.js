@@ -89,6 +89,7 @@ function Layout({ children }) {
       <div className="content">{children}</div>
 
       <Footer version={version} title={title} />
+      
     </div>
   )
 }

@@ -42,13 +42,12 @@
         modifier class applied)
 
 - type: Articles
-  scope: .article--column-2
+  scope: .article--column-{x}
   customProperties:
-    - name: backdrop-fixed-height
-      value: 350px
+    - name: article-sidebar-width
+      value: 260px
       description: !mdx |
-        Height of the *backdrop* component with the fixed height modifier
-        class
+        Width of the *article* component sidebar
 
 - type: Backdrops
   scope: .backdrop

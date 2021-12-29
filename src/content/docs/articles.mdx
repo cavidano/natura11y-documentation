@@ -6,7 +6,9 @@ bannerCreditHandle: "@jbru922"
 bannerImage: ../../images/banner/articles.jpg
 ---
 
-import TwoOrThreeColumns from '../../components/docs/examples/Articles/index-v2.js';
+import { codeImgPlaceholderBackdrop } from '../../mdxVars';
+import TwoOrThreeColumns from '../../components/docs/examples/Articles';
+import ExampleWithContent from '../../components/docs/examples/Articles/ExampleWithContent';
 
 <TextBlock>
 
@@ -18,20 +20,21 @@ Naturally's article component provide a simple way create two and three column l
 
 <TextBlock>
 
-## Article Layout
+## Layout Options
 
-The *article* component includes `.article--column-{x}` selector on an `<article>` tag. Here ***x*** equals the amount of columns (2 or 3). 
+The article component offers layout options with two or three columns. With the example below, `.article--column-2` creates a two-column layout. Can you guess the class name needed for a three column layout?
 
-With the example below `.article--column-2` creates a two-column layout.
+The article component is made up of three preassigned areas: header, sidebar, and body. 
+
+Instead of providing <a href="#1">breakpoint modifiers</a>, the layout changes from mobile to desktop view at the *large* viewport, and again at the *extra-large* viewport. The latter is true only for three column layouts. 
 
 </TextBlock>
 
 <TwoOrThreeColumns />
 
-
 <TextBlock>
 
-Figure 1 (below) provides the minimum HTML for the primary navigation component.
+Figure 1 (below) provides the HTML for the  article component's containing selectors.
 
 </TextBlock>
 
@@ -75,7 +78,7 @@ It holds the article's `header` tag.
 
 The `.article__sidebar` selector is required.
 
-It holds the article's navigation content.
+It holds the article's sidebar or navigation content.
 
 </TableLineDescRow>
 
@@ -89,4 +92,101 @@ It holds the article's main content.
 
 </TableLineDescBlock>
 
+<TextBlock>
+
+Three column layouts use the `.article--column-3` parent selector (Figure 2, line *1*). They include an additional `.article__sidebar` child selector (Figure 2, lines *15-17*). 
+
+</TextBlock>
+
 <TwoOrThreeColumns articleClass="article--column-3" />
+
+<FigureBlock
+    figureNumber="2"
+    highlightedLines="1,15-17"
+    codeExample={(`
+        <article class="article--column-3"> \n
+            <div class="article__header">
+                ...
+            </div> \n
+            <div class="article__sidebar">
+                ...
+            </div> \n
+            <div class="article__body">
+                ...
+            </div> \n
+            <div class="article__related">
+                ...
+            </div> \n
+        </article>
+    `)}
+/>
+
+<Divider id="cool" />
+
+<TextBlock>
+
+## Example With Content
+
+Consider the following two-column article layout. A <a href="#1">backdrop</a> component is present in the `.article__header` selector. The `article__sidebar` contains generic <a href="#1">navigation</a>. Finally, `article__body` has some generic content.
+
+</TextBlock>
+
+<ExampleWithContent />
+
+<TextBlock>
+
+### Header with Backdrop
+
+With the example below, the <a href="#1">backdrop</a> component is a direct child of the `.article__header` selector. When this is the case, a left margin is placed on the first child of the `.backdrop__cover` selector. This margin equals the width of the article's sidebar.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="3"
+    highlightedLines="21"
+    codeExample={(`
+        <article class="article--column-2"> \n
+            <aside class="article__sidebar"> \n
+                <ul class="nav nav--divider position-sticky-top">
+                    <li>
+                        <a" href="#1" aria-current="page>Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul> \n
+            </aside> \n
+            <header class="article__header"> \n
+                <div class="backdrop backdrop--fixed theme-dark"> \n
+                    <div class="backdrop__image">
+                        ${codeImgPlaceholderBackdrop}
+                    </div> \n
+                    <div class="backdrop__cover">
+                        <div class="margin-y-4">
+                            <div class="container narrow">
+                                <p class="h1 text-shadow">
+                                    Cynara cardunculus
+                                </p>
+                            </div>
+                        </div>
+                    </div> \n
+                </div> \n
+            </header> \n
+            <div class="article__body border-left"> \n
+                <div class="container narrow margin-y-5"> \n
+                    <h2>Globe Artichoke</h2> \n
+                    <p>
+                        The globe artichoke (Cynara cardunculus), also known by the names French artichoke and green artichoke, is a variety of a species of <a href="#1">thistle</a> cultivated as a food. The edible portion of the plant consists of the flower buds before the flowers come into bloom. The budding artichoke flower-head is a cluster of many budding small flowers (an inflorescence), together with many bracts, on an edible base.
+                    </p> \n
+                    <p>
+                        Once the buds bloom, the structure changes to a coarse, barely edible form. Another variety of the same species is the cardoon, a perennial plant native to the Mediterranean region. Both wild forms and cultivated varieties (cultivars) exist.
+                    </p> \n
+                    ... \n
+                </div> \n
+            </div> \n
+        </article>
+    `)}
+/>
