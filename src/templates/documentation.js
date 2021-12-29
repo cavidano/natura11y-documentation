@@ -18,6 +18,7 @@ import FigureBlock from '../components/docs/FigureBlock';
 import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
 import BrowserFrame from '../components/docs/BrowserFrame';
+import BrowserContainer from '../components/docs/BrowserContainer';
 import RelatedCustomProperties from '../components/docs/RelatedCustomProperties';
 
 const shortcodes = {
@@ -28,6 +29,7 @@ const shortcodes = {
   TextBlock,
   FigureBlock,
   BrowserFrame,
+  BrowserContainer,
   TableLineDescBlock,
   TableLineDescRow,
   RelatedCustomProperties

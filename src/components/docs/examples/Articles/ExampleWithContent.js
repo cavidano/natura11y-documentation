@@ -8,11 +8,10 @@ const ExampleWithContent = () => {
 
     return (
         <div
-            className="container wide margin-y-4"
             id="articleTop"
             style={exampleStyles}>
 
-            <article className="article--column-2 theme-light box-shadow-2 border-radius">
+            <article className="article--column-2 theme-light">
 
                 <aside className="article__sidebar">
 
