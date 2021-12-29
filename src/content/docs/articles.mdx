@@ -12,7 +12,7 @@ import ExampleWithContent from '../../components/docs/examples/Articles/ExampleW
 
 <TextBlock>
 
-Naturally's article component provide a simple way create two and three column layouts.
+The article component offers a responsive two or three column layout. Articles include a fixed-width sidebar. 
 
 </TextBlock>
 
@@ -20,13 +20,11 @@ Naturally's article component provide a simple way create two and three column l
 
 <TextBlock>
 
-## Layout Options
+## Containing Elements
 
-The article component offers layout options with two or three columns. With the example below, `.article--column-2` creates a two-column layout. Can you guess the class name needed for a three column layout?
+The article component is made up of three preassigned areas: header, sidebar, and body.
 
-The article component is made up of three preassigned areas: header, sidebar, and body. 
-
-Instead of providing <a href="#1">breakpoint modifiers</a>, the layout changes from mobile to desktop view at the *large* viewport, and again at the *extra-large* viewport. The latter is true only for three column layouts. 
+Articles to not use <a href="#1">breakpoint modifiers</a>. Instead, the layout changes from mobile to desktop view at the *large* viewport.  for three column layouts, the layout changes again at the *extra-large* viewport.
 
 </TextBlock>
 
@@ -34,7 +32,7 @@ Instead of providing <a href="#1">breakpoint modifiers</a>, the layout changes f
 
 <TextBlock>
 
-Figure 1 (below) provides the HTML for the  article component's containing selectors.
+Figure 1 (below) provides the HTML for the  article component's containing selectors. The parent class `.article--column-2` (line 1) sets the two-column layout.
 
 </TextBlock>
 
@@ -94,7 +92,7 @@ It holds the article's main content.
 
 <TextBlock>
 
-Three column layouts use the `.article--column-3` parent selector (Figure 2, line *1*). They include an additional `.article__sidebar` child selector (Figure 2, lines *15-17*). 
+Three column layouts use the `.article--column-3` parent selector (Figure 2, line *1*). They include a third `.article__sidebar` child selector (Figure 2, lines *15-17*). 
 
 </TextBlock>
 
@@ -125,7 +123,7 @@ Three column layouts use the `.article--column-3` parent selector (Figure 2, lin
 
 <TextBlock>
 
-## Example With Content
+## Layout With Sample Content
 
 Consider the following two-column article layout. A <a href="#1">backdrop</a> component is present in the `.article__header` selector. The `article__sidebar` contains generic <a href="#1">navigation</a>. Finally, `article__body` has some generic content.
 
