@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/customization.jpg
 ---
 
 import AllCustomProperties from '../../components/docs/AllCustomProperties';
+import PracticeExercise from '../../components/docs/examples/Customization';
 
 <TextBlock>
 
@@ -114,15 +115,16 @@ Preview **index.html** in a browser. It should resemble the following.
 
 </TextBlock>
 
-<BrowserFrame frameSrc="../../iframe-examples/custom-properties-01.html" />
+<BrowserBlock
+    visualExample={<PracticeExercise />}
+    frameWidth="medium"
+/>
 
 <TextBlock>
 
-Declared as CSS variables in **natura11y.css**, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
-Let's customize their color values with a second stylesheet.
+Declared as CSS variables in **natura11y.css**, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>. Let's customize their color values with a second stylesheet.
 
-Within the **color-example** directory, create a new directory called **css**. Make a new CSS file and name it
-**new-colors.css**. Save it into the **/css** directory.
+Within the **color-example** directory, create a new directory called **css**. Make a new CSS file and name it **new-colors.css**. Save it into the **/css** directory.
 
 Open your HTML document. Add a link to **new-colors.css** somewhere below
 **natura11y.css** (Figure 3, line 5).
@@ -151,17 +153,21 @@ With **new-colors.css** open, include the CSS from Figure 4. Save this file and 
     figureWidth="narrow"
     codeLanguage="css"
     codeExample={(`
-    /* Scoped to the root */ \n
-    :root {
-        --primary: #0080f8;
-    } \n
-    /* Scoped to a parent selector */ \n
-    .card {
-        --card-padding-y: 1em;
-    }
+        :root {
+            --primary: #440381;
+            --secondary: #ffcc66;
+            --dark: #1f163f;
+            --light: #ede7e2;
+            --primary-text: white;
+            --secondary-text: var(--dark);
+        }
     `)}
 />
 
+<BrowserBlock
+    visualExample={<PracticeExercise setCustomStyles={true} />}
+    frameWidth="medium"
+/>
 <BrowserFrame frameSrc="../../iframe-examples/custom-properties-02.html" />
 
 <TextBlock>

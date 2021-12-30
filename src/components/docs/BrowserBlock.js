@@ -2,7 +2,7 @@ import React from 'react';
 
 import { exampleStyles } from '../../mdxVars';
 
-const BrowserContainer = (props) => {
+const BrowserBlock = (props) => {
 
     const { 
         frameWidth,
@@ -10,7 +10,7 @@ const BrowserContainer = (props) => {
     } = props;
     
     return (
-        <figure className={`container ${frameWidth} margin-y-4`} style={exampleStyles}>
+        <div className={`container ${frameWidth} margin-y-5`} style={exampleStyles}>
 
             <div className="browser box-shadow-1">
 
@@ -26,13 +26,13 @@ const BrowserContainer = (props) => {
 
             </div>
 
-        </figure>
-    )
+        </div>
+    );
 }
 
-BrowserContainer.defaultProps = {
+BrowserBlock.defaultProps = {
     frameWidth: 'medium',
     visualExample: null
 }
 
-export default BrowserContainer;
+export default BrowserBlock;
