@@ -10,7 +10,11 @@ import IconSprite from '../../icons/natura11y-icons-sprite.svg';
 
 const Icons = ({ data }) => {
 
-    const ajax = new XMLHttpRequest();
+    let ajax;
+
+    if(typeof XMLHttpRequest !== 'undefined') {
+        ajax = new XMLHttpRequest();
+    }
 	
 	const appendSprite = () => {
         ajax.open('GET', IconSprite, true);
