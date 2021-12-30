@@ -17,7 +17,6 @@ import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
 import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
-import BrowserFrame from '../components/docs/BrowserFrame';
 import BrowserBlock from '../components/docs/BrowserBlock';
 import RelatedCustomProperties from '../components/docs/RelatedCustomProperties';
 
@@ -28,7 +27,6 @@ const shortcodes = {
   AccessibilitySpotlight,
   TextBlock,
   FigureBlock,
-  BrowserFrame,
   BrowserBlock,
   TableLineDescBlock,
   TableLineDescRow,

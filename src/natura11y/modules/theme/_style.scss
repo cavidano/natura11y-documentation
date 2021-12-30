@@ -54,12 +54,6 @@ In this file:
     --article-sidebar-width: 240px;
 }
 
-[data-example] {
-    font-family: var(--body-font-family);
-    font-size:  var(--body-font-size);
-    line-height:  var(--body-line-height);
-}
-
 //////////////////////////////////////////////
 // C. Theme Styles
 //////////////////////////////////////////////
@@ -109,8 +103,7 @@ a[data-logo="brand"] {
     --browser-bar-height: 2rem;
 
     overflow: hidden;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-radius: 0.5rem;
 
     iframe {
         border: none;

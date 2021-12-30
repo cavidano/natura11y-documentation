@@ -38,16 +38,16 @@ If you're not familiar with CSS variables, take time now to <a href="#1">read th
     codeToolbar={false}
     codeLanguage="css"
     codeExample={(`
-    /* Primary as a SASS Variable: */\n
-    $primary: navy;\n
-    .selector--primary{
-        background-color: $primary
-    }\n
-    // Primary as a CSS Variable:\n
-    --primary: navy;\n
-    .selector--primary{
-        background-color: var(--primary);
-    }
+        /* Primary as a SASS Variable: */\n
+        $primary: navy;\n
+        .selector--primary{
+            background-color: $primary
+        }\n
+        // Primary as a CSS Variable:\n
+        --primary: navy;\n
+        .selector--primary{
+            background-color: var(--primary);
+        }
     `)}
 />
 
@@ -74,38 +74,38 @@ Make new directory somewhere on your computer. Call it **color-example**. Copy a
 <FigureBlock
     figureNumber="2"
     codeExample={(`
-    <!DOCTYPE html> \n
-    <html lang="en" dir="ltr"> \n
-        <head> \n
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> \n
-            <title>Color Example • Natura11y</title> \n
-            <!-- Natura11y Icons -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css"> \n
-            <!-- Natura11y Stylesheet -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
-        </head> \n
-        <body> \n
-            <main class="overflow-hidden" id="skip-header-content"> \n
-                <div class="container narrow margin-y-5"> \n
-                    <div class="theme-primary padding-3 margin-y-2">
-                        <p>Primary</p>
-                    </div>
-                    <div class="theme-secondary padding-3 margin-y-2">
-                        <p>Secondary</p>
-                    </div>
-                    <div class="theme-dark padding-3 margin-y-2">
-                        <p>Dark</p>
-                    </div>
-                    <div class="theme-light padding-3 margin-y-2">
-                        <p>Light</p>
+        <!DOCTYPE html> \n
+        <html lang="en" dir="ltr"> \n
+            <head> \n
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> \n
+                <title>Color Example • Natura11y</title> \n
+                <!-- Natura11y Icons -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css"> \n
+                <!-- Natura11y Stylesheet -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
+            </head> \n
+            <body> \n
+                <main class="overflow-hidden" id="skip-header-content"> \n
+                    <div class="container narrow margin-y-5"> \n
+                        <div class="theme-primary padding-3 margin-y-2">
+                            <p>Primary</p>
+                        </div>
+                        <div class="theme-secondary padding-3 margin-y-2">
+                            <p>Secondary</p>
+                        </div>
+                        <div class="theme-dark padding-3 margin-y-2">
+                            <p>Dark</p>
+                        </div>
+                        <div class="theme-light padding-3 margin-y-2">
+                            <p>Light</p>
+                        </div> \n
                     </div> \n
-                </div> \n
-            </main> \n
-            <!-- Natura11y Javascript -->
-            <script src="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js"></script>\n
-        </body> \n
-    </html>
+                </main> \n
+                <!-- Natura11y Javascript -->
+                <script src="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js"></script>\n
+            </body> \n
+        </html>
     `)}
 />
 
@@ -168,7 +168,6 @@ With **new-colors.css** open, include the CSS from Figure 4. Save this file and 
     visualExample={<PracticeExercise setCustomStyles={true} />}
     frameWidth="medium"
 />
-<BrowserFrame frameSrc="../../iframe-examples/custom-properties-02.html" />
 
 <TextBlock>
 
@@ -193,14 +192,14 @@ All CSS Variables in the framework are either **scoped** to the document or to a
     figureWidth="narrow"
     codeLanguage="css"
     codeExample={(`
-    /* Scoped to the root */ \n
-    :root {
-        --primary: #0080f8;
-    } \n
-    /* Scoped to a parent selector */ \n
-    .card {
-        --card-padding-y: 1em;
-    }
+        /* Scoped to the root */ \n
+        :root {
+            --primary: #0080f8;
+        } \n
+        /* Scoped to a parent selector */ \n
+        .card {
+            --card-padding-y: 1em;
+        }
     `)}
 />
 

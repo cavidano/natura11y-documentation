@@ -10,7 +10,7 @@ const BrowserBlock = (props) => {
     } = props;
     
     return (
-        <div className={`container ${frameWidth} margin-y-5`} style={exampleStyles}>
+        <div className={`container ${frameWidth} margin-y-4`} style={exampleStyles}>
 
             <div className="browser box-shadow-1">
 
