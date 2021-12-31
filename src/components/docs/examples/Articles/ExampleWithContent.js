@@ -49,7 +49,7 @@ const ExampleWithContent = () => {
                             <div className="margin-y-4">
                                 <div className="container narrow">
                                     <p className="h1 text-shadow">
-                                        Cynara cardunculus
+                                        Globe Artichoke
                                     </p>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@ const ExampleWithContent = () => {
 
                     <div className="container narrow margin-y-4">
                         
-                        <p className="h2">Globe Artichoke</p>
+                        <p className="h2">Cynara cardunculus</p>
 
                         <p>
                             The globe artichoke (Cynara cardunculus), also known by the names French artichoke and green artichoke, is a variety of a species of <a href="#1">thistle</a> cultivated as a food. The edible portion of the plant consists of the flower buds before the flowers come into bloom. The budding artichoke flower-head is a cluster of many budding small flowers (an inflorescence), together with many bracts, on an edible base.
