@@ -61,7 +61,7 @@ const ExampleWithContent = () => {
 
                 <div className="article__body overflow-hidden border-left">
 
-                    <div className="container narrow margin-y-5">
+                    <div className="container narrow margin-y-4">
                         
                         <p className="h2">Globe Artichoke</p>
 
@@ -76,27 +76,35 @@ const ExampleWithContent = () => {
                         <p className="h3">Agricultural output</p>
 
                         <p>
-                            Cultivation of the globe artichoke is concentrated in the Americas and the countries bordering the Mediterranean basin. The main European producers are Italy, Spain, and France and the main American producers are Argentina, Peru and the United States. In the United States, California provides nearly 100% of the U.S. crop, with about 80% of that being grown in Monterey County; there, Castroville proclaims itself to be "The Artichoke Center of the World" and holds the annual Castroville Artichoke Festival. More recently, artichokes have been grown in South Africa in a small town called Parys, located along the Vaal River.
+                            Cultivation of the globe artichoke is concentrated in the Americas and the countries bordering the Mediterranean basin. The main European producers are Italy, Spain, and France and the main American producers are Argentina, Peru and the United States. 
                         </p>
 
                         <p>
+                            In the United States, California provides nearly 100% of the U.S. crop, with about 80% of that being grown in Monterey County; there, Castroville proclaims itself to be "The Artichoke Center of the World" and holds the annual Castroville Artichoke Festival. More recently, artichokes have been grown in South Africa in a small town called Parys, located along the Vaal River.
+                        </p>
+
+                        <p className="font-size-xl">
                             In 2019, the world produced approximately 1.6 million tons of artichokes.
                         </p>
 
                     </div>
                    
-                    <div className="container narrow margin-y-4">
+                    <div className="container narrow margin-y-3">
 
                         <table class="table table--edge">
 
                             <caption>
-                                Top 5 globe artichoke producers in 2017
+                               <em>Top 5 globe artichoke producers in 2017</em>
                             </caption>
 
                             <thead>
                                 <tr>
-                                    <th scope="col">Country</th>
-                                    <th scope="col">Production</th>
+                                    <th scope="col">
+                                        Country
+                                    </th>
+                                    <th scope="col">
+                                        Production (tonnes)
+                                    </th>
                                 </tr>
                             </thead>
 
@@ -126,14 +134,6 @@ const ExampleWithContent = () => {
                         </table>
 
                     </div>
-
-                    <footer className="container narrow margin-y-5">
-                                        
-                        <a className="font-size-md" href="#articleTop">
-                            Back to Top
-                        </a>
-
-                    </footer>
 
                 </div>
 
