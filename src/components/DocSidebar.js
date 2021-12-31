@@ -21,7 +21,10 @@ const DocSidebar = ({ pages }) => {
           </div>
       </div>
       
-      <nav className="position-sticky-top collapse display-block--lg" id="docs-sidebar">
+      <nav
+        className="position-sticky-top collapse display-block--lg"
+        id="docs-sidebar"
+        style={{'maxHeight': '100vh', 'overflowY': 'auto'}}>
 
         <div className="container narrow margin-y-3 font-size-md">
       

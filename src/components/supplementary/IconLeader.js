@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 const IconLeader = () => {
 
@@ -38,7 +38,7 @@ const IconLeader = () => {
             </div>
         
         </Fragment>
-    )
+    );
 }
 
 export default IconLeader;

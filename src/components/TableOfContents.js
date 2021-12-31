@@ -6,8 +6,13 @@ const TableOfContents = ({ sections }) => {
 
     return (
         <div className="padding-y-4">
-            <div className="container narrow font-size-rg">
-                <h2 className="screen-reader-only">On this Page:</h2>
+
+            <div className="container narrow">
+
+                <h2 className="screen-reader-only">
+                    On this Page:
+                </h2>
+            
                 <nav id="table-of-contents">
                     <ul className="nav font-size-md">
                         {sections
@@ -20,9 +25,11 @@ const TableOfContents = ({ sections }) => {
                         ))}
                     </ul>
                 </nav>
+
             </div>
+
         </div>
-    )
+    );
 }
 
 export default TableOfContents;
