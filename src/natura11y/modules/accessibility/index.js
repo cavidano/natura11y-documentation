@@ -18,19 +18,19 @@ export default class Accessibility {
     const focusableElementList = document.querySelectorAll(elements);
 
     focusableElementList.forEach(focusableElement => {
-      let mouseDown = false
+      let mouseDown = false;
 
       focusableElement.addEventListener('mousedown', () => {
-        mouseDown = true
+        mouseDown = true;
       });
 
       focusableElement.addEventListener('mouseup', () => {
-        mouseDown = false
+        mouseDown = false;
       });
 
       focusableElement.addEventListener('focus', event => {
         if (mouseDown) {
-          event.target.blur()
+          event.target.blur();
         }
       });
 
