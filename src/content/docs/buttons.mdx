@@ -6,6 +6,12 @@ bannerCreditHandle: "@karlkiwi90"
 bannerImage: ../../images/banner/buttons.jpg
 ---
 
+import ButtonSelector from '../../components/docs/examples/Buttons';
+import ColoringButtons from '../../components/docs/examples/Buttons/ColoringButtons';
+import FullWidthButton from '../../components/docs/examples/Buttons/FullWidthButton';
+import OutlinedButtons from '../../components/docs/examples/Buttons/OutlinedButtons';
+import ButtonBorderRadius from '../../components/docs/examples/Buttons/ButtonBorderRadius';
+
 <TextBlock>
 
 Distinct, actionable styles for text and icon buttons.
@@ -36,11 +42,7 @@ The example below is a generic `.button` selector with no other styles yet appli
 <FigureBlock
     figureNumber="1"
     visualExample={(
-        <div class="text-align-center">
-            <a class="button" href="#1">
-                Button
-            </a>
-        </div>
+        <ButtonSelector />
     )}
     codeExample={(`
         <a class="button" href="#1">
@@ -65,23 +67,7 @@ Add color to a <code>.button</code> selector with our <a href="/docs/color/#them
 <FigureBlock
     figureNumber="2"
     visualExample={(
-        <ul class="nav nav--horizontal--sm justify-content-center text-align-center">
-            <li>
-                <a class="button theme-primary" href="#1">
-                    Button
-                </a>
-            </li>
-            <li>
-                <a class="button theme-secondary" href="#1">
-                    Button
-                </a>
-            </li>
-            <li>
-                <a class="button theme-dark" href="#1">
-                    Button
-                </a>
-            </li>
-        </ul>
+        <ColoringButtons />
     )}
     codeExample={(`
         <a class="button theme-primary" href="#1">
@@ -111,9 +97,7 @@ Do not use `.display-block` for full-width buttons. Buttons have a display prope
 <FigureBlock
     figureNumber="3"
     visualExample={(
-        <button class="button width-100 theme-primary">
-            Button
-        </button>
+        <FullWidthButton />
     )}
     codeExample={(`
         <a class="button width-100 theme-primary" href="#1">
@@ -137,14 +121,7 @@ The outline color inherits the button's text color. You can change the color usi
 <FigureBlock
     figureNumber="4"
     visualExample={(
-        <div class="grid grid--column-2--md gap-3">            
-            <a class="button button--outline display-block" href="#1">
-                Button
-            </a>
-            <a class="button button--outline display-block text-color-link" href="#1">
-                Button
-            </a>
-        </div>
+        <OutlinedButtons />
     )}
     codeExample={(`
         <a class="button button--outline" href="#1">
@@ -170,9 +147,7 @@ Globally, all <code>.button</code> selectors have a border radius. This value is
     figureNumber="5"
     codeLanguage="css"
     visualExample={(
-        <a class="button width-100 theme-primary" style={{'--button-border-radius': '0'}} href="#1">
-            Button
-        </a>
+        <ButtonBorderRadius />
     )}
     codeExample={(`
         /* Globally remove border radius in CSS */ \n
