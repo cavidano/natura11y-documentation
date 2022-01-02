@@ -1,20 +1,18 @@
 import React from 'react';
 
-const ButtonSelector = (props) => {
+const Button = (props) => {
     
     const { buttonClasses } = props;
 
     return (
-        <div className="text-align-center">
-            <a className="button" href="#1">
-                Button
-            </a>
-        </div>
+        <a className={`button ${buttonClasses && buttonClasses}`}  href="#1">
+            Button
+        </a>
     );
 }
 
-ButtonSelector.defaultProps = {
-    buttonClasses = 'button'
+Button.defaultProps = {
+    buttonClasses: 'button'
 }
 
-export default ButtonSelector;
+export default Button;

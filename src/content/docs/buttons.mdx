@@ -6,7 +6,7 @@ bannerCreditHandle: "@karlkiwi90"
 bannerImage: ../../images/banner/buttons.jpg
 ---
 
-import ButtonSelector from '../../components/docs/examples/Buttons';
+import ButtonSelector from '../../components/docs/examples/Buttons/ButtonSelector';
 import ColoringButtons from '../../components/docs/examples/Buttons/ColoringButtons';
 import FullWidthButton from '../../components/docs/examples/Buttons/FullWidthButton';
 import OutlinedButtons from '../../components/docs/examples/Buttons/OutlinedButtons';
@@ -27,7 +27,7 @@ Icon buttons include <a href="aria labels"></a> for screen readers, and visible 
 
 </AccessibilitySpotlight>
 
-<Divider id="theBasicButton" />
+<Divider id="theButtonSelector" />
 
 <TextBlock>
 
@@ -166,9 +166,7 @@ Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. `.borde
 <FigureBlock
     figureNumber="6"
     visualExample={(
-        <a class="button width-100 theme-primary border-radius-pill" href="#1">
-            Button
-        </a>
+        <ButtonBorderRadius borderRadiusType="pill" />
     )}
     codeExample={(`
         <a class="button theme-primary border-radius-pill" href="#1">

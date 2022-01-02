@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Button from './index';
+
 const FullWidthButton = () => {
     return (
-        <button class="button width-100 theme-primary">
-            Button
-        </button>
+        <Button
+            buttonClasses="width-100 theme-primary"
+        />
     );
 }
 

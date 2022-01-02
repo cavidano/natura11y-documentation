@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const ButtonBorderRadius = () => {
+import Button from './index';
+
+const ButtonBorderRadius = (props) => {
+
+    const { borderRadiusType } = props;
+    
     return (
-        <a class="button width-100 theme-primary" style={{'--button-border-radius': '0'}} href="#1">
-            Button
-        </a>
+        <Fragment>
+            
+            {borderRadiusType === 'none' 
+            ? (
+                <div style={{ '--button-border-radius': '0' }}>
+                    <Button
+                        buttonClasses="width-100 theme-primary"
+                    /> 
+                </div>
+            ) : (
+                <Button
+                    buttonClasses="width-100 theme-secondary border-radius-pill"
+                /> 
+            )}
+        
+        </Fragment>       
     );
+}
+
+ButtonBorderRadius.defaultProps = {
+    borderRadiusType: 'none'
 }
 
 export default ButtonBorderRadius;
