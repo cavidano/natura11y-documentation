@@ -11,6 +11,10 @@ import ColoringButtons from '../../components/docs/examples/Buttons/ColoringButt
 import FullWidthButton from '../../components/docs/examples/Buttons/FullWidthButton';
 import OutlinedButtons from '../../components/docs/examples/Buttons/OutlinedButtons';
 import ButtonBorderRadius from '../../components/docs/examples/Buttons/ButtonBorderRadius';
+import SizingButtons from '../../components/docs/examples/Buttons/SizingButtons';
+import TextAndIconButtons from '../../components/docs/examples/Buttons/TextAndIconButtons';
+import IconOnlyButtons from '../../components/docs/examples/Buttons/IconOnlyButtons';
+import ButtonGroup from '../../components/docs/examples/Buttons/ButtonGroup';
 
 <TextBlock>
 
@@ -60,7 +64,7 @@ The example below is a generic `.button` selector with no other styles yet appli
 
 ## Coloring Buttons
 
-Add color to a <code>.button</code> selector with our <a href="/docs/color/#themeColorUtilities">theme color utilities</a>. These classes apply the button's appropriate text color automatically (Figure 2).
+Add color to a `.button` selector with our <a href="/docs/color/#themeColorUtilities">theme color utilities</a>. These classes apply the button's appropriate text color automatically (Figure 2).
 
 </TextBlock>
 
@@ -112,7 +116,7 @@ Do not use `.display-block` for full-width buttons. Buttons have a display prope
 
 ## Outlined Buttons
 
-Create a button with an outline instead of a fill. Add the outline modifier class `.button--outline` to the `.button` selector. The outline width is a <strong>2x</strong> multiple of your theme's body border width.
+Create a button with an outline instead of a fill. Add the outline modifier class `.button--outline` to the `.button` selector. The outline width is a *2x* multiple of your theme's body border width.
 
 The outline color inherits the button's text color. You can change the color using our <a href="#1">text color utility classes</a>.
 
@@ -139,7 +143,7 @@ The outline color inherits the button's text color. You can change the color usi
 
 ## Button Border Radius
 
-Globally, all <code>.button</code> selectors have a border radius. This value is set with the <code>:root</code> scoped CSS Variable <code>--button-border-radius</code> (see Figure 5). Learn how to <a href="/docs/customization/#referenceGuideCSSVariables">customize CSS Variables</a>. 
+Globally, all `.button` selectors have a border radius. This value is set with the `:root` scoped CSS Variable `--button-border-radius` (see Figure 5). Learn how to <a href="/docs/customization/#referenceGuideCSSVariables">customize CSS Variables</a>. 
 
 </TextBlock>
 
@@ -244,16 +248,7 @@ The first child is is a `<span>` with its combined <a href="/icons">icon</a> cla
 <FigureBlock
     figureNumber="8"
     visualExample={(
-        <div class="grid grid--column-2--md gap-3">
-            <a class="button button--has-icon width-100 theme-primary" href="#1">
-                <span class="icon icon-edit"></span>
-                <span class="button__text">Edit</span>
-            </a>  
-            <a class="button button--has-icon width-100 button--outline" href="#1">
-                <span class="icon icon-delete"></span>
-                <span class="button__text">Delete</span>
-            </a>
-        </div>
+        <TextAndIconButtons />
     )}
     codeExample={(`
         <a class="button button--has-icon theme-primary" href="#1">
@@ -278,10 +273,7 @@ Create a button where the text and icon sit on opposing sides. Add the chain mod
 <FigureBlock
     figureNumber="9"
     visualExample={(
-        <a class="button button--has-icon--disperse theme-dark" href="#1">
-            <span class="button__text">Button</span>
-            <span class="icon icon-arrow-right"></span>
-        </a>
+        <TextAndIconButtons TextAndIconDisperse={true} />
     )}
     codeExample={(`
         <a class="button button--has-icon--disperse theme-dark" href="#1">
@@ -306,17 +298,7 @@ Icon-only buttons require a single child selector. A `<span>` with its combined 
 <FigureBlock
     figureNumber="10"
     visualExample={(
-        <div class="button-group font-size-lg">
-            <a class="button button--icon-only" href="#1" aria-label="Home">
-                <span class="icon icon-home" aria-hidden="true"></span>
-            </a>
-            <a class="button button--icon-only" href="#1" aria-label="Print">
-                <span class="icon icon-print" aria-hidden="true"></span>
-            </a>
-            <a class="button button--icon-only" href="#1" aria-label="Settings">
-                <span class="icon icon-settings" aria-hidden="true"></span>
-            </a>
-        </div>
+        <IconOnlyButtons />
     )}
     codeExample={(`
         <a class="button button--icon-only" href="#1" aria-label="Home">
@@ -334,17 +316,7 @@ Icon-only buttons are transparent by default. Like our other buttons, color can 
 <FigureBlock
     figureNumber="11"
     visualExample={(
-        <div class="button-group font-size-lg">
-            <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
-                <span class="icon icon-home" aria-hidden="true"></span>
-            </a>
-            <a class="button button--icon-only theme-secondary" href="#1" aria-label="Print">
-                <span class="icon icon-print" aria-hidden="true"></span>
-            </a>
-            <a class="button button--icon-only theme-dark" href="#1" aria-label="Settings">
-                <span class="icon icon-settings" aria-hidden="true"></span>
-            </a>
-        </div>
+        <IconOnlyButtons hasColor={true} />
     )}
     codeExample={(`
         <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
@@ -355,8 +327,8 @@ Icon-only buttons are transparent by default. Like our other buttons, color can 
 
 <TextBlock>
 
-Do not use the <code>title</code> attribute to describe the button(on its hover state). Instead apply the <code>aria-label</code> attribute (see Figure 10). Icon-only buttons with the aria-label attribute offer a custom visible tooltip. The core
-javascript file (<strong>natura11y.js</strong>) adds these tooltips to the DOM when the document loads.
+Do not use the `title` attribute to describe the button(on its hover state). Instead apply the `aria-label` attribute (see Figure 10). Icon-only buttons with the aria-label attribute offer a custom visible tooltip. The core
+javascript file (*natura11y.js*) adds these tooltips to the DOM when the document loads.
 
 </TextBlock>
 
@@ -377,7 +349,10 @@ The `.button-group` selector aligns buttons horizontally while giving them the s
 <FigureBlock
     figureNumber="12"
     visualExample={(
-        <div class="button-group font-size-lg">
+        <ButtonGroup />
+    )}
+    codeExample={(`
+        <div class="button-group">
             <a class="button button--outline" href="#1">
                 Sign In  
             </a>
@@ -388,10 +363,5 @@ The `.button-group` selector aligns buttons horizontally while giving them the s
                 <span class="icon icon-search" aria-hidden="true"></span>
             </a>
         </div>
-    )}
-    codeExample={(`
-        <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
-            <span class="icon icon-home" aria-hidden="true"></span>
-        </a>
     `)}
 />
