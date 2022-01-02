@@ -3,7 +3,7 @@ import React from 'react';
 const ButtonGroup = () => {
 
     return (
-        <div className="button-group font-size-lg">
+        <div className="button-group justify-content-center font-size-lg">
             <a className="button button--outline" href="#1">
                 Sign In  
             </a>

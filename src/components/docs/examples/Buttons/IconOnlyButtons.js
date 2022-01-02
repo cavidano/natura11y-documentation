@@ -5,7 +5,7 @@ const IconOnlyButtons = (props) => {
     const { hasColor } = props;
 
     return (
-        <div className="button-group font-size-lg">
+        <div className="button-group justify-content-center font-size-lg">
             <a className={`button button--icon-only ${hasColor && 'theme-primary'}`} href="#1" aria-label="Home">
                 <span className="icon icon-home" aria-hidden="true"></span>
             </a>
