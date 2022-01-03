@@ -21,7 +21,7 @@ const Examples = () => {
 
             <section className='container medium padding-y-5'>
 
-                <div className="grid grid--column-2--lg align-items-center box-shadow-3">
+                <div className="grid grid--column-2--lg align-items-center box-shadow-3 border-radius">
                     
                     <StaticImage
                         src="../images/examples/template-example-01.jpg"
