@@ -64,8 +64,8 @@ const Home = () => {
                 </Link>
                 <Link
                   className="button button--outline width-100"
-                  to="/examples">
-                    Examples
+                  to="/comps">
+                    Comps
                 </Link>
               </div>
             </div>

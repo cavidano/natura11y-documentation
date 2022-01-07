@@ -4,13 +4,13 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 
-const Examples = () => {
+const Comps = () => {
     return (
         <Layout>
 
             <section className="container narrow margin-y-4 text-align-center">
                 <h2>
-                    Full layouts for another way to get started.
+                    Explore free to use comprehensive layouts.
                 </h2>
                 <p>
                     The templates below are built using Natura11y. Use them as they are or cherry pick the parts you want.
@@ -69,4 +69,4 @@ const Examples = () => {
     )
 }
 
-export default Examples;
+export default Comps;
