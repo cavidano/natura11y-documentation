@@ -5,7 +5,10 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
+<<<<<<< HEAD
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+=======
+>>>>>>> parent of 4e359aa (before adding gh pages)
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
@@ -37,7 +40,6 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1"
   },
   "repository": {

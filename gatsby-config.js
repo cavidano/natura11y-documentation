@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  pathPrefix: `/natura11y-documentation`,
   siteMetadata: {
     title: "Natura11y Inclusive Framework",
     version: "1.0.0-alpha",
