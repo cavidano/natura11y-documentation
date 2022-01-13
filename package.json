@@ -5,19 +5,6 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-=======
->>>>>>> parent of 4e359aa (before adding gh pages)
-=======
->>>>>>> parent of 4e359aa (before adding gh pages)
-=======
->>>>>>> parent of 4e359aa (before adding gh pages)
-=======
->>>>>>> parent of 4e359aa (before adding gh pages)
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
@@ -43,6 +30,7 @@
     "gatsby-transformer-yaml": "^4.1.0",
     "gatsby-transformer-yaml-full": "^0.4.6",
     "mdx-yaml-full": "^2.0.0",
+    "prismjs": "^1.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
