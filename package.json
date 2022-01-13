@@ -6,7 +6,10 @@
   "license": "0BSD",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+=======
+>>>>>>> parent of 4e359aa (before adding gh pages)
 =======
 >>>>>>> parent of 4e359aa (before adding gh pages)
     "build": "gatsby build",
