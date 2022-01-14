@@ -1,7 +1,6 @@
-(function () {
-
-	if (typeof Prism === 'undefined') {
-		return;
+;(function () {
+	if (typeof Prism === "undefined") {
+		return
 	}
 
 	/**
@@ -23,21 +22,19 @@
 	// options
 
 	/** @type {ClassAdder | undefined} */
-	var adder;
+	var adder
 	/** @type {ClassMapper | undefined} */
-	var mapper;
+	var mapper
 	/** @type {string} */
-	var prefixString = '';
-
+	var prefixString = ""
 
 	/**
 	 * @param {string} className
 	 * @param {string} language
 	 */
 	function apply(className, language) {
-		return prefixString + (mapper ? mapper(className, language) : className);
+		return prefixString + (mapper ? mapper(className, language) : className)
 	}
-
 
 	Prism.plugins.customClass = {
 		/**
@@ -46,7 +43,7 @@
 		 * @param {ClassAdder} classAdder
 		 */
 		add: function (classAdder) {
-			adder = classAdder;
+			adder = classAdder
 		},
 		/**
 		 * Maps all class names using the given object or map function.
@@ -56,12 +53,12 @@
 		 * @param {Object<string, string> | ClassMapper} classMapper
 		 */
 		map: function map(classMapper) {
-			if (typeof classMapper === 'function') {
-				mapper = classMapper;
+			if (typeof classMapper === "function") {
+				mapper = classMapper
 			} else {
 				mapper = function (className) {
-					return classMapper[className] || className;
-				};
+					return classMapper[className] || className
+				}
 			}
 		},
 		/**
@@ -70,7 +67,7 @@
 		 * @param {string} string
 		 */
 		prefix: function prefix(string) {
-			prefixString = string || '';
+			prefixString = string || ""
 		},
 		/**
 		 * Applies the current mapping and prefix to the given class name.
@@ -80,31 +77,30 @@
 		 *
 		 * If the language is unknown, pass `"none"`.
 		 */
-		apply: apply
-	};
+		apply: apply,
+	}
 
-	Prism.hooks.add('wrap', function (env) {
+	Prism.hooks.add("wrap", function (env) {
 		if (adder) {
 			var result = adder({
 				content: env.content,
 				type: env.type,
-				language: env.language
-			});
+				language: env.language,
+			})
 
 			if (Array.isArray(result)) {
-				env.classes.push.apply(env.classes, result);
+				env.classes.push.apply(env.classes, result)
 			} else if (result) {
-				env.classes.push(result);
+				env.classes.push(result)
 			}
 		}
 
 		if (!mapper && !prefixString) {
-			return;
+			return
 		}
 
 		env.classes = env.classes.map(function (c) {
-			return apply(c, env.language);
-		});
-	});
-
-}());
+			return apply(c, env.language)
+		})
+	})
+})()

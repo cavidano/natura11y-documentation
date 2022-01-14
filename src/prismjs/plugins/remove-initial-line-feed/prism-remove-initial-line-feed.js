@@ -1,21 +1,21 @@
-(function () {
-
-	if (typeof Prism === 'undefined' || typeof document === 'undefined') {
-		return;
+;(function () {
+	if (typeof Prism === "undefined" || typeof document === "undefined") {
+		return
 	}
 
-	Prism.hooks.add('before-sanity-check', function (env) {
+	Prism.hooks.add("before-sanity-check", function (env) {
 		if (env.code) {
-			var pre = env.element.parentNode;
-			var clsReg = /(?:^|\s)keep-initial-line-feed(?:\s|$)/;
+			var pre = env.element.parentNode
+			var clsReg = /(?:^|\s)keep-initial-line-feed(?:\s|$)/
 			if (
-				pre && pre.nodeName.toLowerCase() === 'pre' &&
+				pre &&
+				pre.nodeName.toLowerCase() === "pre" &&
 				// Apply only if nor the <pre> or the <code> have the class
-				(!clsReg.test(pre.className) && !clsReg.test(env.element.className))
+				!clsReg.test(pre.className) &&
+				!clsReg.test(env.element.className)
 			) {
-				env.code = env.code.replace(/^(?:\r?\n|\r)/, '');
+				env.code = env.code.replace(/^(?:\r?\n|\r)/, "")
 			}
 		}
-	});
-
-}());
+	})
+})()

@@ -1,14 +1,12 @@
-(function () {
-
-	if (typeof Prism === 'undefined') {
-		return;
+;(function () {
+	if (typeof Prism === "undefined") {
+		return
 	}
 
-	Prism.hooks.add('wrap', function (env) {
-		if (env.type !== 'keyword') {
-			return;
+	Prism.hooks.add("wrap", function (env) {
+		if (env.type !== "keyword") {
+			return
 		}
-		env.classes.push('keyword-' + env.content);
-	});
-
-}());
+		env.classes.push("keyword-" + env.content)
+	})
+})()

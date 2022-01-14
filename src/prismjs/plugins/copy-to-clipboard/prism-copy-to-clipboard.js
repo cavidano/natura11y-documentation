@@ -1,13 +1,12 @@
-(function () {
-
-	if (typeof Prism === 'undefined' || typeof document === 'undefined') {
-		return;
+;(function () {
+	if (typeof Prism === "undefined" || typeof document === "undefined") {
+		return
 	}
 
 	if (!Prism.plugins.toolbar) {
-		console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
+		console.warn("Copy to Clipboard plugin loaded before Toolbar plugin.")
 
-		return;
+		return
 	}
 
 	/**
@@ -22,53 +21,59 @@
 	 * @property {(reason: unknown) => void} error
 	 */
 	function registerClipboard(element, copyInfo) {
-		element.addEventListener('click', function () {
-			copyTextToClipboard(copyInfo);
-		});
+		element.addEventListener("click", function () {
+			copyTextToClipboard(copyInfo)
+		})
 	}
 
 	// https://stackoverflow.com/a/30810322/7595472
 
 	/** @param {CopyInfo} copyInfo */
 	function fallbackCopyTextToClipboard(copyInfo) {
-		var textArea = document.createElement('textarea');
-		textArea.value = copyInfo.getText();
+		var textArea = document.createElement("textarea")
+		// Carl Edit
+
+		textArea.value = copyInfo.getText().trim()
 
 		// Avoid scrolling to bottom
-		textArea.style.top = '0';
-		textArea.style.left = '0';
-		textArea.style.position = 'fixed';
+		textArea.style.top = "0"
+		textArea.style.left = "0"
+		textArea.style.position = "fixed"
 
-		document.body.appendChild(textArea);
-		textArea.focus();
-		textArea.select();
+		document.body.appendChild(textArea)
+		textArea.focus()
+		textArea.select()
 
 		try {
-			var successful = document.execCommand('copy');
+			var successful = document.execCommand("copy")
 			setTimeout(function () {
 				if (successful) {
-					copyInfo.success();
+					copyInfo.success()
 				} else {
-					copyInfo.error();
+					copyInfo.error()
 				}
-			}, 1);
+			}, 1)
 		} catch (err) {
 			setTimeout(function () {
-				copyInfo.error(err);
-			}, 1);
+				copyInfo.error(err)
+			}, 1)
 		}
 
-		document.body.removeChild(textArea);
+		document.body.removeChild(textArea)
 	}
 	/** @param {CopyInfo} copyInfo */
 	function copyTextToClipboard(copyInfo) {
 		if (navigator.clipboard) {
-			navigator.clipboard.writeText(copyInfo.getText()).then(copyInfo.success, function () {
-				// try the fallback in case `writeText` didn't work
-				fallbackCopyTextToClipboard(copyInfo);
-			});
+			// Carl Edit
+
+			navigator.clipboard
+				.writeText(copyInfo.getText().trim())
+				.then(copyInfo.success, function () {
+					// try the fallback in case `writeText` didn't work
+					fallbackCopyTextToClipboard(copyInfo)
+				})
 		} else {
-			fallbackCopyTextToClipboard(copyInfo);
+			fallbackCopyTextToClipboard(copyInfo)
 		}
 	}
 
@@ -79,7 +84,7 @@
 	 */
 	function selectElementText(element) {
 		// https://stackoverflow.com/a/20079910/7595472
-		window.getSelection().selectAllChildren(element);
+		window.getSelection().selectAllChildren(element)
 	}
 
 	/**
@@ -92,69 +97,71 @@
 	function getSettings(startElement) {
 		/** @type {Settings} */
 		var settings = {
-			'copy': 'Copy',
-			'copy-error': 'Press Ctrl+C to copy',
-			'copy-success': 'Copied!',
-			'copy-timeout': 5000
-		};
+			copy: "Copy",
+			"copy-error": "Press Ctrl+C to copy",
+			"copy-success": "Copied!",
+			"copy-timeout": 5000,
+		}
 
-		var prefix = 'data-prismjs-';
+		var prefix = "data-prismjs-"
 		for (var key in settings) {
-			var attr = prefix + key;
-			var element = startElement;
+			var attr = prefix + key
+			var element = startElement
 			while (element && !element.hasAttribute(attr)) {
-				element = element.parentElement;
+				element = element.parentElement
 			}
 			if (element) {
-				settings[key] = element.getAttribute(attr);
+				settings[key] = element.getAttribute(attr)
 			}
 		}
-		return settings;
+		return settings
 	}
 
-	Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-		var element = env.element;
+	Prism.plugins.toolbar.registerButton("copy-to-clipboard", function (env) {
+		var element = env.element
 
-		var settings = getSettings(element);
+		var settings = getSettings(element)
 
-		var linkCopy = document.createElement('button');
-		linkCopy.className = 'copy-to-clipboard-button';
-		linkCopy.setAttribute('type', 'button');
-		var linkSpan = document.createElement('span');
-		linkCopy.appendChild(linkSpan);
+		var linkCopy = document.createElement("button")
+		linkCopy.className = "copy-to-clipboard-button"
+		linkCopy.setAttribute("type", "button")
+		var linkSpan = document.createElement("span")
+		linkCopy.appendChild(linkSpan)
 
-		setState('copy');
+		setState("copy")
 
 		registerClipboard(linkCopy, {
 			getText: function () {
-				return element.textContent;
+				return element.textContent
 			},
 			success: function () {
-				setState('copy-success');
+				setState("copy-success")
 
-				resetText();
+				resetText()
 			},
 			error: function () {
-				setState('copy-error');
+				setState("copy-error")
 
 				setTimeout(function () {
-					selectElementText(element);
-				}, 1);
+					selectElementText(element)
+				}, 1)
 
-				resetText();
-			}
-		});
+				resetText()
+			},
+		})
 
-		return linkCopy;
+		return linkCopy
 
 		function resetText() {
-			setTimeout(function () { setState('copy'); }, settings['copy-timeout']);
+			setTimeout(function () {
+				setState("copy")
+			}, settings["copy-timeout"])
 		}
 
 		/** @param {"copy" | "copy-error" | "copy-success"} state */
 		function setState(state) {
-			linkSpan.textContent = settings[state];
-			linkCopy.setAttribute('data-copy-state', state);
+			linkSpan.textContent = settings[state]
+			linkCopy.setAttribute("data-copy-state", state)
 		}
-	});
-}());
+	})
+})()
