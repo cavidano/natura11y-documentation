@@ -77,8 +77,6 @@ const Documentation = ({ data }) => {
 
   const relatedCustomProperties = data.relatedCPs.nodes;
 
-  console.log("related custom properties ", relatedCustomProperties)
-
   return (
     <Layout>
 

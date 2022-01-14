@@ -51,7 +51,7 @@ const Footer = ({ version, title }) => {
         </a>
 
         <p>
-          {title} is an open source design system created by <a href="https://www.behance.net/carlavidano" target="_blank"> Carl Avidano</a>.
+          {title} is an open source design system created by <a href="https://www.behance.net/carlavidano" target="_blank"> Carl Avidano</a>. Carl is a New York-based designer, front-end developer, and aspiring fine artist.
         </p>
       </div>
 
