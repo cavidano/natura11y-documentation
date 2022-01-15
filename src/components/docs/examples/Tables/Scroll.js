@@ -80,7 +80,7 @@ const Scroll = () => {
             </div>
         
         </div>
-    )
+    );
 }
 
 export default Scroll;
