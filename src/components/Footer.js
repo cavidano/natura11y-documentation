@@ -11,7 +11,7 @@ const Footer = ({ version, title }) => {
       <div className="container narrow margin-y-4">
 
         <p className="text-align-center font-size-sm opacity-70">
-          Version: {version}
+          {version}
         </p>
 
         <ul className="nav nav--horizontal justify-content-center margin-y-3">
