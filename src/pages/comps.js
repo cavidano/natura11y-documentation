@@ -10,7 +10,7 @@ const Comps = () => {
 
             <section className="container narrow margin-y-4 text-align-center">
                 <h2>
-                    Explore free to use comprehensive layouts.
+                    Explore free-to-use comprehensive layouts.
                 </h2>
                 <p>
                     The templates below are built using Natura11y. Use them as they are or cherry pick the parts you want.
