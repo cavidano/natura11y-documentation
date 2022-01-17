@@ -57,11 +57,12 @@ const Header = ({ version }) => {
   return (
     <header className="box-shadow-1 z-index-2500" id="global-header">
 
-      <a className="focusable-only" href="#nav-docs">
+      <a className="focusable-only" href="#skip-header-target">
         Skip Header
       </a>
 
       <div className="primary-nav--inline--lg">
+      
         <div className="primary-nav__logo">
           <Link to="/" title="Home" data-logo="brand">
             {logo}

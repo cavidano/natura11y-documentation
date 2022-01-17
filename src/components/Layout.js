@@ -86,12 +86,12 @@ function Layout({ children }) {
 
       <Header version={version} />
 
-      <div className="content">{children}</div>
+      <main className="content" id="skip-header-target">{children}</main>
 
       <Footer version={version} title={title} />
       
     </div>
-  )
+  );
 }
 
 export default Layout;
