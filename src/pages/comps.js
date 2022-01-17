@@ -19,45 +19,49 @@ const Comps = () => {
 
             <hr />
 
-            <section className='container medium padding-y-5'>
+            <section className='container wide padding-y-5'>
 
-                <div className="grid grid--column-2--lg align-items-center box-shadow-3 border-radius">
-                    
-                    <StaticImage
-                        src="../images/examples/template-example-01.jpg"
-                        alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
-                    />
+                <div className="theme-primary" style={{'--primary': '#FFDB26', '--primary-text':'black'}}>
 
-                    <div className="padding-4 text-align-center">
+                    <div className="grid grid--column-2--lg align-items-center box-shadow-2">
+                        
+                        <StaticImage
+                            src="../images/examples/comp-thumb-call-to-action.jpg"
+                            alt=""
+                            placeholder="dominantColor"
+                            layout="fullWidth"
+                        />
 
-                        <h5>Landing Page</h5>
+                        <div className="padding-4 text-align-center">
 
-                        <p>
-                            A simple landing page with global navigation below the logo.
-                        </p>
+                            <h2 className='h4'>Call to Action</h2>
 
-                        <nav className="font-size-sm text-color-link">
+                            <p>
+                                A simple landing page with global navigation below the logo.
+                            </p>
 
-                            <ul className="nav nav--horizontal justify-content-center">
-                                <li>
-                                    <a
-                                        className="button button--outline button--has-icon"
-                                        href="https://github.com/cavidano/natura11y/blob/main/dist/html/layouts/landing-page.html"
-                                        target="_blank">
-                                        <span className="icon icon-github button__icon"></span>
-                                        <span className="button__text">View on GitHub</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://cavidano.github.io/natura11y/dist/html/layouts/landing-page.html" target="_blank">
-                                        Preview in Browser
-                                    </a>
-                                </li>
-                            </ul>
+                            <nav className="font-size-sm text-color-link">
 
-                        </nav>
+                                <ul className="nav nav--horizontal justify-content-center">
+                                    <li>
+                                        <a href="https://cavidano.github.io/natura11y/dist/html/comps/call-to-action" target="_blank">
+                                            Preview in Browser
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            className="button button--outline button--has-icon"
+                                            href="https://github.com/cavidano/natura11y/blob/main/dist/html/comps/call-to-action/index.html"
+                                            target="_blank">
+                                            <span className="icon icon-github button__icon"></span>
+                                            <span className="button__text">View on GitHub</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </nav>
+
+                        </div>
 
                     </div>
 

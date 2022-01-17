@@ -10,9 +10,10 @@ import IconSprite from '../../icons/natura11y-icons-sprite.svg';
 
 const Icons = ({ data }) => {
 
-
     if(typeof XMLHttpRequest !== 'undefined') {
+
         const ajax = new XMLHttpRequest();
+        
         const appendSprite = () => {
             ajax.open('GET', IconSprite, true);
             ajax.send();
@@ -23,6 +24,7 @@ const Icons = ({ data }) => {
                 document.body.insertBefore(div, document.body.childNodes[0]);
             }
         }
+        
         appendSprite();
     }
 
