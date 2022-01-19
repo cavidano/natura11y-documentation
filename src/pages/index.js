@@ -248,11 +248,13 @@ const Home = () => {
 
               <div className="container narrow margin-y-5">
                   <div className="grid grid--column-2--md gap-3">
-                      <a className="button button--has-icon width-100 button--outline" href="#1">
+                      <a className="button button--has-icon width-100 button--outline"
+                        href="https://github.com/cavidano/natura11y" target="_blank">
                           <span className="icon icon-github"></span>
                           <span className="button__text">GitHub</span>
                       </a>  
-                      <a className="button button--has-icon width-100 button--outline" href="#1">
+                      <a className="button button--has-icon width-100 button--outline"
+                        href="https://www.npmjs.com/package/natura11y" target="_blank">
                           <span className="icon icon-npm"></span>
                           <span className="button__text">NPM</span>
                       </a>

@@ -18,8 +18,9 @@ In this file:
 // export const cdnJS = `https://cdn.jsdelivr.net/npm/natura11y@0.1.0-alpha/dist/js/natura11y.js`;
 
 // GitHub 
-export const cdnCSS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@v0.1.0-alpha/dist/css/natura11y.css`;
-export const cdnJS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@v0.1.0-alpha/dist/js/natura11y.js`;
+
+export const cdnCSS = `https://cdn.jsdelivr.net/npm/natura11y/dist/css/natura11y.css`;
+export const cdnJS = `https://cdn.jsdelivr.net/npm/natura11y/dist/js/natura11y.js`;
 
 //////////////////////////////////////////////
 // B. Placeholder Images

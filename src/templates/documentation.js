@@ -19,6 +19,7 @@ import TableLineDescBlock from '../components/docs/TableLineDescBlock';
 import TableLineDescRow from '../components/docs/TableLineDescRow';
 import BrowserBlock from '../components/docs/BrowserBlock';
 import RelatedCustomProperties from '../components/docs/RelatedCustomProperties';
+import SproutingAlert from '../components/docs/SproutingAlert';
 
 const shortcodes = {
   StaticImage,
@@ -30,7 +31,8 @@ const shortcodes = {
   BrowserBlock,
   TableLineDescBlock,
   TableLineDescRow,
-  RelatedCustomProperties
+  RelatedCustomProperties,
+  SproutingAlert
 };
 
 const Documentation = ({ data }) => {
