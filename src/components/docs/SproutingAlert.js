@@ -19,7 +19,7 @@ const SproutingAlert = () => {
 
             <div className="alert__description" id="alert-confirm-description">
                 <p>
-                    This page may appear incomplete. I appreciate your patience while I continue writing Natura11y's documentation.
+                    This page may appear incomplete. Thank you for your patience as I continue writing Natura11y's documentation.
                 </p>
             </div>
 
