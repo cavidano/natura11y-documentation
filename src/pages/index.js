@@ -8,28 +8,28 @@ import Layout from '../components/Layout';
 const Home = () => {
 
   const bannerHeight = () => {
-    const headerHeight = document.getElementById('global-header').offsetHeight
-    const bannerTarget = document.getElementById('introduction')
+    const headerHeight = document.getElementById('global-header').offsetHeight;
+    const bannerTarget = document.getElementById('introduction');
 
     const initBannerHeight = () => {
-      const windowHeight = window.innerHeight
 
-      bannerTarget.style.height = windowHeight - headerHeight + "px"
+      const windowHeight = window.innerHeight;
+
+      bannerTarget.style.height = windowHeight - headerHeight + 'px';
     }
 
-    initBannerHeight()
-    window.addEventListener("resize", initBannerHeight)
+    initBannerHeight();
+    window.addEventListener('resize', initBannerHeight);
   }
 
   useEffect(() => {
     bannerHeight();
-  }, [])
+  }, []);
 
   return (
     <Layout>
-      <section
-        className="backdrop backdrop--fixed theme-dark"
-        id="introduction">
+
+      <section className="backdrop backdrop--fixed theme-dark" id="introduction">
 
         <div className="backdrop__image">
           <StaticImage
