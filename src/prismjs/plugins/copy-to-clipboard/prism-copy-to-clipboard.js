@@ -64,6 +64,7 @@
 	/** @param {CopyInfo} copyInfo */
 	function copyTextToClipboard(copyInfo) {
 		if (navigator.clipboard) {
+			
 			// Carl Edit
 
 			navigator.clipboard

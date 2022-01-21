@@ -286,9 +286,10 @@
 
 		// Remove pre-existing temporary lines
 		$$(".temporary.line-highlight").forEach(function (line) {
-			// line.parentNode.removeChild(line);
 
 			/* Carl Edit */
+
+			// line.parentNode.removeChild(line);
 
 			line.classList.remove("temporary")
 		})
@@ -319,6 +320,7 @@
 
 		if (scrollIntoView) {
 			document.querySelector(".temporary.line-highlight").scrollIntoView()
+			listenerHandler()
 		}
 	}
 
@@ -384,9 +386,7 @@
 
 	// Carl Edit
 
-	window.addEventListener("resize", listenerHandler)
-
-	window.addEventListener("DOMContentLoaded", listenerHandler)
+	window.addEventListener("resize", listenerHandler);
 
 	function listenerHandler() {
 		var actions = $$("pre")
