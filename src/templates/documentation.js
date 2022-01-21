@@ -92,31 +92,34 @@ const Documentation = ({ data }) => {
 
           <div className="article__body__content">
 
-            <Banner
-              title={title}
-              image={image}
-              creditHandle={bannerCreditHandle}
-              creditName={bannerCreditName}
-            />
-    
-            {sections.length > 0 && (
-              <Fragment>
-                <TableOfContents sections={sections} />
-                <hr />
-              </Fragment>
-            )}
+            <div className="doc-container">
 
-            <div className="margin-y-5">
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{body}</MDXRenderer>
-              </MDXProvider>
+              <Banner
+                title={title}
+                image={image}
+                creditHandle={bannerCreditHandle}
+                creditName={bannerCreditName}
+              />
 
-              {relatedCustomProperties.length > 0 && (
-                <RelatedCustomProperties customProperties={relatedCustomProperties} />
+              {sections.length > 0 && (
+                <Fragment>
+                  <TableOfContents sections={sections} />
+                </Fragment>
               )}
 
-            </div>
+              <div className="doc-container__body margin-y-5">
+                <MDXProvider components={shortcodes}>
+                  <MDXRenderer>{body}</MDXRenderer>
+                </MDXProvider>
 
+                {relatedCustomProperties.length > 0 && (
+                  <RelatedCustomProperties customProperties={relatedCustomProperties} />
+                )}
+
+              </div>
+
+            </div>
+    
           </div>
 
         </div>

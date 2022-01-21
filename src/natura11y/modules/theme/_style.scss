@@ -52,8 +52,8 @@ In this file:
     font-family: var(--code-font-family);
 }
 
-.article {
-    --article-sidebar-width: 240px;
+[class*="article--"]{
+    --article-sidebar-width: 250px;
 }
 
 //////////////////////////////////////////////
@@ -270,11 +270,11 @@ a[data-logo="brand"] {
     }
 }
 
-.example > div{
+.example > div {
     overflow: hidden;
 }
 
-.section-start{
+.section-start {
     margin-top: var(--spacer-5);
     margin-bottom: var(--spacer-5);
 }
@@ -410,4 +410,59 @@ kbd {
 .gv-dir--left {
     writing-mode: vertical-lr;
     margin-right: auto;
+}
+
+// doc grid
+
+.doc-container {
+
+    .doc-container__toc {
+        border-color: inherit;
+        border-block-end-width: var(--default-border-width);
+        border-block-end-style: var(--default-border-style);
+    }
+
+    .doc-container__toc > .container {
+        padding-block: var(--spacer-4);
+    }
+
+    @media (min-width: 1700px) {
+        
+        display: grid;
+
+        .doc-container__header {
+            grid-area: banner;
+        }
+
+        .doc-container__header .backdrop__cover > * {
+            margin-inline-end: var(--article-sidebar-width);
+        }
+
+        .doc-container__toc {
+            grid-area: toc;
+
+            border-block-end-width: initial;
+            border-block-end-style: initial;
+            border-inline-start: var(--default-border-width);
+            border-inline-start-style: var(--default-border-style);
+        }
+
+        .doc-container__body {
+            grid-area: body;
+        }
+
+        grid-template-columns: 1fr var(--article-sidebar-width);
+
+        grid-template-areas:
+            "banner banner"
+            "body toc";
+
+        .sticky {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: var(--article-sidebar-width);
+        }
+    }
 }

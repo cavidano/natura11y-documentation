@@ -74,8 +74,8 @@ function Layout({ children }) {
     }
   `);
 
-  const title = data.site.siteMetadata.title
-  const version = data.site.siteMetadata.version
+  const title = data.site.siteMetadata.title;
+  const version = data.site.siteMetadata.version;
 
   return (
     <div className="Layout">
@@ -86,7 +86,11 @@ function Layout({ children }) {
 
       <Header version={version} />
 
-      <main className="content" id="skip-header-target">{children}</main>
+      <main className="content" id="skip-header-target">
+
+      {children}
+
+      </main>
 
       <Footer version={version} title={title} />
       
