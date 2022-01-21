@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <Layout>
 
-      <section className="backdrop backdrop--fixed theme-dark" id="introduction">
+      <section className="backdrop backdrop--fixed theme-dark height-100vh" id="introduction">
 
         <div className="backdrop__image">
           <StaticImage
