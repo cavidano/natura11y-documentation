@@ -4,6 +4,10 @@ import { Link } from 'gatsby';
 
 const DocSidebar = ({ pages }) => {
 
+  const activeStyle = {
+    'font-weight': 'var(--body-font-weight-bold)'
+  }
+
   return (
     <Fragment>
       
@@ -30,22 +34,34 @@ const DocSidebar = ({ pages }) => {
       
           <ul className="nav font-size-md">
             <li>
-              <Link to="/docs/get-started">
+              <Link
+                to="/docs/get-started"
+                activeStyle={activeStyle}
+                partiallyActive={true}>
                 Get Started
               </Link>
             </li>
             <li>
-              <Link to="/docs/customization">
+              <Link
+                to="/docs/customization"
+                activeStyle={activeStyle}
+                partiallyActive={true}>
                 Customization
               </Link>
             </li>
             <li>
-              <Link to="/docs/accessibility">
+              <Link
+                to="/docs/accessibility"
+                activeStyle={activeStyle}
+                partiallyActive={true}>
                 Accessibility
               </Link>
             </li>
             <li>
-              <Link to="/docs/rtl">
+              <Link
+                to="/docs/rtl"
+                activeStyle={activeStyle}
+                partiallyActive={true}>
                 RTL
               </Link>
             </li>
@@ -58,8 +74,11 @@ const DocSidebar = ({ pages }) => {
             .filter(page => page.frontmatter.category === 'a-z')
             .map(page => (
               <li key={page.id}>
-                <Link to={`/docs/${page.slug}`}>
-                  {page.frontmatter.title}
+                <Link 
+                  to={`/docs/${page.slug}`}
+                  activeStyle={activeStyle}
+                  partiallyActive={true}>
+                    {page.frontmatter.title}
                 </Link>
               </li>
             ))}
