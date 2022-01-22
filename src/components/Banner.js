@@ -27,10 +27,11 @@ const Banner = (props) => {
             <div className="container narrow">
               <h1 className="banner-headline text-shadow">{title}</h1>
             </div>
+            
           </div>
         </div>
 
-        <div className="backdrop__credit">
+        <div className="backdrop__credit margin-1">
           <p>
               Photo by&nbsp;
               <a href={`https://unsplash.com/${creditHandle}`} target="_blank">

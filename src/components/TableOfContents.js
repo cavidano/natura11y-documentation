@@ -19,11 +19,11 @@ const TableOfContents = ({ sections }) => {
 
             elDistance = elOffset - winScrollY;
 
-            console.log(`
-                window ScrollY =======, ${winScrollY},
-                element Offset =======, ${elOffset},
-                distance =======, ${elDistance}
-            `);
+            // console.log(`
+            //     window ScrollY =======, ${winScrollY},
+            //     element Offset =======, ${elOffset},
+            //     distance =======, ${elDistance}
+            // `);
             
             if (elDistance <= 0) {
                 el.firstChild.classList.add('sticky');
@@ -33,10 +33,8 @@ const TableOfContents = ({ sections }) => {
             }
         
         });
-
-        const accessibleLinks = new Accessibility();
-
-        accessibleLinks.init()
+        
+        new Accessibility();
 
     }, []);
 
@@ -45,9 +43,9 @@ const TableOfContents = ({ sections }) => {
 
             <div className="container narrow font-size-sm">
 
-                <em className='display-block opacity-60 margin-bottom-2'>
-                    Table of Contents:
-                </em>
+                <strong className='display-block opacity-80 margin-bottom-2'>
+                    On this page:
+                </strong>
             
                 <nav id="table-of-contents">
                     <ul className="nav">

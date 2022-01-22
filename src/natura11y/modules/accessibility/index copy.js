@@ -8,14 +8,18 @@ export default class Accessibility {
 
   constructor() {
   
-    const elements = [
+    this.elements = [
       'a[href]',
       'button',
       '[role="tab"]',
       '[data-toggle="accordion"]',
     ];
 
-    const focusableElementList = document.querySelectorAll(elements);
+  }
+  
+  init() {
+
+    const focusableElementList = document.querySelectorAll(this.elements);
 
     focusableElementList.forEach(focusableElement => {
       let mouseDown = false;
@@ -37,6 +41,5 @@ export default class Accessibility {
     });
 
   }
-  
 
 }
