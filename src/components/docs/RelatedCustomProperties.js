@@ -8,7 +8,7 @@ const RelatedCustomProperties = ({ customProperties }) => {
     return (
         <Fragment>
 
-            <Divider id="relatedCSSVariables" />
+            <Divider id="related-css-variables" />
             
                 {customProperties.map((category, index) => {
 
