@@ -130,17 +130,29 @@ const AllCustomProperties = () => {
                         let customProperties = category.customProperties;
                         let scope = category.scope;
 
-                        const slug = title.replace(/ /, '_').toLowerCase();
+                        let titleString = title.replace(/ /, '_').toLowerCase();
+
+                        let slug;
+
+                        if(title === 'Gradient Veneer' || title === 'Subtle Fill') {
+                            slug = `accents#${titleString}`
+                        } else {
+                            slug = titleString;
+                        }
+
 
                         return (
                             <section key={`${category}_${index}`}>
                             
                                 <div className="cp-header box-shadow-1" id={`cp_${slug}`}>
+
                                     <span className="cp-header__title">{title}</span>
-                                    <a className="cp-header__link button button--has-icon" href="#1">
+                                
+                                    <a className="cp-header__link button button--has-icon" href={`/docs/${slug}`}>
                                         <span className="button__text">Docs</span>
                                         <span className="icon icon-arrow-right button__icon"></span>
                                     </a>
+                                
                                 </div>
 
                                 <table className="table">
@@ -156,9 +168,10 @@ const AllCustomProperties = () => {
                                             </th>
                                             <th scope="col">Default Value</th>
                                             <th scope="col">
-                                                <button data-clipboard="all"
-                                                onClick={handleCopyAll}>
-                                                    <span>Copy All</span>
+                                                <button
+                                                    data-clipboard="all"
+                                                    onClick={handleCopyAll}>
+                                                        <span>Copy All</span>
                                                 </button>
                                             </th>
                                             <th scope="col">Description</th>
