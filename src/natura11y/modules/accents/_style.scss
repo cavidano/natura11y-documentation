@@ -142,6 +142,13 @@ In this file:
         
         display: none;
     }
+
+    &[class*="-left"], 
+    &[class*="-right"] {
+        [dir="rtl"] & {
+            transform: scaleX(-1);
+        }
+    }
 }
 
 .gradient-veneer-top {
@@ -159,6 +166,7 @@ In this file:
 .gradient-veneer-left {
     --gradient-direction: to left;
 }
+
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
     @include breakpoints.breakpoints-up($breakpoint) {
