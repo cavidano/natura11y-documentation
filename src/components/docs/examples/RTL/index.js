@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { StaticImage } from 'gatsby-plugin-image';
+
 function RTLExample() {
 
     const logoPlaceholder = (
@@ -14,10 +16,9 @@ function RTLExample() {
     );
 
     return (
-        <div className='overflow-hidden theme-light' dir='rtl' lang='ar'>
+        <div className='overflow-hidden arabic-font' dir='rtl' lang='ar'>
                 
-            <div
-                className="primary-nav--inline--lg box-shadow-1">
+            <div className="primary-nav--inline--lg box-shadow-1">
 
                 <div className="primary-nav__logo">
                     <a href="#1" title="Home" data-logo="brand">
@@ -82,31 +83,39 @@ function RTLExample() {
                     </p>
                 </div>
 
-                <div class="backdrop__image gradient-veneer-left">
-                    <img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder" />
-                </div>
+                <div className="backdrop__image">
+                <StaticImage
+                    className="opacity-50"
+                    src="../../../../images/examples/rtl-backdrop-01.jpg"
+                    alt=""
+                    placeholder="dominantColor"
+                    layout="fullWidth"
+                />
+            </div>
 
                 <div class="backdrop__cover">
 
-                    <div class="container narrow margin-y-5">
+                    <div class="narrow margin-2 margin-4--md margin-5--lg width-50--lg">
 
                         <div class="text-shadow margin-bottom-4">
-                            <h1 class="banner-headline">
-                            هل كنت تعلم؟
+                            <h1>
+                                حول سلطعون الناسك
                             </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusamus repellendus est quo, hic impedit corporis itaque, debitis voluptatem veniam dolorum similique odit tenetur necessitatibus iste sequi. Facilis, eius. Aliquam?
+                            <p className='font-size-lg'>
+                                هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء محكم. تمتلك معظم الأنواع الفرعية من السرطانات الناسك معدة ناعمة ومنحنية ولولبية ، على عكس معدة الحجر الجيري لمعظم القشريات.
                             </p>
                         </div>
 
                         <div class="grid grid--column-2--md gap-2">
 
+
                             <a class="button button--outline width-100" href="#1">
                                 انواع من
                             </a>
 
-                            <a class="button theme-secondary width-100 box-shadow-1" href="#1">
-                                Emily Dickenson Poetry
+                            <a class="button button--has-icon--disperse theme-secondary width-100 box-shadow-1" href="#1">
+                                <span class="button__text">المزيد على ويكيبيديا</span>
+                                <span class="icon icon-arrow-right"></span>
                             </a>
 
                         </div>
