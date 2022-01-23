@@ -231,8 +231,6 @@ p ~ ol {
 p ~ ul {
     --list-item-padding: 1em;
 
-    background-color: red;
-
     li {
         margin-inline-start: var(--list-item-padding);
     }

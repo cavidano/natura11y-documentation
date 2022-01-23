@@ -12,7 +12,7 @@ import RTLExample from '../../components/docs/examples/RTL';
 
 <h2 class="h1">For the millions who read from right to left.</h2>
 
-There are 12 languages right to left languages:
+Natura11y includes localization support for the 12 right-to-left (RTL) languages around the world:
 
 - Arabic
 - Aramaic
@@ -26,11 +26,56 @@ There are 12 languages right to left languages:
 - Syriac
 - Urdu
 
-Natura11y fully supports right-to-left languages. Natura11y uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties" target="_blank">CSS Logical Properties</a> for all *margin*, *padding*, *position*, and *border* declarations.
+</TextBlock>
+
+<Divider id="css-logical-properties" />
+
+<TextBlock>
+
+##  Direction and Language HTML Attributes
+
+There are two key HTML attributes that affect the internationalization of an HTML document. They are direction (`dir`) and language (`lang`). Both of these attributes should be present on the `<html>` tag. 
+    
+The `dir` attribute declares the default text direction. A value of `ltr` sets a *left to right* text direction. While a value of `rtl` sets a *right to left* text direction.
+
+The `lang` attribute sets the document's default language. The value `en` sets the language to *English*.
+
+A document written in Arabic, for example, would inclue both `dir="rtl"` and a `lang="ar"` attributes (Figure 1, line 3).
 
 </TextBlock>
 
-<Divider id="cool" />
+
+<FigureBlock 
+    figureNumber="1"
+    figureWidth="narrow"
+    highlightedLines="3"
+    codeToolbar={false}
+    codeExample={(`
+        <!DOCTYPE html> \n
+        <html dir="rtl" lang="ar"> \n
+            <head>
+                ...
+            </head> \n
+            <body>
+                ...
+            </body> \n
+        </html>
+    `)}
+/>
+
+<Divider id="css-logical-properties" />
+
+<TextBlock>
+
+## CSS Logical Properties
+
+Natura11y declares all *text alignment*, *margin*, *padding*, *position*, and *border* styles using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties" target="_blank">CSS Logical Properties</a>.
+
+For this reason, when the aformentioned `dir="rtl"` attribute is present on the `html` tag, all left and right directional styles flip automatically.
+
+</TextBlock>
+
+<Divider id="arabic-example" />
 
 <TextBlock>
 
