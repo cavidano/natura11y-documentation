@@ -9,7 +9,7 @@ const OpacitySwatch = (props) => {
             <div className={`aspect-ratio-16x9 theme-primary ${swatchClass}`}></div>
             <div className="position-bottom-left flex-row justify-content-center">                
                 <div className="padding-1 box-shadow-1 border-radius-top theme-white text-align-center font-size-sm">
-                    <p><code>{swatchClass}</code></p>
+                    <p><code>.{swatchClass}</code></p>
                 </div>
             </div>
         </div>

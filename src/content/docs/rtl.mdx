@@ -7,6 +7,7 @@ bannerImage: ../../images/banner/rtl.jpg
 ---
 
 import RTLExample from '../../components/docs/examples/RTL';
+import FlippingIcons from '../../components/docs/examples/RTL/FlippingIcons';
 
 <TextBlock>
 
@@ -21,6 +22,7 @@ Natura11y includes localization support for the 12 right-to-left (RTL) languages
 - Fula
 - Hebrew
 - Kurdish
+- N'Ko
 - Persian
 - Rohingya
 - Syriac
@@ -28,7 +30,7 @@ Natura11y includes localization support for the 12 right-to-left (RTL) languages
 
 </TextBlock>
 
-<Divider id="css-logical-properties" />
+<Divider id="direction-and-language-html-attributes" />
 
 <TextBlock>
 
@@ -43,7 +45,6 @@ The `lang` attribute sets the document's default language. The value `en` sets t
 A document written in Arabic, for example, would inclue both `dir="rtl"` and a `lang="ar"` attributes (Figure 1, line 3).
 
 </TextBlock>
-
 
 <FigureBlock 
     figureNumber="1"
@@ -71,15 +72,28 @@ A document written in Arabic, for example, would inclue both `dir="rtl"` and a `
 
 Natura11y declares all *text alignment*, *margin*, *padding*, *position*, and *border* styles using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties" target="_blank">CSS Logical Properties</a>.
 
-For this reason, when the aformentioned `dir="rtl"` attribute is present on the `html` tag, all left and right directional styles flip automatically.
+When the aformentioned `dir="rtl"` attribute is present on the `html` tag, all left and right directional styles flip automatically.
 
 </TextBlock>
+
+<Divider id="flipping-icons" />
+
+<TextBlock>
+
+## Flipping Icons
+
+Natura11y's directional icons flip horizontally when the `dir="rtl"` attribute is present. Consider the icons below: 
+
+</TextBlock>
+
+<FlippingIcons />
+
 
 <Divider id="arabic-example" />
 
 <TextBlock>
 
-## Arabic Example
+## Full Page Arabic Example
 
 Natura11y uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties" target="_blank">CSS Logical Properties</a> for all *margin*, *padding*, *position*, and *border* declarations.
 
