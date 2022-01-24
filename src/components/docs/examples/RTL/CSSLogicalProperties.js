@@ -4,7 +4,7 @@ import IconItem from './IconItem';
 
 import { exampleStyles } from '../../../../mdxVars';
 
-const FlippingIcons = () => {
+const CSSLogicalProperties = () => {
 
   const [direction, setDirection] = useState('ltr');
 
@@ -60,4 +60,4 @@ const FlippingIcons = () => {
   )
 }
 
-export default FlippingIcons;
+export default CSSLogicalProperties;
