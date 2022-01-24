@@ -30,16 +30,16 @@ function RTLExample() {
 
                     <ul>
                         <li>
-                            <button data-toggle="dropdown">Dropdown</button>
+                            <button data-toggle="dropdown">قائمة</button>
                             <ul className="nav__dropdown box-shadow-1--lg">
                                 <li>
-                                    <a href="#1">Link</a>
+                                    <a href="#1">وصلة</a>
                                 </li>
                                 <li>
-                                    <a href="#1">Link</a>
+                                    <a href="#1">وصلة</a>
                                 </li>
                                 <li>
-                                    <a href="#1">Link</a>
+                                    <a href="#1">وصلة</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,7 +66,7 @@ function RTLExample() {
                     <div className="button-group">
 
                         <a href="#1" className="button button--outline">
-                        تسجيل الدخول
+                            تسجيل الدخول
                         </a>
 
                     </div>
@@ -77,21 +77,21 @@ function RTLExample() {
 
             <div class="backdrop backdrop--fixed theme-dark" style={{ '--backdrop-fixed-height': '700px' }}>
 
-                <div class="backdrop__credit">
+                <div class="backdrop__credit display-none">
                     <p>
-                        Photo by <a href="#1">Jane Doe</a> on Unsplash
+                         الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
                     </p>
                 </div>
 
                 <div className="backdrop__image">
-                <StaticImage
-                    className="opacity-50"
-                    src="../../../../images/examples/rtl-backdrop-01.jpg"
-                    alt=""
-                    placeholder="dominantColor"
-                    layout="fullWidth"
-                />
-            </div>
+                    <StaticImage
+                        className="opacity-50"
+                        src="../../../../images/examples/rtl-backdrop-01.jpg"
+                        alt=""
+                        placeholder="dominantColor"
+                        layout="fullWidth"
+                    />
+                </div>
 
                 <div class="backdrop__cover">
 

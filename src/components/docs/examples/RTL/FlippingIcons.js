@@ -19,7 +19,7 @@ const FlippingIcons = () => {
 
       <div style={exampleStyles}>
 
-        <ul className="nav nav--horizontal justify-content-center margin-bottom-3" data-react-nav>
+        <ul className="nav nav--horizontal justify-content-center margin-bottom-4" data-react-nav>
             <li>
                 <button
                     className={direction === 'ltr' ? `active` : ``}
