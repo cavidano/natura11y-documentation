@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const DocSidebar = ({ pages }) => {
 
   const activeStyle = {
-    'font-weight': 'var(--body-font-weight-bold)'
+    'fontWeight': 'var(--body-font-weight-bold)'
   }
 
   return (

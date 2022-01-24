@@ -12,7 +12,7 @@ const TableOfContents = ({ sections }) => {
 
         let elDistance;
 
-        window.addEventListener('scroll', () => {
+        const stickyTOC = () => {
 
             const winScrollY = window.scrollY;
             const elOffset = el.offsetTop;
@@ -27,13 +27,15 @@ const TableOfContents = ({ sections }) => {
             
             if (elDistance <= 0) {
                 el.firstChild.classList.add('sticky');
-
             } else {
                 el.firstChild.classList.remove('sticky');
-            }
-        
-        });
-        
+            }        
+        }
+
+        window.addEventListener('scroll', stickyTOC);
+
+        stickyTOC();
+
         new Accessibility();
 
     }, []);
