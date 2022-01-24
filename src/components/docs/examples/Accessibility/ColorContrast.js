@@ -1,25 +1,22 @@
 import React from 'react';
 
-import { StaticImage } from 'gatsby-plugin-image';
+import ColorSVG from './ColorSVG';
 
 const ColorContrast = () => {
+
     return (
         <div className="container narrow">
             
             <div className='grid grid--column-2 gap-2'>
 
-                <StaticImage
-                    src="../../../../images/color-contrast-fail.svg"
-                    alt=""
-                    placeholder="dominantColor"
-                    layout="fullWidth"
+                <ColorSVG
+                    backgroundColor="#273a5c"
+                    foregroundColor="#a93b6e"    
                 />
-                
-                <StaticImage
-                    src="../../../../images/color-contrast-pass.svg"
-                    alt=""
-                    placeholder="dominantColor"
-                    layout="fullWidth"
+
+                <ColorSVG
+                    backgroundColor="#1e2947"
+                    foregroundColor="#f2849a"    
                 />
                 
             </div>
