@@ -6,27 +6,7 @@ import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import IconLeader from '../../components/supplementary/IconLeader';
 
-import IconSprite from '../../icons/natura11y-icons-sprite.svg';
-
 const Icons = ({ data }) => {
-
-    if(typeof XMLHttpRequest !== 'undefined') {
-
-        const ajax = new XMLHttpRequest();
-        
-        const appendSprite = () => {
-            ajax.open('GET', IconSprite, true);
-            ajax.send();
-            ajax.onload = () => {
-                const div = document.createElement('div');
-                div.className = 'natura11y-icons-sprite';
-                div.innerHTML = ajax.responseText;
-                document.body.insertBefore(div, document.body.childNodes[0]);
-            }
-        }
-        
-        appendSprite();
-    }
 
     const allIcons = data.allNatura11YiconsYaml.nodes;
 

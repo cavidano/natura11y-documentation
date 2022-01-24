@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 
 import { useStaticQuery, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -47,7 +47,28 @@ import Tables from '../natura11y/modules/tables';
 
 import '../natura11y/modules/theme';
 
-function Layout({ children }) {
+import IconSprite from '../icons/natura11y-icons-sprite.svg';
+
+const Layout = ({ children }) => {
+
+  if(typeof XMLHttpRequest !== 'undefined') {
+
+    const ajax = new XMLHttpRequest();
+    
+    const appendSprite = () => {
+        ajax.open('GET', IconSprite, true);
+        ajax.send();
+        ajax.onload = () => {
+            const div = document.createElement('div');
+            div.className = 'natura11y-icons-sprite';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    }
+    
+    appendSprite();
+    
+  }
 
   useEffect(() => {
     new Accessibility();
