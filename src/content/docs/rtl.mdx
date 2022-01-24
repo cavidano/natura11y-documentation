@@ -13,7 +13,7 @@ import FlippingIcons from '../../components/docs/examples/RTL/FlippingIcons';
 
 <h2 class="h1">For the millions who read from right to left.</h2>
 
-Natura11y includes localization support for the 12 right-to-left (RTL) languages around the world:
+Natura11y includes <a href="https://developer.mozilla.org/en-US/docs/Glossary/Localization" target="_blank">localization</a> support for the 12 right-to-left (RTL) languages around the world:
 
 - Arabic
 - Aramaic
@@ -36,13 +36,13 @@ Natura11y includes localization support for the 12 right-to-left (RTL) languages
 
 ##  Direction and Language HTML Attributes
 
-There are two key HTML attributes that affect the internationalization of an HTML document. They are direction (`dir`) and language (`lang`). Both of these attributes should be present on the `<html>` tag. 
+Two key HTML attributes affect the localization of an document: direction (`dir`) and language (`lang`). Both attributes should be present on the `<html>` tag.
     
 The `dir` attribute declares the default text direction. A value of `ltr` sets a *left to right* text direction. While a value of `rtl` sets a *right to left* text direction.
 
-The `lang` attribute sets the document's default language. The value `en` sets the language to *English*.
+The `lang` attribute sets the document's default language. A value of `en` sets the language to *English*.
 
-A document written in Arabic, for example, would inclue both `dir="rtl"` and a `lang="ar"` attributes (Figure 1, line 3).
+A document written in Arabic, for example, requires both `dir="rtl"` and a `lang="ar"` attributes (Figure 1, line 3).
 
 </TextBlock>
 
@@ -72,7 +72,7 @@ A document written in Arabic, for example, would inclue both `dir="rtl"` and a `
 
 Natura11y declares all *text alignment*, *margin*, *padding*, *position*, and *border* styles using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties" target="_blank">CSS Logical Properties</a>.
 
-When the aformentioned `dir="rtl"` attribute is present on the `html` tag, all left and right directional styles flip automatically.
+With the aformentioned `dir="rtl"` attribute present on the `html` tag, all left and right directional styles flip automatically.
 
 </TextBlock>
 
