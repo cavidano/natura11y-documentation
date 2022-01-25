@@ -51,24 +51,26 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
 
-  // if(typeof XMLHttpRequest !== 'undefined') {
+  const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
 
-  //   const ajax = new XMLHttpRequest();
-    
-  //   const appendSprite = () => {
-  //       ajax.open('GET', IconSprite, true);
-  //       ajax.send();
-  //       ajax.onload = () => {
-  //           const div = document.createElement('div');
-  //           div.className = 'natura11y-icons-sprite';
-  //           div.innerHTML = ajax.responseText;
-  //           document.body.insertBefore(div, document.body.childNodes[0]);
-  //       }
-  //   }
-    
-  //   appendSprite();
-    
-  // }
+  if( !iconSpriteDiv && typeof XMLHttpRequest !== 'undefined') {
+
+      const ajax = new XMLHttpRequest();
+      
+      const appendSprite = () => {
+          ajax.open('GET', IconSprite, true);
+          ajax.send();
+          ajax.onload = () => {
+            const div = document.createElement('div');
+            div.className = 'natura11y-icons-sprite';
+            div.setAttribute('id', 'natura11y-icons-sprite-container')
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      
+      appendSprite();
+  }
 
   useEffect(() => {
     new Accessibility();

@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 import IconLeader from '../../components/supplementary/IconLeader';
 
 const Icons = ({ data }) => {
-
+    
     const allIcons = data.allNatura11YiconsYaml.nodes;
 
     const [displayedIcons, setDisplayedIcons] = useState(allIcons);
