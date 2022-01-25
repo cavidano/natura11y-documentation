@@ -91,7 +91,7 @@ const ExampleWithContent = () => {
                    
                     <div className="container narrow margin-y-3">
 
-                        <table class="table table--edge">
+                        <table className="table table--edge">
 
                             <caption>
                                <em>Top 5 globe artichoke producers in 2017</em>

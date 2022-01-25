@@ -75,9 +75,9 @@ function RTLExample() {
 
             </div>
 
-            <div class="backdrop backdrop--fixed theme-dark" style={{ '--backdrop-fixed-height': '700px' }}>
+            <div className="backdrop backdrop--fixed theme-dark" style={{ '--backdrop-fixed-height': '700px' }}>
 
-                <div class="backdrop__credit display-none">
+                <div className="backdrop__credit display-none">
                     <p>
                          الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
                     </p>
@@ -93,11 +93,11 @@ function RTLExample() {
                     />
                 </div>
 
-                <div class="backdrop__cover">
+                <div className="backdrop__cover">
 
-                    <div class="narrow margin-2 margin-4--md margin-5--lg width-50--lg">
+                    <div className="narrow margin-2 margin-4--md margin-5--lg width-50--lg">
 
-                        <div class="text-shadow margin-bottom-4">
+                        <div className="text-shadow margin-bottom-4">
                             <h1>
                                 حول سلطعون الناسك
                             </h1>
@@ -106,16 +106,16 @@ function RTLExample() {
                             </p>
                         </div>
 
-                        <div class="grid grid--column-2--md gap-2">
+                        <div className="grid grid--column-2--md gap-2">
 
 
-                            <a class="button button--outline width-100" href="#1">
+                            <a className="button button--outline width-100" href="#1">
                                 انواع من
                             </a>
 
-                            <a class="button button--has-icon--disperse theme-secondary width-100 box-shadow-1" href="#1">
-                                <span class="button__text">المزيد على ويكيبيديا</span>
-                                <span class="icon icon-arrow-right"></span>
+                            <a className="button button--has-icon--disperse theme-secondary width-100 box-shadow-1" href="#1">
+                                <span className="button__text">المزيد على ويكيبيديا</span>
+                                <span className="icon icon-arrow-right"></span>
                             </a>
 
                         </div>

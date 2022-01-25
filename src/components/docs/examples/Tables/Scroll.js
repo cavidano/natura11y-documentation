@@ -2,7 +2,7 @@ import React from 'react';
 
 const Scroll = () => {
     return (
-        <div class="container medium margin-y-4">
+        <div className="container medium margin-y-4">
 
             <div className="table-scroll">
 

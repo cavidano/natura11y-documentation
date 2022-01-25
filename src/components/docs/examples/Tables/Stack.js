@@ -5,7 +5,7 @@ const Stack = (props) => {
     const { tableClass } = props;
 
     return (
-        <div class="margin-y-3">
+        <div className="margin-y-3">
 
             <table className={`table ${tableClass ? tableClass : ''}`}>
 

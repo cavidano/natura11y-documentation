@@ -9,9 +9,9 @@ const TextAndIconButtons = (props) => {
 
             {TextAndIconDisperse ? (
 
-                <a class="button button--has-icon--disperse theme-dark" href="#1">
-                    <span class="button__text">Button</span>
-                    <span class="icon icon-arrow-right"></span>
+                <a className="button button--has-icon--disperse theme-dark" href="#1">
+                    <span className="button__text">Button</span>
+                    <span className="icon icon-arrow-right"></span>
                 </a>
 
             ) : (
