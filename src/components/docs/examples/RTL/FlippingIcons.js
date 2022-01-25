@@ -47,8 +47,8 @@ const FlippingIcons = () => {
 
                 <IconItem />
                 <IconItem iconName="double-chevron-left" />
-                <IconItem iconName="confirm" />
                 <IconItem iconName="checkbox-checked" />
+                <IconItem iconName="confirm" />
 
             </ul>
 

@@ -4,18 +4,29 @@ const IconItem = (props) => {
 
     const { iconName } = props;
 
+    const iconTitleWords = iconName.replace(/-/g, ' ').split(' ');
+    
+    let iconTitleArray = [];
+    
+    iconTitleWords.map((word) => {
+        word = word[0].toUpperCase() + word.substr(1);
+        iconTitleArray.push(word);
+    });
+
+    const iconTitle = iconTitleArray.join(' ');
+    
     return (
         <li className="flex-row align-items-center overflow-hidden border">
             <div className="padding-2 border-right">
                 <span
                     className={`icon icon-${iconName}`}
-                    style={{ '--icon-size': '2em' }}>    
+                    style={{ '--icon-size': '1.75em' }}>    
                 </span>
             </div>
             <div className="padding-2">                
-                <div className="font-size-md">
-                    <p><code>.icon-{iconName}</code></p>
-                </div>
+                <p className="font-size-md">
+                    {iconTitle}
+                </p>
             </div>
         </li>
     );
