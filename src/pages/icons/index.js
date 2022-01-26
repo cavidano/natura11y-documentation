@@ -36,12 +36,12 @@ const Icons = ({ data }) => {
 
             <div className="container medium">
 
-                <div class="form-entry margin-y-4">
+                <div className="form-entry margin-y-4">
 
-                    <div class="form-entry__field">
+                    <div className="form-entry__field">
 
-                        <span class="form-entry__field__input">
-                            <span class="icon icon-search opacity-50"></span>
+                        <span className="form-entry__field__input">
+                            <span className="icon icon-search opacity-50"></span>
                             <input
                                 type="text"
                                 name="natura11y-icon-search"
@@ -57,14 +57,14 @@ const Icons = ({ data }) => {
 
                 <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center  margin-y-4" id="natura11yIconGrid">
 
-                    {displayedIcons.map(icon => {
+                    {displayedIcons.map((icon, index) => {
 
                         let name = icon.className;
                         let tags = icon.tags;
                         let svg = icon.svg
 
                         return (
-                            <Link to={`/icons/${name}`}>
+                            <Link to={`/icons/${name}`} key={`${icon}_${index}`}>
 
                                 <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
                                     <svg className="icon">

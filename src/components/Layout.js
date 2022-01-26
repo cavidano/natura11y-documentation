@@ -51,9 +51,9 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
 
-  const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
+  // const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
 
-  if( !iconSpriteDiv && typeof XMLHttpRequest !== 'undefined') {
+  if( typeof XMLHttpRequest !== 'undefined') {
 
       const ajax = new XMLHttpRequest();
       
