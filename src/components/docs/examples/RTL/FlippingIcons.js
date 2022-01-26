@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 
-import IconItem from './IconItem';
+import IconRow from './IconRow';
 
 import { exampleStyles } from '../../../../mdxVars';
 
@@ -45,10 +45,10 @@ const FlippingIcons = () => {
 
             <ul className="grid gap-1 text-align-center">
 
-                <IconItem />
-                <IconItem iconName="double-chevron-left" />
-                <IconItem iconName="checkbox-checked" />
-                <IconItem iconName="confirm" />
+                <IconRow />
+                <IconRow iconName="double-chevron-left" />
+                <IconRow iconName="checkbox-checked" />
+                <IconRow iconName="confirm" />
 
             </ul>
 
