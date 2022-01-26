@@ -51,9 +51,23 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
 
-  // const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
+  useEffect(() => {
 
-  if( typeof XMLHttpRequest !== 'undefined') {
+    new Accessibility();
+    new Accordion();
+    new Alerts();
+    new Buttons();
+    new Collapse();
+    new Document();
+    new Forms();
+    new Modal();
+    new Navigation();
+    new Tabs();
+    new Tables();
+
+    const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
+
+    if( !iconSpriteDiv) {
 
       const ajax = new XMLHttpRequest();
       
@@ -70,20 +84,8 @@ const Layout = ({ children }) => {
       }
       
       appendSprite();
-  }
+    }
 
-  useEffect(() => {
-    new Accessibility();
-    new Accordion();
-    new Alerts();
-    new Buttons();
-    new Collapse();
-    new Document();
-    new Forms();
-    new Modal();
-    new Navigation();
-    new Tabs();
-    new Tables();
   }, []);
 
   const data = useStaticQuery(graphql`
