@@ -16,7 +16,8 @@ const ColorContrast = () => {
 
                 <ColorSVG
                     backgroundColor="#1e2947"
-                    foregroundColor="#f2849a"    
+                    foregroundColor="#f2849a"
+                    passContrast={true} 
                 />
                 
             </div>
