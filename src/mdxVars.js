@@ -26,8 +26,8 @@ export const cdnJS = `https://cdn.jsdelivr.net/npm/natura11y/dist/js/natura11y.j
 // B. Placeholder Images
 //////////////////////////////////////////////
 
-export const codeImgPlaceholder = `<img src="https://via.placeholder.com/800x400" alt="Placeholder">`;
-export const codeImgPlaceholderBackdrop = `<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">`;
+export const codeImgPlaceholder = `<img src="https://via.placeholder.com/800x400" alt="Placeholder" />`;
+export const codeImgPlaceholderBackdrop = `<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder" />`;
 
 //////////////////////////////////////////////
 // C. Example Styles

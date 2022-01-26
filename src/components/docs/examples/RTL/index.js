@@ -16,7 +16,7 @@ function RTLExample() {
     );
 
     return (
-        <div className='overflow-hidden arabic-font' dir='rtl' lang='ar'>
+        <div className='overflow-hidden arabic-font theme-light' dir='rtl' lang='ar'>
                 
             <div className="primary-nav--inline--lg box-shadow-1">
 
@@ -30,18 +30,7 @@ function RTLExample() {
 
                     <ul>
                         <li>
-                            <button data-toggle="dropdown">قائمة</button>
-                            <ul className="nav__dropdown box-shadow-1--lg">
-                                <li>
-                                    <a href="#1">وصلة</a>
-                                </li>
-                                <li>
-                                    <a href="#1">وصلة</a>
-                                </li>
-                                <li>
-                                    <a href="#1">وصلة</a>
-                                </li>
-                            </ul>
+                            <a href="#1">وصلة</a>
                         </li>
                         <li>
                             <a href="#1">وصلة</a>
@@ -75,7 +64,27 @@ function RTLExample() {
 
             </div>
 
-            <div className="backdrop backdrop--fixed theme-dark" style={{ '--backdrop-fixed-height': '700px' }}>
+            <nav className="container padding-y-1 theme-dark">
+
+                <ul className="nav-breadcrumb">
+                    <li>
+                        <a className="button button--icon-only" href="#1">
+                            <span className="icon icon-home" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#1">معلومات عنا</a>
+                    </li>
+                    <li className="text-color-secondary">
+                        خدمات
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div
+                className="backdrop backdrop--fixed theme-dark"
+                style={{ '--backdrop-fixed-height': '600px' }}>
 
                 <div className="backdrop__credit display-none">
                     <p>
@@ -83,7 +92,7 @@ function RTLExample() {
                     </p>
                 </div>
 
-                <div className="backdrop__image">
+                <div className="backdrop__image gradient-veneer-left">
                     <StaticImage
                         className="opacity-50"
                         src="../../../../images/examples/rtl-backdrop-01.jpg"
@@ -95,36 +104,133 @@ function RTLExample() {
 
                 <div className="backdrop__cover">
 
-                    <div className="narrow margin-2 margin-4--md margin-5--lg width-50--lg">
+                    <div className="padding-x-3 margin-y-4 width-50--lg">
 
                         <div className="text-shadow margin-bottom-4">
                             <h1>
                                 حول سلطعون الناسك
                             </h1>
                             <p className='font-size-lg'>
-                                هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء محكم. تمتلك معظم الأنواع الفرعية من السرطانات الناسك معدة ناعمة ومنحنية ولولبية ، على عكس معدة الحجر الجيري لمعظم القشريات.
+                                هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء محكم. تمتلك معظم الأنواع الفرعية من السرطانات الناسك معدة ناعمة ومنحنية ولولبية ، على عكس معدة الحجر الجيري لمعظم القشريات.
                             </p>
                         </div>
 
-                        <div className="grid grid--column-2--md gap-2">
-
-
-                            <a className="button button--outline width-100" href="#1">
-                                انواع من
-                            </a>
-
-                            <a className="button button--has-icon--disperse theme-secondary width-100 box-shadow-1" href="#1">
-                                <span className="button__text">المزيد على ويكيبيديا</span>
-                                <span className="icon icon-arrow-right"></span>
-                            </a>
-
-                        </div>
+                        <a className="button button--has-icon theme-secondary box-shadow-1 font-size-sm" href="#1">
+                            <span className="button__text">المزيد على ويكيبيديا</span>
+                            <span className="icon icon-arrow-right"></span>
+                        </a>
 
                     </div>
 
                 </div>
 
             </div>
+
+            <article className="article--column-2">
+
+                <aside className="article__sidebar">
+
+                    <nav>
+
+                        <ul className="nav nav--divider position-sticky-top margin-y-3">
+                            <li>
+                                <a href="#1">وصلة</a>
+                            </li>
+                            <li>
+                                <a href="#1">الوصف البيولوجي</a>
+                            </li>
+                            <li>
+                                <a href="#1">التنمية والتكاثر</a>
+                            </li>
+                            <li>
+                                <a href="#1">تصنيف</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+
+                </aside>
+
+
+            <div className="article__body border-left">
+
+                <div className="container narrow margin-y-4">
+
+                    <h2>
+                        الوصف البيولوجي
+                    </h2>
+
+                    <p>
+                    أنواع السلطعون الهرمية لديها بطنيات طويلة منحنية حلزونية، وهي لينة، على عكس البطن الصلب المكلس الذي يرى في القشريات ذات الصلة. فالبطن الهش محمي من الحيوانات المفترسة بمصب بحر فارغ منقذ يحمله سرطان القشرة، بحيث يمكن لجسمه بكامله ان ينسحب.
+                    </p>
+
+                    <h2>
+                        بيئة السرطانات الناسك
+                    </h2>
+
+                    <p>
+                        يمكن تقسيم السرطانات الناسك إلى مجموعتين:
+                    </p>
+
+                    <p>
+                        المجموعة الأولى هي السرطانات المائية الناسك (كلها تقريبا بحرية ، مع نوع واحد في المياه العذبة). تقضي هذه السرطانات معظم حياتها تحت الماء كحيوانات مائية ، تعيش في أعماق المياه المالحة التي تتراوح من الشعاب المرجانية الضحلة والشواطئ إلى قاع البحار العميقة ، ونادرًا ما تترك المياه للأرض. كحيوانات أليفة ، العديد من الأنواع البحرية من السرطانات الناسك شائعة في تجارة الأحواض البحرية. يتم الاحتفاظ بها عادة في أحواض أسماك الشعاب المرجانية. يتنفسون من خلال الخياشيم ولكن لا يتعين عليهم حمل الماء حولهم للقيام بذلك ، ويمكن لمعظمهم البقاء على قيد الحياة لفترة وجيزة خارج الماء طالما أن الخياشيم رطبة. ومع ذلك ، فإن هذه القدرة ليست متطورة مثل سرطان البحر الناسك الداخلي.
+                    </p>
+
+                    <p>
+                        المجموعة الثانية ، وهي سرطان البحر الناسك ، تقضي معظم حياتها على الأرض كأنواع برية في المناطق الاستوائية ، على الرغم من أنها تتطلب الوصول إلى كل من المياه العذبة والمياه المالحة للحفاظ على رطوبة الخياشيم أو رطبها للبقاء على قيد الحياة والتكاثر.
+                    </p>
+
+                </div>
+
+                <div className="container narrow margin-y-3">
+
+                    <table className="table table--edge">
+
+                        <thead>
+                            <tr>
+                                <th colSpan={2}>
+                                    <strong>
+                                            التصنيف العلمي
+                                    </strong>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td className="font-weight-bold">المملكة</td>
+                                <td>حيوان</td>
+                            </tr>
+                            <tr>
+                                <td className="font-weight-bold">حيوان</td>
+                                <td>مفصليات الأرجل</td>
+                            </tr>
+                            <tr>
+                                <td className="font-weight-bold">الشعيبة</td>
+                                <td>قشريات</td>
+                            </tr>
+                            <tr>
+                                <td className="font-weight-bold">الطائفة</td>
+                                <td>لينات الدرقة</td>
+                            </tr>
+                            <tr>
+                                <td className="font-weight-bold">الرتبة</td>
+                                <td>عشاريات الأرجل</td>
+                            </tr>
+                            <tr>
+                                <td className="font-weight-bold">الرتيبة</td>
+                                <td>متعددات الحمل</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            </article>
 
         </div>
     );

@@ -75,14 +75,14 @@ In this file:
         
         padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
         
-        text-align: left;
+        text-align: start;
     
         &::before {
             position: absolute;
             content: "";
-            top: 0;
-            left: 0;
-            bottom: 0;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inset-block-end: 0;
 
             width: var(--tab-accent-bar-size);
             

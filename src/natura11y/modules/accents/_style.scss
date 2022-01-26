@@ -143,8 +143,8 @@ In this file:
         display: none;
     }
 
-    &[class*="-left"], 
-    &[class*="-right"] {
+    &[class*="-left"]::after, 
+    &[class*="-right"]::after {
         [dir="rtl"] & {
             transform: scaleX(-1);
         }
