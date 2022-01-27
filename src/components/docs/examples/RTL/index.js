@@ -16,7 +16,7 @@ const RTLExample = () => {
     );
 
     return (
-        <div className='overflow-hidden arabic-font theme-light' dir='rtl' lang='ar'>
+        <div className="overflow-hidden arabic-font theme-light" dir="rtl" lang="ar">
                 
             <div className="primary-nav--inline--lg box-shadow-1">
 
@@ -162,11 +162,11 @@ const RTLExample = () => {
                         </h2>
 
                         <p>
-                        أنواع السلطعون الهرمية لديها بطنيات طويلة منحنية حلزونية، وهي لينة، على عكس البطن الصلب المكلس الذي يرى في القشريات ذات الصلة. فالبطن الهش محمي من الحيوانات المفترسة بمصب بحر فارغ منقذ يحمله سرطان القشرة، بحيث يمكن لجسمه بكامله ان ينسحب.
+                            تمتلك معظم الأنواع بطونًا طويلة منحنية حلزونيًا ، وهي ناعمة ، على عكس البطون الصلبة المتكلسة التي تظهر في القشريات ذات الصلة. يتم حماية البطن الضعيفة من الحيوانات المفترسة بواسطة صدف فارغ تم إنقاذه يحمله سلطعون الناسك ، والذي يمكن أن يتراجع جسمه بالكامل. في أغلب الأحيان ، تستخدم السرطانات الناسك أصداف حلزون البحر. يتم تكييف طرف بطن السلطعون الناسك ليغلق بقوة على عمود قوقعة الحلزون.                        
                         </p>
 
                         <h2>
-                            بيئة السرطانات الناسك
+                            بيئة السرطان الناسك
                         </h2>
 
                         <p>
@@ -182,6 +182,7 @@ const RTLExample = () => {
                         </p>
 
                     </div>
+
 
                     <div className="container narrow margin-y-3">
 
@@ -227,6 +228,76 @@ const RTLExample = () => {
                         </table>
 
                     </div>
+
+                    <div className="container narrow margin-y-4">
+
+                        <h3>
+                            الوصف البيولوجي
+                        </h3>
+
+                        <p>
+                            السرطانات الناسك هي جزء من عائلة القشريات. تشكل القشريات فئة كبيرة ومتنوعة من مفصليات الأرجل والتي تشمل حيوانات مثل:                        
+                        </p>
+                        <ul>
+                            <li>
+                            سلطعون
+                            </li>
+                            <li>
+                            سرطعون البحر
+                            </li>
+                            <li>
+                            جراد البحر
+                            </li>
+                            <li>
+                            جمبري
+                            </li>
+                            <li>
+                            الكريل
+                            </li>
+                            <li>
+                            قريدس
+                            </li>
+                            <li>
+                            وودليس
+                            </li>
+                            <li>
+                            البرنقيل
+                            </li>
+                            <li>
+                            مجدافيات
+                            </li>
+                            <li>
+                            السرعوف الروبيان
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <footer className="container narrow margin-y-4">
+
+                        <hr className="margin-y-2" />
+                    
+                        <div className="button-group justify-content-end align-items-center font-size-sm">
+
+                            <span className='margin-right-2'>
+                            شارك مع الاصدقاء:
+                            </span>
+
+                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
+                                <span className="icon icon-mail" aria-hidden="true"></span>
+                            </a>
+
+                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
+                                <span className="icon icon-facebook" aria-hidden="true"></span>
+                            </a>
+
+                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
+                                <span className="icon icon-twitter" aria-hidden="true"></span>
+                            </a>
+
+                        </div>
+                        
+                    </footer>
 
                 </div>
 
