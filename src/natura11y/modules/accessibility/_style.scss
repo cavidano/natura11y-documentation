@@ -109,3 +109,7 @@ button {
         --focus-outline-distance: calc(var(--default-border-width) * 4);
     }
 }
+
+.cool {
+    @extend %hover-focus;
+}

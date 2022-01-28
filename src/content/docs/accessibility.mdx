@@ -7,8 +7,7 @@ bannerImage: ../../images/banner/accessibility.jpg
 ---
 
 import ColorContrast from '../../components/docs/examples/Accessibility/ColorContrast';
-
-<SproutingAlert />
+import FocusIndicator from '../../components/docs/examples/Accessibility/FocusIndicator';
 
 <TextBlock>
 
@@ -26,9 +25,9 @@ On this page, learn about the high-level accessibility features built into Natur
 
 ## Accessible HTML
 
-The first practical step towards accessibility is to create valid HTML, which better provides a consistent experience across all browsers and assistive technologies. 
+An easy way to promote accessibility is to create valid HTML. This helps provide a consistent experience across browsers and assistive technologies. 
 
-Natura11y's premade <a href="/examples">examples</a> have been validated through the <a href="https://validator.w3.org/nu/">W3C Nu Html Checker</a>. It is a good idea to periodically check your work here, too at different stages of development. 
+Natura11y's premade <a href="/comps">comps</a> have been validated through the <a href="https://validator.w3.org/nu/">W3C Nu Html Checker</a>. It's a good idea to periodically check your work here, too at different stages of development. 
 
 </TextBlock>
 
@@ -47,7 +46,7 @@ with <a href="https://www.w3.org/WAI/WCAG21/quickref/#use-of-color">WCAG Level A
 
 <TextBlock>
 
-In the examples above, the dark text on green passes readability with a color contrast ratio of <em>7.14</em>, while the white text on green fails with a color contrast ratio of <em>2.09</em>.
+In the examples above, the dark text on green passes readability with a color contrast ratio of <em>5.84</em>, while the white text on green fails with a color contrast ratio of <em>1.91</em>.
 
 Learn how our <a href="/docs/color">color system</a> helps you keep your accessible colors consistent throughout your layouts.
 
@@ -59,20 +58,29 @@ Learn how our <a href="/docs/color">color system</a> helps you keep your accessi
 
 ## Aria
 
-Accessible Rich Internet Applications (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">WAI-ARIA</a>) roles are present throughout Natura11y's components. Some are added with Natura11y's Javascript, while others are present within the example markup. Still others you will need to add yourself, as needed. 
+Accessible Rich Internet Applications (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">WAI-ARIA</a>) roles, states, and properties are present throughout Natura11y's components. Some are added with javacript, while others are present within the example markup. Still others you will need to add yourself, as needed. 
 
 </TextBlock>
 
 <FigureBlock
     figureNumber="1"
     figureWidth="narrow"
+    codeToolbar={false}
     codeExample={(`
-        <a class="button" href="#1">
-            Button
-        </a> \n
-        <button class="button">
-            Button
-        </button>
+        <!-- Aria Role -->
+        <div class="alert" role="alert">
+            <!-- alert content -->
+        </div> \n
+        <!-- Aria State -->
+        <button aria-expanded="false">
+            Accordion Button
+        </button> \n
+        <!-- Aria Property -->
+        <div
+            class="modal__content"
+            aria-labelledby="modal-title">
+            <!-- modal content -->
+        </div>
     `)}
 />
 
@@ -82,6 +90,8 @@ Accessible Rich Internet Applications (<a href="https://developer.mozilla.org/en
 
 ## Focus Management
 
-Natura11y provides consistent and noticable focus indicators for those who navigate with the keyboard.
+Natura11y provides consistent and noticable focus indicators for all actionable element in the DOM. This is critical for those who navigate with the keyboard.
 
 </TextBlock>
+
+<FocusIndicator />
