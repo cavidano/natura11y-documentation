@@ -106,7 +106,9 @@ const Layout = ({ children }) => {
   return (
     <div className="Layout">
       
-      <Helmet>
+      <Helmet htmlAttributes={{
+        lang: 'en',
+      }}>
         <title>{title}</title>
       </Helmet>
 

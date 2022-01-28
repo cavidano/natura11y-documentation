@@ -32,6 +32,10 @@ const Footer = ({ version, title }) => {
           data-logo="brand"
           target="_blank">
 
+          <span className="screen-reader-only">
+            Visit Carl Avidano's Website
+          </span>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="150"

@@ -84,12 +84,15 @@ const Home = () => {
                   <h2>
                     It's time to evolve.
                   </h2>
+
                   <p>
                     With each passing day, designers and developers face increasing expectations. To be successful, we're required to master an ever widening landscape of technologies.
                   </p>
+                  
                   <p>
                     Natura11y aims to make life a little easier.
                   </p>
+
               </div>
 
               <div className="container wide">
@@ -117,7 +120,7 @@ const Home = () => {
                                   </h3>
 
                                   <p className="text-shadow">
-                                      Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
+                                    Built-in accessibility features and best practices help you be more inclusive with less effort.
                                   </p>
                                   
                                   <Link
@@ -154,8 +157,7 @@ const Home = () => {
                                   </h3>
 
                                   <p className="text-shadow">
-                                      Effortlessly apply color wherever you wish while keeping an accessible contrast
-                                      ratio throughout your layouts.
+                                    Simple utility classes apply distinctive color themes on entire pages and specific elements in a uniform way.
                                   </p>
                                   
                                   <Link
@@ -164,7 +166,6 @@ const Home = () => {
                                       Color
                                   </Link>
                                   
-
                               </div>
 
                           </div>
@@ -192,7 +193,7 @@ const Home = () => {
                                   </h3>
 
                                   <p className="text-shadow">
-                                      Style declarations use CSS Variables. You can redefine styles without the need for compiling Sass.  
+                                    Content delivered styles use CSS Variables. Redefine styles a number of ways without compiling Sass.
                                   </p>
                                   
                                   <Link
@@ -201,7 +202,6 @@ const Home = () => {
                                       Customization
                                   </Link>
                                   
-
                               </div>
 
                           </div>
