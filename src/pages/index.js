@@ -33,7 +33,7 @@ const Home = () => {
 
         <div className="backdrop__image">
           <StaticImage
-            className="opacity-40"
+            className="opacity-30"
             src="../images/backdrop-introduction.jpg"
             alt="Bees"
             placeholder="dominantColor"
@@ -52,8 +52,7 @@ const Home = () => {
             <div className="narrow margin-y-3">
               
               <p className="font-size-lg text-shadow">
-                Natura11y is an open-source design system. With it, create
-                elegant, accessible websites.
+                Natura11y is an open source design system. It's simple for green developers while robust and scalable for seasoned ones.
               </p>
 
               <div className="grid grid--column-2--sm gap-3">
