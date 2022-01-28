@@ -52,7 +52,7 @@ const Home = () => {
             <div className="narrow margin-y-3">
               
               <p className="font-size-lg text-shadow">
-                Natura11y is an open source design system. It's simple for green developers while robust and scalable for seasoned ones.
+                Natura11y is an open source design system. It's made simple for green developers while robust and scalable for seasoned ones.
               </p>
 
               <div className="grid grid--column-2--sm gap-3">
@@ -80,11 +80,15 @@ const Home = () => {
           <div className="margin-y-5">
           
               <div className="container narrow margin-bottom-4">
+
                   <h2>
-                      Evolution demands adaptation.
+                    It's time to evolve.
                   </h2>
                   <p>
-                      Natura11y helps you adapt to today's ever-widening landscape of UX tools and processes.
+                    With each passing day, designers and developers face increasing expectations. To be successful, we're required to master an ever widening landscape of technologies.
+                  </p>
+                  <p>
+                    Natura11y aims to make life a little easier.
                   </p>
               </div>
 
