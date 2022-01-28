@@ -11,7 +11,6 @@ const FocusIndicator = () => {
             <div className="grid grid--column-3 gap-1">
                 <FocusSVG focusRing={true} />
                 <FocusSVG />
-                <FocusSVG />
             </div>
 
         </div>
