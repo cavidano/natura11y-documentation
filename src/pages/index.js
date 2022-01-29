@@ -31,6 +31,16 @@ const Home = () => {
 
       <section className="backdrop backdrop--fixed theme-dark height-100vh" id="introduction">
 
+      <div class="backdrop__credit">
+          <p>
+            Photo by&nbsp;
+            <a href="https://unsplash.com/@tup_s" target="_blank">
+              Damien Tupinier
+            </a>&nbsp;
+            on Unsplash
+          </p>
+      </div>
+
         <div className="backdrop__image">
           <StaticImage
             className="opacity-30"
@@ -52,7 +62,7 @@ const Home = () => {
             <div className="narrow margin-y-3">
               
               <p className="font-size-lg text-shadow">
-                Natura11y is an open source, front-end design system. It's simple to use for green developers and robust for seasoned ones.
+                Natura11y is an open source, front-end toolkit. It's easy to use for developers at different skill levels. Natura11y is ideal for projects of any size.
               </p>
 
               <div className="grid grid--column-2--sm gap-3">
@@ -117,14 +127,14 @@ const Home = () => {
 
                       <div className="backdrop__cover">
 
-                          <div className="container narrow margin-y-4">
+                          <div className="container narrow margin-y-3">
 
                               <h3 className="text-shadow--md text-shadow">
                                   Accessibility
                               </h3>
 
                               <p className="text-shadow">
-                                Built-in accessibility features and best practices help you be more inclusive with less effort.
+                                Built-in accessibility features and guidance help you be more accomodating with less effort.
                               </p>
                               
                               <Link
@@ -164,7 +174,7 @@ const Home = () => {
                               </h3>
 
                               <p className="text-shadow">
-                                Simple utility classes apply sweeping color themes on entire pages and specific elements in a uniform way.
+                                Apply sweeping color themes to pages and components. You can also add single colors to specific elements. 
                               </p>
                               
                               <Link
@@ -244,7 +254,7 @@ const Home = () => {
                                 </h3>
 
                                 <p className="text-shadow">
-                                  CSS logical properties and mirrored directional icons provide needed support for right-to-left languages.
+                                  CSS logical properties and flipped directional icons provide needed support for right-to-left languages.
                                 </p>
                                 
                                 <Link
