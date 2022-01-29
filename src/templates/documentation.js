@@ -152,20 +152,20 @@ query queryPageData($slug: String, $title: String) {
             bannerCreditName
             bannerCreditHandle
             bannerImage {
-                childImageSharp {
-                    gatsbyImageData
-                }
+              childImageSharp {
+                  gatsbyImageData
+              }
             }
         }
     }
     relatedCPs: allNatura11YcustompropertiesYaml(filter: {type: { eq: $title  }}) {
       nodes {
           customProperties {
-              name
-              value
-              description {
-                  body
-              }
+            name
+            value
+            description {
+                body
+            }
           }
           type
           scope

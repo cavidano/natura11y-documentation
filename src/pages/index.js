@@ -281,7 +281,7 @@ const Home = () => {
           </div>
 
       </section>
-    
+
     </Layout>
   );
 }
