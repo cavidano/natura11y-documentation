@@ -11,40 +11,48 @@ import { cdnCSS, cdnJS } from '../../mdxVars';
 <TextBlock>
 
 <h2 className="h1">
-    Make beautiful, accessible websites.
+    Create beautiful web experiences.
 </h2>
 
-Natura11y is an open-source design system for building modern websites. The framework aims to remove technical barriers for those with limited resources. It provides a wealth of customizable components accessible via <a href="#1">CDN</a>.
+<h2 className="h1 display-none">
+    Complexity is the the enemy of productivity.
+</h2>
 
-At the same time, the framework is ideal for seasoned developers and complex projects.
+Natura11y is an open source front-end toolkit. It removes technical barriers for those with **limited time or resources**. Natura11y's uncomplicated codebase makes it ideal for real-world, time-sensitive projects. 
 
-<div className="grid grid--column-3--md gap-1 text-color-link font-size-md">
-    <a className="button button--outline button--has-icon width-100"
-        href="#quickStart">
-        <span className="icon icon-arrow-down button__icon" aria-hidden="true"></span>
-        <span className="button__text">Quick Start</span>
-    </a>
-    <a className="button button--outline button--has-icon width-100"
-        href="https://github.com/cavidano/natura11y" target="_blank">
-        <span className="icon icon-github button__icon" aria-hidden="true"></span>
-        <span className="button__text">GitHub</span>
-    </a>
-    <a className="button button--outline button--has-icon width-100"
-        href="https://www.npmjs.com/package/natura11y" target="_blank">
-        <span className="icon icon-npm button__icon" aria-hidden="true"></span>
-        <span className="button__text">NPM</span>
-    </a>
-</div>
+<ul>
+    <li>
+        <p>        
+            <a href="#quick-start">
+                Quick Start (CDN)
+            </a>
+        </p>
+    </li>
+    <li>
+        <p>        
+            <a href="https://github.com/cavidano/natura11y" target="_blank">
+                GitHub
+            </a>
+        </p>
+    </li>
+    <li>
+        <p>        
+            <a href="https://www.npmjs.com/package/natura11y" target="_blank">
+                NPM
+            </a>
+        </p>
+    </li>
+</ul>
 
 </TextBlock>
 
-<Divider id="framework-at-a-glance" />
+<Divider id="files-at-a-glance" />
 
 <TextBlock>
 
-## Framework at a Glance
+## Files at a Glance
 
-Natura11y is built with modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the general folder and file tree that makes up the framework proper:
+Compared to other front-end frameworks, Natura11y's source code is diminutive. **Less code equals less technical debt**. Figure 1 below depicts the overall folders and files that make up Natura11y proper:
 
 </TextBlock>
 
@@ -53,7 +61,7 @@ Natura11y is built with modular CSS (SASS) and JavaScript (es6+). Figure 1 (bell
     figureWidth="narrow"
     codeLanguage="treeview"
     codeToolbar={false}
-    highlightedLines="4,6,8"
+    highlightedLines="4,6,8,9-11"
     codeExample={(`
     natura11y/
     ├── dist/
@@ -72,13 +80,15 @@ Natura11y is built with modular CSS (SASS) and JavaScript (es6+). Figure 1 (bell
     `)}
 />
 
+
+
 <TextBlock>
 
-The **src/modules/** <a href="https://github.com/cavidano/natura11y/tree/main/src/modules" target="_blank">directory</a> (Figure 1, line 8) contains the framework *modules*. Each *module* (e.g., *button*) is a directory containing two files: **_style.scss** and **index.js**.
+Notice the **/src/modules** <a href="https://github.com/cavidano/natura11y/tree/main/src/modules" target="_blank">directory</a> shown above in Figure 1, line 8. It contains Natura11y's *modules*. Each *module* (e.g., *accordion*) is a directory that contains two files: **_style.scss** and **index.js**. In this way, styles (CSS) and functionality (JS) reside together for each module.
 
-We use a module bundler to process all modules into a single CSS file, and a single JavaScript file. This helps maintain (and future-proof) the framework while accounting for out-of-date browsers. Figure 1 highlights these files: **/dist/css/natura11y.css** (line 4), **dist/js/natura11y.js**/ (line 6).
+Webpack bundles all modules into a single CSS file, and a single JavaScript file. Figure 1, above, highlights these files: **/dist/css/natura11y.css** on line 4, and **/dist/js/natura11y.js** on line 6.
 
-These files are two of the three required dependencies of the framework. The third dependency is for icons. Follow our *Quick Start* instructions for including these dependencies (via CDN).
+These files are two of the three dependencies required to use Natura11y. The third dependency is for icons. Follow our *Quick Start* instructions for including these dependencies (via CDN).
 
 </TextBlock>
 

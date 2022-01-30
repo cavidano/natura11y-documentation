@@ -11,6 +11,8 @@
 
  :root {
 	 --code-example-line-height: 1.75;
+	 --code-color-default: hsla(0, 0%, 100%, 0.9);
+	 --code-color-comment: hsla(0, 0%, 100%, 0.5)
  }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
@@ -28,7 +30,7 @@ figure .code-toolbar + figcaption {
 code[class*='language-'],
 pre[class*='language-'] {
 	background-color: none;
-	color: #ccc;
+	color: var(--code-color-default);
 
 	font-family: var(--code-font-family);
 	font-size: var(--font-size-md);
@@ -111,7 +113,7 @@ p > code::before {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: hsla(200, 75%, 90%, 0.5);
+	color: var(--code-color-comment);
 }
 
 .token.punctuation {
@@ -366,18 +368,18 @@ pre[class*='language-'].line-numbers > code {
 
 .token.treeview-part .line-h:before,
 .token.treeview-part .line-v:before {
-	border-left: 1px solid #ccc;
+	border-left: 1px solid var(--code-color-comment);
 }
 
 .token.treeview-part .line-v-last:before {
 	height: 50%;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-left: 1px solid var(--code-color-comment);
+	border-bottom: 1px solid var(--code-color-comment);
 }
 
 .token.treeview-part .line-h:after {
 	height: 50%;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--code-color-comment);
 }
 
 .token.treeview-part .entry-name {
@@ -417,15 +419,18 @@ pre[class*='language-'].line-numbers > code {
 }
 
 .token.treeview-part .entry-name:before {
-	content: '\ea01';
+	content: '\ea02';
 	font-family: 'PrismTreeview';
 	font-style: inherit;
 	font-size: 95%;
+	line-height: 1;
+	line-height: calc(var(--code-example-line-height) * .75) ;
 	vertical-align: baseline;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	width: 2.5ex;
+	margin-inline-end: 1em;
 	display: inline-block;
+	/* background-color: red; */
 }
 
 .token.treeview-part .entry-name.dir:before {
