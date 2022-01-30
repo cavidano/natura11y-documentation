@@ -36,7 +36,7 @@ const CodeBlock = (props) => {
     const code = nw.normalize(codeExample);
 
     return (
-        <pre
+        <pre 
             data-line={highlightedLines}
             className={codeToolbar === false ? `hide-toolbar` : ``}>
 

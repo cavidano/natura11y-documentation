@@ -69,7 +69,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 3.25);
+    --banner-headline-font-size: calc(var(--body-font-size) * 3.5);
     --banner-headline-font-weight: var(--body-font-weight-normal);
 
     // Paragraph
@@ -262,7 +262,6 @@ ol {
 figure {
     figcaption {
         font-size: var(--font-size-sm);
-        opacity: 0.85;
         margin-block-start: var(--spacer-2);
     }
 }

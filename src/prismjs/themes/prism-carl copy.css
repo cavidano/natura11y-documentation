@@ -19,17 +19,12 @@
 
 figure .example + figcaption,
 figure .code-toolbar + figcaption {
-
-	margin-top: initial;
-	
-	padding: var(--spacer-2);
-
-	border-top-width: var(--default-border-width);
-	border-top-style: var(--default-border-style);
-
 	background-color: var(--dark);
-
 	color: var(--dark-text);
+	padding: var(--spacer-2);
+	margin-top: unset;
+
+	opacity: 0.9;
 }
 
 code[class*='language-'],
@@ -39,7 +34,7 @@ pre[class*='language-'] {
 
 	font-family: var(--code-font-family);
 	font-size: var(--font-size-md);
-	text-align: start;
+	text-align: left;
 	white-space: pre;
 
 	word-spacing: normal;
@@ -60,9 +55,9 @@ pre[class*='language-'] {
 
 /* Code blocks */
 
-/* .code-toolbar {
+.code-toolbar {
 	outline: blueviolet solid 8px;
-} */
+}
 
 pre[class*='language-'] {
 	overflow: auto;
@@ -263,8 +258,7 @@ div.code-toolbar > .toolbar {
 	left: 0;
 	right: 0;
 
-	border-bottom-width: var(--default-border-width);
-	border-bottom-style: var(--default-border-style);
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
 }
 
 div.code-toolbar > .toolbar a,
@@ -285,10 +279,8 @@ div.code-toolbar > .toolbar button {
 	-moz-user-select: none;
 	-ms-user-select: none;
 
-	
-	color: var(--primary);
-
 	font-weight: bold;
+	color: var(--primary);
 }
 
 .toolbar-item {
