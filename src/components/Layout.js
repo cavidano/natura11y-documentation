@@ -10,7 +10,6 @@ import Footer from './Footer';
 import '../icons/natura11y-icons.css';
 
 import '../natura11y/modules/accents';
-import '../natura11y/modules/accents';
 import '../natura11y/modules/article';
 import '../natura11y/modules/aspect-ratios';
 import '../natura11y/modules/backdrops';
