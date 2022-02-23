@@ -28,7 +28,7 @@ const Footer = ({ version, title }) => {
 
         <a
           className="display-block margin-bottom-2"
-          href="https://www.behance.net/carlavidano"
+          href="https://design.carlavidano.com"
           data-logo="brand"
           target="_blank">
 
@@ -55,7 +55,7 @@ const Footer = ({ version, title }) => {
         </a>
 
         <p>
-          {title} is an open source design system created by <a href="https://www.behance.net/carlavidano" target="_blank"> Carl Avidano</a>. Carl is a New York-based designer, front-end developer, and aspiring fine artist.
+          {title} is an open source design system created by <a href="https://design.carlavidano.com" target="_blank"> Carl Avidano</a>. Carl is a New York-based designer, front-end developer, and aspiring fine artist.
         </p>
       </div>
 
