@@ -26,7 +26,7 @@ const IconLeader = () => {
                     <li>
                         <Link
                             id="tab-button-example-01"
-                            to="/icons"
+                            to="/icons/"
                             role="tab">
                                 Icons
                         </Link>
@@ -34,7 +34,7 @@ const IconLeader = () => {
                     <li>
                         <Link
                             id="tab-button-example-02"
-                            to="/icons/usage"
+                            to="/icons/usage/"
                             activeStyle={activeStyle}
                             role="tab">
                                 Usage
