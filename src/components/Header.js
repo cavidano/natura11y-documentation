@@ -93,7 +93,7 @@ const Header = ({ version }) => {
               </Link>
             </li>
             <li>
-              <Link to="/comps/">
+              <Link to="/comps">
                 Comps
               </Link>
             </li>
