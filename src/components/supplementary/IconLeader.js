@@ -4,6 +4,11 @@ import { Link } from 'gatsby';
 
 const IconLeader = () => {
 
+    const activeStyle = {
+        'fontWeight': 'var(--body-font-weight-bold)',
+        'textDecoration': 'underline'
+    }
+
     return (
         <Fragment>
 
@@ -30,6 +35,7 @@ const IconLeader = () => {
                         <Link
                             id="tab-button-example-02"
                             to="/icons/usage"
+                            activeStyle={activeStyle}
                             role="tab">
                                 Usage
                         </Link>
