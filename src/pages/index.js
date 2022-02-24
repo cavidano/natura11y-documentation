@@ -31,15 +31,15 @@ const Home = () => {
 
       <section className="backdrop backdrop--fixed theme-dark height-100vh" id="introduction">
 
-      <div class="backdrop__credit">
-          <p>
-            Photo by&nbsp;
-            <a href="https://unsplash.com/@tup_s" target="_blank">
-              Damien Tupinier
-            </a>&nbsp;
-            on Unsplash
-          </p>
-      </div>
+        <div class="backdrop__credit margin-1">
+            <p>
+              Photo by&nbsp;
+              <a href="https://unsplash.com/@tup_s" target="_blank">
+                Damien Tupinier
+              </a>&nbsp;
+              on Unsplash
+            </p>
+        </div>
 
         <div className="backdrop__image">
           <StaticImage
