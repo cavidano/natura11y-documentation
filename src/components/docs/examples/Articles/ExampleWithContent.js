@@ -40,8 +40,6 @@ const ExampleWithContent = () => {
                                 className="opacity-50"
                                 src="../../../../images/examples/article-example-01.jpg"
                                 alt=""
-                                placeholder="dominantColor"
-                                layout="fullWidth"
                             />
                         </div>
 

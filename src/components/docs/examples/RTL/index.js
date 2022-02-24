@@ -97,8 +97,6 @@ const RTLExample = () => {
                         className="opacity-50"
                         src="../../../../images/examples/rtl-backdrop-01.jpg"
                         alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
                 </div>
 

@@ -26,8 +26,6 @@ const Comps = () => {
                     <StaticImage
                         src="../images/examples/comp-thumb-call-to-action.jpg"
                         alt="Thumbnail of Natura11y's Call to Action landing page"
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
 
                     <div className="padding-4 text-align-center">

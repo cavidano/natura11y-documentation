@@ -29,8 +29,6 @@ const StackBreakpointModifier = (props) => {
                     <StaticImage
                         src="../../../../images/examples/backdrop-example-02.jpg"
                         alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
                 </div>
             </div>

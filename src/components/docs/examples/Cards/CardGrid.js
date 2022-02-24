@@ -14,8 +14,6 @@ const CardGrid = () => {
                     <StaticImage
                         src="../../../../images/examples/card-example-02.jpg"
                         alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
             
                     <div className="card__body">
@@ -38,8 +36,6 @@ const CardGrid = () => {
                     <StaticImage
                         src="../../../../images/examples/card-example-03.jpg"
                         alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
 
                     <div className="card__body">
@@ -62,8 +58,6 @@ const CardGrid = () => {
                     <StaticImage
                         src="../../../../images/examples/card-example-04.jpg"
                         alt=""
-                        placeholder="dominantColor"
-                        layout="fullWidth"
                     />
                     
                     <div className="card__body">

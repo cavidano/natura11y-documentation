@@ -9,8 +9,6 @@ const CardImage = () => {
             <StaticImage
                 src="../../../../images/examples/card-example-01.jpg"
                 alt=""
-                placeholder="dominantColor"
-                layout="fullWidth"
             />
             <div className="card__body">
                 <h2 className="h4">Stellaria graminea</h2>

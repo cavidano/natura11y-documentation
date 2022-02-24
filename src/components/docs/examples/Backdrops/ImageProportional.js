@@ -16,8 +16,6 @@ const ImageProportional = () => {
                     className="opacity-40"
                     src="../../../../images/examples/backdrop-example-01.jpg"
                     alt=""
-                    placeholder="dominantColor"
-                    layout="fullWidth"
                 />
             </div>
             <div className="backdrop__cover">
