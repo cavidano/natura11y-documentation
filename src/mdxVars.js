@@ -5,6 +5,7 @@ In this file:
 // A. CDNs
 // B. Placeholder Images
 // C. Example Styles
+// D. Active Styles
 
 */
 
@@ -53,4 +54,13 @@ export const exampleStyles = {
     '--article-sidebar-width': '200px',
     fontFamily: 'var(--body-font-family)',
     lineHeight: 'var(--body-line-height)'
+}
+
+//////////////////////////////////////////////
+// D. Active Styles
+//////////////////////////////////////////////
+
+export const activeLinkStyles = {
+    'fontWeight': 'var(--body-font-weight-bold)',
+    'textDecoration': 'underline'
 }

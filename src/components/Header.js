@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'gatsby';
 
+import { activeLinkStyles } from '../mdxVars.js';
+
 const Header = ({ version }) => {
 
   const logo = (
@@ -49,11 +51,6 @@ const Header = ({ version }) => {
     </svg>
   );
 
-  const active = {
-    fontWeight: 'bold',
-    textDecoration: 'underline'
-  }
-
   return (
     <header className="box-shadow-1 z-index-2500" id="global-header">
 
@@ -79,7 +76,7 @@ const Header = ({ version }) => {
             <li>
               <Link 
                 to="/docs/get-started"
-                activeStyle={active}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Docs
               </Link>
@@ -87,13 +84,15 @@ const Header = ({ version }) => {
             <li>
               <Link
                 to="/icons"
-                activeStyle={active}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                   Icons
               </Link>
             </li>
             <li>
-              <Link to="/comps">
+              <Link to="/comps"
+                activeStyle={activeLinkStyles}
+                partiallyActive={true}>
                 Comps
               </Link>
             </li>
@@ -101,6 +100,7 @@ const Header = ({ version }) => {
         </nav>
 
         <div className="primary-nav__actions">
+        
           <button
             className="button button--icon-only mobile-menu-toggle"
             title="Menu"

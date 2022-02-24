@@ -2,11 +2,9 @@ import React, { Fragment } from 'react';
 
 import { Link } from 'gatsby';
 
-const DocSidebar = ({ pages }) => {
+import { activeLinkStyles } from '../mdxVars.js';
 
-  const activeStyle = {
-    'fontWeight': 'var(--body-font-weight-bold)'
-  }
+const DocSidebar = ({ pages }) => {
 
   return (
     <Fragment>
@@ -36,7 +34,7 @@ const DocSidebar = ({ pages }) => {
             <li>
               <Link
                 to="/docs/get-started"
-                activeStyle={activeStyle}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Get Started
               </Link>
@@ -44,7 +42,7 @@ const DocSidebar = ({ pages }) => {
             <li>
               <Link
                 to="/docs/customization"
-                activeStyle={activeStyle}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Customization
               </Link>
@@ -52,7 +50,7 @@ const DocSidebar = ({ pages }) => {
             <li>
               <Link
                 to="/docs/accessibility"
-                activeStyle={activeStyle}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Accessibility
               </Link>
@@ -60,7 +58,7 @@ const DocSidebar = ({ pages }) => {
             <li>
               <Link
                 to="/docs/rtl"
-                activeStyle={activeStyle}
+                activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 RTL
               </Link>
@@ -76,7 +74,7 @@ const DocSidebar = ({ pages }) => {
               <li key={page.id}>
                 <Link 
                   to={`/docs/${page.slug}`}
-                  activeStyle={activeStyle}
+                  activeStyle={activeLinkStyles}
                   partiallyActive={true}>
                     {page.frontmatter.title}
                 </Link>

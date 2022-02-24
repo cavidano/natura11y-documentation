@@ -2,12 +2,9 @@ import React, { Fragment } from 'react';
 
 import { Link } from 'gatsby';
 
-const IconLeader = () => {
+import { activeLinkStyles } from '../../mdxVars.js';
 
-    const activeStyle = {
-        'fontWeight': 'var(--body-font-weight-bold)',
-        'textDecoration': 'underline'
-    }
+const IconLeader = () => {
 
     return (
         <Fragment>
@@ -27,7 +24,7 @@ const IconLeader = () => {
                         <Link
                             id="tab-button-example-01"
                             to="/icons"
-                            activeStyle={activeStyle}
+                            activeStyle={activeLinkStyles}
                             role="tab">
                                 Icons
                         </Link>
@@ -36,7 +33,7 @@ const IconLeader = () => {
                         <Link
                             id="tab-button-example-02"
                             to="/icons/usage/"
-                            activeStyle={activeStyle}
+                            activeStyle={activeLinkStyles}
                             role="tab">
                                 Usage
                         </Link>
