@@ -75,7 +75,7 @@ const Header = ({ version }) => {
             </li>
             <li>
               <Link 
-                to="/docs/get-started"
+                to="/docs/get-started/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Docs
@@ -83,14 +83,14 @@ const Header = ({ version }) => {
             </li>
             <li>
               <Link
-                to="/icons"
+                to="/icons/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                   Icons
               </Link>
             </li>
             <li>
-              <Link to="/comps"
+              <Link to="/comps/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Comps

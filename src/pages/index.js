@@ -68,12 +68,12 @@ const Home = () => {
               <div className="grid grid--column-2--sm gap-3">
                 <Link
                   className="button theme-white width-100"
-                  to="/docs/get-started">
+                  to="/docs/get-started/">
                     Get Started
                 </Link>
                 <Link
                   className="button button--outline width-100"
-                  to="/comps">
+                  to="/comps/">
                     Comps
                 </Link>
               </div>
@@ -139,7 +139,7 @@ const Home = () => {
                               
                               <Link
                                 className="button theme-white box-shadow font-size-md"
-                                to="/docs/accessibility">
+                                to="/docs/accessibility/">
                                   What's Included
                               </Link>
 
@@ -179,7 +179,7 @@ const Home = () => {
                               
                               <Link
                                 className="button theme-white box-shadow font-size-md"
-                                to="/docs/color">
+                                to="/docs/color/">
                                   Color
                               </Link>
                               
@@ -219,7 +219,7 @@ const Home = () => {
                                 
                                 <Link
                                   className="button theme-white box-shadow font-size-md"
-                                  to="/docs/customization">
+                                  to="/docs/customization/">
                                     Customization
                                 </Link>
                                 
@@ -259,7 +259,7 @@ const Home = () => {
                                 
                                 <Link
                                   className="button theme-white box-shadow font-size-md"
-                                  to="/docs/rtl">
+                                  to="/docs/rtl/">
                                     How it Works
                                 </Link>
 

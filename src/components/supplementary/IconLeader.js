@@ -23,7 +23,7 @@ const IconLeader = () => {
                     <li>
                         <Link
                             id="tab-button-example-01"
-                            to="/icons"
+                            to="/icons/"
                             activeStyle={activeLinkStyles}
                             role="tab">
                                 Icons

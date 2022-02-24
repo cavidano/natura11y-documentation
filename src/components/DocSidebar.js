@@ -33,7 +33,7 @@ const DocSidebar = ({ pages }) => {
           <ul className="nav font-size-md">
             <li>
               <Link
-                to="/docs/get-started"
+                to="/docs/get-started/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Get Started
@@ -41,7 +41,7 @@ const DocSidebar = ({ pages }) => {
             </li>
             <li>
               <Link
-                to="/docs/customization"
+                to="/docs/customization/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Customization
@@ -49,7 +49,7 @@ const DocSidebar = ({ pages }) => {
             </li>
             <li>
               <Link
-                to="/docs/accessibility"
+                to="/docs/accessibility/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Accessibility
@@ -57,7 +57,7 @@ const DocSidebar = ({ pages }) => {
             </li>
             <li>
               <Link
-                to="/docs/rtl"
+                to="/docs/rtl/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 RTL
@@ -73,7 +73,7 @@ const DocSidebar = ({ pages }) => {
             .map(page => (
               <li key={page.id}>
                 <Link 
-                  to={`/docs/${page.slug}`}
+                  to={`/docs/${page.slug}/`}
                   activeStyle={activeLinkStyles}
                   partiallyActive={true}>
                     {page.frontmatter.title}
