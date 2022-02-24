@@ -53,13 +53,11 @@ const GradientVeneerDirections = () => {
                 <div className={`backdrop__image gradient-veneer-${direction}`}>
                     <StaticImage
                         src="../../../../images/gradient-veneer-directions.jpg"
-                        alt="whoa"
-                        placeholder="dominantColor"
-                        layout="fullWidth"
+                        alt=""
                     />
                 </div>
-                <div className="backdrop__cover">
-                    <div className={`gv-dir gv-dir--${direction}`}>
+                <div className={`backdrop__cover gv-dir gv-dir--${direction}`}>
+                    <div className="padding-2 font-size-md">
                         <p>
                             <strong>
                                 .gradient-veneer-{direction}

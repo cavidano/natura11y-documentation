@@ -37,13 +37,11 @@ const GradientVeneerThemes = () => {
                     <StaticImage
                         src="../../../../images/gradient-veneer-themes.jpg"
                         className="opacity-80"
-                        alt="whoa"
-                        placeholder="dominantColor"
-                        layout="fullWidth"
+                        alt=""
                     />
                 </div>
-                <div className="backdrop__cover">
-                    <div className="gv-dir margin-top-auto">
+                <div className="backdrop__cover align-content-end">
+                    <div className="gv-dir">
                         <p>
                             <strong>
                                 .gradient-veneer-{theme}

@@ -45,9 +45,7 @@ const Home = () => {
           <StaticImage
             className="opacity-30"
             src="../images/backdrop-introduction.jpg"
-            alt="Bees"
-            placeholder="dominantColor"
-            layout="fullWidth"
+            alt="Swarm of Bees"
           />
         </div>
 
@@ -118,9 +116,7 @@ const Home = () => {
                         <StaticImage
                           className="opacity-30"
                           src="../images/backdrop-feature-accessibility.jpg"
-                          alt=""
-                          placeholder="dominantColor"
-                          layout="fullWidth"
+                          alt="Giraffe eating leaves from a tree"
                         />
 
                       </div>
@@ -158,9 +154,7 @@ const Home = () => {
                         <StaticImage
                           className="opacity-30"
                           src="../images/backdrop-feature-color-system.jpg"
-                          alt=""
-                          placeholder="dominantColor"
-                          layout="fullWidth"
+                          alt="Colorful bird"
                         />
                         
                       </div>
@@ -198,9 +192,7 @@ const Home = () => {
                           <StaticImage
                             className="opacity-30"
                             src="../images/backdrop-feature-customizable-cdn.jpg"
-                            alt=""
-                            placeholder="dominantColor"
-                            layout="fullWidth"
+                            alt="Close-up of a chamealoen"
                           />
                         
                         </div>
@@ -238,9 +230,7 @@ const Home = () => {
                           <StaticImage
                             className="opacity-40"
                             src="../images/backdrop-feature-rtl.jpg"
-                            alt=""
-                            placeholder="dominantColor"
-                            layout="fullWidth"
+                            alt="A crab on the beach"
                           />
                   
                         </div>

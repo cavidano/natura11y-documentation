@@ -401,27 +401,24 @@ kbd {
     }
 }
 
-.gv-dir {
-    font-size: var(--font-size-md);
-    padding: var(--spacer-2);
-}
+.gv-dir {}
 
 .gv-dir--top {
-    margin-bottom: auto;
+    place-content: start center;
 }
 
 .gv-dir--right {
     writing-mode: vertical-rl;
-    margin-left: auto;
+    place-content: start center;
 }
 
 .gv-dir--bottom {
-    margin-top: auto;
+    place-content: end center;
 }
 
 .gv-dir--left {
     writing-mode: vertical-lr;
-    margin-right: auto;
+    place-content: start center;
 }
 
 // doc grid
