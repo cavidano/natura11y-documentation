@@ -20,7 +20,6 @@ const FixedHeightStretch = () => {
                     src="../../../../images/examples/backdrop-example-04.jpg"
                     alt=""
                     placeholder="dominantColor"
-                    layout="fullWidth"
                 />
             </div>
 

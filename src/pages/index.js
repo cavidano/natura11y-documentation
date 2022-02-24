@@ -109,7 +109,7 @@ const Home = () => {
 
                   <div className="grid grid--column-2--lg gap-border">
 
-                    <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                    <div className="backdrop backdrop--fixed align-content-end">
 
                       <div 
                         className="backdrop__image gradient-veneer-bottom"
@@ -149,7 +149,7 @@ const Home = () => {
 
                     </div>
 
-                    <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                    <div className="backdrop backdrop--fixed align-content-end">
 
                       <div 
                         className="backdrop__image gradient-veneer-bottom"
@@ -189,7 +189,7 @@ const Home = () => {
 
                     </div>
 
-                    <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                    <div className="backdrop backdrop--fixed align-content-end">
 
                       <div 
                         className="backdrop__image gradient-veneer-bottom"
@@ -229,7 +229,7 @@ const Home = () => {
 
                     </div>
 
-                    <div className="backdrop backdrop--fixed theme-dark justify-content-end">
+                    <div className="backdrop backdrop--fixed align-content-end">
 
                         <div 
                           className="backdrop__image gradient-veneer-bottom"

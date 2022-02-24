@@ -20,7 +20,6 @@ const FixedHeight = () => {
                     src="../../../../images/examples/backdrop-example-03.jpg"
                     alt=""
                     placeholder="dominantColor"
-                    layout="fullWidth"
                 />
             </div>
 
