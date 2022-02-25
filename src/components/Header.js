@@ -2,9 +2,23 @@ import React from 'react';
 
 import { Link } from 'gatsby';
 
+import { useStaticQuery, graphql } from 'gatsby';
+
 import { activeLinkStyles } from '../mdxVars.js';
 
-const Header = ({ version }) => {
+const Header = () => {
+
+  const data = useStaticQuery(graphql`
+    query versionQuery {
+      site {
+        siteMetadata {
+          version
+        }
+      }
+    }
+  `);
+
+  const version = data.site.siteMetadata.version;
 
   const logo = (
     <svg

@@ -2,8 +2,6 @@ import React, {useEffect} from 'react';
 
 import { Link } from 'gatsby';
 
-import Accessibility from '../natura11y/modules/accessibility';
-
 const TableOfContents = ({ sections }) => {
 
     useEffect(() => {
@@ -35,8 +33,6 @@ const TableOfContents = ({ sections }) => {
         window.addEventListener('scroll', stickyTOC);
 
         stickyTOC();
-
-        new Accessibility();
 
     }, []);
 

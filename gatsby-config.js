@@ -2,6 +2,11 @@ module.exports = {
   siteMetadata: {
     title: "Natura11y Inclusive Framework",
     version: "v0.1.x-alpha",
+    titleTemplate: `%s • Natura11y Inclusive Framework`,
+    description:
+      "Natura11y page description.",
+    url: "https://gonataura11y",
+    image: "/snape.jpg",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

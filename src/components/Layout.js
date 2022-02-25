@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
-
-import { useStaticQuery, graphql } from 'gatsby';
-
-import { Helmet } from 'react-helmet';
-
-import Header from './Header';
-import Footer from './Footer';
+import React, { useEffect, Fragment } from 'react';
 
 import '../icons/natura11y-icons.css';
 
+import '../natura11y/modules/accessibility';
 import '../natura11y/modules/accents';
 import '../natura11y/modules/article';
 import '../natura11y/modules/aspect-ratios';
@@ -33,7 +27,6 @@ import '../natura11y/modules/spacing';
 import '../natura11y/modules/typography';
 import '../natura11y/modules/z-index/index';
 
-import Accessibility from '../natura11y/modules/accessibility';
 import Accordion from '../natura11y/modules/accordion';
 import Alerts from '../natura11y/modules/alerts';
 import Buttons from '../natura11y/modules/buttons';
@@ -52,8 +45,7 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 const Layout = ({ children }) => {
 
   useEffect(() => {
-
-    new Accessibility();
+    
     new Accordion();
     new Alerts();
     new Buttons();
@@ -88,40 +80,12 @@ const Layout = ({ children }) => {
 
   }, []);
 
-  const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          title
-          version
-        }
-      }
-    }
-  `);
-
-  const title = data.site.siteMetadata.title;
-  const version = data.site.siteMetadata.version;
-
   return (
-    <div className="Layout">
-      
-      <Helmet htmlAttributes={{
-        lang: 'en',
-      }}>
-        <title>{title}</title>
-      </Helmet>
-
-      <Header version={version} />
-
-      <main className="content" id="skip-header-target">
+    <Fragment>
 
       {children}
 
-      </main>
-
-      <Footer version={version} title={title} />
-      
-    </div>
+    </Fragment>
   );
 }
 

@@ -6,7 +6,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Seo from '../components/Seo';
+
 import Banner from '../components/Banner';
 import DocSidebar from '../components/DocSidebar';
 import TableOfContents from '../components/TableOfContents';
@@ -78,7 +81,11 @@ const Documentation = ({ data }) => {
   const relatedCustomProperties = data.relatedCPs.nodes;
 
   return (
-    <Layout>
+    <Fragment>
+
+      <Seo title={title} />
+      
+      <Header />
 
       <div className="article--column-2">
 
@@ -124,7 +131,9 @@ const Documentation = ({ data }) => {
 
       </div>
       
-    </Layout>
+      <Footer />
+      
+    </Fragment>
   );
 }
 

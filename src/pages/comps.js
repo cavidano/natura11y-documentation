@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Seo from '../components/Seo';
+
 
 const Comps = () => {
     return (
-        <Layout>
+        <Fragment>
+            
+            <Seo title="Comps" />
+            
+            <Header />
 
             <section className="container narrow margin-y-4 text-align-center">
                 <h2>
@@ -63,7 +70,9 @@ const Comps = () => {
 
             </section>
 
-        </Layout>
+            <Footer />
+
+        </Fragment>
     )
 }
 

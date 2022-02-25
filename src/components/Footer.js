@@ -2,7 +2,24 @@ import React from 'react';
 
 import { Link } from 'gatsby';
 
-const Footer = ({ version, title }) => {
+import { useStaticQuery, graphql } from 'gatsby';
+
+const Footer = () => {
+
+  const data = useStaticQuery(graphql`
+    query siteInfoQuery {
+      site {
+        siteMetadata {
+          title
+          version
+        }
+      }
+    }
+  `);
+
+  const title = data.site.siteMetadata.title;
+  const version = data.site.siteMetadata.version;
+
   return (
     <footer className="theme-white box-shadow-1 text-align-center overflow-hidden font-size-md">
 

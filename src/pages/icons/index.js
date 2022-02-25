@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/Layout';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Seo from '../../components/Seo';
+
 import IconLeader from '../../components/supplementary/IconLeader';
 
 const Icons = ({ data }) => {
@@ -29,8 +32,11 @@ const Icons = ({ data }) => {
     }
 
     return (
+        <Fragment>
 
-        <Layout>
+            <Seo title="Icons" />
+            
+            <Header />
 
             <IconLeader />
 
@@ -84,7 +90,9 @@ const Icons = ({ data }) => {
 
             </div>
 
-        </Layout>
+            <Footer />
+
+        </Fragment>
     );
 }
 

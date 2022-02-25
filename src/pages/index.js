@@ -1,87 +1,84 @@
-import React, { useEffect } from 'react';
+import React, { Fragment } from 'react';
 
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 
 const Home = () => {
 
-  const bannerHeight = () => {
-    const headerHeight = document.getElementById('global-header').offsetHeight;
-    const bannerTarget = document.getElementById('introduction');
-
-    const initBannerHeight = () => {
-
-      const windowHeight = window.innerHeight;
-
-      bannerTarget.style.height = windowHeight - headerHeight + 'px';
-    }
-
-    initBannerHeight();
-    window.addEventListener('resize', initBannerHeight);
-  }
-
-  useEffect(() => {
-    bannerHeight();
-  }, []);
-
   return (
-    <Layout>
+    <Fragment>
 
-      <section className="backdrop backdrop--fixed theme-dark height-100vh" id="introduction">
+      <Seo title='Home' />
 
-        <div class="backdrop__credit margin-1">
-            <p>
-              Photo by&nbsp;
-              <a href="https://unsplash.com/@tup_s" target="_blank">
-                Damien Tupinier
-              </a>&nbsp;
-              on Unsplash
-            </p>
-        </div>
+      <div className="min-height-100vh flex-column">
 
-        <div className="backdrop__image">
-          <StaticImage
-            className="opacity-30"
-            src="../images/backdrop-introduction.jpg"
-            alt="Swarm of Bees"
-          />
-        </div>
+        <Header />
 
-        <div className="backdrop__cover">
-
-          <div className="container medium margin-y-4 text-align-center">
-            
-            <h1 className="banner-headline text-align-center text-shadow">
-              Be inclusive&#8212;naturally.
-            </h1>
-
-            <div className="narrow margin-y-3">
-              
-              <p className="font-size-lg text-shadow">
-                Natura11y is an open source, front-end toolkit. It's easy to use for developers at different skill levels. Natura11y is ideal for projects of any size.
-              </p>
-
-              <div className="grid grid--column-2--sm gap-3">
-                <Link
-                  className="button theme-white width-100"
-                  to="/docs/get-started/">
-                    Get Started
-                </Link>
-                <Link
-                  className="button button--outline width-100"
-                  to="/comps/">
-                    Comps
-                </Link>
-              </div>
-            </div>
-          
-          </div>
+        <section
+          className="flex-grow-1 theme-secondary backdrop backdrop--fixed theme-dark"
+          id="skip-header-target"
+          style={{
+            '--backdrop-fixed-height':'100%',
+            'minHeight': '400px'
+          }}>
         
-        </div>
-      
-      </section>
+          <div class="backdrop__credit margin-1">
+              <p>
+                Photo by&nbsp;
+                <a href="https://unsplash.com/@tup_s" target="_blank">
+                  Damien Tupinier
+                </a>&nbsp;
+                on Unsplash
+              </p>
+          </div>
+
+          <div className="backdrop__image">
+            <StaticImage
+              className="opacity-30"
+              src="../images/backdrop-introduction.jpg"
+              alt="Swarm of Bees"
+            />
+          </div>
+
+          <div className="backdrop__cover">
+
+            <div className="container medium margin-y-4 text-align-center">
+                
+              <h1 className="banner-headline text-align-center text-shadow">
+                Be inclusive&#8212;naturally.
+              </h1>
+
+              <div className="narrow margin-y-3">
+                  
+                <p className="font-size-lg text-shadow">
+                  Natura11y is an open source, front-end toolkit. It's easy to use for developers at different skill levels. Natura11y is ideal for projects of any size.
+                </p>
+
+                <div className="grid grid--column-2--sm gap-3">
+                  <Link
+                    className="button theme-white width-100"
+                    to="/docs/get-started/">
+                      Get Started
+                  </Link>
+                  <Link
+                    className="button button--outline width-100"
+                    to="/comps/">
+                      Comps
+                  </Link>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+
+        </section>
+
+      </div>
 
       <section className="theme-dark overflow-hidden text-align-center" id="features">
 
@@ -282,7 +279,9 @@ const Home = () => {
 
       </section>
 
-    </Layout>
+      <Footer />
+
+    </Fragment>
   );
 }
 

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../../components/Layout';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Seo from '../../components/Seo';
+
 import IconLeader from '../../components/supplementary/IconLeader';
 
 import Divider from '../../components/docs/Divider';
@@ -19,11 +22,14 @@ const shortcodes = {
 
 const Icons = ({ data }) => {
 
-    const { body } = data.neat;
+    const { body } = data.iconUsage;
 
     return (
+        <Fragment>
 
-        <Layout className="theme-dark">
+            <Seo title="Icon Usage" />
+            
+            <Header />
 
             <IconLeader />
 
@@ -32,8 +38,10 @@ const Icons = ({ data }) => {
                     <MDXRenderer>{body}</MDXRenderer>
                 </MDXProvider>
             </div>
+
+            <Footer />
             
-        </Layout>
+        </Fragment>
     );
 }
 
@@ -41,7 +49,7 @@ export default Icons;
 
 export const query = graphql`
     query MyQuery {
-        neat: mdx(frontmatter: {title: {eq: "Using the Icons"}}) {
+        iconUsage: mdx(frontmatter: {title: {eq: "Using the Icons"}}) {
             body
         }
     }
