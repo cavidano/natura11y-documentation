@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Seo from '../components/Seo';
+
 import Divider from '../components/docs/Divider';
 import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
@@ -30,7 +33,11 @@ const iconSingle = ({ data }) => {
   }
 
   return (
-    <Layout components={shortcodes}>
+    <Fragment>
+
+      <Seo title={title} />
+            
+      <Header />
 
       <div className="container medium text-align-center margin-y-4">
 
@@ -85,19 +92,19 @@ const iconSingle = ({ data }) => {
         </div>
       </div>
 
-        <FigureBlock
-            figureNumber="1"
-            language="html"
-            hideFigCaption={true}
-            codeExample={(`
-            <!-- Icon Font --> \n
-            <span class="icon icon-${className}"></span> \n
-            <!-- SVG Sprite --> \n
-            <svg class="icon">
-                <use href="#${className}"></use>
-            </svg>
-            `)}
-        />
+      <FigureBlock
+          figureNumber="1"
+          language="html"
+          hideFigCaption={true}
+          codeExample={(`
+          <!-- Icon Font --> \n
+          <span class="icon icon-${className}"></span> \n
+          <!-- SVG Sprite --> \n
+          <svg class="icon">
+              <use href="#${className}"></use>
+          </svg>
+          `)}
+      />
 
       <hr />
 
@@ -122,7 +129,9 @@ const iconSingle = ({ data }) => {
           </p>
       </div>
 
-    </Layout>
+      <Footer />
+
+    </Fragment>
   );
 }
 

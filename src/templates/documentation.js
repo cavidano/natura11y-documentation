@@ -113,6 +113,7 @@ const Documentation = ({ data }) => {
               )}
 
               <div className="doc-container__body margin-y-4">
+              
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{body}</MDXRenderer>
                 </MDXProvider>
