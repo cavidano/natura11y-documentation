@@ -14,7 +14,7 @@ const CheckboxSwitch = () => {
 
                     <div className="form-entry__option__check">
 
-                        <label aria-labeledby="single-option-label">
+                        <label>
                             <input
                                 type="checkbox"
                                 name="singleOption"

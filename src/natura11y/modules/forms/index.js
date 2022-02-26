@@ -64,6 +64,8 @@ export default class Forms {
             // Submission Handler
             form.addEventListener('submit', (event) => {
 
+                console.log("HEY CARL!!!!!!!!!")
+
                 event.preventDefault();
 
                 formSubmitAttempted = true;
