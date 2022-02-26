@@ -26,7 +26,7 @@ const Home = () => {
             'minHeight': '400px'
           }}>
         
-          <div class="backdrop__credit margin-1">
+          <div className="backdrop__credit margin-1">
               <p>
                 Photo by&nbsp;
                 <a href="https://unsplash.com/@tup_s" target="_blank">
