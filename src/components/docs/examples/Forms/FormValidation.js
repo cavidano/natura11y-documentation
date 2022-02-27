@@ -2,127 +2,9 @@ import React from 'react';
 
 const FormValidation = () => {
 
-    // const formList = document.querySelectorAll('form[novalidate]');
-        
-    const formEntryList = document.querySelectorAll('.form-entry');
-
-    let formSubmitAttempted = false;
-
-    const checkIfEmpty = (field) => {
-        if (isEmpty(field.value)) {
-            setInvalid(field);
-            return true;
-        } else {
-            setValid(field);
-            return false;
-        }
-    }
-
-    const isEmpty = (value = null) => {
-        if (value === '') return true;
-        return false;
-    }
-
-    const invalidClasses = ['is-invalid'];
-
-    const setInvalid = (field) => {
-        let entryRoot = field.closest('.form-entry');
-        entryRoot.classList.add(...invalidClasses);
-    }
-
-    const setValid = (field) => {
-        let entryRoot = field.closest('.form-entry');
-        entryRoot.classList.remove(...invalidClasses);
-    }
-
-
-
-    const createErrorMessage = ((desc, inst) => {
-            
-        if(desc === null) {
-            desc = 'This field is Required';
-        }
-        
-        return (`
-            <div class="form-entry__feedback">
-                <small>
-                    <span class="icon icon-warn" aria-hidden="true"></span>
-                    <span class="message">
-                        <strong>${desc}</strong> ${inst !== undefined ? inst : ''}
-                    </span>
-                </small>
-            </div>
-        `);
-    });
-
-
     const onSubmitHandler = (event) => {
         
         event.preventDefault();
-        alert("Wha??");
-
-        const form = event.target.closest('form');
-
-        formSubmitAttempted = true;
-        
-        let errorsArray = [];
-
-        // Create list of elements that fail to validate
-        let formErrorsList = form.querySelectorAll(':invalid');
-
-        formErrorsList.forEach((formError) => {
-
-            let formErrorEntry = formError.closest('.form-entry');
-            let formErrorEntryLabel = formErrorEntry.querySelector('.form-entry__field__label');
-
-            // Add error class to .form-entry selector
-            formErrorEntry.classList.add('is-invalid');
-
-            // Form Entry Feedback
-            const formEntryFeedback = formErrorEntry.querySelector('.form-entry__feedback');
-
-            // Form Entry Feedback
-            const formEntryHelp = formErrorEntry.querySelector('.form-entry__help');
-
-            let entryHelpText;
-
-            if(formEntryHelp) {
-                entryHelpText = formEntryHelp.innerHTML.toString();
-            }
-
-            let errorMessage = formErrorEntry.getAttribute('data-error-message');
-            let errorFeedback = [errorMessage, entryHelpText];
-
-            // Send errors to errorArray
-            errorsArray.push(errorFeedback);
-
-            if (formEntryFeedback === null) {
-                formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorMessage, entryHelpText));
-            }
-        });
-
-        // If errors exist, do not submit the form
-        if (errorsArray.length > 0) {
-            event.preventDefault();
-        }
-        
-        // Scroll to first error
-
-        let firstError = form.querySelector('[class*="alert"], [class*="invalid"]');
-        
-        if (firstError) {
-
-            if (firstError.hasAttribute('data-alert')) {
-                firstError.style.display = 'block';
-            }
-
-            let myScroll = firstError.offsetTop - 16;
-
-            window.scrollTo({
-                top: myScroll,
-                behavior: 'smooth'
-            });
-        }
 
     };
 
@@ -288,9 +170,7 @@ const FormValidation = () => {
 
             </div>
 
-            <button 
-                className="button theme-primary width-100 rounded-pill"
-                onClick={onSubmitHandler}>
+            <button className="button theme-primary width-100 rounded-pill">
                     Send
             </button>
 
