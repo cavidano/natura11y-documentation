@@ -2,12 +2,6 @@ import React from 'react';
 
 const FormValidation = () => {
 
-    const onSubmitHandler = (event) => {
-        
-        event.preventDefault();
-
-    };
-
     return (
         <form noValidate>
 

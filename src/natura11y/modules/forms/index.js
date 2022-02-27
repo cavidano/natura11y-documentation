@@ -8,7 +8,7 @@ export default class Forms {
 
     constructor() {
 
-        const formList = document.querySelectorAll('form[novalidate]');
+        const formList = document.querySelectorAll('form[noValidate]');
         
         const formEntryList = document.querySelectorAll('.form-entry');
 
