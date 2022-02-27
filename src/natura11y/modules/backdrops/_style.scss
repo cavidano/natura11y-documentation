@@ -43,6 +43,9 @@ In this file:
 .backdrop:not([class*="--stack"]):not([class*="--fixed"]) {
     .backdrop__cover {
         position: absolute;
+
+        display: grid;
+        place-content: center;
     }
 }
 
@@ -60,9 +63,6 @@ In this file:
     bottom: 0;
     left: 0;
 
-    display: grid;
-
-    place-content: center;
 }
 
 .backdrop__credit {
@@ -107,7 +107,7 @@ In this file:
 
     display: grid;
     
-    place-content: center;
+    place-content: center stretch;
     
     min-height: var(--backdrop-fixed-height);
 
