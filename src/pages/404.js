@@ -22,18 +22,16 @@ const NotFound = () => {
             Page not found
           </h1>
 
-          <div className="text-align-center">
+          <div className="container narrow text-align-center">
 
-            <span className="display-block banner-headline margin-bottom-3" aria-hidden="true">
-              (\&nbsp;&nbsp;/)<br />
-              (&nbsp;&nbsp;'x'&nbsp;&nbsp;)<br />
+            <p className="h2 code-font margin-bottom-3" aria-hidden="true">
+              (\_/)<br />
+              ('x')<br />
               c(")(")<span style={{'opacity': '0'}}>c</span>
-            </span>
-
-            <p>
-              <strong>Poor wee bunny!</strong>
-              <span className='display-block'>You've hopped onto a page that doesn't exist.</span>
             </p>
+
+            <p className='h6 display-block'>Poor wee bunny!</p>
+            <p>You've hopped on to a page that doesn't exist.</p>
 
             <p>
               <Link to="/">Back to Home</Link>

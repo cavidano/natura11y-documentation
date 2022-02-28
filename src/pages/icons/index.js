@@ -14,22 +14,56 @@ const Icons = ({ data }) => {
     const allIcons = data.allNatura11YiconsYaml.nodes;
 
     const [displayedIcons, setDisplayedIcons] = useState(allIcons);
+    const [enteredSearch, setEnteredSearch] = useState('');
+    const [noResults, setNoResults] = useState(false);
 
     const searchHandler = (event) => {
 
-        const enteredSearch = event.target.value.toLowerCase();
-        		
+        setEnteredSearch(event.target.value);
+
+        const enteredSearchLowercase = enteredSearch.toLowerCase();
+
         let filteredIcons = allIcons.filter(icon => {
             return (
-                icon.className.toLowerCase().includes(enteredSearch) ||
-                icon.tags.toString().includes(enteredSearch)
+                icon.className.toLowerCase().includes(enteredSearchLowercase) ||
+                icon.tags.toString().includes(enteredSearchLowercase)
             );
         });
 
-        enteredSearch !== '' ? 
+        console.log(filteredIcons.length, noResults);
+
+        enteredSearchLowercase !== '' ? 
             setDisplayedIcons(filteredIcons) :
             setDisplayedIcons(allIcons);
+
+       filteredIcons.length === 0 ?
+            setNoResults(true) :
+            setNoResults(false);
+
     }
+
+    const iconList = displayedIcons.map((icon, index) => {
+
+        let name = icon.className;
+        let tags = icon.tags;
+        let svg = icon.svg
+
+        return (
+            <Link to={`/icons/${name}`} key={`${icon}_${index}`}>
+
+                <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
+                    <svg className="icon">
+                        <use href={`#${name}`}></use>
+                    </svg>
+                </div>
+        
+                <p className="font-size-sm opacity-70">
+                    {name}
+                </p>
+
+            </Link>
+        );
+    })
 
     return (
         <Fragment>
@@ -61,31 +95,32 @@ const Icons = ({ data }) => {
 
                 </div>
 
-                <div className="grid gap-1 grid--column-3 grid--column-6--md text-align-center  margin-y-4" id="natura11yIconGrid">
+                <div className="text-align-center margin-y-4">
 
-                    {displayedIcons.map((icon, index) => {
+                {noResults ? (
 
-                        let name = icon.className;
-                        let tags = icon.tags;
-                        let svg = icon.svg
+                    <div className="container narrow text-align-center">
 
-                        return (
-                            <Link to={`/icons/${name}`} key={`${icon}_${index}`}>
+                        <p className="h2 code-font" aria-hidden="true">
+                            .__.<br />
+                            &#123;O,o&#125;<br />
+                            /&#41;__&#41;<br />
+                            " "<span style={{'opacity': '0'}}>c</span>
+                        </p>
 
-                                <div className="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">                                    
-                                    <svg className="icon">
-                                        <use href={`#${name}`}></use>
-                                    </svg>
-                                </div>
-                        
-                                <p className="font-size-sm opacity-70">
-                                    {name}
-                                </p>
+                        <p className='h6'>No icons found for '{enteredSearch}'</p>
 
-                            </Link>
-                        );
-                    })}
+                    </div>
+                    
+                ) : (
 
+                    <div className="grid grid--column-3 grid--column-6--md gap-1" id="natura11yIconGrid">
+
+                        {iconList}
+
+                    </div>
+                )}
+                
                 </div>
 
             </div>
