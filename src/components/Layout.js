@@ -45,7 +45,7 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 const Layout = ({ children }) => {
 
   useEffect(() => {
-    
+
     new Accordion();
     new Alerts();
     new Buttons();

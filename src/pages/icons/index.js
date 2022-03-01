@@ -13,15 +13,15 @@ const Icons = ({ data }) => {
     
     const allIcons = data.allNatura11YiconsYaml.nodes;
 
-    const [displayedIcons, setDisplayedIcons] = useState(allIcons);
+    const [hasResults, setHasResults] = useState(true);
     const [enteredSearch, setEnteredSearch] = useState('');
-    const [noResults, setNoResults] = useState(false);
+    const [displayedIcons, setDisplayedIcons] = useState(allIcons);
 
     const searchHandler = (event) => {
 
         setEnteredSearch(event.target.value);
 
-        const enteredSearchLowercase = enteredSearch.toLowerCase();
+        const enteredSearchLowercase = event.target.value.toLowerCase();
 
         let filteredIcons = allIcons.filter(icon => {
             return (
@@ -30,15 +30,13 @@ const Icons = ({ data }) => {
             );
         });
 
-        console.log(filteredIcons.length, noResults);
-
         enteredSearchLowercase !== '' ? 
             setDisplayedIcons(filteredIcons) :
             setDisplayedIcons(allIcons);
 
-       filteredIcons.length === 0 ?
-            setNoResults(true) :
-            setNoResults(false);
+        filteredIcons.length > 0 ?
+            setHasResults(true) :
+            setHasResults(false);
 
     }
 
@@ -97,8 +95,16 @@ const Icons = ({ data }) => {
 
                 <div className="text-align-center margin-y-4">
 
-                {noResults ? (
+                {hasResults ? (
 
+                    <div className="grid grid--column-3 grid--column-6--md gap-1" id="natura11yIconGrid">
+
+                        {iconList}
+
+                    </div>
+                    
+                ) : (
+                    
                     <div className="container narrow text-align-center">
 
                         <p className="h2 code-font" aria-hidden="true">
@@ -111,14 +117,7 @@ const Icons = ({ data }) => {
                         <p className='h6'>No icons found for '{enteredSearch}'</p>
 
                     </div>
-                    
-                ) : (
 
-                    <div className="grid grid--column-3 grid--column-6--md gap-1" id="natura11yIconGrid">
-
-                        {iconList}
-
-                    </div>
                 )}
                 
                 </div>
