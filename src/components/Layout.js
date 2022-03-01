@@ -44,19 +44,9 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
 
+  // Icon Sprite
+
   useEffect(() => {
-
-    new Accordion();
-    new Alerts();
-    new Buttons();
-    new Collapse();
-    new Document();
-    new Forms();
-    new Modal();
-    new Navigation();
-    new Tabs();
-    new Tables();
-
     const iconSpriteDiv = document.getElementById('natura11y-icons-sprite-container');
 
     if( !iconSpriteDiv) {
@@ -77,8 +67,24 @@ const Layout = ({ children }) => {
       
       appendSprite();
     }
-
   }, []);
+
+  // Natura11y JS
+
+  useEffect(() => {
+
+    new Accordion();
+    new Alerts();
+    new Buttons();
+    new Collapse();
+    new Document();
+    new Forms();
+    new Modal();
+    new Navigation();
+    new Tabs();
+    new Tables();
+
+  });
 
   return (
     <Fragment>

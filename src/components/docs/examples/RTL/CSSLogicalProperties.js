@@ -47,10 +47,10 @@ const CSSLogicalProperties = () => {
                 <div className="padding-2 border-right flex-shrink-0">
                     <StaticImage
                         src="../../../../images/examples/rtl-css-logical-properties.jpg"
-                        width="200"
-                        height="200"
                         alt=""
                         placeholder="dominantColor"
+                        width="200"
+                        height="200"
                     />
                 </div>
 
