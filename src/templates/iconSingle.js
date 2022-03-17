@@ -7,24 +7,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Seo from '../components/Seo';
 
-import Divider from '../components/docs/Divider';
-import TextBlock from '../components/docs/TextBlock';
 import FigureBlock from '../components/docs/FigureBlock';
 
 import iconBG from '../images/grid-pattern.svg';
-
-const shortcodes = {
-  Divider,
-  TextBlock,
-  FigureBlock,
-};
 
 const iconSingle = ({ data }) => {
 
   const title = data.singleIcon.icon;
   const className = data.singleIcon.className;
   const unicode = data.singleIcon.unicode;
-  const codePoint = data.singleIcon.codePoint;
+  // const codePoint = data.singleIcon.codePoint;
   const svg = data.singleIcon.svgCode.body;
   const tags = data.singleIcon.tags;
 
@@ -112,7 +104,7 @@ const iconSingle = ({ data }) => {
           <div className="margin-y-3">
               <a
                   className="button button--has-icon button--outline font-size-md"
-                  href="#"
+                  href={`../../icons/svg/${className}.svg`}
                   download>
                   <span className="icon icon-file-download"></span>
                   <span className="button__text">
@@ -122,7 +114,7 @@ const iconSingle = ({ data }) => {
               </a>  
           </div>
           <p>
-              Natura11y Icons are free to use for commercial or personal use. If you wish to contribute, <a href="#1">please Let me know</a>.
+              Natura11y Icons are free to use for commercial or personal use. If you wish to contribute, <a href="https://design.carlavidano.com/about" target="_blank">please Let me know</a>.
           </p>
           <p className="font-size-md">
               <a href="https://github.com/cavidano/natura11y-icons" target="_blank">Natura11y Icons on Github</a>
