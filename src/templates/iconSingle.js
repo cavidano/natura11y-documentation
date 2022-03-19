@@ -104,7 +104,7 @@ const iconSingle = ({ data }) => {
           <div className="margin-y-3">
               <a
                   className="button button--has-icon button--outline font-size-md"
-                  href={`../../icons/svg/${className}.svg`}
+                  href={`/natura11y-icon-svg/${className}.svg`}
                   download>
                   <span className="icon icon-file-download"></span>
                   <span className="button__text">
