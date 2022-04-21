@@ -26,11 +26,12 @@ const Comps = () => {
 
             <hr />
 
-            <section className='container wide padding-y-5'>
+            <section className="container wide padding-y-5">
 
-                <div className="grid grid--column-2--lg align-items-center theme-white box-shadow-2">
+                <div className="grid grid--column-2--lg align-items-center">
                         
                     <StaticImage
+                        className="box-shadow-2"
                         src="../images/examples/comp-birds-landing-page.jpg"
                         alt="Thumbnail of Natura11y's Call to Action landing page"
                     />
@@ -47,7 +48,7 @@ const Comps = () => {
 
                             <ul className="nav nav--horizontal justify-content-center">
                                 <li>
-                                    <a href="https://cavidano.github.io/natura11y/dist/html/comps/bird-landing-page/" target="_blank">
+                                    <a href="https://cavidano.github.io/natura11y/dist/html/comps/birds-landing-page/" target="_blank">
                                         Preview in Browser
                                     </a>
                                 </li>
