@@ -31,7 +31,7 @@ const Comps = () => {
                 <div className="grid grid--column-2--lg align-items-center theme-white box-shadow-2">
                         
                     <StaticImage
-                        src="../images/examples/comp-thumb-call-to-action.jpg"
+                        src="../images/examples/comp-birds-landing-page.jpg"
                         alt="Thumbnail of Natura11y's Call to Action landing page"
                     />
 
@@ -47,7 +47,7 @@ const Comps = () => {
 
                             <ul className="nav nav--horizontal justify-content-center">
                                 <li>
-                                    <a href="https://cavidano.github.io/natura11y/dist/html/comps/call-to-action" target="_blank">
+                                    <a href="https://cavidano.github.io/natura11y/dist/html/comps/bird-landing-page/" target="_blank">
                                         Preview in Browser
                                     </a>
                                 </li>
@@ -56,8 +56,8 @@ const Comps = () => {
                                         className="button button--outline button--has-icon"
                                         href="https://github.com/cavidano/natura11y/blob/main/dist/html/comps/call-to-action/index.html"
                                         target="_blank">
-                                        <span className="icon icon-github button__icon"></span>
-                                        <span className="button__text">View on GitHub</span>
+                                            <span className="icon icon-github button__icon"></span>
+                                            <span className="button__text">View on GitHub</span>
                                     </a>
                                 </li>
                             </ul>

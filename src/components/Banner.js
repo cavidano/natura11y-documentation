@@ -23,7 +23,7 @@ const Banner = (props) => {
         </div>
 
         <div className="backdrop__cover">
-          <div className="margin-y-5">
+          <div className="justify-self-stretch">
             <div className="container narrow">
               <h1 className="banner-headline text-shadow">{title}</h1>
             </div>
