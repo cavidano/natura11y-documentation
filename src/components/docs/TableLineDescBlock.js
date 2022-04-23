@@ -2,8 +2,8 @@ import React, { cloneElement } from 'react';
 
 const TableLineDescBlock = ({ children, ...props }) => {
 
-    children.map((child) => {
-        cloneElement(child, props)
+    const tableRows = children.map((child) => {
+        return cloneElement(child, {...props})
     });
 
     return (
@@ -16,7 +16,7 @@ const TableLineDescBlock = ({ children, ...props }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {children}
+                    {tableRows}
                 </tbody>
             </table>
         </figure>

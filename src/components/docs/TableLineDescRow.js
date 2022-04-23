@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TableLineDescRow = ({ children, lines, ...props }) => {
+
     return (
         <tr key={`${props.targetFigure}_${lines}`}>
             <td>
