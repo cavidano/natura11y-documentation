@@ -10,9 +10,6 @@ const FixedHeight = () => {
 
         <div className="backdrop backdrop--fixed theme-dark margin-y-5" style={exampleStyles}>
 
-            <div className="backdrop__credit">
-                <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
-            </div>
 
             <div className="backdrop__image">
                 <StaticImage
@@ -21,6 +18,9 @@ const FixedHeight = () => {
                     alt=""
                     placeholder="dominantColor"
                 />
+                <div className="backdrop__image__credit">
+                    <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                </div>
             </div>
 
             <div className="backdrop__cover">

@@ -15,11 +15,23 @@ const Banner = (props) => {
       <div className="doc-container__header backdrop backdrop--fixed theme-dark">
 
         <div className="backdrop__image">
+
           <GatsbyImage
             className="opacity-40"
             image={image}
             alt=""
           />
+          
+          <div className="backdrop__image__credit margin-1">
+            <p>
+                Photo by&nbsp;
+                <a href={`https://unsplash.com/${creditHandle}`} target="_blank">
+                    {creditName}
+                </a>&nbsp;
+                on Unsplash
+            </p>
+          </div>
+
         </div>
 
         <div className="backdrop__cover">
@@ -29,16 +41,6 @@ const Banner = (props) => {
             </div>
             
           </div>
-        </div>
-
-        <div className="backdrop__credit margin-1">
-          <p>
-              Photo by&nbsp;
-              <a href={`https://unsplash.com/${creditHandle}`} target="_blank">
-                  {creditName}
-              </a>&nbsp;
-              on Unsplash
-          </p>
         </div>
 
       </div>

@@ -26,22 +26,25 @@ const Home = () => {
             'minHeight': '400px'
           }}>
         
-          <div className="backdrop__credit margin-1">
-              <p>
-                Photo by&nbsp;
-                <a href="https://unsplash.com/@tup_s" target="_blank">
-                  Damien Tupinier
-                </a>&nbsp;
-                on Unsplash
-              </p>
-          </div>
 
           <div className="backdrop__image">
+
             <StaticImage
               className="opacity-30"
               src="../images/backdrop-introduction.jpg"
               alt="Swarm of Bees"
             />
+
+            <div className="backdrop__image__credit margin-1">
+                <p>
+                  Photo by&nbsp;
+                  <a href="https://unsplash.com/@tup_s" target="_blank">
+                    Damien Tupinier
+                  </a>&nbsp;
+                  on Unsplash
+                </p>
+            </div>
+            
           </div>
 
           <div className="backdrop__cover">

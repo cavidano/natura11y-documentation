@@ -16,20 +16,20 @@ const StackBreakpointModifier = (props) => {
     }
 
     return (
-        <div className={`${backdropClasses} theme-dark position-relative`} style={exampleStyles}>
-
-            <div className="backdrop__credit position-top-right">
-                <p>
-                    Photo by <a href="https://unsplash.com/@anik3t?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Aniket Deole</a> on <a href="https://unsplash.com/s/photos/yosemite?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-                </p>
-            </div>
+        <div className={`${backdropClasses} theme-dark`} style={exampleStyles}>
 
             <div className="backdrop__image">
+
                 <div className={imageClass}>
                     <StaticImage
                         src="../../../../images/examples/backdrop-example-02.jpg"
                         alt=""
                     />
+                </div>
+                <div className="backdrop__image__credit">
+                    <p>
+                        Photo by <a href="https://unsplash.com/@anik3t?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Aniket Deole</a> on <a href="https://unsplash.com/s/photos/yosemite?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+                    </p>
                 </div>
             </div>
 

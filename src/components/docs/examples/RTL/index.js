@@ -86,11 +86,6 @@ const RTLExample = () => {
                 className="backdrop backdrop--fixed theme-dark"
                 style={{ '--backdrop-fixed-height': '600px' }}>
 
-                <div className="backdrop__credit display-none">
-                    <p>
-                         الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
-                    </p>
-                </div>
 
                 <div className="backdrop__image gradient-veneer-left">
                     <StaticImage
@@ -98,6 +93,11 @@ const RTLExample = () => {
                         src="../../../../images/examples/rtl-backdrop-01.jpg"
                         alt=""
                     />
+                    <div className="backdrop__image__credit display-none">
+                        <p>
+                            الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
+                        </p>
+                    </div>
                 </div>
 
                 <div className="backdrop__cover">
