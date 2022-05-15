@@ -4,92 +4,89 @@ import './_style.scss';
 // Table
 //////////////////////////////////////////////
 
-export default class Tables {
+export default function initTables() {
 
-    constructor() {
+    // Table Breakpoints
 
-        // Table Breakpoints
+    const tableStackList = document.querySelectorAll("[class*='table--stack']");
 
-        const tableStackList = document.querySelectorAll("[class*='table--stack']");
+    tableStackList.forEach((tableStack) => {
 
-        tableStackList.forEach((tableStack) => {
+        const tableHeaderList = tableStack.querySelectorAll("thead th");
+        const tableRowList = tableStack.querySelectorAll("tbody tr");
 
-            const tableHeaderList = tableStack.querySelectorAll("thead th");
-            const tableRowList = tableStack.querySelectorAll("tbody tr");
+        let myHeaders = [];
 
-            let myHeaders = [];
+        tableHeaderList.forEach((tableHeader) => {
 
-            tableHeaderList.forEach((tableHeader) => {
+            if (tableHeader.textContent !== "") {
+                let myTitle = tableHeader.textContent.trim();
+                myHeaders.push(myTitle);
+            }
 
-                if (tableHeader.textContent !== "") {
-                    let myTitle = tableHeader.textContent.trim();
-                    myHeaders.push(myTitle);
-                }
+        });
 
-            });
+        tableRowList.forEach((tableRow) => {
 
-            tableRowList.forEach((tableRow) => {
+            const tableDataList = tableRow.querySelectorAll("td");
 
-                const tableDataList = tableRow.querySelectorAll("td");
+            tableDataList.forEach((tableData, index) => {
 
-                tableDataList.forEach((tableData, index) => {
+                let tableDataHTML = tableData.innerHTML;
 
-                    let tableDataHTML = tableData.innerHTML;
+                let myNewContent = `
+                        <div class="td-content">
+                        ${tableDataHTML}
+                        </div>
+                    `;
 
-                    let myNewContent = `
-                            <div class="td-content">
-                            ${tableDataHTML}
-                            </div>
-                        `;
-
-                    tableData.innerHTML = myNewContent;
-                    tableData.setAttribute("data-before", myHeaders[index]);
-
-                });
+                tableData.innerHTML = myNewContent;
+                tableData.setAttribute("data-before", myHeaders[index]);
 
             });
 
         });
 
-        // Table Scrolling
+    });
 
-        const tableScrollList = document.querySelectorAll(".table-scroll");
+    // Table Scrolling
 
-        const initTableScroll = () => {
+    const tableScrollList = document.querySelectorAll(".table-scroll");
 
-            tableScrollList.forEach((scrollElement) => {
+    const initTableScroll = () => {
 
-                let scrollTarget = scrollElement.querySelector(".table-scroll__container");
+        tableScrollList.forEach((scrollElement) => {
 
-                let maxWidth = scrollElement.offsetWidth;
-                let scrollWidth = scrollTarget.scrollWidth;
+            let scrollTarget = scrollElement.querySelector(".table-scroll__container");
 
-                const removeGradient = () => {
+            let maxWidth = scrollElement.offsetWidth;
+            let scrollWidth = scrollTarget.scrollWidth;
 
-                    let scrollPosition = scrollTarget.scrollLeft;
+            const removeGradient = () => {
 
-                    if (scrollPosition > 1) {
-                        scrollTarget.setAttribute("data-scrolling", true);
-                    } else {
-                        scrollTarget.setAttribute("data-scrolling", false);
-                    }
+                let scrollPosition = scrollTarget.scrollLeft;
 
-                }
-
-                if (scrollWidth > maxWidth) {
-                    scrollElement.setAttribute("data-scroll", true);
+                if (scrollPosition > 1) {
+                    scrollTarget.setAttribute("data-scrolling", true);
                 } else {
-                    scrollElement.setAttribute("data-scroll", false);
+                    scrollTarget.setAttribute("data-scrolling", false);
                 }
 
-                scrollTarget.addEventListener("scroll", removeGradient, {
-                    passive: true
-                });
+            }
 
+            if (scrollWidth > maxWidth) {
+                scrollElement.setAttribute("data-scroll", true);
+            } else {
+                scrollElement.setAttribute("data-scroll", false);
+            }
+
+            scrollTarget.addEventListener("scroll", removeGradient, {
+                passive: true
             });
-        }
-    
-        initTableScroll();
-        window.addEventListener("resize", initTableScroll);
+
+        });
     }
+
+    initTableScroll();
+    window.addEventListener("resize", initTableScroll);
 }

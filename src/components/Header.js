@@ -80,59 +80,66 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="primary-nav__menu" id="primary-menu">
-          <ul>
-            <li>
-              <span className="font-size-sm margin-y-auto opacity-70">
-                {version}
-              </span>
-            </li>
-            <li>
-              <Link 
-                to="/docs/get-started/"
-                activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                Docs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/icons/"
-                activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                  Icons
-              </Link>
-            </li>
-            <li>
-              <Link to="/comps/"
-                activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                Comps
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="primary-nav__menu" id="primary-menu">
+
+          <nav aria-label="Main Menu">
+
+            <ul>
+              <li>
+                <span className="font-size-sm margin-y-auto opacity-70">
+                  {version}
+                </span>
+              </li>
+              <li>
+                <Link 
+                  to="/docs/get-started/"
+                  activeStyle={activeLinkStyles}
+                  partiallyActive={true}>
+                  Docs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/icons/"
+                  activeStyle={activeLinkStyles}
+                  partiallyActive={true}>
+                    Icons
+                </Link>
+              </li>
+              <li>
+                <Link to="/comps/"
+                  activeStyle={activeLinkStyles}
+                  partiallyActive={true}>
+                  Comps
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div className="primary-nav__toggles">
+
+          <button
+              className="button button--icon-only mobile-menu-toggle"
+              title="Menu"
+              data-toggle="collapse"
+              data-target-toggle="#primary-menu">
+                <span className="icon icon-menu" aria-hidden="true"></span>
+            </button>
+            
+        </div>
 
         <div className="primary-nav__actions">
-        
-          <button
-            className="button button--icon-only mobile-menu-toggle"
-            title="Menu"
-            data-toggle="collapse"
-            data-target-toggle="#primary-menu">
-              <span className="icon icon-menu" aria-hidden="true"></span>
-          </button>
 
-          <div className="button-group">
-            <a
-              className="button button--icon-only"
-              href="https://github.com/cavidano/natura11y"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noopener noreferrer">
-                <span className="icon icon-github"></span>
-            </a>
-          </div>
+          <a
+            className="button button--icon-only"
+            href="https://github.com/cavidano/natura11y"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer">
+              <span className="icon icon-github"></span>
+          </a>
 
         </div>
       

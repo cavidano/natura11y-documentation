@@ -60,17 +60,6 @@ In this file:
     }
 }
 
-.backdrop__cover {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: grid;
-
-    place-items: center;
-}
-
 .backdrop__image__credit {
     position: absolute;
     inset-block-end: 0;
@@ -83,6 +72,17 @@ In this file:
     width: auto;
     
     z-index: 500;
+}
+
+.backdrop__cover {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+
+    place-items: center;
 }
 
 //////////////////////////////////////////////
@@ -129,13 +129,12 @@ In this file:
         display: flex;
         overflow: hidden;
 
-        img, 
-        [data-gatsby-image-wrapper] {
+        [data-gatsby-image-wrapper],
+        img {
             object-fit: cover;
             object-position: 50% 50%;
         }
     }
-
 
     .backdrop__cover {
         position: relative;

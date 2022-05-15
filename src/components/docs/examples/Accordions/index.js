@@ -15,6 +15,7 @@ const AccordionExample = (props) => {
                 aria-expanded={openFirst ? `true` : `false`}>
                     Danaus Plexippus
             </button>
+            
             <div
                 className={openFirst ? `accordion__panel show` : `accordion__panel`}
                 id="acc-panel-example-01"

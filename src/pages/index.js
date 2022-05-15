@@ -63,7 +63,7 @@ const Home = () => {
 
                 <div className="grid grid--column-2--sm gap-3">
                   <Link
-                    className="button theme-white width-100"
+                    className="button theme-canvas width-100"
                     to="/docs/get-started/">
                       Get Started
                   </Link>

@@ -4,38 +4,35 @@ import './_style.scss';
 // Alerts
 //////////////////////////////////////////////
 
-export default class Alerts {
+export default function initAlerts() {
 
-    constructor() {
+    const alertDismissableList = document.querySelectorAll('.alert--dismissable');
+
+    const closeButtonHTML = (`
+        <button class="button button--icon-only">
+            <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+        </button>
+    `);
+
+    alertDismissableList.forEach((alertDismissable) => {
         
-        const alertDismissableList = document.querySelectorAll('.alert--dismissable');
+        alertDismissable.insertAdjacentHTML('afterbegin', closeButtonHTML);
 
-        const closeButtonHTML = (`
-            <button class="button button--icon-only">
-                <span class="icon icon-close" aria-label="Close" aria-hidden="true">
-            </button>
-        `);
+        const alertCloseButton = alertDismissable.querySelector("button");
 
-        alertDismissableList.forEach((alertDismissable) => {
+        alertCloseButton.addEventListener('click', (event) => {
             
-            alertDismissable.insertAdjacentHTML('afterbegin', closeButtonHTML);
+            event.preventDefault();
 
-            const alertCloseButton = alertDismissable.querySelector("button");
+            alertDismissable.classList.add('dismissed');
 
-            alertCloseButton.addEventListener('click', (event) => {
-                
-                event.preventDefault();
+            const dismissed = document.querySelector('.dismissed');
 
-                alertDismissable.classList.add('dismissed');
-
-                const dismissed = document.querySelector('.dismissed');
-
-                dismissed.addEventListener('animationend', () => {
-                    alertDismissable.remove();
-                });
-
+            dismissed.addEventListener('animationend', () => {
+                alertDismissable.remove();
             });
 
         });
-    }
+
+    });
 }

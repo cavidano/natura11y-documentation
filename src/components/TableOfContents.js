@@ -16,12 +16,6 @@ const TableOfContents = ({ sections }) => {
             const elOffset = el.offsetTop;
 
             elDistance = elOffset - winScrollY;
-
-            // console.log(`
-            //     window ScrollY =======, ${winScrollY},
-            //     element Offset =======, ${elOffset},
-            //     distance =======, ${elDistance}
-            // `);
             
             if (elDistance <= 0) {
                 el.firstChild.classList.add('sticky');

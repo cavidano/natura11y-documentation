@@ -16,12 +16,6 @@ const RelatedCustomProperties = ({ customProperties }) => {
                     let scope = category.scope;
                     let cps = category.customProperties;
 
-                    let showCPs = () => {
-
-                     return;
-                    
-                    }
-
                     const slug = title.replace(/ /, '_').toLowerCase();
 
                     return (
