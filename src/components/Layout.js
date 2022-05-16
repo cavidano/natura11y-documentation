@@ -1,4 +1,6 @@
-import React, { Fragment, useEffect } from "react"
+import React, { Fragment, useEffect, useState } from "react";
+
+import { globalHistory } from "@reach/router";
 
 import "../icons/natura11y-icons.css"
 
@@ -73,6 +75,25 @@ import "../natura11y/modules/theme"
 import IconSprite from "../icons/natura11y-icons-sprite.svg"
 
 const Layout = ({ children }) => {
+
+  // const cool = () => {
+
+  //     window.addEventListener('load', (event) => {
+  //       console.log("Why am I here?")
+  //       // initCollapse();
+  //       // initAlerts();
+  //       // initButtons();
+  //       // initDocument();
+  //       // initForms();
+  //       // initModal();
+  //       // initNavigation();
+  //       // initTabs();
+  //       // initTables();
+  //     });
+  // if (typeof document !== `undefined`) {
+  //   }
+  // }
+
   // Icon Sprite
 
   useEffect(() => {
@@ -99,29 +120,41 @@ const Layout = ({ children }) => {
 
     }
 
-    if (typeof document !== `undefined`) {
-      window.addEventListener("load", event => {
-        console.log("DOM fully loaded and parsed")
-        initAccordion();
-        initAlerts()
-        initButtons()
-        initDocument()
-        initForms()
-        initModal()
-        initNavigation()
-        initTabs()
-        initTables()
-        initCollapse();
-      });
+
+  }, []);
+
+  function waitForElm(selector) {
+    return new Promise(resolve => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector))
+      }
+
+      const observer = new MutationObserver(() => {
+        if (document.querySelector(selector)) {
+          // resolve(document.querySelector(selector));
+
+          console.log("I am disconnected");
+          observer.disconnect();
+        }
+      })
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      })
+    })
+  }
+
+  globalHistory.listen(({ action }) => {
+    if (action === "PUSH") {
+    waitForElm(".accordion").then(elm => {
+      console.log(elm, "is ready")
+      initAccordion()
+    })
     }
+  })
 
-  }, []);
 
-  useEffect(() => {
-
-    console.log('I can do this!!!!!!!!!!!!!');
-  
-  }, []);
 
   return <Fragment>{children}</Fragment>
 }

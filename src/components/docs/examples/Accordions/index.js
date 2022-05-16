@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AccordionExample = (props) => {
 
+    useEffect(() => {
+
+        console.log('I am an accordion loading');
+
+    }, []);
     const { openFirst } = props;
 
     return (
