@@ -1,19 +1,22 @@
 import React, { useEffect } from 'react';
 
+import { v4 as uuidv4 } from 'uuid';
+
 import initAccordion from '../../../../natura11y/modules/accordion';
 
 const AccordionExample = (props) => {
 
     useEffect(() => {
-
+        console.log(idSuffix, 'acc called');
         initAccordion();
-
     }, []);
+
+    const accKey = uuidv4();
 
     const { openFirst, idSuffix } = props;
 
     return (
-        <div className="accordion">
+        <div className="accordion" key={accKey}>
 
             <button
                 className="accordion__button h5"
@@ -128,7 +131,8 @@ const AccordionExample = (props) => {
 }
 
 AccordionExample.defaultProps = {
-    openFirst: false
+    openFirst: false,
+    idSuffix: null
 }
 
 export default AccordionExample;

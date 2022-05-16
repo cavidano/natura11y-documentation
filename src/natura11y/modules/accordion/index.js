@@ -12,10 +12,10 @@ export default function initAccordion() {
 
     if(accordionList.length) {
 
-        
         accordionList.forEach((accordion) => {
 
-    console.log('cooooooooool')
+            console.log('I am an acc')
+
             const accordionButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
             const accordionPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
 
