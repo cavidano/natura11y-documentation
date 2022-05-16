@@ -40,7 +40,9 @@ The following is a basic accordion component. All accordion panels are closed by
     figureNumber="1"
     highlightedLines="1,3-10,12-25"
     visualExample={(
-        <AccordionExample />
+        <AccordionExample
+            idSuffix="_example_one"
+        />
     )}
     codeExample={(`
         <div class="accordion"> \n
@@ -157,7 +159,10 @@ You may want one of your accordion topics to be open by default (when the page l
     figureNumber="3"
     highlightedLines="6,11"
     visualExample={(
-        <p>kjhugyftguiokp</p>
+        <AccordionExample
+            openFirst={true}
+            idSuffix="_example_two"
+        />
     )}
     codeExample={(`
         <button

@@ -1,31 +1,34 @@
 import React, { useEffect } from 'react';
 
+import initAccordion from '../../../../natura11y/modules/accordion';
+
 const AccordionExample = (props) => {
 
     useEffect(() => {
 
-        console.log('I am an accordion loading');
+        initAccordion();
 
     }, []);
-    const { openFirst } = props;
+
+    const { openFirst, idSuffix } = props;
 
     return (
         <div className="accordion">
 
             <button
                 className="accordion__button h5"
-                id="acc-button-example-01"
+                id={`acc-button-one${idSuffix}`}
                 data-toggle="accordion"
-                aria-controls="acc-panel-example-01"
+                aria-controls={`acc-panel-one${idSuffix}`}
                 aria-expanded={openFirst ? `true` : `false`}>
                     Danaus Plexippus
             </button>
             
             <div
                 className={openFirst ? `accordion__panel show` : `accordion__panel`}
-                id="acc-panel-example-01"
+                id={`acc-panel-one${idSuffix}`}
                 data-accordion="panel"
-                aria-labelledby="acc-button-example-01"
+                aria-labelledby={`acc-button-one${idSuffix}`}
                 role="region">
                 <div className="accordion__panel__content">
                     <p>
@@ -36,16 +39,17 @@ const AccordionExample = (props) => {
 
             <button
                 className="accordion__button h5"
-                id="acc-button-example-01"
+                id={`acc-button-two${idSuffix}`}
                 data-toggle="accordion"
-                aria-controls="acc-panel-example-01"
+                aria-controls={`acc-panel-two${idSuffix}`}
                 aria-expanded="false">
                     Papilio Polyxenes
             </button>
+
             <div className="accordion__panel"
-                id="acc-panel-example-01"
+                id={`acc-panel-two${idSuffix}`}
                 data-accordion="panel"
-                aria-labelledby="acc-button-example-01"
+                aria-labelledby={`acc-button-two${idSuffix}`}
                 role="region">
                 <div className="accordion__panel__content">
                     <p>
@@ -56,17 +60,18 @@ const AccordionExample = (props) => {
 
             <button
                 className="accordion__button h5"
-                id="acc-button-example-01"
+                id={`acc-button-three${idSuffix}`}
                 data-toggle="accordion"
-                aria-controls="acc-panel-example-01"
+                aria-controls={`acc-panel-three${idSuffix}`}
                 aria-expanded="false">
                     Hyalophora Cecropia
             </button>
+
             <div
                 className="accordion__panel"
-                id="acc-panel-example-01"
+                id={`acc-panel-three${idSuffix}`}
                 data-accordion="panel"
-                aria-labelledby="acc-button-example-01"
+                aria-labelledby={`acc-button-three${idSuffix}`}
                 role="region">
                 <div className="accordion__panel__content">
                     <p>
@@ -77,17 +82,18 @@ const AccordionExample = (props) => {
 
             <button
                 className="accordion__button h5"
-                id="acc-button-example-01"
+                id={`acc-button-four${idSuffix}`}
                 data-toggle="accordion"
-                aria-controls="acc-panel-example-01"
+                aria-controls={`acc-panel-four${idSuffix}`}
                 aria-expanded="false">
                     Deilephila Elpenor
             </button>
+
             <div
                 className="accordion__panel"
-                id="acc-panel-example-01"
+                id={`acc-panel-four${idSuffix}`}
                 data-accordion="panel"
-                aria-labelledby="acc-button-example-01"
+                aria-labelledby={`acc-button-four${idSuffix}`}
                 role="region">
                 <div className="accordion__panel__content">
                     <p>
@@ -98,17 +104,18 @@ const AccordionExample = (props) => {
 
             <button
                 className="accordion__button h5"
-                id="acc-button-example-01"
+                id={`acc-button-five${idSuffix}`}
                 data-toggle="accordion"
-                aria-controls="acc-panel-example-01"
+                aria-controls={`acc-panel-five${idSuffix}`}
                 aria-expanded="false">
                     Papilio Troilus
             </button>
+            
             <div
                 className="accordion__panel"
-                id="acc-panel-example-01"
+                id={`acc-panel-five${idSuffix}`}
                 data-accordion="panel"
-                aria-labelledby="acc-button-example-01"
+                aria-labelledby={`acc-button-five${idSuffix}`}
                 role="region">
                 <div className="accordion__panel__content">
                     <p>

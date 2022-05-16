@@ -8,7 +8,7 @@ import "../natura11y/modules/accents"
 
 import "../natura11y/modules/accessibility"
 
-import initAccordion from '../natura11y/modules/accordion';
+// import initAccordion from '../natura11y/modules/accordion';
 
 import initAlerts from "../natura11y/modules/alerts"
 
@@ -76,24 +76,6 @@ import IconSprite from "../icons/natura11y-icons-sprite.svg"
 
 const Layout = ({ children }) => {
 
-  // const cool = () => {
-
-  //     window.addEventListener('load', (event) => {
-  //       console.log("Why am I here?")
-  //       // initCollapse();
-  //       // initAlerts();
-  //       // initButtons();
-  //       // initDocument();
-  //       // initForms();
-  //       // initModal();
-  //       // initNavigation();
-  //       // initTabs();
-  //       // initTables();
-  //     });
-  // if (typeof document !== `undefined`) {
-  //   }
-  // }
-
   // Icon Sprite
 
   useEffect(() => {
@@ -120,43 +102,9 @@ const Layout = ({ children }) => {
 
     }
 
-
   }, []);
-
-  function waitForElm(selector) {
-    return new Promise(resolve => {
-      if (document.querySelector(selector)) {
-        return resolve(document.querySelector(selector))
-      }
-
-      const observer = new MutationObserver(() => {
-        if (document.querySelector(selector)) {
-          // resolve(document.querySelector(selector));
-
-          console.log("I am disconnected");
-          observer.disconnect();
-        }
-      })
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-      })
-    })
-  }
-
-  globalHistory.listen(({ action }) => {
-    if (action === "PUSH") {
-    waitForElm(".accordion").then(elm => {
-      console.log(elm, "is ready")
-      initAccordion()
-    })
-    }
-  })
-
-
 
   return <Fragment>{children}</Fragment>
 }
 
-export default Layout
+export default Layout;
