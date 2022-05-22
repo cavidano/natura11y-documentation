@@ -6,12 +6,17 @@ import { getFocusableElements } from '../../utilities/focus'
 // Modal
 //////////////////////////////////////////////
 
-export default function initModal() {
+export default class Modal {
 
-    const modalList = document.querySelectorAll('.modal');
-    const modalButtonList = document.querySelectorAll('[data-modal-open]');
+  constructor() {
+    this.modalList = document.querySelectorAll('.modal');
+    this.modalButtonList = document.querySelectorAll('[data-modal-open]');
+  }
 
-    const initModal = modalTarget => {
+  init() {
+  
+    const initModal = (modalTarget) => {
+
       document.querySelector('body').classList.add('modal-open');
 
       modalTarget.setAttribute('aria-hidden', false);
@@ -102,7 +107,7 @@ export default function initModal() {
 
     }
 
-    modalList.forEach(modal => {
+    this.modalList.forEach(modal => {
       const modalContainer = modal.querySelector('.modal__content');
 
       modalContainer.setAttribute('role', 'dialog');
@@ -111,7 +116,7 @@ export default function initModal() {
       modal.setAttribute('aria-hidden', true);
     });
 
-    modalButtonList.forEach(modalButton => {
+    this.modalButtonList.forEach(modalButton => {
 
       modalButton.addEventListener('click', event => {
         const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
@@ -123,4 +128,7 @@ export default function initModal() {
       });
 
     });
+  
+  }
+
 }

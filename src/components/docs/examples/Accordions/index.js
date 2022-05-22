@@ -1,15 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import initAccordion from '../../../../natura11y/modules/accordion';
-
 const AccordionExample = (props) => {
-
-    useEffect(() => {
-        console.log(idSuffix, 'acc called');
-        initAccordion();
-    }, []);
 
     const accKey = uuidv4();
 

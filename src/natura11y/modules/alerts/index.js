@@ -4,35 +4,40 @@ import './_style.scss';
 // Alerts
 //////////////////////////////////////////////
 
-export default function initAlerts() {
+export default class Alerts {
 
-    const alertDismissableList = document.querySelectorAll('.alert--dismissable');
+    constructor() {
+        this.alertDismissableList = document.querySelectorAll('.alert--dismissable');
+    
+        this.closeButtonHTML = (`
+            <button class="button button--icon-only">
+                <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+            </button>
+        `);
+    }
 
-    const closeButtonHTML = (`
-        <button class="button button--icon-only">
-            <span class="icon icon-close" aria-label="Close" aria-hidden="true">
-        </button>
-    `);
+    init() {
 
-    alertDismissableList.forEach((alertDismissable) => {
-        
-        alertDismissable.insertAdjacentHTML('afterbegin', closeButtonHTML);
-
-        const alertCloseButton = alertDismissable.querySelector("button");
-
-        alertCloseButton.addEventListener('click', (event) => {
+        this.alertDismissableList.forEach((alertDismissable) => {
             
-            event.preventDefault();
+            alertDismissable.insertAdjacentHTML('afterbegin', this.closeButtonHTML);
 
-            alertDismissable.classList.add('dismissed');
+            const alertCloseButton = alertDismissable.querySelector("button");
 
-            const dismissed = document.querySelector('.dismissed');
+            alertCloseButton.addEventListener('click', (event) => {
+                
+                event.preventDefault();
 
-            dismissed.addEventListener('animationend', () => {
-                alertDismissable.remove();
+                alertDismissable.classList.add('dismissed');
+
+                const dismissed = document.querySelector('.dismissed');
+
+                dismissed.addEventListener('animationend', () => {
+                    alertDismissable.remove();
+                });
+
             });
 
         });
-
-    });
+    }
 }

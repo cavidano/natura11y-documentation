@@ -6,13 +6,13 @@ import { getFocusableElements } from '../../utilities/focus';
 // Accordion
 //////////////////////////////////////////////
 
-export default class Accordion {
+export default async function initAccordion() {
 
-    constructor() {
-        
-        const accordionList = document.querySelectorAll('.accordion');
+    const accordionList = document.querySelectorAll('.accordion');
 
-       accordionList.forEach((accordion) => {
+    if(accordionList.length) {
+
+        accordionList.forEach((accordion) => {
 
             const accordionButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
             const accordionPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
@@ -119,18 +119,11 @@ export default class Accordion {
                         }
                     }
 
-                    const key = event.keyCode;
-
-                    const keyCodes = {
-                        arrowUp: 38,
-                        arrowDown: 40
-                    };
-
-                    switch (key) {
-                        case keyCodes.arrowUp:
+                    switch (event.code) {
+                        case 'ArrowUp':
                             directionalFocus(-1);
                             break;
-                        case keyCodes.arrowDown:
+                        case'ArrowDown':
                             directionalFocus(1);
                             break;
                         default:
@@ -140,7 +133,7 @@ export default class Accordion {
                 });
 
                 accordionButton.addEventListener('keyup', (event) => {
-                    if (event.keyCode === 13 && event.target.tagName !== 'BUTTON') {
+                    if (event.code === 'Enter' && event.target.tagName !== 'BUTTON') {
                         initAccordion(event);
                     }
                 });
@@ -148,5 +141,6 @@ export default class Accordion {
             });
 
         });
-}
     }
+
+}

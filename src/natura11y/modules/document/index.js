@@ -4,12 +4,16 @@ import './_style.scss';
 // Document
 //////////////////////////////////////////////
 
-export default function initDocument() {
+export default class Document {
 
-    const copyrightYear = document.querySelector('.copyright-year');
+    constructor() {
+        this.copyrightYear = document.querySelector('.copyright-year');
+    }
 
-    if (copyrightYear) {
-        const currentYear = new Date().getFullYear();
-        copyrightYear.innerHTML = currentYear;
+    init(){
+        if(this.copyrightYear) {
+            const currentYear = new Date().getFullYear();
+            this.copyrightYear.innerHTML = currentYear;
+        }
     }
 }

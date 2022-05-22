@@ -4,12 +4,15 @@ import './_style.scss';
 // Tabs
 //////////////////////////////////////////////
 
-export default function initTabs() {
+export default class Tabs {
 
+    constructor() {
+        this.tabsList = document.querySelectorAll('.tabs');
+    }
 
-        const tabsList = document.querySelectorAll('.tabs');
+    init() {
 
-        tabsList.forEach((tab) => {
+        this.tabsList.forEach((tab) => {
 
             const tabsButtonList = tab.querySelectorAll('[role="tab"]');
             const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]');
@@ -93,7 +96,6 @@ export default function initTabs() {
                             break;
                         default:
                         // do nothing
-        
                     }
 
                 });
@@ -101,4 +103,5 @@ export default function initTabs() {
             });
 
         });
+    }
 }

@@ -6,17 +6,17 @@ import { getFocusableElements } from '../../utilities/focus';
 // Accordion
 //////////////////////////////////////////////
 
-export default function initAccordion() {
+export default class Accordion {
 
-    const accordionList = document.querySelectorAll('.accordion');
+    constructor() {
+        this.accordionList = document.querySelectorAll('.accordion');
+    }
 
-    if(accordionList.length) {
+    init() {
 
-        accordionList.forEach((accordion) => {
+        this.accordionList.forEach((accordion) => {
 
-            console.log('I am an acc')
-
-            const accordionButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
+            const accordionButtonList = accordion.querySelectorAll('[data-accordion="button"]');
             const accordionPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
 
             const setFocusableElements = (element = document, focusable = false) => {
@@ -53,7 +53,7 @@ export default function initAccordion() {
                     setFocusableElements(currentAccordionPanel, false);
                 }
 
-                const initAccordionCool = (event) => {
+                const initAccordion = (event) => {
 
                     event.preventDefault();
                     event.stopPropagation();
@@ -102,7 +102,7 @@ export default function initAccordion() {
                 }
 
                 accordionButton.addEventListener('click', (event) => {
-                    initAccordionCool(event);
+                    initAccordion(event);
                 });
 
                 accordionButton.addEventListener('keydown', (event) => {
@@ -136,7 +136,7 @@ export default function initAccordion() {
 
                 accordionButton.addEventListener('keyup', (event) => {
                     if (event.code === 'Enter' && event.target.tagName !== 'BUTTON') {
-                        initAccordionCool(event);
+                        initAccordion(event);
                     }
                 });
 
@@ -144,5 +144,4 @@ export default function initAccordion() {
 
         });
     }
-
 }
