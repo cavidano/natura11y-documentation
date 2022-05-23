@@ -70,8 +70,6 @@ import Layout from './src/components/Layout';
 
 export const onRouteUpdate = () => {
   
-  console.log('ROUTE CHANGE');
-
   const accordion = new Accordion();
   accordion.init();
   
@@ -88,15 +86,6 @@ export const onRouteUpdate = () => {
   tabs.init();
 
 }
-
-export const onClientEntry = () => {
-
-  console.log('CLIENT ENTRY');
-
-
-
-};
-
 
 export const wrapPageElement = ({ element, props }) => {
   return (
