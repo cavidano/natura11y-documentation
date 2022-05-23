@@ -21,8 +21,11 @@ const ThemeExampleCard = (props) => {
             case 'Light':
                 setThemeClass('theme-light');
                 break;
+            case 'Prefers':
+                setThemeClass('theme-canvas--prefers');
+                break;
             default:
-                setThemeClass('theme-white');
+                setThemeClass('theme-canvas');
         }
 
     }, [themeColor]);
@@ -105,12 +108,12 @@ const ThemeExampleCard = (props) => {
             </div>
             {cardContent()}
         </div>
-    )
+    );
 }
 
 ThemeExampleCard.defaultProps = {
     cardType: 'theme',
-    themeColor: 'White',
+    themeColor: 'Canvas',
     border: true,
 }
 

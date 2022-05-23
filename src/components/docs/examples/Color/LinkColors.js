@@ -22,7 +22,7 @@ const LinkColors = () => {
 
             </div>
         </figure>         
-    )
+    );
 }
 
 export default LinkColors;

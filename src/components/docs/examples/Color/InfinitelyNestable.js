@@ -14,15 +14,15 @@ const InfinitelyNestable = () => {
                         <p><strong>Dark</strong></p>
                         <div className="theme-light padding-3 box-shadow-1">
                             <p><strong>Light</strong></p>
-                            <div className="theme-white padding-3 box-shadow-1">
-                                <p><strong>White</strong></p>
+                            <div className="theme-canvas padding-3 box-shadow-1">
+                                <p><strong>Canvas</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>          
         </figure>          
-    )
+    );
 }
 
 export default InfinitelyNestable;

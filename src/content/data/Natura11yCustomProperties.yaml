@@ -229,20 +229,20 @@
       description: !mdx |
         Color of text elements within the *white theme* (default) utility
         class
-    - name: white-border
+    - name: canvas-border
       value: hsla(0, 0%, 50%, 0.25)
       description: !mdx |
         Color of borders within the *white theme* (default) utility class
-    - name: white-link
+    - name: canvas-link
       value: var(--a11y-link)
       description: !mdx |
         Color of links within the *white theme* (default) utility class
-    - name: white-confirm
+    - name: canvas-confirm
       value: '#008237'
       description: !mdx |
         Color of confirmation alerts within the *white theme* (default)
         utility class
-    - name: white-warn
+    - name: canvas-warn
       value: '#e4193c'
       description: !mdx |
         Color of warning alerts within the *white theme* (default)

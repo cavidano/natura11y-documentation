@@ -21,7 +21,7 @@ const PrinciplePalette = () => {
                     <p><strong>Light</strong></p>
                 </div>
                 <div className="theme-white border padding-3 margin-y-2">
-                    <p><strong>White (default)</strong></p>
+                    <p><strong>Canvas (default)</strong></p>
                 </div>
 
             </div>

@@ -8,6 +8,7 @@ bannerImage: ../../images/banner/color.jpg
 
 import PrinciplePalette from '../../components/docs/examples/Color/PrinciplePalette';
 import ThemeColors from '../../components/docs/examples/Color/ThemeColors';
+import PrefersColorScheme from '../../components/docs/examples/Color/PrefersColorScheme';
 import LinkColors from '../../components/docs/examples/Color/LinkColors';
 import FeedbackColors from '../../components/docs/examples/Color/FeedbackColors';
 import InfinitelyNestable from '../../components/docs/examples/Color/InfinitelyNestable';
@@ -32,7 +33,7 @@ Learn more about <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-m
 
 ## Theme Colors: Your Principle Palette
 
-Your principal theme colors include ***Primary***, ***Secondary***, ***Dark***, ***Light***, and ***White***.
+Your principal theme colors include ***Primary***, ***Secondary***, ***Dark***, ***Light***, and ***Canvas***.
 
 </TextBlock>
 
@@ -42,7 +43,7 @@ Your principal theme colors include ***Primary***, ***Secondary***, ***Dark***, 
 
 These five colors produce utility classes for <a href="#themeColorUtilities">theme colors</a>, <a href="#backgroundColorUtilities">background colors</a>, <a href="#1">text colors</a>, and <a href="#1">border colors</a>.
 
-Natura11y treats ***white*** as a color&#8212;and this is important&#8212;it serves as your default theme. Natura11y's CSS file applies the white theme (and its <a href="#correlatedColors">correlated colors</a>) to the <code>&lt;body&gt;</code>.
+Natura11y treats ***canvas*** (white) as a color&#8212;and this is important&#8212;it serves as your default theme. Natura11y's CSS file applies the *canvas* theme (and its <a href="#correlatedColors">correlated colors</a>) to the <code>&lt;body&gt;</code> selector.
 
 </TextBlock>
 
@@ -275,6 +276,19 @@ Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. 
 On smaller viewports The above example uses the default ***white*** theme. It instead used the ***primary*** theme when the viewport reaches the large breakpoint. Scale your browser horizontally to see this change occur.
 
 </TextBlock>
+
+<Divider id="prefers-color-scheme" />
+
+<TextBlock>
+
+## Prefers Color Scheme
+
+Natura11y's `.theme-canvas` utility offers a special modifier class `--prefers`. With `theme-canvas--prefers` present on the `<body>` tag for example, a light or dark color theme is used depending on the operating system's settings. 
+
+</TextBlock>
+
+
+<PrefersColorScheme />
 
 <Divider id="background-color-utilities" />
 

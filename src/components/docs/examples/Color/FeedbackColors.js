@@ -8,6 +8,7 @@ const LinkColors = () => {
 
     return (
         <figure className="margin-y-4">
+
             <div className="container narrow grid gap-3" style={exampleStyles}>
 
                 <ThemeExampleCard cardType="feedback" themeColor="Primary" border={false} />
@@ -20,9 +21,10 @@ const LinkColors = () => {
 
                 <ThemeExampleCard cardType="feedback" />
 
-            </div>          
+            </div>
+
         </figure>          
-    )
+    );
 }
 
 export default LinkColors;

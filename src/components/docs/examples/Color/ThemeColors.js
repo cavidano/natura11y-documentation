@@ -22,7 +22,7 @@ const ThemeColors = () => {
 
             </div>        
         </figure>        
-    )
+    );
 }
 
 export default ThemeColors;
