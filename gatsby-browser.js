@@ -65,6 +65,7 @@ import Tables from './src/natura11y/modules/tables';
 import './src/natura11y/modules/typography';
 
 import './src/natura11y/modules/z-index';
+
 import './src/natura11y/theme';
 
 import Layout from './src/components/Layout';
@@ -77,14 +78,26 @@ export const onRouteUpdate = () => {
   const alerts = new Alerts();
   alerts.init();
   
+  const buttons = new Buttons();
+  buttons.init();
+  
   const collapse = new Collapse();
   collapse.init();
+  
+  const forms = new Forms();
+  forms.init();
 
   const modal = new Modal();
   modal.init();
 
+  const navigation = new Navigation();
+  navigation.init();
+
   const tabs = new Tabs();
   tabs.init();
+
+  const tables = new Tables();
+  tables.init();
 
 }
 

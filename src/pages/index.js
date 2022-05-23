@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { Link } from 'gatsby';
+
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header';
@@ -22,11 +23,9 @@ const Home = () => {
           className="flex-grow-1 theme-secondary backdrop backdrop--fixed theme-dark"
           id="skip-header-target"
           style={{
-            '--backdrop-fixed-height':'100%',
-            'minHeight': '400px'
+            '--backdrop-fixed-height':'100%'
           }}>
         
-
           <div className="backdrop__image">
 
             <StaticImage
@@ -51,17 +50,17 @@ const Home = () => {
 
             <div className="container medium margin-y-4 text-align-center">
                 
-              <h1 className="banner-headline text-align-center text-shadow">
+              <h1 className="banner-headline text-shadow display">
                 Be inclusive&#8212;naturally.
               </h1>
 
-              <div className="narrow margin-y-3">
+              <div className="container narrow margin-y-3">
                   
                 <p className="font-size-lg text-shadow">
-                  Natura11y is an open source, front-end toolkit. It's easy to use for developers at different skill levels. Natura11y is ideal for projects of any size.
+                  Natura11y is an open source, front-end toolkit. It's easy to use for developers at different skill levels.
                 </p>
 
-                <div className="grid grid--column-2--sm gap-3">
+                <div className="grid narrow grid--column-2--sm gap-3">
                   <Link
                     className="button theme-canvas width-100"
                     to="/docs/get-started/">
@@ -134,7 +133,7 @@ const Home = () => {
                               </p>
                               
                               <Link
-                                className="button theme-white box-shadow font-size-md"
+                                className="button theme-canvas box-shadow font-size-md"
                                 to="/docs/accessibility/">
                                   What's Included
                               </Link>
@@ -172,7 +171,7 @@ const Home = () => {
                               </p>
                               
                               <Link
-                                className="button theme-white box-shadow font-size-md"
+                                className="button theme-canvas box-shadow font-size-md"
                                 to="/docs/color/">
                                   Color
                               </Link>
@@ -210,7 +209,7 @@ const Home = () => {
                                 </p>
                                 
                                 <Link
-                                  className="button theme-white box-shadow font-size-md"
+                                  className="button theme-canvas box-shadow font-size-md"
                                   to="/docs/customization/">
                                     Customization
                                 </Link>
@@ -248,7 +247,7 @@ const Home = () => {
                                 </p>
                                 
                                 <Link
-                                  className="button theme-white box-shadow font-size-md"
+                                  className="button theme-canvas box-shadow font-size-md"
                                   to="/docs/rtl/">
                                     How it Works
                                 </Link>
