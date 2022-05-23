@@ -1,27 +1,23 @@
 import React from 'react';
 
-import { v4 as uuidv4 } from 'uuid';
+const OpenFirst = () => {
 
-const AccordionExample = (props) => {
-
-    const accKey = uuidv4();
-
-    const { openFirst, idSuffix } = props;
+    const idSuffix = '_example-01';
 
     return (
-        <div className="accordion" key={accKey}>
+        <div className="accordion">
 
             <button
                 className="accordion__button h5"
                 id={`acc-button-one${idSuffix}`}
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls={`acc-panel-one${idSuffix}`}
-                aria-expanded={openFirst ? `true` : `false`}>
+                aria-expanded="true">
                     Danaus Plexippus
             </button>
             
             <div
-                className={openFirst ? `accordion__panel show` : `accordion__panel`}
+                className="accordion__panel show"
                 id={`acc-panel-one${idSuffix}`}
                 data-accordion="panel"
                 aria-labelledby={`acc-button-one${idSuffix}`}
@@ -36,7 +32,7 @@ const AccordionExample = (props) => {
             <button
                 className="accordion__button h5"
                 id={`acc-button-two${idSuffix}`}
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls={`acc-panel-two${idSuffix}`}
                 aria-expanded="false">
                     Papilio Polyxenes
@@ -57,7 +53,7 @@ const AccordionExample = (props) => {
             <button
                 className="accordion__button h5"
                 id={`acc-button-three${idSuffix}`}
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls={`acc-panel-three${idSuffix}`}
                 aria-expanded="false">
                     Hyalophora Cecropia
@@ -79,7 +75,7 @@ const AccordionExample = (props) => {
             <button
                 className="accordion__button h5"
                 id={`acc-button-four${idSuffix}`}
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls={`acc-panel-four${idSuffix}`}
                 aria-expanded="false">
                     Deilephila Elpenor
@@ -101,7 +97,7 @@ const AccordionExample = (props) => {
             <button
                 className="accordion__button h5"
                 id={`acc-button-five${idSuffix}`}
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls={`acc-panel-five${idSuffix}`}
                 aria-expanded="false">
                     Papilio Troilus
@@ -123,9 +119,4 @@ const AccordionExample = (props) => {
     );
 }
 
-AccordionExample.defaultProps = {
-    openFirst: false,
-    idSuffix: null
-}
-
-export default AccordionExample;
+export default OpenFirst;

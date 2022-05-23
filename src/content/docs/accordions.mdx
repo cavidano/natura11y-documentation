@@ -6,8 +6,8 @@ bannerCreditHandle: "@shatteredsmooth"
 bannerImage: ../../images/banner/accordions.jpg
 ---
 
-import AccordionExample from '../../components/docs/examples/Accordions';
 import DefaultBehavior from '../../components/docs/examples/Accordions/DefaultBehavior';
+import OpenFirst from '../../components/docs/examples/Accordions/OpenFirst';
 
 <TextBlock>
 
@@ -158,10 +158,7 @@ You may want one of your accordion topics to be open by default (when the page l
     figureNumber="3"
     highlightedLines="6,11"
     visualExample={(
-        <AccordionExample
-            openFirst={true}
-            idSuffix="_two"
-        />
+        <OpenFirst />
     )}
     codeExample={(`
         <button

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DefaultBehavior = () => {
 
-    const idSuffix = '_cool';
+    const idSuffix = '_example-01';
 
     return (
         <div className="accordion">
@@ -13,7 +13,7 @@ const DefaultBehavior = () => {
                 data-accordion="button"
                 aria-controls={`acc-panel-one${idSuffix}`}
                 aria-expanded="false">
-                    Danaus Plexippus COOL
+                    Danaus Plexippus
             </button>
             
             <div
