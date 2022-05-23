@@ -64,7 +64,8 @@ import Tables from './src/natura11y/modules/tables';
 
 import './src/natura11y/modules/typography';
 
-import './src/natura11y/modules/z-index/index';
+import './src/natura11y/modules/z-index';
+import './src/natura11y/theme';
 
 import Layout from './src/components/Layout';
 
