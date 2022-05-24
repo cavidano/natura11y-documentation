@@ -80,43 +80,40 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="primary-nav__menu" id="primary-menu">
+        <nav className="primary-nav__menu" id="primary-menu" aria-label="Main Menu">
 
-          <nav aria-label="Main Menu">
+          <ul>
+            <li>
+              <span className="font-size-sm margin-y-auto opacity-70">
+                {version}
+              </span>
+            </li>
+            <li>
+              <Link 
+                to="/docs/get-started/"
+                activeStyle={activeLinkStyles}
+                partiallyActive={true}>
+                Docs
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/icons/"
+                activeStyle={activeLinkStyles}
+                partiallyActive={true}>
+                  Icons
+              </Link>
+            </li>
+            <li>
+              <Link to="/comps/"
+                activeStyle={activeLinkStyles}
+                partiallyActive={true}>
+                Comps
+              </Link>
+            </li>
+          </ul>
 
-            <ul>
-              <li>
-                <span className="font-size-sm margin-y-auto opacity-70">
-                  {version}
-                </span>
-              </li>
-              <li>
-                <Link 
-                  to="/docs/get-started/"
-                  activeStyle={activeLinkStyles}
-                  partiallyActive={true}>
-                  Docs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/icons/"
-                  activeStyle={activeLinkStyles}
-                  partiallyActive={true}>
-                    Icons
-                </Link>
-              </li>
-              <li>
-                <Link to="/comps/"
-                  activeStyle={activeLinkStyles}
-                  partiallyActive={true}>
-                  Comps
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-        </div>
+        </nav>
 
         <div className="primary-nav__toggles">
 

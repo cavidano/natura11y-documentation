@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import { v4 as uuidv4 } from 'uuid';
 
 const PrimaryNavigation = (props) => {
 
-    const { navClass, searchWidth } = props;
+    const idSuffix = uuidv4();
+
+    const { navClass } = props;
 
     const logoPlaceholder = (
         <svg xmlns="http://www.w3.org/2000/svg" width="126" height="34" viewBox="0 0 126 34">
@@ -15,95 +19,118 @@ const PrimaryNavigation = (props) => {
         </svg>
     );
 
-    return (
 
-        <div className="container wide margin-y-4">
-            
-            <div
-                className={`${navClass} box-shadow-1 z-index-1500`}
-                style={{'--primary-nav-search-width': `${searchWidth}`}}>
+    const toggleButtons = () => {
 
-                <div className="primary-nav__logo">
-                    <a href="#1" title="Home" data-logo="brand">
-                        {logoPlaceholder}
-                    </a>
-                </div>
-
-                <nav className="primary-nav__menu" aria-label="Main Menu" id="primary-menu-below">
-
-                    <ul>
-                        <li>
-                            <button data-toggle="dropdown">Dropdown</button>
-                            <ul className="nav__dropdown box-shadow-1--lg">
-                                <li>
-                                    <a href="#1">Link</a>
-                                </li>
-                                <li>
-                                    <a href="#1">Link</a>
-                                </li>
-                                <li>
-                                    <a href="#1">Link</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-
-                    <form className="form-entry" aria-label="Search" role="search">
-
-                        <div className="form-entry__field">
-        
-                            <span className="form-entry__field__input">
-                                <span className="icon icon-search opacity-50" aria-hidden="true"></span>
-                                <input type="text" name="global-search" placeholder="Search" />
-                            </span>
-
-                        </div>
+        switch(navClass){
+            case 'primary-nav--below--lg': 
+                return (
+                    <Fragment>
                     
-                    </form>
-
-                </nav>
-
-                <div className="primary-nav__actions">
-
-                    <button
-                        className="button button--icon-only mobile-menu-toggle"
-                        aria-label="Menu"
-                        data-toggle="collapse"
-                        data-target-toggle="#primary-menu-below">
-                            <span className="icon icon-menu"></span>
-                    </button>
-                    
-                    <div className="button-group">
-
-                        <a href="#1" className="button">
-                            Sign In
-                        </a>
-
                         <button
-                            className="button button--icon-only"
-                            aria-label="Language"
-                            data-modal-open="global-language">
-                                <span className="icon icon-language"></span>
+                            className="mobile-menu-toggle button button--icon-only"
+                            aria-label="Menu"
+                            data-toggle="collapse"
+                            data-target-toggle={`#main-menu_${idSuffix}`}>
+                            <span className="icon icon-menu"></span>
+                        </button>
+                        
+                    </Fragment>
+                );
+            case 'primary-nav--inline--lg': 
+                return (
+                    <Fragment>
+                    
+                        <button
+                            className="mobile-menu-toggle button button--icon-only"
+                            aria-label="Menu"
+                            data-toggle="collapse"
+                            data-target-toggle={`#main-menu_${idSuffix}`}
+                            data-target-close={`#search_${idSuffix}`}>
+                            <span className="icon icon-menu"></span>
                         </button>
 
-                    </div>
+                        <button
+                            className="mobile-menu-toggle button button--icon-only"
+                            aria-label="Search"
+                            data-toggle="collapse"
+                            data-target-toggle={`#search_${idSuffix}`}
+                            data-target-close={`#main-menu_${idSuffix}`}>
+                                <span className="icon icon-search"></span>
+                        </button>
 
-                </div>
+                    </Fragment>
+                );
+            default: return <p>cool</p>
+        }
+    }
 
+    return (
+      <div className="container wide margin-y-4">
+        <div className={`${navClass} box-shadow-1 z-index-1500`}>
+          <div className="primary-nav__logo">
+            <a href="#1" title="Home" data-logo="brand">
+              {logoPlaceholder}
+            </a>
+          </div>
+
+          <nav className="primary-nav__menu" id={`main-menu_${idSuffix}`}>
+            <ul>
+              <li>
+                <button data-toggle="dropdown">Dropdown</button>
+                <ul className="nav__dropdown box-shadow-1--lg">
+                  <li>
+                    <a href="#1">Link</a>
+                  </li>
+                  <li>
+                    <a href="#1">Link</a>
+                  </li>
+                  <li>
+                    <a href="#1">Link</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#1">Link</a>
+              </li>
+              <li>
+                <a href="#1">Link</a>
+              </li>
+              <li>
+                <a href="#1">Link</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="primary-nav__toggle">
+
+            {toggleButtons()}
+
+          </div>
+
+          <form className="primary-nav__search" role="search" id={`search_${idSuffix}`}>
+            <div className="form-entry" aria-label="Search">
+              <div className="form-entry__field">
+                <span className="form-entry__field__input">
+                  <input type="text" name="global-search" />
+                  <button className="button font-size-sm">Search</button>
+                </span>
+              </div>
             </div>
+          </form>
+
+          <div class="primary-nav__actions">
+            <button class="button button--icon-only" aria-label="Language">
+              <span class="icon icon-language"></span>
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    )
 }
 
 PrimaryNavigation.defaultProps = {
-    navClass : 'primary-nav--below--lg',
-    searchWidth  : '25%'
+    navClass : 'primary-nav--below--lg'
 }
 
 export default PrimaryNavigation;
