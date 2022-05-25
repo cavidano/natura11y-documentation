@@ -19,7 +19,6 @@ const PrimaryNavigation = (props) => {
         </svg>
     );
 
-
     const toggleButtons = () => {
 
         switch(navClass){
@@ -119,9 +118,9 @@ const PrimaryNavigation = (props) => {
             </div>
           </form>
 
-          <div class="primary-nav__actions">
-            <button class="button button--icon-only" aria-label="Language">
-              <span class="icon icon-language"></span>
+          <div className="primary-nav__actions">
+            <button className="button button--icon-only" aria-label="Language">
+              <span className="icon icon-language"></span>
             </button>
           </div>
         </div>
@@ -130,7 +129,7 @@ const PrimaryNavigation = (props) => {
 }
 
 PrimaryNavigation.defaultProps = {
-    navClass : 'primary-nav--below--lg'
+    navClass : 'primary-nav--inline--lg'
 }
 
 export default PrimaryNavigation;

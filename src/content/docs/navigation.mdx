@@ -33,9 +33,9 @@ Learn more about <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focu
 
 ## Primary Navigation Component
 
-The primary navigation component is a complete header menu system. It's made up of four preassigned areas: the *logo*, *global action buttons*, and the *main menu*. The main menu container includes an optional search field.
+The primary navigation component is a complete header menu system. It's made up of four preassigned areas: ***logo***, ***main menu***, ***search***, and ***actions***. The main menu container includes an optional search field.
 
-There are two distinct placements available for the main menu. The first menu placement is below the logo, spanning the full width of the page:
+There are two distinct placements available for the main menu. The first menu placement is inline with the logo, creating a slim navigation bar:
 
 </TextBlock>
 
@@ -43,27 +43,27 @@ There are two distinct placements available for the main menu. The first menu pl
 
 <TextBlock>
 
-The second menu placement is inline with the logo, creating a slimmer navigation:
+The second menu placement is below the logo, spanning the full width of the component:
 
 </TextBlock>
 
-<PrimaryNavigation navClass="primary-nav--inline--lg" />
+<PrimaryNavigation navClass="primary-nav--below--lg" />
 
 <TextBlock>
 
-Both menus use the same markup but include a different *modifier* on their parent selector.
+Both menus use the same HTML markup but include a different *modifier* on their parent selector.
 
-In particular, `.primary-nav--below--{x}` places the menu below the logo. In contrast, `.primary-nav--inline--{x}` places the menu inline with the logo. Here, ***x*** equals its breakpoint modifier (e.g., *lg* for large). At this point the component changes layout from mobile to desktop.
+The `.primary-nav--inline--{x}` places the menu *inline* with the logo. In contrast, `.primary-nav--below--{x}` selector places the menu *below* the logo. Here, ***x*** equals its breakpoint modifier (e.g., *lg* for large). At this point the component changes layout from mobile to desktop.
 
 Figure 1 (below) provides the entire HTML for the primary navigation component.
 
 </TextBlock>
 
 <FigureBlock
-    figureNumber="2"
-    highlightedLines="1,3-17,19,47-54,58,60-65,67-77"
+    figureNumber="1"
+    highlightedLines="1,3-17,19-47,49-71,73-86,88-96"
     codeExample={(`
-        <div class="primary-nav--below--lg"> \n
+        <div class="primary-nav--inline--lg"> \n
             <div class="primary-nav__logo"> \n
                 <a href="#1" title="Home" data-logo="brand">
                     <!-- Placeholder logo, replace the following <svg> tag with your own -->
@@ -77,7 +77,7 @@ Figure 1 (below) provides the entire HTML for the primary navigation component.
                     </svg>
                 </a> \n
             </div> \n
-            <nav class="primary-nav__menu" aria-label="Main Menu" id="main-menu"> \n
+            <nav class="primary-nav__menu" id="main-menu" aria-label="Main Menu"> \n
                 <ul>
                     <li>
                         <button data-toggle="dropdown">Dropdown</button>
@@ -103,36 +103,48 @@ Figure 1 (below) provides the entire HTML for the primary navigation component.
                         <a href="#1">Link</a>
                     </li>
                 </ul> \n
-                <form class="form-entry" aria-label="Search" role="search">
-                    <div class="form-entry__field">
-                        <span class="form-entry__field__input">
-                            <span class="icon icon-search opacity-50" aria-hidden="true"></span>
-                            <input type="text" name="global-search" placeholder="Search">
-                        </span>
-                    </div>
-                </form> \n
             </nav> \n
-            <div class="primary-nav__actions"> \n
-                <button class="mobile-menu-toggle button button--icon-only"
+            <div class="primary-nav__toggle"> \n                     
+                <button
+                    class="mobile-menu-toggle button button--icon-only"
                     aria-label="Menu"
                     data-toggle="collapse"
-                    data-target-toggle="#main-menu">
+                    data-target-toggle="#main-menu"
+                    data-target-close="#search">
                         <span class="icon icon-menu"></span>
                 </button> \n
-                <div class="button-group"> \n
-                    <a href="#1" class="button">
-                        Sign In
-                    </a> \n
-                    <button class="button button--icon-only" aria-label="Language">
-                        <span class="icon icon-language"></span>
-                    </button> \n
+                <!-- The search toggle button is only required for inline navigation --> \n
+                <button
+                    class="mobile-menu-toggle button button--icon-only"
+                    aria-label="Search"
+                    data-toggle="collapse"
+                    data-target-toggle="#search"
+                    data-target-close="#main-menu">
+                        <span class="icon icon-search"></span>
+                </button> \n
+            </div> \n
+            <form class="primary-nav__search" id="search" role="search" data-focus-first> \n
+                <div class="form-entry">
+                    <div class="form-entry__field">
+                        <span class="form-entry__field__input">
+                            <input type="text" name="global-search">
+                            <button class="button">
+                                Search
+                            </button>
+                        </span>
+                    </div>
                 </div> \n
+            </form> \n
+            <div class="primary-nav__actions"> \n
+                <button
+                    class="button button--icon-only"
+                    aria-label="Language">
+                        <span class="icon icon-language"></span>
+                </button> \n
             </div> \n
         </div>
     `)}
 />
-
-
 
 <TableLineDescBlock targetFigure="1">
 
@@ -154,59 +166,49 @@ When using a single color `svg` for the logo, the `data-logo="brand"` attribute 
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="19">
+<TableLineDescRow lines="19-47">
 
 The `.primary-nav__menu` selector is required.
 
-The `id` attribute equals the value of `aria-controls` from the associated menu button (found within the `.primary-nav__buttons` selector).
+The `id` attribute equals the value of `aria-controls` from the associated menu button (found within the `.primary-nav__toggle` selector).
 
 It is recommended to include `aria-label="{y}"`, where y provides a descriptive name for assistive technology.
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="47-54">
+<TableLineDescRow lines="49-71">
 
-The `.form-entry` selector (search bar) is optional.
+The `.primary-nav__toggle` selector is required.
 
-The `role="search"` attribute is present for assistive technology.
+It contains the website's menu and search buttons (on mobile viewports). 
 
-It is recommended to include `aria-label="Search"`, which provides a descriptive name for assistive technology.
+The search toggle button is only required within the `.primary-nav--inline--{x}` selector. This is because with `.primary-nav--below--{x}`, the `.primary-nav__search` selector (described below) remains visible from mobile to dektop.
 
-Learn about <a href="/docs/forms/#formEntries">form entries</a>.
-
-</TableLineDescRow>
-
-<TableLineDescRow lines="58">
-
-The `.primary-nav__actions` selector is required.
-
-It contains the website's menu button (on mobile viewports).
-
-</TableLineDescRow>
-
-<TableLineDescRow lines="60-65">
-
-The `.mobile-menu-toggle` button is required.
-
-It toggles the main menu on mobile viewports. This button is a direct child of `.primary-nav__actions`.
+The `data-target-toggle` attribute equals the value of the main menu's `id` attribute.
 
 The `aria-label="Toggle Menu"` attribute provides a descriptive name for assistive technology.
 
 The `data-toggle="collapse"` attribute is required.
 
-The `data-target-toggle` attribute equals the value of the main menu's `id` attribute.
+Learn about <a href="/docs/collapse/">collapse</a>.
 
 </TableLineDescRow>
 
-<TableLineDescRow lines="67-77">
+<TableLineDescRow lines="73-86">
 
-The `.button-group` selector is optional.
+The `.primary-nav__search` selector is optional.
 
-It contains actions buttons that should be available on every page (e.g. *Sign In*, *Translate*).
+The `role="search"` attribute on the `form` tag is present for assistive technology.
 
-The `data-target-toggle` attribute equals the value of the main menu's `id` attribute.
+Learn about <a href="/docs/forms/#formEntries">form entries</a>.
 
-Learn about the <a href="/docs/buttons/#theButtonGroup">button group</a>.
+</TableLineDescRow>
+
+<TableLineDescRow lines="88-96">
+
+The `.primary-nav__actions` selector is optional.
+
+It contains actions buttons that should persist on every page (e.g. *Sign In*, *Translate*).
 
 </TableLineDescRow>
 

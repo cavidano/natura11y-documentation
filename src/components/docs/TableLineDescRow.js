@@ -1,13 +1,15 @@
 import React from 'react';
 
+import { Link } from 'gatsby';
+
 const TableLineDescRow = ({ children, lines, ...props }) => {
 
     return (
         <tr key={`${props.targetFigure}_${lines}`}>
             <td>
-                <a href={`#figure_${props.targetFigure}.${lines}`} data-line-anchor>
+                <Link to={`./#figure_${props.targetFigure}.${lines}`} data-line-anchor>
                     {lines}
-                </a>
+                </Link>
             </td>
             <td>
                 {children}
