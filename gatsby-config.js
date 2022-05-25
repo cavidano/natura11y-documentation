@@ -8,6 +8,7 @@ module.exports = {
     url: "https://gonataura11y",
     image: "/snape.jpg",
   },
+  trailingSlash: "never",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

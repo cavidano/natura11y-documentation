@@ -101,7 +101,7 @@ export const onRouteUpdate = () => {
 
 }
 
-export const wrapPageElement = ({ element, props }) => {
+export const wrapRootElement = ({ element, props }) => {
   return (
     <Layout {...props}>
         {element}
