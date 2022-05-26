@@ -48,6 +48,15 @@ const Margin = () => {
                     <p><code>.margin-5</code></p>
                 </div>
             </div>
+            
+            <div className="subtle-fill overflow-hidden">
+                <div className="theme-white border padding-2 margin-6">
+                    <p className="margin-bottom-1">
+                        Margin value (all sides)
+                    </p>
+                    <p><code>.margin-6</code></p>
+                </div>
+            </div>
 
         </div>
 

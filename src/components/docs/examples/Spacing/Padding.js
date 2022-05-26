@@ -39,6 +39,13 @@ function Padding() {
             <p><code>.padding-5</code></p>
         </div>
 
+        <div className="padding-6 subtle-fill border">
+            <p className="margin-bottom-1">
+                Padding value 6 (all sides)
+            </p>
+            <p><code>.padding-6</code></p>
+        </div>
+
     </div>
 
     )
