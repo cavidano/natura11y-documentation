@@ -48,7 +48,7 @@ iframe {
 //////////////////////////////////////////////
 
 [class*="aspect-ratio"] {
-    width: 100%;
+    max-width: 100%;
 }
 
 [class*="aspect-ratio-custom"] {

@@ -2,15 +2,7 @@ import React, {useEffect} from 'react';
 
 import { Link } from 'gatsby';
 
-import { navigate } from 'gatsby';
-
 const TableOfContents = ({ sections }) => {
-
-    const handleClick = (e) => {
-        console.log(window.location.pathname, 'window location')
-        e.preventDefault();
-        navigate(e.currentTarget.getAttribute('href'));
-    }
 
     useEffect(() => {
 
@@ -52,11 +44,9 @@ const TableOfContents = ({ sections }) => {
                         {sections
                         .map(section => (
                             <li key={`${section.id}`}>
-                                <a
-                                    href={`#${section.id}`}
-                                    onClick={handleClick}>
-                                        {section.text}
-                                </a>
+                                <Link to={`#${section.id}`}>
+                                    {section.text}
+                                </Link>
                             </li>
                         ))}
                     </ul>
