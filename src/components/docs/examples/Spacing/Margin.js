@@ -2,7 +2,9 @@ import React from 'react';
 
 const Margin = () => {
     return (
-        <div className="grid gap-2 font-size-md text-align-center" style={{'--subtle-fill-opacity': '.0375', '--white-border': 'hsla(0, 0%, 50%, 0.375)'}}>
+        <div
+            className="grid gap-2 font-size-md text-align-center"
+            style={{'--subtle-fill-opacity': '.0375', '--white-border': 'hsla(0, 0%, 50%, 0.375)'}}>
 
             <div className="subtle-fill overflow-hidden">
                 <div className="theme-white border padding-2 margin-1">

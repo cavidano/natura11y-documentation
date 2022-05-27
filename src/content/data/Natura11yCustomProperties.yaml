@@ -494,3 +494,7 @@
       value: '1.125'
       description: !mdx |
         Line height applied to headers
+    - name: paragraph-margin-bottom
+      value: '1.25em'
+      description: !mdx |
+        Bottom margin set to paragraphs

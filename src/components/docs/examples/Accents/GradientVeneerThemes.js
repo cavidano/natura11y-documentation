@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+
 import { StaticImage } from 'gatsby-plugin-image';
 
 const GradientVeneerThemes = () => {
