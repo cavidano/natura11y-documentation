@@ -57,7 +57,7 @@ const Comps = () => {
                                     <li>
                                         <a
                                             className="button button--outline button--has-icon"
-                                            href="https://github.com/cavidano/natura11y/blob/main/dist/html/comps/call-to-action/index.html"
+                                            href="https://github.com/cavidano/natura11y/blob/main/dist/html/comps/birds-landing-page/index.html"
                                             target="_blank">
                                                 <span className="icon icon-github button__icon"></span>
                                                 <span className="button__text">View on GitHub</span>
