@@ -114,8 +114,11 @@ In this file:
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
+
             flex-direction: row;
             align-items: center;
+
+            gap: calc(var(--nav-gap) * 2);
 
             > li > .nav__dropdown {
                 position: absolute;
