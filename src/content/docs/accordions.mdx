@@ -48,7 +48,7 @@ The following is a basic accordion component. All accordion panels are closed by
             <button
                 class="accordion__button h5"
                 id="acc-button-example-01"
-                data-toggle="accordion"
+                data-accordion="button"
                 aria-controls="acc-panel-example-01"
                 aria-expanded="false">
                     Danaus Plexippus
@@ -86,7 +86,7 @@ The child `.accordion__button` selector is required.
 
 The `id` attribute equals the value of its associated panel's `aria-labelledby` attribute.
 
-The `data-toggle="accordion"` attribute is present on the accordion button for JavaScript purposes.
+The `data-accordion="button"` attribute is present on the accordion button for JavaScript purposes.
 
 The `aria-controls` attribute equals its associated panel's `id` attribute. 
 
@@ -130,7 +130,7 @@ The the `.accordion__button` selector doesn't have to be a button tag. In fact, 
         <h2
             class="accordion__button h5"
             id="..."
-            data-toggle="accordion"
+            data-accordion="button"
             aria-controls="..."
             aria-expanded="false">
                 Danaus Plexippus
@@ -164,7 +164,7 @@ You may want one of your accordion topics to be open by default (when the page l
         <button
             class="accordion__button h5"
             id="acc-button-id"
-            data-toggle="accordion"
+            data-accordion="button"
             aria-controls="acc-panel-id"
             aria-expanded="true">
                 Danaus Plexippus
