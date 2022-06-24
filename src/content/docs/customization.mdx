@@ -6,6 +6,8 @@ bannerCreditHandle: "@bamin"
 bannerImage: ../../images/banner/customization.jpg
 ---
 
+import { cdnCSS, cdnJS, cdnIcons } from '../../mdxVars';
+
 import PracticeExercise from '../../components/docs/examples/Customization';
 import AllCustomProperties from '../../components/docs/AllCustomProperties';
 
@@ -81,9 +83,9 @@ Make new directory somewhere on your computer. Call it **color-example**. Copy a
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> \n
                 <title>Color Example • Natura11y</title> \n
                 <!-- Natura11y Icons -->
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css"> \n
+                <link rel="stylesheet" href="${cdnIcons}"> \n
                 <!-- Natura11y Stylesheet -->
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"> \n
+                <link rel="stylesheet" href="${cdnCSS}"> \n
             </head> \n
             <body> \n
                 <main class="overflow-hidden" id="skip-header-content"> \n

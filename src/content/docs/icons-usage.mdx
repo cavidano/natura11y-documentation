@@ -3,6 +3,8 @@ category: "supplemental"
 title: "Using the Icons"
 ---
 
+import { cdnIcons } from '../../mdxVars';
+
 <TextBlock>
 
 ## Icon Font (CDN)
@@ -28,7 +30,7 @@ Place the Natura11y icon font link tag in the `<head>` your document. Create ico
     )}
     codeExample={(`
         <!-- Natura11y Icon CSS -->
-        <link href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css" rel="stylesheet"> \n
+        <link href="${cdnIcons}" rel="stylesheet"> \n
         <!-- Icon HTML: your choice of <span> or <i> tags -->
         <span class="icon icon-home"></span>
     `)}
