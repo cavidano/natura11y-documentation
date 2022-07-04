@@ -113,7 +113,7 @@ const Home = () => {
                         style={{'--gradient-veneer-opacity': '0.8'}}>
 
                         <StaticImage
-                          className="opacity-30"
+                          className="opacity-60"
                           src="../images/backdrop-feature-accessibility.jpg"
                           alt="Giraffe eating leaves from a tree"
                         />
@@ -151,7 +151,7 @@ const Home = () => {
                         style={{'--gradient-veneer-opacity': '0.8'}}>
 
                         <StaticImage
-                          className="opacity-30"
+                          className="opacity-60"
                           src="../images/backdrop-feature-color-system.jpg"
                           alt="Colorful bird"
                         />
@@ -189,7 +189,7 @@ const Home = () => {
                         style={{'--gradient-veneer-opacity': '0.8'}}>
                           
                           <StaticImage
-                            className="opacity-30"
+                            className="opacity-60"
                             src="../images/backdrop-feature-customizable-cdn.jpg"
                             alt="Close-up of a chamealoen"
                           />
@@ -227,7 +227,7 @@ const Home = () => {
                           style={{'--gradient-veneer-opacity': '0.8'}}>
                   
                           <StaticImage
-                            className="opacity-40"
+                            className="opacity-60"
                             src="../images/backdrop-feature-rtl.jpg"
                             alt="A crab on the beach"
                           />

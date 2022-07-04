@@ -16,293 +16,261 @@ const RTLExample = () => {
     );
 
     return (
-        <div className="overflow-hidden arabic-font theme-light" dir="rtl" lang="ar">
-                
-            <div className="primary-nav--inline--lg box-shadow-1">
+      <div
+        className="overflow-hidden arabic-font theme-light"
+        dir="rtl"
+        lang="ar"
+      >
 
-                <div className="primary-nav__logo">
-                    <a href="#1" title="Home" data-logo="brand">
-                        {logoPlaceholder}
-                    </a>
-                </div>
+        <div className="primary-nav--inline--lg box-shadow-1">
+          <div className="primary-nav__logo">
+            <a href="#1" title="Home" data-logo="brand">
+              {logoPlaceholder}
+            </a>
+          </div>
 
-                <nav className="primary-nav__menu" aria-label="Main Menu" id="primary-menu-below">
-
-                    <ul>
-                        <li>
-                            <a href="#1">وصلة</a>
-                        </li>
-                        <li>
-                            <a href="#1">وصلة</a>
-                        </li>
-                        <li>
-                            <a href="#1">وصلة</a>
-                        </li>
-                    </ul>
-
-                </nav>
-
-                <div className="primary-nav__actions">
-
-                    <button
-                        className="button button--icon-only mobile-menu-toggle"
-                        aria-label="Menu"
-                        data-toggle="collapse"
-                        data-target-toggle="#primary-menu-below">
-                            <span className="icon icon-menu"></span>
-                    </button>
-                    
-                    <div className="button-group">
-
-                        <a href="#1" className="button button--outline">
-                            تسجيل الدخول
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <nav className="container padding-y-1 theme-dark">
-
-                <ul className="nav-breadcrumb">
+          <nav className="primary-nav__menu" id="main-menu" aria-label="Main Menu">
+                <ul>
                     <li>
-                        <a className="button button--icon-only" href="#1">
-                            <span className="icon icon-home" aria-hidden="true"></span>
-                        </a>
+                        <a href="#1">وصلة</a>
                     </li>
                     <li>
-                        <a href="#1">معلومات عنا</a>
+                        <a href="#1">وصلة</a>
                     </li>
-                    <li className="text-color-secondary">
-                        خدمات
+                    <li>
+                        <a href="#1">وصلة</a>
                     </li>
                 </ul>
+          </nav>
 
+          <div className="primary-nav__toggle">
+            <button
+              className="mobile-menu-toggle button button--icon-only"
+              aria-label="Menu"
+              data-toggle="collapse"
+              data-target-toggle="#main-menu">
+                <span className="icon icon-menu"></span>
+            </button>
+          </div>
+
+          <div className="primary-nav__actions">
+            <button className="button button--icon-only" aria-label="Language">
+              <span className="icon icon-language"></span>
+            </button>
+          </div>
+        </div>
+
+        <nav className="container padding-y-1 theme-dark">
+          <ul className="nav-breadcrumb">
+            <li>
+              <a className="button button--icon-only" href="#1">
+                <span className="icon icon-home" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#1">معلومات عنا</a>
+            </li>
+            <li className="text-color-secondary">خدمات</li>
+          </ul>
+        </nav>
+
+        <div
+          className="backdrop backdrop--fixed theme-dark"
+          style={{ "--backdrop-fixed-height": "600px" }}
+        >
+          <div className="backdrop__image gradient-veneer-left">
+            <StaticImage
+              className="opacity-50"
+              src="../../../../images/examples/rtl-backdrop-01.jpg"
+              alt=""
+            />
+            <div className="backdrop__image__credit display-none">
+              <p>
+                الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
+              </p>
+            </div>
+          </div>
+
+          <div className="backdrop__cover">
+            <div className="padding-x-3 margin-y-4 width-50--lg">
+              <div className="text-shadow margin-bottom-4">
+                <h1>حول سلطعون الناسك</h1>
+                <p className="font-size-lg">
+                  هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير
+                  متماثل مخفي بغطاء محكم. تمتلك معظم الأنواع الفرعية من
+                  السرطانات الناسك معدة ناعمة ومنحنية ولولبية ، على عكس معدة
+                  الحجر الجيري لمعظم القشريات.
+                </p>
+              </div>
+
+              <a
+                className="button button--has-icon theme-secondary box-shadow-1 font-size-sm"
+                href="#1"
+              >
+                <span className="button__text">المزيد على ويكيبيديا</span>
+                <span className="icon icon-arrow-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <article className="article--column-2">
+          <aside className="article__sidebar">
+            <nav>
+              <ul className="nav nav--divider position-sticky-top margin-y-3">
+                <li>
+                  <a href="#1">وصلة</a>
+                </li>
+                <li>
+                  <a href="#1">الوصف البيولوجي</a>
+                </li>
+                <li>
+                  <a href="#1">التنمية والتكاثر</a>
+                </li>
+                <li>
+                  <a href="#1">تصنيف</a>
+                </li>
+              </ul>
             </nav>
+          </aside>
 
-            <div
-                className="backdrop backdrop--fixed theme-dark"
-                style={{ '--backdrop-fixed-height': '600px' }}>
+          <div className="article__body border-left">
+            <div className="container narrow margin-y-4">
+              <h2>الوصف البيولوجي</h2>
 
+              <p>
+                تمتلك معظم الأنواع بطونًا طويلة منحنية حلزونيًا ، وهي ناعمة ،
+                على عكس البطون الصلبة المتكلسة التي تظهر في القشريات ذات الصلة.
+                يتم حماية البطن الضعيفة من الحيوانات المفترسة بواسطة صدف فارغ تم
+                إنقاذه يحمله سلطعون الناسك ، والذي يمكن أن يتراجع جسمه بالكامل.
+                في أغلب الأحيان ، تستخدم السرطانات الناسك أصداف حلزون البحر. يتم
+                تكييف طرف بطن السلطعون الناسك ليغلق بقوة على عمود قوقعة الحلزون.
+              </p>
 
-                <div className="backdrop__image gradient-veneer-left">
-                    <StaticImage
-                        className="opacity-50"
-                        src="../../../../images/examples/rtl-backdrop-01.jpg"
-                        alt=""
-                    />
-                    <div className="backdrop__image__credit display-none">
-                        <p>
-                            الصورة من تصوير <a href="#1">Jane Doe</a>, Unsplash
-                        </p>
-                    </div>
-                </div>
+              <h2>بيئة السرطان الناسك</h2>
 
-                <div className="backdrop__cover">
+              <p>يمكن تقسيم السرطانات الناسك إلى مجموعتين:</p>
 
-                    <div className="padding-x-3 margin-y-4 width-50--lg">
+              <p>
+                المجموعة الأولى هي السرطانات المائية الناسك (كلها تقريبا بحرية ،
+                مع نوع واحد في المياه العذبة). تقضي هذه السرطانات معظم حياتها
+                تحت الماء كحيوانات مائية ، تعيش في أعماق المياه المالحة التي
+                تتراوح من الشعاب المرجانية الضحلة والشواطئ إلى قاع البحار
+                العميقة ، ونادرًا ما تترك المياه للأرض. كحيوانات أليفة ، العديد
+                من الأنواع البحرية من السرطانات الناسك شائعة في تجارة الأحواض
+                البحرية. يتم الاحتفاظ بها عادة في أحواض أسماك الشعاب المرجانية.
+                يتنفسون من خلال الخياشيم ولكن لا يتعين عليهم حمل الماء حولهم
+                للقيام بذلك ، ويمكن لمعظمهم البقاء على قيد الحياة لفترة وجيزة
+                خارج الماء طالما أن الخياشيم رطبة. ومع ذلك ، فإن هذه القدرة ليست
+                متطورة مثل سرطان البحر الناسك الداخلي.
+              </p>
 
-                        <div className="text-shadow margin-bottom-4">
-                            <h1>
-                                حول سلطعون الناسك
-                            </h1>
-                            <p className='font-size-lg'>
-                                هناك أكثر من 800 نوع من السرطانات الناسك ، ومعظمها له بطن غير متماثل مخفي بغطاء محكم. تمتلك معظم الأنواع الفرعية من السرطانات الناسك معدة ناعمة ومنحنية ولولبية ، على عكس معدة الحجر الجيري لمعظم القشريات.
-                            </p>
-                        </div>
-
-                        <a className="button button--has-icon theme-secondary box-shadow-1 font-size-sm" href="#1">
-                            <span className="button__text">المزيد على ويكيبيديا</span>
-                            <span className="icon icon-arrow-right"></span>
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <p>
+                المجموعة الثانية ، وهي سرطان البحر الناسك ، تقضي معظم حياتها على
+                الأرض كأنواع برية في المناطق الاستوائية ، على الرغم من أنها
+                تتطلب الوصول إلى كل من المياه العذبة والمياه المالحة للحفاظ على
+                رطوبة الخياشيم أو رطبها للبقاء على قيد الحياة والتكاثر.
+              </p>
             </div>
 
-            <article className="article--column-2">
+            <div className="container narrow margin-y-3">
+              <table className="table table--edge">
+                <thead>
+                  <tr>
+                    <th colSpan={2}>
+                      <strong>التصنيف العلمي</strong>
+                    </th>
+                  </tr>
+                </thead>
 
-                <aside className="article__sidebar">
+                <tbody>
+                  <tr>
+                    <td className="font-weight-bold">المملكة</td>
+                    <td>حيوان</td>
+                  </tr>
+                  <tr>
+                    <td className="font-weight-bold">حيوان</td>
+                    <td>مفصليات الأرجل</td>
+                  </tr>
+                  <tr>
+                    <td className="font-weight-bold">الشعيبة</td>
+                    <td>قشريات</td>
+                  </tr>
+                  <tr>
+                    <td className="font-weight-bold">الطائفة</td>
+                    <td>لينات الدرقة</td>
+                  </tr>
+                  <tr>
+                    <td className="font-weight-bold">الرتبة</td>
+                    <td>عشاريات الأرجل</td>
+                  </tr>
+                  <tr>
+                    <td className="font-weight-bold">الرتيبة</td>
+                    <td>متعددات الحمل</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                    <nav>
+            <div className="container narrow margin-y-4">
+              <h3>الوصف البيولوجي</h3>
 
-                        <ul className="nav nav--divider position-sticky-top margin-y-3">
-                            <li>
-                                <a href="#1">وصلة</a>
-                            </li>
-                            <li>
-                                <a href="#1">الوصف البيولوجي</a>
-                            </li>
-                            <li>
-                                <a href="#1">التنمية والتكاثر</a>
-                            </li>
-                            <li>
-                                <a href="#1">تصنيف</a>
-                            </li>
-                        </ul>
+              <p>
+                السرطانات الناسك هي جزء من عائلة القشريات. تشكل القشريات فئة
+                كبيرة ومتنوعة من مفصليات الأرجل والتي تشمل حيوانات مثل:
+              </p>
+              <ul>
+                <li>سلطعون</li>
+                <li>سرطعون البحر</li>
+                <li>جراد البحر</li>
+                <li>جمبري</li>
+                <li>الكريل</li>
+                <li>قريدس</li>
+                <li>وودليس</li>
+                <li>البرنقيل</li>
+                <li>مجدافيات</li>
+                <li>السرعوف الروبيان</li>
+              </ul>
+            </div>
 
-                    </nav>
+            <footer className="container narrow margin-y-4">
+              <hr className="margin-y-2" />
 
+              <div className="button-group justify-content-end align-items-center font-size-sm">
+                <span className="margin-right-2">شارك مع الاصدقاء:</span>
 
-                </aside>
+                <a
+                  className="button button--icon-only border-radius-circle"
+                  href="#1"
+                  aria-label="Language"
+                >
+                  <span className="icon icon-mail" aria-hidden="true"></span>
+                </a>
 
+                <a
+                  className="button button--icon-only border-radius-circle"
+                  href="#1"
+                  aria-label="Language"
+                >
+                  <span
+                    className="icon icon-facebook"
+                    aria-hidden="true"
+                  ></span>
+                </a>
 
-                <div className="article__body border-left">
-
-                    <div className="container narrow margin-y-4">
-
-                        <h2>
-                            الوصف البيولوجي
-                        </h2>
-
-                        <p>
-                            تمتلك معظم الأنواع بطونًا طويلة منحنية حلزونيًا ، وهي ناعمة ، على عكس البطون الصلبة المتكلسة التي تظهر في القشريات ذات الصلة. يتم حماية البطن الضعيفة من الحيوانات المفترسة بواسطة صدف فارغ تم إنقاذه يحمله سلطعون الناسك ، والذي يمكن أن يتراجع جسمه بالكامل. في أغلب الأحيان ، تستخدم السرطانات الناسك أصداف حلزون البحر. يتم تكييف طرف بطن السلطعون الناسك ليغلق بقوة على عمود قوقعة الحلزون.                        
-                        </p>
-
-                        <h2>
-                            بيئة السرطان الناسك
-                        </h2>
-
-                        <p>
-                            يمكن تقسيم السرطانات الناسك إلى مجموعتين:
-                        </p>
-
-                        <p>
-                            المجموعة الأولى هي السرطانات المائية الناسك (كلها تقريبا بحرية ، مع نوع واحد في المياه العذبة). تقضي هذه السرطانات معظم حياتها تحت الماء كحيوانات مائية ، تعيش في أعماق المياه المالحة التي تتراوح من الشعاب المرجانية الضحلة والشواطئ إلى قاع البحار العميقة ، ونادرًا ما تترك المياه للأرض. كحيوانات أليفة ، العديد من الأنواع البحرية من السرطانات الناسك شائعة في تجارة الأحواض البحرية. يتم الاحتفاظ بها عادة في أحواض أسماك الشعاب المرجانية. يتنفسون من خلال الخياشيم ولكن لا يتعين عليهم حمل الماء حولهم للقيام بذلك ، ويمكن لمعظمهم البقاء على قيد الحياة لفترة وجيزة خارج الماء طالما أن الخياشيم رطبة. ومع ذلك ، فإن هذه القدرة ليست متطورة مثل سرطان البحر الناسك الداخلي.
-                        </p>
-
-                        <p>
-                            المجموعة الثانية ، وهي سرطان البحر الناسك ، تقضي معظم حياتها على الأرض كأنواع برية في المناطق الاستوائية ، على الرغم من أنها تتطلب الوصول إلى كل من المياه العذبة والمياه المالحة للحفاظ على رطوبة الخياشيم أو رطبها للبقاء على قيد الحياة والتكاثر.
-                        </p>
-
-                    </div>
-
-
-                    <div className="container narrow margin-y-3">
-
-                        <table className="table table--edge">
-
-                            <thead>
-                                <tr>
-                                    <th colSpan={2}>
-                                        <strong>
-                                                التصنيف العلمي
-                                        </strong>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td className="font-weight-bold">المملكة</td>
-                                    <td>حيوان</td>
-                                </tr>
-                                <tr>
-                                    <td className="font-weight-bold">حيوان</td>
-                                    <td>مفصليات الأرجل</td>
-                                </tr>
-                                <tr>
-                                    <td className="font-weight-bold">الشعيبة</td>
-                                    <td>قشريات</td>
-                                </tr>
-                                <tr>
-                                    <td className="font-weight-bold">الطائفة</td>
-                                    <td>لينات الدرقة</td>
-                                </tr>
-                                <tr>
-                                    <td className="font-weight-bold">الرتبة</td>
-                                    <td>عشاريات الأرجل</td>
-                                </tr>
-                                <tr>
-                                    <td className="font-weight-bold">الرتيبة</td>
-                                    <td>متعددات الحمل</td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                    <div className="container narrow margin-y-4">
-
-                        <h3>
-                            الوصف البيولوجي
-                        </h3>
-
-                        <p>
-                            السرطانات الناسك هي جزء من عائلة القشريات. تشكل القشريات فئة كبيرة ومتنوعة من مفصليات الأرجل والتي تشمل حيوانات مثل:                        
-                        </p>
-                        <ul>
-                            <li>
-                            سلطعون
-                            </li>
-                            <li>
-                            سرطعون البحر
-                            </li>
-                            <li>
-                            جراد البحر
-                            </li>
-                            <li>
-                            جمبري
-                            </li>
-                            <li>
-                            الكريل
-                            </li>
-                            <li>
-                            قريدس
-                            </li>
-                            <li>
-                            وودليس
-                            </li>
-                            <li>
-                            البرنقيل
-                            </li>
-                            <li>
-                            مجدافيات
-                            </li>
-                            <li>
-                            السرعوف الروبيان
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <footer className="container narrow margin-y-4">
-
-                        <hr className="margin-y-2" />
-                    
-                        <div className="button-group justify-content-end align-items-center font-size-sm">
-
-                            <span className='margin-right-2'>
-                            شارك مع الاصدقاء:
-                            </span>
-
-                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
-                                <span className="icon icon-mail" aria-hidden="true"></span>
-                            </a>
-
-                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
-                                <span className="icon icon-facebook" aria-hidden="true"></span>
-                            </a>
-
-                            <a className="button button--icon-only border-radius-circle" href="#1" aria-label="Language">
-                                <span className="icon icon-twitter" aria-hidden="true"></span>
-                            </a>
-
-                        </div>
-                        
-                    </footer>
-
-                </div>
-
-            </article>
-
-        </div>
-    );
+                <a
+                  className="button button--icon-only border-radius-circle"
+                  href="#1"
+                  aria-label="Language"
+                >
+                  <span className="icon icon-twitter" aria-hidden="true"></span>
+                </a>
+              </div>
+            </footer>
+          </div>
+        </article>
+      </div>
+    )
 }
 
 export default RTLExample;
