@@ -16,8 +16,8 @@ In this file:
 // GitHub 
 
 export const cdnIcons = `https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css`;
-export const cdnCSS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@1.0/dist/css/natura11y.min.css`;
-export const cdnJS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@1.0/dist/js/natura11y.min.js`;
+export const cdnCSS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@1.1/dist/css/natura11y.min.css`;
+export const cdnJS = `https://cdn.jsdelivr.net/gh/cavidano/natura11y@1.1/dist/js/natura11y.min.js`;
 
 //////////////////////////////////////////////
 // B. Placeholder Images
