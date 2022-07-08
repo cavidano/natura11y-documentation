@@ -206,14 +206,38 @@ Apply <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform" 
     figureNumber="4"
     visualExample={(
         <Fragment>
-            <p class="text-transform-uppercase">Text Transform Uppercase</p>
-            <p class="text-transform-capitalize">Text Transform Capitalize</p>
-            <p class="text-transform-lowercase">Text Transform Lowercase</p>
+            <p className="text-transform-capitalize margin-bottom-1">text transform capitalize</p>
+            <p className="text-transform-uppercase margin-bottom-1">text transform uppercase</p>
+            <p className="text-transform-lowercase margin-bottom-1">text transform lowercase</p>
         </Fragment>
     )}
     codeExample={(`
-        <p class="text-transform-uppercase">Text Transform Uppercase</p>
-        <p class="text-transform-capitalize">Text Transform Capitalize</p>
-        <p class="text-transform-lowercase">Text Transform Lowercase</p>
+        <p class="text-transform-uppercase">text transform capitalize</p>
+        <p class="text-transform-capitalize">text transform uppercase</p>
+        <p class="text-transform-lowercase">text transform lowercase</p>
+    `)}
+/>
+
+<Divider id="text-decoration-utilities" />
+
+<TextBlock>
+
+## Text Decoration Utilities
+
+Apply <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank">text-decoration</a> property to a selector.
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="4"
+    visualExample={(
+        <Fragment>
+            <p className="text-decoration-underline margin-bottom-1">Underline</p>
+            <p className="text-decoration-line-through margin-bottom-1">Line through</p>
+        </Fragment>
+    )}
+    codeExample={(`
+        <p class="text-decoration-underline">Underline</p>
+        <p class="text-decoration-line-through">Line through</p>
     `)}
 />
