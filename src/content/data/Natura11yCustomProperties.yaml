@@ -289,6 +289,26 @@
       description: !mdx |
         Maximum width of the *medium* utility class
 
+- type: Grids
+  scope: '.grid--divider'
+  customProperties:
+    - name: grid-divider-gap
+      value: var(--spacer-3)
+      description: !mdx |
+        Default total gap size of the *grid--divider* selector
+    - name: grid-divider-border-width
+      value: var(--default-border-width)
+      description: !mdx |
+        Width of centered border between *grid--divider* gap
+    - name: grid-divider-border-x-color
+      value: var(--canvas-border)
+      description: !mdx |
+        Color of centered border along the horizontal axis of the *grid--divider* modifier class
+    - name: grid-divider-border-y-color
+      value: var(--canvas-border)
+      description: !mdx |
+        Color of centered border along the vertical axis of the *grid--divider* modifier class
+
 - type: Gradient Veneer
   scope: .gradient-veneer-{x}
   customProperties:
