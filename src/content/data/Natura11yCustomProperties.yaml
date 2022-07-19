@@ -224,33 +224,33 @@
       value: '#ce1736'
       description: !mdx |
         Color of warning alerts within the *light theme* utility class
-    - name: white-text
+    - name: canvas-text
       value: var(--dark)
       description: !mdx |
-        Color of text elements within the *white theme* (default) utility
+        Color of text elements within the *canvas theme* (default) utility
         class
     - name: canvas-border
       value: hsla(0, 0%, 50%, 0.25)
       description: !mdx |
-        Color of borders within the *white theme* (default) utility class
+        Color of borders within the *canvas theme* (default) utility class
     - name: canvas-link
       value: var(--a11y-link)
       description: !mdx |
-        Color of links within the *white theme* (default) utility class
+        Color of links within the *canvas theme* (default) utility class
     - name: canvas-confirm
       value: '#008237'
       description: !mdx |
-        Color of confirmation alerts within the *white theme* (default)
+        Color of confirmation alerts within the *canvas theme* (default)
         utility class
     - name: canvas-warn
       value: '#e4193c'
       description: !mdx |
-        Color of warning alerts within the *white theme* (default)
+        Color of warning alerts within the *canvas theme* (default)
         utility class
     - name: a11y-link
       value: blue
       description: !mdx |
-        Accessible link color applied to links within *white* and
+        Accessible link color applied to links within *canvas* and
         *light* themes
 
 - type: Containers
@@ -295,19 +295,19 @@
     - name: grid-divider-gap
       value: var(--spacer-3)
       description: !mdx |
-        Default total gap size of the *grid--divider* selector
+        Default total gap size of the *grid divider* selector
     - name: grid-divider-border-width
       value: var(--default-border-width)
       description: !mdx |
-        Width of centered border between *grid--divider* gap
+        Width of centered border between *grid divider* gap
     - name: grid-divider-border-x-color
       value: var(--canvas-border)
       description: !mdx |
-        Color of centered border along the horizontal axis of the *grid--divider* modifier class
+        Color of centered border along the horizontal axis of the *grid divider* selector
     - name: grid-divider-border-y-color
       value: var(--canvas-border)
       description: !mdx |
-        Color of centered border along the vertical axis of the *grid--divider* modifier class
+        Color of centered border along the vertical axis of the *grid--divider* selector
 
 - type: Gradient Veneer
   scope: .gradient-veneer-{x}
