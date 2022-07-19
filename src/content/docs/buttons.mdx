@@ -92,9 +92,9 @@ Add color to a `.button` selector with our <a href="/docs/color/#themeColorUtili
 
 ## Full-width Buttons
 
-For buttons that span the width of their parent, add the .width-100 <a href="#1">size utility class</a> (Figure 3).
+For buttons that span the width of their parent, add the .width-100 <a href="/docs/sizing">size utility class</a> (Figure 3).
 
-Do not use `.display-block` for full-width buttons. Buttons have a display property of flex (for vertical centering text with icons). Using use `.display-block` changes the buttons display property from `flex` to `block`. This breaks the vertical centering of the icon within the button (See <a href="#1">buttons with text and icon</a> below).
+Do not use `.display-block` for full-width buttons. Buttons have a display property of flex (for vertical centering text with icons). Using use `.display-block` changes the buttons display property from `flex` to `block`. This breaks the vertical centering of the icon within the button (See <a href="#text-and-icon-buttons">buttons with text and icon</a> below).
 
 </TextBlock>
 
@@ -118,7 +118,7 @@ Do not use `.display-block` for full-width buttons. Buttons have a display prope
 
 Create a button with an outline instead of a fill. Add the outline modifier class `.button--outline` to the `.button` selector. The outline width is a *2x* multiple of your theme's body border width.
 
-The outline color inherits the button's text color. You can change the color using our <a href="#1">text color utility classes</a>.
+The outline color inherits the button's text color. You can change the color using our <a href="/docs/color/#text-color-utilities">text color utility classes</a>.
 
 </TextBlock>
 
@@ -163,7 +163,7 @@ Globally, all `.button` selectors have a border radius. This value is set with t
 
 <TextBlock>
 
-Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. `.border-radius-pill`) on `.button` selectors.
+Optionally, use our <a href="/docs/borders/#border-radius-utilities">border-radius utility classes</a> (e.g. `.border-radius-pill`) on `.button` selectors.
 
 </TextBlock>
 
@@ -185,7 +185,7 @@ Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. `.borde
 
 ## Sizing Buttons
 
-With Natura11y, `.button` selectors inherit their font size. Padding is set with relative (em) sizes. This allows you to resize multiple buttons at once. Use our <a href="#1">font size</a> utility classes, or declare your own CSS values.
+With Natura11y, `.button` selectors inherit their font size. Padding is set with relative (em) sizes. This allows you to resize multiple buttons at once. Use our <a href="/docs/typography/#font-size-utilities">font size</a> utility classes, or declare your own CSS values.
 
 The example below applies the `.font-size-sm` utility class to a `<ul>` containing buttons. Each button within this `<ul>` becomes smaller with this single declaration.
 
@@ -233,7 +233,7 @@ The example below applies the `.font-size-sm` utility class to a `<ul>` containi
     `)}
 />
 
-<Divider id="tex-and-icon-buttons" />
+<Divider id="text-and-icon-buttons" />
 
 <TextBlock>
 
@@ -309,7 +309,7 @@ Icon-only buttons require a single child selector. A `<span>` with its combined 
 
 <TextBlock>
 
-Icon-only buttons are transparent by default. Like our other buttons, color can be applied with <a href="/docs/color-system/#backgroundColorClasses">background-color</a> and <a href="#1">text color</a> utility classes.
+Icon-only buttons are transparent by default. Like our other buttons, color can be applied with <a href="/docs/color-system/#backgroundColorClasses">background-color</a> and <a href="/docs/color/#text-color-utilities">text color</a> utility classes.
 
 </TextBlock>
 

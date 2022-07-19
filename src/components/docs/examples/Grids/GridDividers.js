@@ -30,6 +30,18 @@ const GridDividers = (props) => {
             <li>
                 <GridItem label="06" />
             </li>
+            
+            <li>
+                <GridItem label="07" />
+            </li>
+            
+            <li>
+                <GridItem label="08" />
+            </li>
+            
+            <li>
+                <GridItem label="09" />
+            </li>
 
         </ul>
     );

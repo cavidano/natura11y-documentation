@@ -399,7 +399,8 @@ You can now add horizontal and vertical borders between grid cells! Apply the `.
 
 <TextBlock>
 
-You can control which axis (*x* or *y*) uses continuous lines. Chain: `--fill-x` or `--fill-y` modifiers to `.grid--divider` selectors. With `.grid--divider--fill-x` present on the example below, the horizontal lines connect.
+You can specify which axis (*x* or *y*) has continuous lines. Chain `--fill-x` or `--fill-y` modifiers to `.grid--divider`. With `.grid--divider--fill-x` present on the example in Figure 11, the horizontal lines run through.
+
 
 </TextBlock>
 
@@ -418,7 +419,7 @@ You can control which axis (*x* or *y*) uses continuous lines. Chain: `--fill-x`
 
 <TextBlock>
 
-You can control which axis (*x* or *y*) uses continuous lines. Chain: `--fill-x` or `--fill-y` modifiers to `.grid--divider` selectors. With `.grid--divider--fill-x` present on the example below, the horizontal lines connect.
+With `.grid--divider--fill-y` present on the example in Figure 12, the vertical lines run through.
 
 </TextBlock>
 
@@ -435,14 +436,45 @@ You can control which axis (*x* or *y*) uses continuous lines. Chain: `--fill-x`
     `)}
 />
 
+
+<TextBlock>
+
+The `.grid--divider` modifier class adds borders using psuedo elements on each of its direct children or *cells*. For this reason, when its child has `overflow: hidden;` css property applied, such as with <a href="/docs/backdrops">backdrops</a>, for example, that child's border would not appear.
+
+To remedy this, simply nest each child of `.grid--divider` in a containing element. You could use a `<ul>` tag with `<li>` children, as shown in Figure 13:
+
+</TextBlock>
+
+<FigureBlock
+    figureNumber="13"
+    codeExample={(`
+        <ul class="grid grid--divider--fill-x grid--column-3"> \n
+            <li>
+                <div class="backdrop">
+                    <!-- ... -->
+                </div>
+            </li> \n
+            <li>
+                <div class="backdrop">
+                <!-- ... -->
+                </div>
+            </li> \n
+            <li>
+                <div class="backdrop">
+                <!-- ... -->
+                </div>
+            </li> \n
+        </ul>
+    `)}
+/>
+
 <Divider id="gap-utilities" />
 
 <TextBlock>
 
 ## Gap Utilities
 
-Add space between matrix cells and grid items using the same utility class. Apply the `.gap-{x}` utility class to `.matrix`, and `.grid` selectors. Here <em><strong>x</strong></em> equals the gap value. The gap value includes the global border width (e.g., `.gap-border`) and the default <a href="#1">spacer</a> values (e.g., `.gap-1`);
-
+Add space between matrix cells and grid items using the same utility class. Apply the `.gap-{x}` utility class to `.matrix`, and `.grid` selectors. Here <em><strong>x</strong></em> equals the gap value. The gap value includes the global border width (e.g., `.gap-border`) and the default <a href="/docs/spacing">spacer</a> values (e.g., `.gap-1`);
 
 With the example in Figure 9, both `.matrix`, and `.grid` have the `.gap-{x}` applied.
 
