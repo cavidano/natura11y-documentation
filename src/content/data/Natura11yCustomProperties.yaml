@@ -35,11 +35,6 @@
       value: var(--spacer-2)
       description: !mdx |
         Top and bottom padding of the *alert* component header and body
-    - name: alert-background-opacity
-      value: '0.075'
-      description: !mdx |
-        Opacity of the *alert* component background (without the dark
-        modifier class applied)
 
 - type: Articles
   scope: .article--column-{x}
@@ -53,7 +48,7 @@
   scope: .backdrop
   customProperties:
     - name: backdrop-fixed-height
-      value: 350px
+      value: 400px
       description: !mdx |
         Height of the *backdrop* component with the fixed height modifier
         class
@@ -82,13 +77,17 @@
       description: !mdx |
         Left and right padding of the *button* utility class
     - name: button-padding-y
-      value: 0.625em
+      value: 0.75em
       description: !mdx |
         Top and bottom padding of the *button* utility class
     - name: button-font-weight
       value: var(--body-font-weight-bold)
       description: !mdx |
         Weight of text elements within the *button* utility class
+    - name: button-text-transform
+      value: initial
+      description: !mdx |
+        Text transform value of the *button* utility class
     - name: button-border-radius
       value: 0.25em
       description: !mdx |
@@ -273,6 +272,22 @@
       description: !mdx |
         Maximum width of the *wide* utility class
 
+- type: Document
+  scope: 'html'
+  customProperties:
+    - name: body-min-width
+      value: 325px
+      description: !mdx |
+        Minimum width of the *body* element
+    - name: body-max-width
+      value: 100%
+      description: !mdx |
+        Maximum width of the *body* element
+    - name: html-background-color
+      value: var(--canvas)
+      description: !mdx |
+        Background color of the *html* element
+
 - type: Forms
   scope: ':root'
   customProperties:
@@ -408,9 +423,14 @@
         Size of *spacer 4*, used in CSS including margin and padding
         utility classes
     - name: spacer-5
-      value: calc(var(--spacer-base) * 5)
+      value: calc(var(--spacer-base) * 4)
       description: !mdx |
         Size of *spacer 5*, used in CSS including margin and padding
+        utility classes
+    - name: spacer-6
+      value: calc(var(--spacer-base) * 6.5)
+      description: !mdx |
+        Size of *spacer 6*, used in CSS including margin and padding
         utility classes
 
 - type: Subtle Fill
@@ -482,10 +502,6 @@
       description: !mdx |
         Extra large font size used in CSS including *font size* utility
         classes
-    - name: banner-headline-font-size
-      value: calc(var(--body-font-size) * 3.5)
-      description: !mdx |
-        Font size of the *Banner Headline* utility class
     - name: h1-font-size
       value: calc(var(--body-font-size) * 3)
       description: !mdx |
@@ -514,6 +530,14 @@
       value: '1.125'
       description: !mdx |
         Line height applied to headers
+    - name: banner-headline-font-size-sm
+      value: calc(var(--body-font-size) * 2.75)
+      description: !mdx |
+        Smallest font size of the *Banner Headline* utility class
+    - name: banner-headline-font-size-lg
+      value: calc(var(--body-font-size) * 2.75)
+      description: !mdx |
+        Largest font size of the *Banner Headline* utility class
     - name: paragraph-margin-bottom
       value: '1.25em'
       description: !mdx |
