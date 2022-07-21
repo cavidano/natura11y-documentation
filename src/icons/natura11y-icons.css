@@ -1,8 +1,8 @@
 @font-face {
     font-family: "natura11y-icons";
-    src: url("./natura11y-icons.ttf?62e120f6090ca4ba738fdb7ee8754533") format("truetype"),
-url("./natura11y-icons.woff2?62e120f6090ca4ba738fdb7ee8754533") format("woff2"),
-url("./natura11y-icons.woff?62e120f6090ca4ba738fdb7ee8754533") format("woff");
+    src: url("./natura11y-icons.ttf?384cbfd97860c5e9c7a69f35b81e13e7") format("truetype"),
+url("./natura11y-icons.woff2?384cbfd97860c5e9c7a69f35b81e13e7") format("woff2"),
+url("./natura11y-icons.woff?384cbfd97860c5e9c7a69f35b81e13e7") format("woff");
 }
 
 .icon:before {
@@ -252,4 +252,13 @@ url("./natura11y-icons.woff?62e120f6090ca4ba738fdb7ee8754533") format("woff");
 }
 .icon.icon-tiktok:before {
     content: "\f14f";
+}
+.icon.icon-open-new:before {
+    content: "\f150";
+}
+.icon.icon-menu-label-open:before {
+    content: "\f151";
+}
+.icon.icon-search-label-open:before {
+    content: "\f152";
 }

@@ -50,8 +50,12 @@ const Comps = () => {
 
                                 <ul className="nav nav--horizontal justify-content-center">
                                     <li>
-                                        <a href="https://cavidano.github.io/natura11y/dist/html/comps/bird-landing-page/" target="_blank">
-                                            Preview in Browser
+                                        <a
+                                            className="button button--has-icon"
+                                            href="https://cavidano.github.io/natura11y/dist/html/comps/bird-landing-page/"
+                                            target="_blank">
+                                                <span className="icon icon-open-new button__icon"></span>
+                                                <span className="button__text">Preview in Browser</span>
                                         </a>
                                     </li>
                                     <li>
@@ -101,8 +105,12 @@ const Comps = () => {
 
                                 <ul className="nav nav--horizontal justify-content-center">
                                     <li>
-                                        <a href="https://cavidano.github.io/natura11y/dist/html/comps/lion-article-page/" target="_blank">
-                                            Preview in Browser
+                                        <a
+                                            className="button button--has-icon"
+                                            href="https://cavidano.github.io/natura11y/dist/html/comps/lion-article-page/"
+                                            target="_blank">
+                                                <span className="icon icon-open-new button__icon"></span>
+                                                <span className="button__text">Preview in Browser</span>
                                         </a>
                                     </li>
                                     <li>
@@ -154,9 +162,9 @@ const Comps = () => {
                                     <li>
                                         <a
                                             className="button button--has-icon"
-                                            href="https://github.com/cavidano/natura11y/blob/main/dist/html/comps/ocean-news-page/index.html"
+                                            href="https://cavidano.github.io/natura11y/dist/html/comps/ocean-news-page/index.html"
                                             target="_blank">
-                                                <span className="icon icon-arrow-right button__icon"></span>
+                                                <span className="icon icon-open-new button__icon"></span>
                                                 <span className="button__text">Preview in Browser</span>
                                         </a>
                                     </li>
