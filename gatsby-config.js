@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Natura11y Inclusive Framework",
-    version: "v1.1.x",
+    version: "v1.2.x",
     titleTemplate: `%s • Natura11y Inclusive Framework`,
     description:
       "Natura11y page description.",
