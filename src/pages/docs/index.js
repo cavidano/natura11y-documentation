@@ -1,9 +1,20 @@
-import { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
+
 import { navigate } from 'gatsby';
 
-export default () => {
+import Header from '../../components/Header';
+
+const Docs = () => {
   useEffect(() => {
     navigate('/docs/get-started');
   }, []);
-  return null;
+  return (
+    <Fragment>
+            
+        <Header />
+
+    </Fragment>
+  );
 };
+
+export default Docs;
