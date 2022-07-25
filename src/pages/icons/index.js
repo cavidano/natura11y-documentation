@@ -97,7 +97,7 @@ const Icons = ({ data }) => {
 
                 {hasResults ? (
 
-                    <div className="grid grid--column-3 grid--column-6--md gap-1" id="natura11yIconGrid">
+                    <div className="grid grid--column-3 grid--column-6--md gap-2" id="natura11yIconGrid">
 
                         {iconList}
 
