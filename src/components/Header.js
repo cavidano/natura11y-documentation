@@ -90,7 +90,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/docs/get-started/"
+                to="/docs/"
                 activeStyle={activeLinkStyles}
                 partiallyActive={true}>
                 Docs
