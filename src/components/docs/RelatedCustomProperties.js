@@ -24,7 +24,7 @@ const RelatedCustomProperties = ({ customProperties }) => {
                             <div className="container narrow margin-y-4">
                                 <h2>Related CSS Variables</h2>
                                 <p>
-                                    Further <a href="/docs/customization/#customizableCDN">customize</a> {title} by redefining any of their related <a href="#">CSS variables</a> as shown below.
+                                    Further <a href="/docs/customization/#customizableCDN">customize</a> {title} by redefining any of their related <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS variables</a> as shown below.
                                 </p>
                             </div>
 

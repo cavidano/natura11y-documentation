@@ -87,6 +87,14 @@
     - name: button-text-transform
       value: initial
       description: !mdx |
+        Text transform of text elements within the *button* utility class
+    - name: button-letter-spacing
+      value: normal
+      description: !mdx |
+        Letter spacing of text elements within the *button* utility class
+    - name: button-text-transform
+      value: initial
+      description: !mdx |
         Text transform value of the *button* utility class
     - name: button-border-radius
       value: 0.25em
@@ -255,10 +263,14 @@
 - type: Containers
   scope: ':root'
   customProperties:
-    - name: container-padding-x
+    - name: container-padding-x-sm
+      value: var(--spacer-2)
+      description: !mdx |
+        Left and right padding of the *container* component on smaller (mobile) viewports 
+    - name: container-padding-x-lg
       value: var(--spacer-3)
       description: !mdx |
-        Left and right padding of the *container* component
+        Left and right padding of the *container* component on larger (desktop) viewports 
     - name: narrow-width
       value: 40rem
       description: !mdx |
@@ -533,11 +545,11 @@
     - name: banner-headline-font-size-sm
       value: calc(var(--body-font-size) * 2.75)
       description: !mdx |
-        Smallest font size of the *Banner Headline* utility class
+        Font size of the *Banner Headline* utility class on smaller (mobile) viewports
     - name: banner-headline-font-size-lg
       value: calc(var(--body-font-size) * 2.75)
       description: !mdx |
-        Largest font size of the *Banner Headline* utility class
+        Font size of the *Banner Headline* utility class on larger (desktop) viewports
     - name: paragraph-margin-bottom
       value: '1.25em'
       description: !mdx |
