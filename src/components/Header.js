@@ -18,6 +18,16 @@ const Header = () => {
     }
   `);
 
+  const getLocation = (props) => {
+    const currentLocation = props.pathname;
+      if (currentLocation.includes('docs')) {
+        return { 
+          style:  activeLinkStyles,
+          'aria-current': 'page'
+        }
+      }
+  }
+
   const version = data.site.siteMetadata.version;
 
   const logo = (
@@ -90,10 +100,10 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/docs/"
+                to="/docs/get-started"
                 activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                Docs
+                getProps={({location}) => getLocation(location)}>
+                  Docs
               </Link>
             </li>
             <li>
