@@ -43,11 +43,13 @@ const GradientVeneerThemes = () => {
                 </div>
                 <div className="backdrop__cover align-content-end">
                     <div className="gv-dir">
-                        <p>
-                            <strong>
-                                .gradient-veneer-{theme}
-                            </strong>
-                        </p> 
+                        <div className="padding-2 font-size-md">
+                            <p>
+                                <strong>
+                                    .gradient-veneer-{theme}
+                                </strong>
+                            </p> 
+                        </div>
                     </div>
                 </div>
             </div>
