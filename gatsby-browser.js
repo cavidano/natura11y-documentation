@@ -30,7 +30,7 @@ import './src/natura11y/modules/containers';
 
 import './src/natura11y/modules/display';
 
-import Document from './src/natura11y/modules/document';
+import './src/natura11y/modules/document';
 
 import './src/natura11y/modules/flex';
 
@@ -71,7 +71,7 @@ import './src/natura11y/theme';
 import Layout from './src/components/Layout';
 
 export const onRouteUpdate = () => {
-  
+
   const accordion = new Accordion();
   accordion.init();
   
