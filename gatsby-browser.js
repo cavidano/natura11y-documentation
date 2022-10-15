@@ -4,7 +4,7 @@ import './src/natura11y/modules/accents';
 
 import './src/natura11y/modules/accessibility';
 
-import Accordion from './src/natura11y/modules/accordion';
+import './src/natura11y/modules/accordion';
 
 import Alerts from './src/natura11y/modules/alerts';
 
@@ -72,8 +72,8 @@ import Layout from './src/components/Layout';
 
 export const onRouteUpdate = () => {
 
-  const accordion = new Accordion();
-  accordion.init();
+  // const accordion = new Accordion();
+  // accordion.init();
   
   const alerts = new Alerts();
   alerts.init();

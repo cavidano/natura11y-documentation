@@ -6,8 +6,7 @@ bannerCreditHandle: "@shatteredsmooth"
 bannerImage: ../../images/banner/accordions.jpg
 ---
 
-import DefaultBehavior from '../../components/docs/examples/Accordions/DefaultBehavior';
-import OpenFirst from '../../components/docs/examples/Accordions/OpenFirst';
+import Accordion from '../../components/docs/examples/Accordions/Accordion';
 
 <TextBlock>
 
@@ -41,7 +40,7 @@ The following is a basic accordion component. All accordion panels are closed by
     figureNumber="1"
     highlightedLines="1,3-10,12-25"
     visualExample={(
-        <DefaultBehavior />
+        <Accordion />
     )}
     codeExample={(`
         <div class="accordion"> \n
@@ -158,7 +157,7 @@ You may want one of your accordion topics to be open by default (when the page l
     figureNumber="3"
     highlightedLines="6,11"
     visualExample={(
-        <OpenFirst />
+        <Accordion openDefault='Danaus Plexippus' />
     )}
     codeExample={(`
         <button
