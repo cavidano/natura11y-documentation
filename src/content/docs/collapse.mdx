@@ -6,6 +6,8 @@ bannerCreditHandle: "@nicolegeri"
 bannerImage: ../../images/banner/collapse.jpg
 ---
 
+import Collapse from '../../components/docs/examples/Collapse'
+
 <TextBlock>
 
 Toggle the visibility of a block-level selector from a button located anywhere in the DOM.
@@ -26,27 +28,7 @@ The collapse mechanism establishes a relationship between a button and its targe
     figureNumber="1"
     highlightedLines="3,4,9,10"
     visualExample={(
-        <Fragment>
-            <button
-                class="button width-100 theme-primary display-block border-radius"
-                data-toggle="collapse"
-                data-target-toggle="#collapseMenuExample">
-                    Navigation
-            </button>
-            <div class="collapse border border-radius margin-y-3" id="collapseMenuExample">
-                <ul class="nav nav--divider" id="" role="navigation">
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                </ul>
-            </div>
-        </Fragment>
+        <Collapse />
     )}
     codeExample={(`
         <button

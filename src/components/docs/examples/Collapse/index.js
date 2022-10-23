@@ -2,30 +2,39 @@ import React, { useState } from "react"
 
 const index = () => {
 
-    const [isOpen, setIsOpen] = useState();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        setIsOpen(!isOpen)
+    }
     
     return (
         <>
             <button
-                class="button width-100 theme-primary display-block border-radius"
-                data-toggle="collapse"
-                data-target-toggle="#collapseMenuExample">
+                className="button width-100 theme-primary display-block border-radius"
+                onClick={handleClick}
+                >
                     Navigation
             </button>
 
-            <div class="collapse border border-radius margin-y-3" id="collapseMenuExample">
-                <ul class="nav nav--divider" id="" role="navigation">
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                    <li>
-                        <a href="#1">Link</a>
-                    </li>
-                </ul>
-            </div>
+            {isOpen && (
+                
+                <div className="border border-radius margin-y-3" id="collapseMenuExample">
+                    <ul className="nav nav--divider" id="" role="navigation">
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            
+            )}
+
         </>
     );
 }
