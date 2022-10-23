@@ -1,16 +1,10 @@
-/*
-
-// Accordion
-
-*/ 
-
 import React, { useState, useEffect, useRef } from 'react';
 
 import AccordionItem from './AccordionItem';
 
-import { getFilteredElements } from '../../../../utilities/focus';
+import { getFilteredElements } from '../../utilities/focus';
 
-const Accordion = ({ openDefault = null }) => {
+const Accordion = () => {
 
   	const data = [
 		{
@@ -71,7 +65,7 @@ const Accordion = ({ openDefault = null }) => {
 		},
 	];
 
-  	const [openAccordion, setOpenAccordion] = useState(openDefault);
+  	const [openAccordion, setOpenAccordion] = useState(null);
 
 	const accordion = useRef(null);
 	const accordionButtons = useRef();
@@ -84,8 +78,6 @@ const Accordion = ({ openDefault = null }) => {
 			? setOpenAccordion(null)
 			: setOpenAccordion(clicked);
 
-
-			console.log("kellp", clicked)
 	};
 
 	const handleKeyDown = (e) => {
