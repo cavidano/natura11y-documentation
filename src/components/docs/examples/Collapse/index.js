@@ -6,7 +6,6 @@ const index = () => {
     
     return (
         <>
-
             <button
                 class="button width-100 theme-primary display-block border-radius"
                 data-toggle="collapse"
