@@ -1,15 +1,19 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-import { Link, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
-const Dropdown = () => {
+const Dropdown = ( props ) => {
 
-  const dropdownButton = useRef();
-  const dropdownMenu = useRef();
+    const {
+        title = 'Dropdown'
+    } = props;
 
-  const [dropdownShow, setDropdownShow] = useState(false);
+    const dropdownButton = useRef();
+    const dropdownMenu = useRef();
 
-  const location = useLocation();
+    const [dropdownShow, setDropdownShow] = useState(false);
+
+    const showClass = classNames({'shown' : dropdownShow});
 
     useEffect(() => {
 
@@ -24,6 +28,8 @@ const Dropdown = () => {
             }
         } 
 
+        setDropdownShow(false);
+
         window.addEventListener('click', dropdownClickListener);
 
         return () => {
@@ -32,10 +38,6 @@ const Dropdown = () => {
 
     }, []);
 
-    useEffect(() => {
-        setDropdownShow(false);
-    }, [location]);
-
     const handleClick = () => {
         setDropdownShow(!dropdownShow);
     }
@@ -43,24 +45,21 @@ const Dropdown = () => {
     return (
         <>
             <button
+                className='opacity-70'
                 ref={dropdownButton}
                 data-toggle="dropdown"
                 aria-expanded={dropdownShow ? true : false}
                 onClick={handleClick}>
-                    Dropdown
+                    {title}
             </button>
 
             <ul
                 ref={dropdownMenu}
-                className={`nav__dropdown box-shadow-1--lg ${dropdownShow ? 'shown' : ''}`}>
+                className={`nav__dropdown box-shadow-1--lg ${showClass}`}>
                 <li>
-                    <Link to="#1">One</Link>
-                </li>
-                <li>
-                    <Link to="#1">Two</Link>
-                </li>
-                <li>
-                    <Link to="#1">Link</Link>
+                    <a href='https://gonatura11y.com/v1/'>
+                        v1.2.x
+                    </a>
                 </li>
             </ul>
 

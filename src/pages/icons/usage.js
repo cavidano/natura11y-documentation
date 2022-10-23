@@ -29,7 +29,9 @@ const Icons = ({ data }) => {
 
             <Seo title="Icon Usage" />
             
-            <Header />
+            <Header
+                utilities='box-shadow-1 z-index-2500'
+            />
 
             <IconLeader />
 

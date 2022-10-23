@@ -15,7 +15,7 @@ const PrimaryNavigation = ( props ) => {
 	const { 
 		navType = 'inline', // 'inline' or 'below'
 		breakpoint = 'lg',
-		includeSearch = true,
+		includeSearch = false,
 		utilities = null,
 	} = props;
 

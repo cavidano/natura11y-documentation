@@ -85,7 +85,9 @@ const Documentation = ({ data }) => {
 
       <Seo title={title} />
       
-      <Header />
+      <Header
+        utilities='box-shadow-1 z-index-2500'
+      />
 
       <div className="article--column-2">
 

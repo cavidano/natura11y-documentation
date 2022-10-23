@@ -13,7 +13,9 @@ const Comps = () => {
             
             <Seo title="Comps" />
             
-            <Header />
+            <Header
+                utilities='box-shadow-1 z-index-2500'
+            />
 
             <section className="container narrow margin-y-4 text-align-center">
                 <h2>

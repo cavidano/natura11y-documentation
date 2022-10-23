@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Icon = ({iconHandle = 'home'}) => {
 	return (
         <span

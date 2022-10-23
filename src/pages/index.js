@@ -17,7 +17,9 @@ const Home = () => {
 
       <div className="min-height-100vh flex-column">
 
-        <Header />
+        <Header
+          utilities='box-shadow-1 z-index-2500'
+        />
 
         <section
           className="flex-grow-1 theme-secondary backdrop backdrop--fixed theme-dark"

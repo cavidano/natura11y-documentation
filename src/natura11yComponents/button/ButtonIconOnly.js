@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import classNames from 'classnames';
 
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 import Icon from '../icon/Icon.js'
 

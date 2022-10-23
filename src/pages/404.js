@@ -14,7 +14,9 @@ const NotFound = () => {
 
       <div className="flex-column min-height-100vh">
 
-        <Header />
+        <Header
+          utilities='box-shadow-1 z-index-2500'
+        />
 
         <section className="display-flex flex-grow-1 justify-content-center align-items-center">
 
