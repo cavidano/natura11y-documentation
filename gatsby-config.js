@@ -1,5 +1,4 @@
 module.exports = {
-	pathPrefix: `/v1`,
 	siteMetadata: {
 		title: 'Natura11y Inclusive Framework',
 		version: 'v1.2.x',

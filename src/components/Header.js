@@ -81,9 +81,9 @@ const Header = () => {
 				Skip Header
 			</a>
 
-			<div className='theme-primary text-align-center padding-y-1 padding-x-2'>
+			<div className='theme-primary text-align-center padding-y-1 padding-x-2 display-none'>
 				<p>
-          There is a newer version of <a href='https://gonatura11y.com/'><strong>Naturally</strong></a>.
+          			There is a newer version of <a href='https://gonatura11y.com/'><strong>Naturally</strong></a>.
 				</p>
 			</div>
 
