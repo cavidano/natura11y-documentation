@@ -109,113 +109,114 @@ const Header = ( props ) => {
 	</svg>
 	);
 
-  return (
+  	return (
 
-  <Fragment>
-  
-		<div className={`${componentClasses}`}>
-			<div className='primary-nav__logo'>
-				<Link to='/' title='Home' data-logo='brand'>
-					{logo}
-				</Link>
-			</div>
+		<Fragment>
+	
+			<div className={`${componentClasses}`}>
+				<div className='primary-nav__logo'>
+					<Link to='/' title='Home' data-logo='brand'>
+						{logo}
+					</Link>
+				</div>
 
-			<nav
-				className={`primary-nav__menu ${menuShow ? 'shown' : ''}`}
-				id='main-menu'
-				aria-label='Main Menu'
-			>
-				<ul>
-					<li>
-						<Dropdown title={version} />
-					</li>
-					<li>
-						<Link
-							to='/docs/get-started'
-							activeStyle={activeLinkStyles}
-							getProps={({ location }) => getLocation(location)}
-						>
-							Docs
-						</Link>
-					</li>
-					<li>
-						<Link
-							to='/icons/'
-							activeStyle={activeLinkStyles}
-							partiallyActive={true}
-						>
-							Icons
-						</Link>
-					</li>
-					<li>
-						<Link
-							to='/comps/'
-							activeStyle={activeLinkStyles}
-							partiallyActive={true}
-						>
-							Comps
-						</Link>
-					</li>
-					<li>
-						<Link
-							to='#1'
-							activeStyle={activeLinkStyles}
-							partiallyActive={true}
-						>
-							React
-						</Link>
-					</li>
-				</ul>
-			</nav>
+				<nav
+					className={`primary-nav__menu ${menuShow ? 'shown' : ''}`}
+					id='main-menu'
+					aria-label='Main Menu'
+				>
+					<ul>
+						<li>
+							<Dropdown title={version} />
+						</li>
+						<li>
+							<Link
+								to='/docs/get-started'
+								activeStyle={activeLinkStyles}
+								getProps={({ location }) => getLocation(location)}
+							>
+								Docs
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/icons/'
+								activeStyle={activeLinkStyles}
+								partiallyActive={true}
+							>
+								Icons
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/comps/'
+								activeStyle={activeLinkStyles}
+								partiallyActive={true}
+							>
+								Comps
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='#1'
+								activeStyle={activeLinkStyles}
+								partiallyActive={true}
+							>
+								React
+							</Link>
+						</li>
+					</ul>
+				</nav>
 
-			<div className='primary-nav__toggle'>
+				<div className='primary-nav__toggle'>
 
-				{includeSearch && navType === 'inline' && (
-				
+					{includeSearch && navType === 'inline' && (
+					
+						<ButtonIconOnly
+							iconHandle='search'
+							clickHandler={handleSearchClick}
+							ariaLabel='Search'
+							ariaExpanded={searchShow ? true : false}
+						/>
+
+					)}
+
 					<ButtonIconOnly
-						iconHandle='search'
-						clickHandler={handleSearchClick}
-						ariaLabel='Search'
-						ariaExpanded={searchShow ? true : false}
+						iconHandle={menuShow ? 'close' : 'menu'}
+						clickHandler={handleMenuClick}
+						ariaLabel='Menu'
+						ariaExpanded={menuShow ? true : false}
 					/>
 
+				</div>
+
+				{includeSearch && (
+						
+					<form
+						className={`primary-nav__search ${searchShow ? 'shown' : ''}`}
+						role='search'
+						id='search'
+					>
+						<div className='form-entry' aria-label='Search'>
+							<div className='form-entry__field'>
+								<span className='form-entry__field__input'>
+									<input type='text' name='global-search' />
+									<Button title="Search" />
+								</span>
+							</div>
+						</div>
+
+					</form>
 				)}
 
-				<ButtonIconOnly
-					iconHandle={menuShow ? 'close' : 'menu'}
-					clickHandler={handleMenuClick}
-					ariaLabel='Menu'
-					ariaExpanded={menuShow ? true : false}
-				/>
-
+				<div className='primary-nav__actions'>
+					<ButtonIconOnly iconHandle='mode-light-dark' />
+				</div>
 			</div>
 
-			{includeSearch && (
-					
-				<form
-					className={`primary-nav__search ${searchShow ? 'shown' : ''}`}
-					role='search'
-					id='search'
-				>
-					<div className='form-entry' aria-label='Search'>
-						<div className='form-entry__field'>
-							<span className='form-entry__field__input'>
-								<input type='text' name='global-search' />
-								<Button title="Search" />
-							</span>
-						</div>
-					</div>
-
-				</form>
-			)}
-
-			<div className='primary-nav__actions'>
-				<ButtonIconOnly iconHandle='github' />
-			</div>
-		</div>
-
-  </Fragment>
+		</Fragment>
 	);
+	
 }
 
 export default Header;

@@ -29,7 +29,9 @@ const iconSingle = ({ data }) => {
 
       <Seo title={title} />
             
-      <Header />
+      <Header
+        utilities='box-shadow-1 z-index-2500'
+      />
 
       <div className="container medium text-align-center margin-y-4">
 

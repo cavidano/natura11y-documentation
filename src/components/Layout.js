@@ -1,10 +1,19 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 import '../icons/natura11y-icons.css';
 
 import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
+
+	// Theme
+
+	const [DarkMode, setDarkMode] = useState(false);
+
+	const handleDarkMode = () => {
+		setDarkMode(!DarkMode);
+	}
+
 	// Icon Sprite
 
 	useEffect(() => {
@@ -31,7 +40,11 @@ const Layout = ({ children }) => {
 		}
 	}, []);
 
-	return <Fragment>{children}</Fragment>;
+	return (
+		<div className='theme-dark'>
+			{children}
+		</div>
+	);
 };
 
 export default Layout;
