@@ -76,84 +76,90 @@ const Header = () => {
   );
 
   return (
-    <header className="box-shadow-1 z-index-2500" id="global-header">
+		<header className='box-shadow-1 z-index-2500' id='global-header'>
+			<a className='focusable-only' href='#skip-header-target'>
+				Skip Header
+			</a>
 
-      <a className="focusable-only" href="#skip-header-target">
-        Skip Header
-      </a>
+			<div className='theme-primary text-align-center padding-y-1 padding-x-2'>
+				<p>
+          There is a newer version of <a href='https://gonatura11y.com/'><strong>Naturally</strong></a>.
+				</p>
+			</div>
 
-      <div className="primary-nav--inline--lg">
-      
-        <div className="primary-nav__logo">
-          <Link to="/" title="Home" data-logo="brand">
-            {logo}
-          </Link>
-        </div>
+			<div className='primary-nav--inline--lg'>
+				<div className='primary-nav__logo'>
+					<Link to='/' title='Home' data-logo='brand'>
+						{logo}
+					</Link>
+				</div>
 
-        <nav className="primary-nav__menu" id="primary-menu" aria-label="Main Menu">
+				<nav
+					className='primary-nav__menu'
+					id='primary-menu'
+					aria-label='Main Menu'
+				>
+					<ul>
+						<li>
+							<span className='font-size-sm margin-y-auto opacity-70'>
+								{version}
+							</span>
+						</li>
+						<li>
+							<Link
+								to='/docs/get-started'
+								activeStyle={activeLinkStyles}
+								getProps={({ location }) => getLocation(location)}
+							>
+								Docs
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/icons/'
+								activeStyle={activeLinkStyles}
+								partiallyActive={true}
+							>
+								Icons
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/comps/'
+								activeStyle={activeLinkStyles}
+								partiallyActive={true}
+							>
+								Comps
+							</Link>
+						</li>
+					</ul>
+				</nav>
 
-          <ul>
-            <li>
-              <span className="font-size-sm margin-y-auto opacity-70">
-                {version}
-              </span>
-            </li>
-            <li>
-              <Link 
-                to="/docs/get-started"
-                activeStyle={activeLinkStyles}
-                getProps={({location}) => getLocation(location)}>
-                  Docs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/icons/"
-                activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                  Icons
-              </Link>
-            </li>
-            <li>
-              <Link to="/comps/"
-                activeStyle={activeLinkStyles}
-                partiallyActive={true}>
-                Comps
-              </Link>
-            </li>
-          </ul>
+				<div className='primary-nav__toggles'>
+					<button
+						className='button button--icon-only mobile-menu-toggle'
+						title='Menu'
+						data-toggle='collapse'
+						data-target-toggle='#primary-menu'
+					>
+						<span className='icon icon-menu' aria-hidden='true'></span>
+					</button>
+				</div>
 
-        </nav>
-
-        <div className="primary-nav__toggles">
-
-          <button
-              className="button button--icon-only mobile-menu-toggle"
-              title="Menu"
-              data-toggle="collapse"
-              data-target-toggle="#primary-menu">
-                <span className="icon icon-menu" aria-hidden="true"></span>
-            </button>
-            
-        </div>
-
-        <div className="primary-nav__actions">
-
-          <a
-            className="button button--icon-only"
-            href="https://github.com/cavidano/natura11y"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener noreferrer">
-              <span className="icon icon-github"></span>
-          </a>
-
-        </div>
-      
-      </div>
-    
-    </header>
-  );
+				<div className='primary-nav__actions'>
+					<a
+						className='button button--icon-only'
+						href='https://github.com/cavidano/natura11y'
+						aria-label='GitHub'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<span className='icon icon-github'></span>
+					</a>
+				</div>
+			</div>
+		</header>
+	);
 }
 
 export default Header;
