@@ -11,7 +11,7 @@
 
  :root {
 	 --code-example-line-height: 1.75;
-	 --code-color-default: hsla(0, 0%, 100%, 0.9);
+	 --code-color-default: hsla(0, 0%, 0%, 0.9);
 	 --code-color-comment: hsla(0, 0%, 100%, 0.5);
  }
 
@@ -27,9 +27,9 @@ figure .code-toolbar + figcaption {
 	border-top-width: var(--default-border-width);
 	border-top-style: var(--default-border-style);
 
-	background-color: var(--dark);
+	/* background-color: rgb(0, 0, 0); */
 
-	color: var(--dark-text);
+	/* color: var(--dark-text); */
 }
 
 code[class*='language-'],
@@ -74,7 +74,7 @@ pre[class*='language-'],
 *:not(pre) > code[class*='language-'] {
 	overflow-x: scroll;
 	
-	background-color: var(--dark);
+	/* background-color: var(--dark); */
 }
 
 pre[class*='language-']:not([class*='hide-toolbar']) {

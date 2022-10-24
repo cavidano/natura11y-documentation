@@ -31,6 +31,8 @@ In this file:
     --dark: #0d1333;
     --light: #e6ebed;
 
+    --cool: rgb(255, 255, 255);
+
     --body-font-family: 'Poppins';
     
     --body-font-weight-normal: 400;
@@ -90,20 +92,35 @@ In this file:
 @media (prefers-color-scheme: light) {
 
     .opacity-color-scheme {
-        filter: opacity(36%);
+        filter: opacity(50%);
     }
 
-    .shadow-color-scheme {
+    .text-shadow {
+        --text-shadow-color: hsla(0, 0%, 100%, 0.75);
+    }
 
-        
+    .code-example {
+        color: var(--canvas-text);
+        background-color: hsl(0, 0%, 0%, 5%);
     
     }
+
 }
 
 @media (prefers-color-scheme: dark) {
 
     .opacity-color-scheme {
-        filter: opacity(18%);
+        filter: opacity(25%);
+    }
+    
+    .text-shadow {
+        --text-shadow-color: hsla(0, 0%, 0%, 75%);
+    }
+    
+    .code-example {
+
+        background-color: hsl(0, 0%, 100%, 5%);
+    
     }
 
 }

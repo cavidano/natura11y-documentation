@@ -38,7 +38,7 @@ const CodeBlock = (props) => {
     return (
         <pre 
             data-line={highlightedLines}
-            className={codeToolbar === false ? `hide-toolbar` : ``}>
+            className={`${codeToolbar === false ? 'hide-toolbar' : ''} code-example`}>
 
             <code className={`language-${codeLanguage}`}>
                 {code}

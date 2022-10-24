@@ -26,6 +26,11 @@ In this file:
     --base-shadow-opacity: 0.125;
 }
 
+%text-shadow-vars {
+    --text-shadow-size: 0.25rem;
+    --text-shadow-color: hsla(0, 0%, 0%, 75%);
+}
+
 [class*="theme-dark"] {
     --base-shadow-opacity: 0.2;
 }
@@ -71,5 +76,7 @@ In this file:
 //////////////////////////////////////////////
 
 .text-shadow {
-    text-shadow: 0 0 6px rgba(black, 0.75);
+    @extend %text-shadow-vars;
+    filter: drop-shadow(0 0 var(--text-shadow-size) var(--text-shadow-color));
+    // text-shadow: 0 0 var(--text-shadow-size) var(--text-shadow-color);
 }

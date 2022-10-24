@@ -45,7 +45,7 @@ const Home = () => {
 
 						<div className='container medium'>
 
-							<h1 className='banner-headline shadow-color-scheme text-align-center margin-y-4'>
+							<h1 className='banner-headline text-shadow text-align-center margin-y-4'>
 								Natura11y is an open source front-end toolkit for accessible experiences.
 							</h1>
 

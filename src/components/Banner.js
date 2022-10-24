@@ -12,7 +12,7 @@ const Banner = (props) => {
     } = props;
 
     return (
-      <div className="doc-container__header backdrop backdrop--fixed theme-dark">
+      <div className="doc-container__header backdrop backdrop--fixed">
 
         <div className="backdrop__image">
 
