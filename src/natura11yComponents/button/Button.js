@@ -12,6 +12,7 @@ const Button = ( props ) => {
         tag = 'button',
 		title = 'Button',
 		linkUrl = '#1',
+		target = null,
 		outline = false,
         iconHandle = null,
 		utilities = null,
@@ -58,6 +59,7 @@ const Button = ( props ) => {
 				<Link
 					className={`${componentClasses}`}
 					to={linkUrl}
+					target={target !== null && target}
 				>
 					{buttonContents()}
 				</Link>
@@ -70,6 +72,7 @@ const Button = ( props ) => {
 				<a
 					className={`${componentClasses}`}
 					href={linkUrl}
+					target={target !== null && target}
 				>
 					{buttonContents()}
 				</a>

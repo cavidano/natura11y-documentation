@@ -5,8 +5,6 @@ import Dropdown from '../natura11yComponents/navigation/Dropdown';
 import ButtonIconOnly from '../natura11yComponents/button/ButtonIconOnly';
 import Button from '../natura11yComponents/button/Button';
 
-import ThemeContext from './ThemeContext';
-
 import classNames from 'classnames';
 
 import { Link } from 'gatsby';
@@ -213,14 +211,12 @@ const Header = ( props ) => {
 
 				<div className='primary-nav__actions'>
 
-					<ThemeContext.Consumer>
-						{({ darkMode, toggleTheme }) =>
-							<ButtonIconOnly
-								iconHandle='mode-light-dark'
-								clickHandler={toggleTheme}
-							/>
-						}
-					</ThemeContext.Consumer>
+					<ButtonIconOnly
+						iconHandle='github'
+						tag='link'
+						linkUrl='https://github.com/cavidano/natura11y'
+						target='_blank'
+					/>
 					
 				</div>
 

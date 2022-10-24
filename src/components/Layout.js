@@ -1,29 +1,10 @@
-import React, { useEffect } from 'react';
-
-import ThemeContext from './ThemeContext';
+import React, { Fragment, useEffect } from 'react';
 
 import '../icons/natura11y-icons.css';
 
 import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
-
-	const mql = window.matchMedia('(prefers-color-scheme: dark)');
-  	const prefersDark = mql.matches;
-
-	const [darkMode, setDarkMode] = React.useState(prefersDark)
-
-	const toggleTheme = () => {
-		setDarkMode(!darkMode);
-	};
-
-	const value = React.useMemo(
-		() => ({
-			darkMode,
-			toggleTheme,
-		}),
-		[darkMode]
-	);
 
 	// Icon Sprite
 
@@ -53,11 +34,9 @@ const Layout = ({ children }) => {
 	}, []);
 
 	return (
-		<ThemeContext.Provider value={value}>
-			<div className={darkMode ? 'theme-dark' : 'theme-light'}>
-				{children}
-			</div>
-		</ThemeContext.Provider>
+		<Fragment>
+			{children}
+		</Fragment>
 	);
 };
 

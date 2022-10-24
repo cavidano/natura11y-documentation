@@ -11,10 +11,12 @@ const ButtonIconOnly = forwardRef(( props, ref ) => {
     const {
         tag = 'button',
         iconHandle = 'home',
-		utilities = null,
+		linkUrl = '#1',
+		target = null,
         ariaLabel = null,
         clickHandler = null,
-		ariaExpanded = null
+		ariaExpanded = null,
+		utilities = null
     } = props;
 
 
@@ -47,8 +49,9 @@ const ButtonIconOnly = forwardRef(( props, ref ) => {
 			button = (
 				<Link
 					className={`${componentClasses}`}
-					to='#1'
+					to={linkUrl}
 					aria-label={ariaLabel}
+					target={target !== null && target}
 				>
 					<Icon iconHandle={iconHandle} />
 				</Link>
@@ -60,8 +63,9 @@ const ButtonIconOnly = forwardRef(( props, ref ) => {
 			button = (
 				<a
 					className={`${componentClasses}`}
-					href='#1'
+					href={linkUrl}
 					aria-label={ariaLabel}
+					target={target !== null && target}
 				>
 					<Icon iconHandle={iconHandle} />
 				</a>
