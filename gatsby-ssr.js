@@ -1,6 +1,10 @@
 import React from 'react';
 
-import Layout from './src/components/Layout';
+export const onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+      className: 'theme-canvas--prefers'
+    });
+};
 
 export const wrapRootElement = ({ element, props }) => {
   return (

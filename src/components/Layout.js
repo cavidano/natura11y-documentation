@@ -1,4 +1,6 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+
+import ThemeContext from './ThemeContext';
 
 import '../icons/natura11y-icons.css';
 
@@ -6,17 +8,27 @@ import IconSprite from '../icons/natura11y-icons-sprite.svg';
 
 const Layout = ({ children }) => {
 
-	// Theme
+	const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  	const prefersDark = mql.matches;
 
-	const [DarkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = React.useState(prefersDark)
 
-	const handleDarkMode = () => {
-		setDarkMode(!DarkMode);
-	}
+	const toggleTheme = () => {
+		setDarkMode(!darkMode);
+	};
+
+	const value = React.useMemo(
+		() => ({
+			darkMode,
+			toggleTheme,
+		}),
+		[darkMode]
+	);
 
 	// Icon Sprite
 
 	useEffect(() => {
+	
 		const iconSpriteDiv = document.getElementById(
 			'natura11y-icons-sprite-container'
 		);
@@ -41,9 +53,11 @@ const Layout = ({ children }) => {
 	}, []);
 
 	return (
-		<div className='theme-dark'>
-			{children}
-		</div>
+		<ThemeContext.Provider value={value}>
+			<div className={darkMode ? 'theme-dark' : 'theme-light'}>
+				{children}
+			</div>
+		</ThemeContext.Provider>
 	);
 };
 
