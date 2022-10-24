@@ -17,7 +17,7 @@ const Banner = (props) => {
         <div className="backdrop__image">
 
           <GatsbyImage
-            className="opacity-40"
+            className="opacity-color-scheme"
             image={image}
             alt=""
           />

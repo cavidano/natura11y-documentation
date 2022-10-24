@@ -25,7 +25,7 @@ const Home = () => {
 					<div className='backdrop__image'>
 
 						<StaticImage
-							className='opacity-20'
+							className='opacity-color-scheme'
 							src='../images/backdrop-introduction.jpg'
 							alt='Swarm of Bees'
 						/>
@@ -45,7 +45,7 @@ const Home = () => {
 
 						<div className='container medium'>
 
-							<h1 className='banner-headline text-align-center text-shadow display margin-y-4'>
+							<h1 className='banner-headline shadow-color-scheme text-align-center margin-y-4'>
 								Natura11y is an open source front-end toolkit for accessible experiences.
 							</h1>
 
@@ -77,7 +77,7 @@ const Home = () => {
       </div>
 
 			<section
-				className='theme-dark overflow-hidden text-align-center'
+				className='overflow-hidden text-align-center'
 				id='features'
 			>
 				<div className='margin-y-5'>
@@ -101,7 +101,7 @@ const Home = () => {
 									style={{ '--gradient-veneer-opacity': '0.8' }}
 								>
 									<StaticImage
-										className='opacity-60'
+										className='opacity-color-scheme'
 										src='../images/backdrop-feature-accessibility.jpg'
 										alt='Giraffe eating leaves from a tree'
 									/>
@@ -134,7 +134,7 @@ const Home = () => {
 									style={{ '--gradient-veneer-opacity': '0.8' }}
 								>
 									<StaticImage
-										className='opacity-60'
+										className='opacity-color-scheme'
 										src='../images/backdrop-feature-color-system.jpg'
 										alt='Colorful bird'
 									/>
@@ -167,7 +167,7 @@ const Home = () => {
 									style={{ '--gradient-veneer-opacity': '0.8' }}
 								>
 									<StaticImage
-										className='opacity-60'
+										className='opacity-color-scheme'
 										src='../images/backdrop-feature-customizable-cdn.jpg'
 										alt='Close-up of a chamealoen'
 									/>
@@ -200,7 +200,7 @@ const Home = () => {
 									style={{ '--gradient-veneer-opacity': '0.8' }}
 								>
 									<StaticImage
-										className='opacity-60'
+										className='opacity-color-scheme'
 										src='../images/backdrop-feature-rtl.jpg'
 										alt='A crab on the beach'
 									/>
