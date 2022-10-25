@@ -1,23 +1,24 @@
-;(function () {
-	if (typeof Prism === "undefined" || typeof document === "undefined") {
-		return
+(function () {
+
+	if (typeof Prism === 'undefined' || typeof document === 'undefined') {
+		return;
 	}
 
 	// https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
 	if (!Element.prototype.matches) {
-		Element.prototype.matches =
-			Element.prototype.msMatchesSelector ||
-			Element.prototype.webkitMatchesSelector
+		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 	}
 
-	var script = Prism.util.currentScript()
+	var script = Prism.util.currentScript();
+
 
 	/**
 	 * @type {Array<(element: HTMLElement) => boolean>}
 	 */
-	var filters = []
+	var filters = [];
 
-	var config = (Prism.plugins.filterHighlightAll = {
+	var config = Prism.plugins.filterHighlightAll = {
+
 		/**
 		 * Adds a new filter for the elements of `highlightAll` and `highlightAllUnder` such that only elements for
 		 * which the given function returns `true` will be highlighted.
@@ -28,9 +29,9 @@
 			filters.push(function (element) {
 				return condition({
 					element: element,
-					language: Prism.util.getLanguage(element),
-				})
-			})
+					language: Prism.util.getLanguage(element)
+				});
+			});
 		},
 
 		/**
@@ -41,11 +42,12 @@
 		 */
 		addSelector: function (selector) {
 			filters.push(function (element) {
-				return element.matches(selector)
-			})
+				return element.matches(selector);
+			});
 		},
 
 		reject: {
+
 			/**
 			 * Adds a new filter for the elements of `highlightAll` and `highlightAllUnder` such that only elements for
 			 * which the given function returns `false` will be highlighted.
@@ -56,9 +58,9 @@
 				filters.push(function (element) {
 					return !condition({
 						element: element,
-						language: Prism.util.getLanguage(element),
-					})
-				})
+						language: Prism.util.getLanguage(element)
+					});
+				});
 			},
 
 			/**
@@ -69,9 +71,10 @@
 			 */
 			addSelector: function (selector) {
 				filters.push(function (element) {
-					return !element.matches(selector)
-				})
+					return !element.matches(selector);
+				});
 			},
+
 		},
 
 		/**
@@ -82,25 +85,22 @@
 		 *
 		 * @type {boolean}
 		 */
-		filterKnown: !!script && script.hasAttribute("data-filter-known"),
-	})
+		filterKnown: !!script && script.hasAttribute('data-filter-known')
+	};
 
 	config.add(function filterKnown(env) {
-		return (
-			!config.filterKnown ||
-			typeof Prism.languages[env.language] === "object"
-		)
-	})
+		return !config.filterKnown || typeof Prism.languages[env.language] === 'object';
+	});
 
 	if (script) {
-		var attr
-		attr = script.getAttribute("data-filter-selector")
+		var attr;
+		attr = script.getAttribute('data-filter-selector');
 		if (attr) {
-			config.addSelector(attr)
+			config.addSelector(attr);
 		}
-		attr = script.getAttribute("data-reject-selector")
+		attr = script.getAttribute('data-reject-selector');
 		if (attr) {
-			config.reject.addSelector(attr)
+			config.reject.addSelector(attr);
 		}
 	}
 
@@ -114,13 +114,14 @@
 	function combinedFilter(element) {
 		for (var i = 0, l = filters.length; i < l; i++) {
 			if (!filters[i](element)) {
-				return false
+				return false;
 			}
 		}
-		return true
+		return true;
 	}
 
-	Prism.hooks.add("before-all-elements-highlight", function (env) {
-		env.elements = env.elements.filter(combinedFilter)
-	})
-})()
+	Prism.hooks.add('before-all-elements-highlight', function (env) {
+		env.elements = env.elements.filter(combinedFilter);
+	});
+
+}());

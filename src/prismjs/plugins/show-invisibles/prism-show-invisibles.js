@@ -1,15 +1,18 @@
-;(function () {
-	if (typeof Prism === "undefined") {
-		return
+(function () {
+
+	if (typeof Prism === 'undefined') {
+		return;
 	}
 
+
 	var invisibles = {
-		tab: /\t/,
-		crlf: /\r\n/,
-		lf: /\n/,
-		cr: /\r/,
-		space: / /,
-	}
+		'tab': /\t/,
+		'crlf': /\r\n/,
+		'lf': /\n/,
+		'cr': /\r/,
+		'space': / /
+	};
+
 
 	/**
 	 * Handles the recursive calling of `addInvisibles` for one token.
@@ -18,31 +21,30 @@
 	 * @param {string|number} name The name or index of the token in `tokens`.
 	 */
 	function handleToken(tokens, name) {
-		var value = tokens[name]
+		var value = tokens[name];
 
-		var type = Prism.util.type(value)
+		var type = Prism.util.type(value);
 		switch (type) {
-			case "RegExp":
-				var inside = {}
+			case 'RegExp':
+				var inside = {};
 				tokens[name] = {
 					pattern: value,
-					inside: inside,
-				}
-				addInvisibles(inside)
-				break
+					inside: inside
+				};
+				addInvisibles(inside);
+				break;
 
-			case "Array":
+			case 'Array':
 				for (var i = 0, l = value.length; i < l; i++) {
-					handleToken(value, i)
+					handleToken(value, i);
 				}
-				break
+				break;
 
-			default:
-				// 'Object'
+			default: // 'Object'
 				// eslint-disable-next-line no-redeclare
-				var inside = value.inside || (value.inside = {})
-				addInvisibles(inside)
-				break
+				var inside = value.inside || (value.inside = {});
+				addInvisibles(inside);
+				break;
 		}
 	}
 
@@ -52,30 +54,30 @@
 	 * @param {Object} grammar
 	 */
 	function addInvisibles(grammar) {
-		if (!grammar || grammar["tab"]) {
-			return
+		if (!grammar || grammar['tab']) {
+			return;
 		}
 
 		// assign invisibles here to "mark" the grammar in case of self references
 		for (var name in invisibles) {
 			if (invisibles.hasOwnProperty(name)) {
-				grammar[name] = invisibles[name]
+				grammar[name] = invisibles[name];
 			}
 		}
 
 		// eslint-disable-next-line no-redeclare
 		for (var name in grammar) {
 			if (grammar.hasOwnProperty(name) && !invisibles[name]) {
-				if (name === "rest") {
-					addInvisibles(grammar["rest"])
+				if (name === 'rest') {
+					addInvisibles(grammar['rest']);
 				} else {
-					handleToken(grammar, name)
+					handleToken(grammar, name);
 				}
 			}
 		}
 	}
 
-	Prism.hooks.add("before-highlight", function (env) {
-		addInvisibles(env.grammar)
-	})
-})()
+	Prism.hooks.add('before-highlight', function (env) {
+		addInvisibles(env.grammar);
+	});
+}());
