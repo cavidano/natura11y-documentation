@@ -96,7 +96,7 @@ In this file:
     }
 
     .text-shadow {
-        --text-shadow-color: hsla(0, 0%, 100%, 0.75);
+        --text-shadow-hsl: 360 100% 100%;
     }
 
     .code-example {
@@ -111,10 +111,6 @@ In this file:
 
     .opacity-color-scheme {
         filter: opacity(25%);
-    }
-    
-    .text-shadow {
-        --text-shadow-color: hsla(0, 0%, 0%, 75%);
     }
     
     .code-example {
