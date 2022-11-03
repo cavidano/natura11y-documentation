@@ -10,7 +10,8 @@ import '../../prismjs/plugins/show-language/prism-show-language';
 import '../../prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 import '../../prismjs/plugins/treeview/prism-treeview';
 
-import '../../prismjs/themes/prism-light-dark.css';
+// import '../../prismjs/themes/prism-light-dark.css';
+import '../../prismjs/themes/prism-natura11y.css';
 
 const CodeBlock = (props) => {
 
