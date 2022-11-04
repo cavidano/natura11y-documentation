@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CodeBlock from './CodeBlock';
+
 import { exampleStyles } from '../../mdxVars';
 
 const Figure = (props) => {
@@ -18,7 +19,10 @@ const Figure = (props) => {
     } = props;
 
     return (
-        <figure className={`container ${figureWidth} margin-y-4`} id={`figure_${figureNumber}`}>
+        <figure
+            className={`container ${figureWidth} margin-y-4`}
+            id={`figure_${figureNumber}`}
+        >
 
             {visualExample ? (
                 <div className="example">
