@@ -14,12 +14,11 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "./natura11yStyles/scss/breakpoint.scss" as breakpoints;
+@use "./natura11yStyles/breakpoint" as breakpoints;
 
 //////////////////////////////////////////////
 // B. Variables
 //////////////////////////////////////////////
-
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
@@ -28,8 +27,8 @@ In this file:
 
     --primary: #008854;
     --secondary: #004857;
-    --dark: #0d1333;
-    --light: #e6ebed;
+    --dark: #0a0f2a;
+    --canvas: #f8f8f8;
 
     --cool: rgb(255, 255, 255);
 
@@ -40,19 +39,20 @@ In this file:
     --body-font-weight-bold: 800;
 
     --body-font-size: 20px;
-    --body-line-height: 1.5;
+    --body-line-height: 1.6;
     --header-line-height: 1.275;
 
     // Banner Headline
 
-    --banner-headline-font-lg: calc(var(--body-font-size) * 3.25);
-    --banner-headline-font-sm: calc(var(--body-font-size) * 2.25);
+    --banner-headline-font-size-lg: calc(var(--body-font-size) * 3.75);
+    --banner-headline-font-size-sm: calc(var(--body-font-size) * 2);
 
     --banner-headline-font-weight: var(--body-font-weight-normal);
     
     // Paragraph
 
     --paragraph-margin-bottom: 1.5em;
+
 }
 
 // Code Font
@@ -91,6 +91,11 @@ In this file:
 
 @media (prefers-color-scheme: light) {
 
+:root {
+
+    --box-shadow-hsl: 0 0% 50%;
+}
+
     .opacity-color-scheme {
         filter: opacity(50%);
     }
@@ -101,8 +106,12 @@ In this file:
 
     .code-example {
         color: var(--canvas-text);
-        background-color: hsl(0, 0%, 0%, 5%);
-    
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    figure .example + figcaption,
+    figure .code-toolbar + figcaption {
+        background-color: rgba(255, 255, 255, 0.75);
     }
 
 }
@@ -115,7 +124,7 @@ In this file:
     
     .code-example {
 
-        background-color: hsl(0, 0%, 100%, 5%);
+        background-color: rgba(0, 0, 0, 0.175);
     
     }
 
@@ -465,9 +474,7 @@ kbd {
 .doc-container {
 
     .doc-container__toc {
-        border-color: inherit;
-        border-block-end-width: var(--default-border-width);
-        border-block-end-style: var(--default-border-style);
+        border-block-end: var(--border-width) var(--border-style) var(--border-color);
     }
 
     .doc-container__toc > .container {
@@ -489,10 +496,9 @@ kbd {
         .doc-container__toc {
             grid-area: toc;
 
-            border-block-end-width: initial;
-            border-block-end-style: initial;
-            border-inline-start: var(--default-border-width);
-            border-inline-start-style: var(--default-border-style);
+            border-block-end: unset;
+
+            border-inline-start: var(--border-width) var(--border-style) var(--border-color);
         }
 
         .doc-container__body {

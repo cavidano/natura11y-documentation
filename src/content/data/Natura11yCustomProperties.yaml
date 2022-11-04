@@ -101,7 +101,7 @@
       description: !mdx |
         Default Border radius of all *button* selectors
     - name: button-outline-border-width
-      value: calc( var(--default-border-width) * 2)
+      value: calc( var(--border-width) * 2)
       description: !mdx |
         Border width of the *button outline* modifier class
     - name: button-icon-only-size
@@ -324,7 +324,7 @@
       description: !mdx |
         Default total gap size of the *grid divider* selector
     - name: grid-divider-border-width
-      value: var(--default-border-width)
+      value: var(--border-width)
       description: !mdx |
         Width of centered border between *grid divider* gap
     - name: grid-divider-border-x-color

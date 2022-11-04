@@ -20,13 +20,13 @@ const Figure = (props) => {
 
     return (
         <figure
-            className={`container ${figureWidth} margin-y-4`}
+            className={`${figureWidth} margin-y-4 margin-x-auto box-shadow-3`}
             id={`figure_${figureNumber}`}
         >
 
             {visualExample ? (
                 <div className="example">
-                    <div className={(`padding-y-5 box-shadow-1 ${visualExampleClass && visualExampleClass}`)} style={exampleStyles}>
+                    <div className={(`padding-y-5 ${visualExampleClass && visualExampleClass}`)} style={exampleStyles}>
                         <div className="container narrow">
                             {visualExample}
                         </div>
