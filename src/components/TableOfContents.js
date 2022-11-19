@@ -33,7 +33,7 @@ const TableOfContents = ({ sections }) => {
     return (
         <div className="doc-container__toc">
 
-            <div className="container narrow font-size-sm">
+            <div className="container narrow font-size-md">
 
                 <strong className='display-block opacity-80 margin-bottom-2'>
                     On this page:

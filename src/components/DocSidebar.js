@@ -14,7 +14,7 @@ const DocSidebar = ({ pages }) => {
       <div className="display-none--lg padding-y-2">
           <div className="container narrow">
               <button
-                  className="button button--outline button--has-icon--disperse width-100"
+                  className="button button--outline button--has-icon--disperse font-size-md"
                   data-toggle="collapse"
                   data-target-toggle="#docs-sidebar">
                       <span className="button__text">Documentation</span>
