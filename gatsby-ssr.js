@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const onRenderBody = ({ setBodyAttributes }) => {
-  setBodyAttributes({
+export const onRenderBody = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({
       className: 'theme-canvas--prefers'
     });
 };
