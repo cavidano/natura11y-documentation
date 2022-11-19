@@ -19,7 +19,9 @@ In this file:
 // B. Variables
 ////////////////////////////////////////
 
-:root {
+// Scoped to Block
+
+%custom-properties {
     --tab-button-padding-x: var(--spacer-3);
     --tab-button-padding-y: var(--button-padding-y);
 
@@ -35,6 +37,8 @@ In this file:
     // Tabs Nav
 
     .tabs-nav {
+        @extend %custom-properties;
+
         list-style: none;
 
         // Separator

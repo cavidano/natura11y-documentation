@@ -27,7 +27,12 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-:root {
+$columns: 12;
+$rows: math.div($columns, 2);
+
+// Scoped to Block
+
+%grid-divider-vars {
     --grid-divider-gap: var(--spacer-3);
 
     --grid-divider-border-width: var(--border-width);
@@ -36,9 +41,6 @@ In this file:
     --grid-divider-border-x-color: var(--canvas-border);
     --grid-divider-border-y-color: var(--canvas-border);
 }
-
-$columns: 12;
-$rows: math.div($columns, 2);
 
 //////////////////////////////////////////////
 // C. Components
@@ -158,6 +160,7 @@ $rows: math.div($columns, 2);
     // Grid Divider Modifier
     
     [class*="grid--divider"] {
+        @extend %grid-divider-vars;
         --gap: var(--gap-size, var(--grid-divider-gap));
     }
 

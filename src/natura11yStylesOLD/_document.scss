@@ -19,13 +19,11 @@ In this file:
 // B. Variables
 ////////////////////////////////////////
 
-:root {
-    --body-min-width: 325px;
+// Scoped to Block
 
+%custom-properties {
+    --body-min-width: 325px;
     --body-max-width: 100%;
-    
-    --body-min-height: 100%;
-    
     --html-background-color: var(--canvas);
 }
 
@@ -92,18 +90,11 @@ In this file:
         box-sizing: border-box;
     }
 
-    // HTML, Body 
-
-    html, 
-    body {
-        min-height: var(--body-min-height);
-    }
-
     // HTML
 
     html {
-        @extend .theme-canvas !optional;
-
+        @extend %custom-properties;
+        
         font-size: 1rem;
         line-height: 1.125;
 
@@ -119,6 +110,7 @@ In this file:
     // Body
 
     body {
+        @extend .theme-canvas !optional;
 
         font-family: sans-serif;
 
@@ -131,12 +123,14 @@ In this file:
         -moz-osx-font-smoothing: grayscale;
 
         margin-inline: auto;
+        
     }
 
     // Horizontal Rule
 
     hr {
-        border-block-start: var(--border-width) var(--border-style);
+        border-block-start-width: var(--border-width);
+        border-block-start-style: var(--border-style);
     }
 
 } // end @layer

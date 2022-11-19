@@ -20,14 +20,21 @@ In this file:
 // B. Variables
 ////////////////////////////////////////
 
+// Scoped to Root
+
 :root {
-
-    // Subtle Fill
-
     --subtle-fill-opacity: 0.075;
+}
 
-    // Gradient Veneer
+// Scoped to Block
 
+%caret-vars {
+    --caret-size: 0.25em;
+
+    --caret-margin: 0.375em;
+}
+
+%gradient-veneer-vars {
     --gradient-veneer-start: 50%;
 
     --gradient-veneer-opacity: 1;
@@ -62,9 +69,8 @@ In this file:
 }
 
 %caret {
-    --caret-size: 0.25em;
-    --caret-margin: 0.375em;
-
+    @extend %caret-vars;
+    
     display: inline-flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -75,7 +81,7 @@ In this file:
         border-bottom: 0;
         border-left: var(--caret-size) solid transparent;
 
-        position: relative;
+        // position: relative;
         content: "";
         
         display: inline-flex;
@@ -114,6 +120,8 @@ In this file:
     // Gradient Veneer Utilities
 
     [class*="gradient-veneer"] {
+        @extend %gradient-veneer-vars;
+
         --gradient-direction: to bottom;
         
         position: relative;
@@ -126,30 +134,28 @@ In this file:
             bottom: 0;
             left: 0;
 
-            background-image: linear-gradient( var(--gradient-direction), hsla(0, 0%, 100%, 0) var(--gradient-veneer-start), var(--gradient-color) );
+            background: linear-gradient( var(--gradient-direction), hsla(0, 0%, 100%, 0) var(--gradient-veneer-start), var(--gradient-color) );
             background-clip: border-box;
 
             opacity: var(--gradient-veneer-opacity);
-
-            pointer-events: none;
             
             display: none;
         }
     }
 
-    [class*="gradient-veneer-top"] {
+    .gradient-veneer-top {
         --gradient-direction: to top;
     }
 
-    [class*="gradient-veneer-right"] {
+    .gradient-veneer-right {
         --gradient-direction: to right;
     }
 
-    [class*="gradient-veneer-bottom"] {
+    .gradient-veneer-bottom {
         --gradient-direction: to bottom;
     }
 
-    [class*="gradient-veneer-left"] {
+    .gradient-veneer-left {
         --gradient-direction: to left;
     }
 
@@ -162,7 +168,7 @@ In this file:
             .gradient-veneer-bottom#{$mod},
             .gradient-veneer-left#{$mod} {
                 &::after{
-                    display: block;
+                    display: block !important;
                 }
             }
             
