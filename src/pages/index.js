@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -8,14 +8,55 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Seo from '../components/Seo';
 
-const Home = () => {
+// Natura11y components
 
-  return (
+const Home = ({ data }) => {
+
+	const featureData = data.allNatura11YfeaturesYaml.nodes;
+
+	const FeatureItems = featureData.map((feature, index) => (
+
+		<li className='backdrop backdrop--fixed align-content-end border-radius'>
+
+			<div className='backdrop__image gradient-veneer-bottom'>
+				<StaticImage
+					className='opacity-color-scheme'
+					src='../images/backdrop-feature-accessibility.jpg'
+					alt='Giraffe eating leaves from a tree'
+				/>
+			</div>
+
+			<div className='backdrop__cover'>
+				<div className='container narrow margin-y-3'>
+					<h3 className='text-shadow--md text-shadow'>
+						{feature.headline}
+					</h3>
+
+					<p className='text-shadow'>
+						Built-in accessibility features and guidance help you be
+						more accomodating with less effort.
+					</p>
+
+					<Link
+						className='button theme-canvas box-shadow font-size-md'
+						to='/docs/accessibility/'
+					>
+						What's Included
+					</Link>
+				</div>
+			</div>
+		</li>
+	));
+
+  	return (
 		<Fragment>
 
 			<Seo title='Home' />
 
+			<pre className='display-none'>{JSON.stringify(data, null, 4)}</pre>
+
 			<div className='min-height-100vh flex-column'>
+
 				<Header utilities='box-shadow-1 z-index-2500' />
 
 				<section
@@ -53,13 +94,13 @@ const Home = () => {
 
 								<div className='grid narrow grid--column-2--sm gap-3'>
 									<Link
-										className='button theme-canvas width-100'
+										className='button theme-canvas'
 										to='/docs/get-started/'
 									>
 										Get Started
 									</Link>
 									<Link
-										className='button button--outline width-100'
+										className='button button--outline'
 										to='/comps/'
 									>
 										Comps
@@ -81,6 +122,7 @@ const Home = () => {
 				id='features'
 			>
 				<div className='margin-y-5'>
+
 					<div className='container narrow margin-bottom-4'>
 						<h2>It's time to evolve.</h2>
 
@@ -91,15 +133,22 @@ const Home = () => {
 						</p>
 
 						<p>Natura11y aims to make life a little easier.</p>
+
 					</div>
 
 					<div className='container wide'>
-						<div className='grid grid--column-2--lg gap-border'>
-							<div className='backdrop backdrop--fixed align-content-end'>
-								<div
-									className='backdrop__image gradient-veneer-bottom'
-									style={{ '--gradient-veneer-opacity': '0.8' }}
-								>
+
+							{FeatureItems}
+
+						<ul
+							className='grid grid--column-2--lg gap-3'
+							style={{ '--gradient-veneer-opacity': '0.5' }}>
+
+							
+
+							<div className='backdrop backdrop--fixed align-content-end border-radius'>
+
+								<div className='backdrop__image gradient-veneer-bottom'>
 									<StaticImage
 										className='opacity-color-scheme'
 										src='../images/backdrop-feature-accessibility.jpg'
@@ -128,11 +177,9 @@ const Home = () => {
 								</div>
 							</div>
 
-							<div className='backdrop backdrop--fixed align-content-end'>
-								<div
-									className='backdrop__image gradient-veneer-bottom'
-									style={{ '--gradient-veneer-opacity': '0.8' }}
-								>
+							<div className='backdrop backdrop--fixed align-content-end border-radius'>
+
+								<div className='backdrop__image gradient-veneer-bottom'>
 									<StaticImage
 										className='opacity-color-scheme'
 										src='../images/backdrop-feature-color-system.jpg'
@@ -142,7 +189,7 @@ const Home = () => {
 
 								<div className='backdrop__cover'>
 									<div className='container narrow margin-y-3'>
-										<h3 className='text-shadow--md margin-bottom-3 text-shadow'>
+										<h3 className='text-shadow--md text-shadow'>
 											Dynamic Color System
 										</h3>
 
@@ -161,11 +208,9 @@ const Home = () => {
 								</div>
 							</div>
 
-							<div className='backdrop backdrop--fixed align-content-end'>
-								<div
-									className='backdrop__image gradient-veneer-bottom'
-									style={{ '--gradient-veneer-opacity': '0.8' }}
-								>
+							<div className='backdrop backdrop--fixed align-content-end border-radius'>
+
+								<div className='backdrop__image gradient-veneer-bottom'>
 									<StaticImage
 										className='opacity-color-scheme'
 										src='../images/backdrop-feature-customizable-cdn.jpg'
@@ -175,7 +220,8 @@ const Home = () => {
 
 								<div className='backdrop__cover'>
 									<div className='container narrow margin-y-3'>
-										<h3 className='text-shadow--md margin-bottom-3 text-shadow'>
+
+										<h3 className='text-shadow--md text-shadow'>
 											Customizable CDN
 										</h3>
 
@@ -194,11 +240,9 @@ const Home = () => {
 								</div>
 							</div>
 
-							<div className='backdrop backdrop--fixed align-content-end'>
-								<div
-									className='backdrop__image gradient-veneer-bottom'
-									style={{ '--gradient-veneer-opacity': '0.8' }}
-								>
+							<div className='backdrop backdrop--fixed align-content-end border-radius'>
+
+								<div className='backdrop__image gradient-veneer-bottom'>
 									<StaticImage
 										className='opacity-color-scheme'
 										src='../images/backdrop-feature-rtl.jpg'
@@ -208,7 +252,7 @@ const Home = () => {
 
 								<div className='backdrop__cover'>
 									<div className='container narrow margin-y-3'>
-										<h3 className='text-shadow--md margin-bottom-3 text-shadow'>
+										<h3 className='text-shadow--md text-shadow'>
 											RTL Support
 										</h3>
 
@@ -226,10 +270,11 @@ const Home = () => {
 									</div>
 								</div>
 							</div>
-						</div>
+						</ul>
 					</div>
 
 					<div className='container narrow margin-y-5'>
+
 						<div className='grid grid--column-2--md gap-3'>
 							<a
 								className='button button--has-icon width-100 button--outline'
@@ -248,13 +293,30 @@ const Home = () => {
 								<span className='button__text'>NPM</span>
 							</a>
 						</div>
+
 					</div>
+
 				</div>
+			
 			</section>
 
 			<Footer />
+
 		</Fragment>
 	);
 }
+
+export const query = graphql`
+  query queryFeatures {
+    allNatura11YfeaturesYaml {
+      nodes {
+        headline
+        description
+        linkTitle
+        linkUrl
+      }
+    }
+  }
+`;
 
 export default Home;

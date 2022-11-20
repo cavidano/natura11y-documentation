@@ -1,0 +1,14 @@
+
+-  headline: Accessibility
+   description:
+    Built-in accessibility features and guidance help you be more accomodating with less effort.
+   image: ../../images/banner/accessibility.jpg
+   linkTitle: Cool
+   linkUrl: /cool
+
+-  headline: Dynamic Color System
+   description:
+    Apply sweeping color themes to pages and components. You can also add single colors to specific elements.
+   image: ../../images/banner/colors.jpg
+   linkTitle: Rad
+   linkUrl: /rad
